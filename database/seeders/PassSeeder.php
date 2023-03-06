@@ -13,6 +13,6 @@ class PassSeeder extends Seeder
      */
     public function run()
     {
-        //
+        \App\Models\Pass::factory(3)->create();
     }
 }
