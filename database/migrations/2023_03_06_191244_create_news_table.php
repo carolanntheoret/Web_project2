@@ -17,7 +17,7 @@ class CreateNewsTable extends Migration
             $table->id();
             $table->text('author', 255);
             $table->text('title', 255);
-            $table->text('subtitle');
+            $table->text('subtitle')->nullable();
             $table->text('text');
             $table->timestamps();
         });
