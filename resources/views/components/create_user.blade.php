@@ -16,7 +16,7 @@
             <span>Mot de Passe :</span>
             <input type="text" name="password">
         </div>
-        <div>
+        <div> <!-- Ajouter une condition -->
             <span>Rôle :</span>
             <select name="role">
                 <option value="user">Utilisateur</option>
