@@ -15,3 +15,4 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [SiteController::class, 'test']);
+Route::post('/create-user', [SiteController::class, 'createUser']);
