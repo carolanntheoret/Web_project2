@@ -11,7 +11,7 @@
                       </p>
 
                     </div>
-
+                    <a href="/">Homepage</a>
                 </div>
             </main>
         </x-layout>

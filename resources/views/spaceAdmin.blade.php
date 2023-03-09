@@ -13,9 +13,6 @@
                 </div>
                 <p>non il n'est pas fini</p>
                 <a href="/">Homepage</a>
-              |
-              <a  href="disconnect">Log Out</a>
-
             </div>
         </main>
 

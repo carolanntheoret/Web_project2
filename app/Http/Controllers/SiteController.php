@@ -8,50 +8,43 @@ use Illuminate\Support\Facades\Auth;
 class SiteController extends Controller
 {
     /**
-     * Connect a user
-     *
-     * @param Request $request
-     * @return object
-     */
-    public function connect(Request $request)
-    {
-        // if(auth()->check()) return back();
-
-        // $request->validate([
-        //     'email' => "required|max:255",
-        //     'password' => "required|max:255",
-        // ], [
-        //     'email.required' => "Email manquant",
-        //     'email.max' => "Email trop long",
-        //     'password.required' => "Mot de passe manquant",
-        //     'password.max' => "Mot de passe trop long",
-        // ]);
-
-        // if(!Auth::attempt($request->only('email', 'password'))) return redirect('/')->with('wrong_login', "Informations incorrectes");
-        //return redirect("/")->with('login_or_creation_successful', 'Connexion réussie'); // revoir la redirection, peut-être plusieurs pages selon le rôle
-
-        return view('spaceUser');
-    }
-
-    /**
-     * Disconnect a user
+     * Display the homepage view
      *
      * @return object
      */
-    public function disconnect()
+    public function homepage()
     {
-        //auth()->logout(auth()->user());
-        //return redirect('homepage')->with('logout_successful', 'Déconnexion réussie');
-
-        return redirect('/');
+        return view('homepage');
     }
 
-
     /**
-     * Show the list of activities
+     * Display the activity list view
+     *
+     * @return object
      */
-    public function list_activities()
+    public function listActivities()
     {
         return view('activities');
+    }
+
+    /**
+     * Display admin space
+     *
+     * @return object
+     */
+    public function showAdmin()
+    {
+        if(Auth::check() && auth()->user()->admin == 1) return view('spaceAdmin');
+        return redirect('/user-zone');
+    }
+
+    /**
+     * Display user space
+     *
+     * @return object
+     */
+    public function showUser()
+    {
+        return view('spaceUser');
     }
 }

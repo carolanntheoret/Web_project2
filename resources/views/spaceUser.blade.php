@@ -8,7 +8,7 @@
                 <div class="mt-5">
                     <p>espace utilisateur</p>
 
-                    <a class="bouton text-sm text-gray-700 dark:text-gray-500 underline" href="connect">Se connecter</a>
+                    <x-login></x-login>
                     <a href="/">Homepage</a>
                 </div>
 

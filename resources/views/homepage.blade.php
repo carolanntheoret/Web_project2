@@ -9,13 +9,13 @@
             <div class="mt-5">
                 <p>patate dynamique - homepage</p>
 
-                <a class="mainbtn"  href="adminZone">space Admin</a>
+                <a class="mainbtn"  href="/admin">space Admin</a>
                 |
-                <a class="mainbtn" href="userZone">space User</a>
+                <a class="mainbtn" href="/user-zone">space User</a>
                 |
-                <a class="mainbtn" href="activities">activities</a>
+                <a class="mainbtn" href="/activities">activities</a>
                 |
-                <a class="mainbtn" href="connect">Se connecter</a>
+                <a  href="disconnect">Log Out</a>
 
             </div>
 

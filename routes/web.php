@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\AdminController;
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,18 +14,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-// Show the hompage
-Route::get('/', function () {return view('homepage');});
 
+/***** simple views *****/
+Route::get('/', [SiteController::class, 'homepage']);
+Route::get('/activities', [SiteController::class, 'listActivities']);
+Route::get('/admin', [SiteController::class, 'showAdmin'] );
+Route::get('/user-zone', [SiteController::class, 'showUser'] );
 
-// Routes for connection and disconnection
-Route::get('/connect', [SiteController::class, 'connect']);
-Route::get('/disconnect', [SiteController::class, 'disconnect']);
+/***** form views *****/
 
-// Route to show the pages
-Route::get('/activities', [SiteController::class, 'list_activities']);
-Route::get('/adminZone', [AdminController::class, 'showadmin'] );
-Route::get('/userZone', [AdminController::class, 'showuser'] );
+/***** submit pages *****/
+Route::post('/connect', [UserController::class, 'connect']);
+Route::get('/disconnect', [UserController::class, 'disconnect']);
 
 
 
