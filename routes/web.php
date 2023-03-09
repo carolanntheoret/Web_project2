@@ -15,8 +15,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [SiteController::class, 'test']);
+/***** simple views *****/
+Route::get('/', [SiteController::class, 'homepage']);
+Route::get('/activities', [SiteController::class, 'listActivities']);
+Route::get('/admin', [SiteController::class, 'showAdmin'] );
+Route::get('/user-zone', [SiteController::class, 'showUser'] );
+
+/***** form views *****/
 Route::post('/create-user', [UserController::class, 'createUser']);
-Route::get('/delete-user', [UserController::class, 'deleteUser']);
+
+/***** submit pages *****/
 Route::post('/connect', [UserController::class, 'connect']);
 Route::get('/disconnect', [UserController::class, 'disconnect']);
+Route::get('/delete-user', [UserController::class, 'deleteUser']);
+
+
+

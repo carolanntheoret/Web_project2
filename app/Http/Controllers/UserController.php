@@ -17,20 +17,15 @@ class UserController extends Controller
      */
     public function connect(Request $request)
     {
-        if(auth()->check()) return redirect('/LaraGPT');
+        if(auth()->check()) return back();
 
         $request->validate([
             'email' => "required|max:255",
             'password' => "required|max:255",
-        ], [
-            'email.required' => "Email manquant",
-            'email.max' => "Email trop long",
-            'password.required' => "Mot de passe manquant",
-            'password.max' => "Mot de passe trop long",
         ]);
 
-        if(!Auth::attempt($request->only('email', 'password'))) return redirect('/')->with('wrong_login', "Informations incorrectes");
-        return redirect("/")->with('login_or_creation_successful', 'Connexion réussie'); // revoir la redirection, peut-être plusieurs pages selon le rôle
+        if(!Auth::attempt($request->only('email', 'password'))) return redirect('/')->with('wrong_login', "incorrect informations");
+        $this->redirectSpace();
     }
 
     /**
