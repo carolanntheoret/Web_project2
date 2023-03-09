@@ -7,3 +7,14 @@ Pour que le projet soit fonctionnel après un import de Git :
 Pour avoir la base de données :
 1. ouvrir xampp et créer une base de données du nom de "projet_web2"
 2. dans un terminal : php artisan migrate:fresh --seed
+
+Documentation sur les components
+
+Créer un utilisateur : a besoin d'un $user, reçu via le return view('', ['user' => auth()->user()]) ou valeur nulle
+<x-create_user :admin="$user->admin"></x-create_user>
+
+Supprimer un utilisateur : a besoin de recevoir l'id de l'utilisateur
+<a href="delete-user/{id}">Supprimer l'utilisateur</a>
+
+Formulaire de connexion :
+<x-login></x-login>

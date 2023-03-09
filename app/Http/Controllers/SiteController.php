@@ -45,6 +45,8 @@ class SiteController extends Controller
      */
     public function showUser()
     {
-        return view('spaceUser');
+        $user = null;
+        if(Auth::check()) $user = auth()->user();
+        return view('spaceUser', ['user' => $user]);
     }
 }

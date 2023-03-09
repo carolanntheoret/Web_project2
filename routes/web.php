@@ -27,7 +27,7 @@ Route::post('/create-user', [UserController::class, 'createUser']);
 /***** submit pages *****/
 Route::post('/connect', [UserController::class, 'connect']);
 Route::get('/disconnect', [UserController::class, 'disconnect']);
-Route::get('/delete-user', [UserController::class, 'deleteUser']);
+Route::get('/delete-user/{id}', [UserController::class, 'deleteUser']);
 
 
 

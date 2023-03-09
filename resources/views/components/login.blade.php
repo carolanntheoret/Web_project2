@@ -1,5 +1,5 @@
 <div>
-    <form action="connect" method="post">
+    <form action="/connect" method="post">
         @csrf
         <div>
             <span>Email :</span>

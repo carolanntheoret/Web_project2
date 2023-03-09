@@ -24,8 +24,9 @@ class UserController extends Controller
             'password' => "required|max:255",
         ]);
 
-        if(!Auth::attempt($request->only('email', 'password'))) return redirect('/')->with('wrong_login', "incorrect informations");
-        $this->redirectSpace();
+        if(!Auth::attempt($request->only('email', 'password'))) return back()->with('wrong_login', "incorrect informations");
+        if(auth()->user()->admin == 1) return redirect('/admin');
+        return redirect('/user-zone');
     }
 
     /**
@@ -36,7 +37,7 @@ class UserController extends Controller
     public function disconnect()
     {
         auth()->logout(auth()->user());
-        return redirect('/')->with('logout_successful', 'Déconnexion réussie');
+        return redirect('/')->with('logout_successful', 'Log out successfully');
     }
 
     /**
@@ -54,21 +55,20 @@ class UserController extends Controller
             'password' => 'required|max:255'
         ]);
 
+        $admin = $request->admin == NULL ? false : true;
         $user = new User();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
-        $user->role = $request->admin;
+        $user->admin = $admin;
 
         $user->save();
 
-        // section à tester avec la connexion
-        var_dump(auth()->user()); exit();
-        if(auth()->user()->admin != 'user') return redirect('/')->with('creation_successful','Account created with success'); // admin account creation page
+        if(Auth::check() && auth()->user()->admin == 1) return redirect('/admin')->with('creation_successful','Account created with success');
 
         auth()->login($user);
-        return redirect('/')->with('creation_successful','');
+        return view('spaceUser', ['user' => auth()->user()])->with('creation_successful', 'Account created with success');
     }
 
     /**
