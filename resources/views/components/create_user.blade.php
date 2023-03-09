@@ -17,13 +17,15 @@
             <span>Password :</span>
             <input type="password" name="password" required>
         </div>
-        <div> <!-- Ajouter une condition -->
-            <span>Role :</span>
-            <select name="role" required>
-                <option value="user">User</option>
-                <option value="admin">Admin</option>
-            </select>
-        </div>
+        @if ($user->admin)
+            <div>
+                <span>Role :</span>
+                <select name="role" required>
+                    <option value="user">User</option>
+                    <option value="admin">Admin</option>
+                </select>
+            </div>
+        @endif
         <div>
             <input type="submit" value="Submit">
         </div>

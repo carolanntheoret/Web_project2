@@ -1,1 +1,3 @@
-<x-create_user></x-create_user>
+<x-logout></x-logout>
+<hr>
+<x-login></x-login>
