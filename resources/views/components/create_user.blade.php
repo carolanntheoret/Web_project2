@@ -2,11 +2,11 @@
     <form action="create-user" method="post">
         @csrf
         <div>
-            <span>Prénom :</span>
+            <span>First Name :</span>
             <input type="text" name="first_name" required>
         </div>
         <div>
-            <span>Nom :</span>
+            <span>Last Name :</span>
             <input type="text" name="last_name" required>
         </div>
         <div>
@@ -14,19 +14,18 @@
             <input type="email" name="email" required>
         </div>
         <div>
-            <span>Mot de Passe :</span>
+            <span>Password :</span>
             <input type="password" name="password" required>
         </div>
         <div> <!-- Ajouter une condition -->
-            <span>Rôle :</span>
+            <span>Role :</span>
             <select name="role" required>
-                <option value="user">Utilisateur</option>
-                <option value="admin">Administrateur</option>
-                <option value="superadmin">BIG BOSS ADMINISTRATEUR !!!</option>
+                <option value="user">User</option>
+                <option value="admin">Admin</option>
             </select>
         </div>
         <div>
-            <input type="submit" value="Soumettre">
+            <input type="submit" value="Submit">
         </div>
     </form>
 </div>

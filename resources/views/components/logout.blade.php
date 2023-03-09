@@ -1,3 +1,3 @@
 <div>
-    <a href="disconnect">Déconnexion</a>
+    <a href="disconnect">Log Out</a>
 </div>
