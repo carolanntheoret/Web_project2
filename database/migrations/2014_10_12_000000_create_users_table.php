@@ -19,7 +19,7 @@ class CreateUsersTable extends Migration
             $table->text('last_name', 255);
             $table->text('email', 255)->unique();
             $table->text('password', 255);
-            $table->text('role', 255); // bool if only admin and user
+            $table->boolean('role');
             $table->timestamps();
         });
     }
