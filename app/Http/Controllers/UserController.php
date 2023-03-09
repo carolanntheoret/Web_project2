@@ -53,9 +53,17 @@ class UserController extends Controller
         return redirect('/')->with('creation_successful','Compte créé avec succès');
     }
 
+    /**
+     * Delete a user !
+     *
+     * @param Request $request
+     * @return void
+     */
     public function deleteUser(Request $request)
     {
-        if(User::where('id', $request->id)->delete()) return back()->withInput(['delete_successful', 'Le compte a été supprimé avec succès']);
+        if(!auth()->user()->admin) return back();
+        if(!User::find($request->id)) return back()->with('user_missing', "L'utilisateur est introubable");
+        if(User::where('id', $request->id)->delete()) return back()->with(['delete_successful', 'Le compte a été supprimé avec succès']);
         return back()->withInput(['delete_fail', 'La suppression a échouée']);
     }
 }
