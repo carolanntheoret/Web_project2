@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\SiteController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', [SiteController::class, 'test']);
-Route::post('/create-user', [SiteController::class, 'createUser']);
+Route::post('/create-user', [UserController::class, 'createUser']);
+Route::get('/delete-user', [UserController::class, 'deleteUser']);
