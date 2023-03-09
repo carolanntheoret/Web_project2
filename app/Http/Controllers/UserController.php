@@ -22,18 +22,6 @@ class UserController extends Controller
             'last_name' => 'required|max:255',
             'email' => 'required|max:255|email',
             'password' => 'required|max:255'
-        ], [
-            'first_name.required' => 'Un prénom est requis',
-            'last_name.required' => 'Un nom est requis',
-            'email.required' => 'Un email est requis',
-            'password.required' => 'Un mot de passe est requis',
-
-            'first_name.max' => 'Le prénom ne peut contenir que 255 caractères',
-            'last_name.max' => 'Le nom ne peut contenir que 255 caractères',
-            'email.max' => "L'email' ne peut contenir que 255 caractères",
-            'password.max' => 'Le mot de passe ne peut contenir que 255 caractères',
-
-            'email.email' => "L'email doit être valide",
         ]);
 
         $user = new User();
@@ -41,16 +29,16 @@ class UserController extends Controller
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
-        $user->role = $request->role;
+        $user->role = $request->admin;
 
         $user->save();
 
         // section à tester avec la connexion
         var_dump(auth()->user()); exit();
-        if(auth()->user()->role != 'user') return redirect('/')->with('creation_successful','Compte créé avec succès'); // admin account creation page
+        if(auth()->user()->admin != 'user') return redirect('/')->with('creation_successful','Account created with success'); // admin account creation page
 
         auth()->login($user);
-        return redirect('/')->with('creation_successful','Compte créé avec succès');
+        return redirect('/')->with('creation_successful','');
     }
 
     /**
