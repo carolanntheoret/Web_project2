@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
@@ -14,7 +15,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 /***** test page *****/
 Route::get('/test', [SiteController::class, 'testpage']);
 
@@ -35,6 +35,9 @@ Route::get('/disconnect', [UserController::class, 'disconnect']);
 Route::post('/create-user', [UserController::class, 'createUser']);
 Route::post('/modify-user', [UserController::class, 'modifyUser']);
 Route::get('/delete-user/{id}', [UserController::class, 'deleteUser']);
+
+/* Reservation */
+Route::post('/reservation', [ReservationController::class, 'reserve']);
 
 
 
