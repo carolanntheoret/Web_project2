@@ -8,16 +8,6 @@ use Illuminate\Support\Facades\Auth;
 
 class SiteController extends Controller
 {
-    public function testpage()
-    {
-        $user = null;
-        if(Auth::check()) $user = auth()->user();
-        return view('test', [
-            'user' => $user,
-            'a_user' => User::get()[6],
-        ]);
-    }
-
     /**
      * Display the homepage view
      *
