@@ -1,5 +1,5 @@
 <div>
-    <form action="/create-user" method="post">
+    <form action="<?= isset($user) ? '/modify-user' : '/create-user' ?>" method="post">
         @csrf
         <div>
             <span>First Name :</span>
@@ -25,8 +25,8 @@
             <div>
                 <span>Role :</span>
                 <select name="admin" required>
-                    <option value="false" <?= $user ?? $user->admin == 0 ? 'selected' : false ?>>User</option>
-                    <option value="true" <?= $user ?? $user->admin == 1 ? 'selected' : false ?>>Admin</option>
+                    <option value="false" <?= isset($user) && $user->admin == 0 ? 'selected' : '' ?>>User</option>
+                    <option value="true" <?= isset($user) && $user->admin == 1 ? 'selected' : '' ?>>Admin</option>
                 </select>
             </div>
         @endif
