@@ -38,6 +38,7 @@ Route::get('/delete-user/{id}', [UserController::class, 'deleteUser']);
 
 /* Reservation */
 Route::post('/reservation', [ReservationController::class, 'reserve']);
+Route::get('/delete-reservation', [ReservationController::class, 'cancel']);
 
 
 

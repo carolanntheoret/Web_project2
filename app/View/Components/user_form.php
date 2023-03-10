@@ -4,7 +4,7 @@ namespace App\View\Components;
 
 use Illuminate\View\Component;
 
-class create_user extends Component
+class user_form extends Component
 {
     public $admin;
     public $user;
@@ -26,6 +26,6 @@ class create_user extends Component
      */
     public function render()
     {
-        return view('components.create_user');
+        return view('components.user_form');
     }
 }

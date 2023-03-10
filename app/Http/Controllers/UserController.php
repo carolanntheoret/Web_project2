@@ -93,7 +93,7 @@ class UserController extends Controller
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
-            'password' => $request->password == null ? (DB::table('users')->select('password')->where('id', '=', $request->id)->get())[0]->password : Hash::make($request->password),
+            'password' => $request->password == null ? DB::table('users')->select('password')->where('id', '=', $request->id)->first()->password : Hash::make($request->password),
             'admin' => $request->admin == "true" ? 1 : 0,
         ]);
 

@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Pass;
+use App\Models\Reservation;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -12,7 +14,8 @@ class SiteController extends Controller
     public function testpage()
     {
         return view('test', [
-            'passes' => DB::table('passes')->get(),
+            'passes' => Pass::get(),
+            'reservations' => Reservation::get(),
         ]);
     }
 
