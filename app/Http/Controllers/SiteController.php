@@ -2,11 +2,22 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class SiteController extends Controller
 {
+    public function testpage()
+    {
+        $user = null;
+        if(Auth::check()) $user = auth()->user();
+        return view('test', [
+            'user' => $user,
+            'all_users' => User::get(),
+        ]);
+    }
+
     /**
      * Display the homepage view
      *
@@ -45,8 +56,6 @@ class SiteController extends Controller
      */
     public function showUser()
     {
-        $user = null;
-        if(Auth::check()) $user = auth()->user();
-        return view('spaceUser', ['user' => $user]);
+        return view('spaceUser');
     }
 }

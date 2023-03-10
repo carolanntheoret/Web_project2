@@ -8,12 +8,6 @@
                     <p>espace utilisateur</p>
                     <x-login></x-login>
                     <a href="/">Homepage</a>
-                    @if ($user)
-                        <x-create_user :admin="$user->admin"></x-create_user>
-                    @else
-                        <x-create_user :admin="false"></x-create_user>
-                    @endif
-                    <a href="delete-user/8">Delete test</a>
                 </div>
             </div>
         </main>
