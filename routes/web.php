@@ -15,8 +15,6 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-/***** test page *****/
-Route::get('/test', [SiteController::class, 'testpage']);
 
 /***** simple views *****/
 Route::get('/', [SiteController::class, 'homepage']);

@@ -11,14 +11,6 @@ use Illuminate\Support\Facades\DB;
 
 class SiteController extends Controller
 {
-    public function testpage()
-    {
-        return view('test', [
-            'passes' => Pass::get(),
-            'reservations' => Reservation::get(),
-        ]);
-    }
-
     /**
      * Display the homepage view
      *
