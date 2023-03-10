@@ -15,9 +15,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/***** test page *****/
-Route::get('/test', [SiteController::class, 'testpage']);
-
 /***** simple views *****/
 Route::get('/', [SiteController::class, 'homepage']);
 Route::get('/activities', [SiteController::class, 'listActivities']);
