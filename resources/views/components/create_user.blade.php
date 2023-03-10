@@ -15,11 +15,11 @@
         </div>
         <div>
             <span>Password :</span>
-            <input type="password" name="password" required>
+            <input type="password" name="password" <?= isset($user) ? '' : 'required' ?>>
         </div>
         <div>
             <span>Retype Password :</span>
-            <input type="password_confirmation" name="password" required>
+            <input type="password_confirmation" name="password" <?= isset($user) ? '' : 'required' ?>>
         </div>
         @if ($admin)
             <div>
@@ -30,8 +30,9 @@
                 </select>
             </div>
         @endif
-        <div>
-            <input type="submit" value="Submit">
-        </div>
+        @if (isset($user))
+            <input name="id" type="hidden" value="<?= $user->id ?>">
+        @endif
+        <input type="submit" value="Submit">
     </form>
 </div>

@@ -25,11 +25,15 @@ Route::get('/admin', [SiteController::class, 'showAdmin'] );
 Route::get('/user-zone', [SiteController::class, 'showUser'] );
 
 /***** form views *****/
-Route::post('/create-user', [UserController::class, 'createUser']);
 
 /***** submit pages *****/
+/* log in/out */
 Route::post('/connect', [UserController::class, 'connect']);
 Route::get('/disconnect', [UserController::class, 'disconnect']);
+
+/* User */
+Route::post('/create-user', [UserController::class, 'createUser']);
+Route::post('/modify-user', [UserController::class, 'modifyUser']);
 Route::get('/delete-user/{id}', [UserController::class, 'deleteUser']);
 
 

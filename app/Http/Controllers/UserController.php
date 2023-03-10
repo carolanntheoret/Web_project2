@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 
 class UserController extends Controller
@@ -53,16 +54,15 @@ class UserController extends Controller
             'last_name' => 'required|max:255',
             'email' => 'required|max:255|email',
             'password' => 'required|max:255',
-            'password_confirmation' => 'required|confirmed|max:255',
+            'password_confirmation' => 'confirmed',
         ]);
 
-        $admin = $request->admin == NULL ? false : true;
         $user = new User();
         $user->first_name = $request->first_name;
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
-        $user->admin = $admin;
+        $user->admin = $request->admin == "true" ? 1 : 0;
 
         $user->save();
 
@@ -73,10 +73,39 @@ class UserController extends Controller
     }
 
     /**
-     * Delete a user !
+     * Modify a user in the database
      *
      * @param Request $request
      * @return void
+     */
+    public function modifyUser(Request $request)
+    {
+        $request->validate([
+            'first_name' => 'required|max:255',
+            'last_name' => 'required|max:255',
+            'email' => 'required|max:255|email',
+            'password' => 'max:255',
+            'password_confirmation' => 'confirmed',
+            'id' => 'required',
+        ]);
+
+        $success = User::where('id', '=', $request->id)->update([
+            'first_name' => $request->first_name,
+            'last_name' => $request->last_name,
+            'email' => $request->email,
+            'password' => $request->password == null ? (DB::table('users')->select('password')->where('id', '=', $request->id)->get())[0]->password : Hash::make($request->password),
+            'admin' => $request->admin == "true" ? 1 : 0,
+        ]);
+
+        if(!$success) return back()->with('modify_error', 'An error occurred while updating the user');
+        return back()->with('modify_success', 'Modification successful');
+    }
+
+    /**
+     * Delete a user !
+     *
+     * @param Request $request
+     * @return object
      */
     public function deleteUser(Request $request)
     {
