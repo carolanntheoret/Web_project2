@@ -14,7 +14,7 @@ class SiteController extends Controller
         if(Auth::check()) $user = auth()->user();
         return view('test', [
             'user' => $user,
-            'all_users' => User::get(),
+            'a_user' => User::get()[0],
         ]);
     }
 

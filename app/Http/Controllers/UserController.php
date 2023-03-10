@@ -52,7 +52,8 @@ class UserController extends Controller
             'first_name' => 'required|max:255',
             'last_name' => 'required|max:255',
             'email' => 'required|max:255|email',
-            'password' => 'required|max:255'
+            'password' => 'required|max:255',
+            'password_confirmation' => 'required|confirmed|max:255',
         ]);
 
         $admin = $request->admin == NULL ? false : true;

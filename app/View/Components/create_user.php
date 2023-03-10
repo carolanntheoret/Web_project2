@@ -6,14 +6,17 @@ use Illuminate\View\Component;
 
 class create_user extends Component
 {
+    public $admin;
+    public $user;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($connected_user, $user_to_modify)
     {
-        //
+        $this->admin = $connected_user->admin ? true : false;
+        $this->user = $user_to_modify ?? null;
     }
 
     /**
