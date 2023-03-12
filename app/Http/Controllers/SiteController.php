@@ -18,7 +18,7 @@ class SiteController extends Controller
      */
     public function homepage()
     {
-        return view('homepage');
+        return view('homepage', ['title' => 'HIFF']);
     }
 
     /**
@@ -28,7 +28,36 @@ class SiteController extends Controller
      */
     public function listActivities()
     {
-        return view('activities');
+        return view('activities', ['title' => 'HIFF Activities']);
+    }
+        /**
+     * Display news view
+     *
+     * @return object
+     */
+    public function showNews()
+    {
+        return view('news', ['title' => 'HIFF News']);
+    }
+
+    /**
+     * Display packages view
+     *
+     * @return object
+     */
+    public function showPackage()
+    {
+        return view('packages', ['title' => 'HIFF Packages']);
+    }
+
+    /**
+     * Display the contact view
+     *
+     * @return object
+     */
+    public function showContact()
+    {
+        return view('contact', ['title' => 'HIFF contact us']);
     }
 
     /**
@@ -38,8 +67,8 @@ class SiteController extends Controller
      */
     public function showAdmin()
     {
-        if(Auth::check() && auth()->user()->admin == 1) return view('spaceAdmin');
-        return redirect('/user-zone');
+        if (Auth::check() && auth()->user()->admin == 1) return view('spaceAdmin');
+        return redirect('/user-zone', ['title' => 'Admin Zone']);
     }
 
     /**
@@ -49,6 +78,8 @@ class SiteController extends Controller
      */
     public function showUser()
     {
-        return view('spaceUser');
+        return view('spaceUser', ['title' => 'User Zone']);
     }
+
+
 }

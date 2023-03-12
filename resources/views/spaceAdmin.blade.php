@@ -1,6 +1,6 @@
+<x-layout :title="$title">
 
-<x-layout>
-
+    @section('content')
         <main class="w-80 m-auto mt-5">
 
             <div class="container py-5">
@@ -16,5 +16,4 @@
             </div>
         </main>
 
-</x-layout>
-
+    </x-layout>

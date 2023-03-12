@@ -5,12 +5,15 @@
 
             <div class="container py-5">
                 <h1 class="text-center text-color m-0 fs-1">Titre H1 - ouais c'est gros</h1>
+
                 <div class="mt-5">
-                    <p>espace utilisateur</p>
-                    <x-login></x-login>
-                    <a href="/">Homepage</a>
+                    <p>The news
+
+                    </p>
+
                 </div>
+                <a href="/">Homepage</a>
             </div>
         </main>
-    @endsection
-</x-layout>
+
+    </x-layout>
