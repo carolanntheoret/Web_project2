@@ -20,6 +20,7 @@ class ReservationFactory extends Factory
             'pass_id' => Pass::inRandomOrder()->first()->id,
             'open_day' => $this->faker->dateTimeBetween('-2 weeks', '-1 week'),
             'closed_day' => $this->faker->dateTimeBetween('-1 week', 'now'),
+            'quantity' => $this->faker->numberBetween(1, 5),
         ];
     }
 }
