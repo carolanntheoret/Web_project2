@@ -14,7 +14,7 @@
     </div>
     <div>
         <span>Image :</span>
-        <input type="file" name="image">
+        <input name="image" type="text">
     </div>
     <input type="submit" value="Submit">
 </form>
