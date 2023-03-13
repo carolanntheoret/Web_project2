@@ -80,6 +80,4 @@ class SiteController extends Controller
     {
         return view('spaceUser', ['title' => 'User Zone']);
     }
-
-
 }
