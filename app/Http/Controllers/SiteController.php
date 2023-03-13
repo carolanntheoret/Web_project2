@@ -67,8 +67,8 @@ class SiteController extends Controller
      */
     public function showAdmin()
     {
-        if (Auth::check() && auth()->user()->admin == 1) return view('spaceAdmin');
-        return redirect('/user-zone', ['title' => 'Admin Zone']);
+        if (Auth::check() && auth()->user()->admin == 1) return view('spaceAdmin', ['title' => 'Admin Zone']);
+        return redirect('/user-zone');
     }
 
     /**

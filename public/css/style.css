@@ -1,53 +1,49 @@
 body {
   font-family: sans-serif;
-  color: #fbf7ea;
-  background-color: #1f2833;
+  color: #fefed5;
+  background-color: #222222;
 }
-body .content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-body .content .mainBlock {
+body .mainBlock {
   border: 1px solid #fefed5;
   border-radius: 4px;
   padding: 20px;
   margin: 20px;
 }
-body .content .mainBlock .container {
+body .mainBlock .container {
   max-width: 95vw;
   margin: 0 auto;
 }
-body .content .mainBlock .container h1 {
+body .mainBlock .container h1 {
   font-size: 36px;
   font-weight: bold;
   margin-top: 0;
+  margin-bottom: 20px;
 }
-body .content .mainBlock .container h2 {
+body .mainBlock .container h2 {
   font-size: 28px;
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 20px;
 }
-body .content .mainBlock .container h3 {
+body .mainBlock .container h3 {
   font-size: 24px;
   font-weight: bold;
   margin-top: 0;
   margin-bottom: 20px;
 }
-body .content .mainBlock .container .mainText {
-  font-size: 16px;
+body .mainBlock .container .mainText {
+  font-size: 20px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
-body .content .mainBlock .container .secText {
-  font-size: 14px;
+body .mainBlock .container .secText {
+  font-size: 15px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
-body .content .mainBlock .container .mainBtn,
-body .content .mainBlock .container .secBtn,
-body .content .mainBlock .container .thirdBtn {
+body .mainBlock .container .mainBtn,
+body .mainBlock .container .secBtn,
+body .mainBlock .container .thirdBtn {
   display: inline-block;
   padding: 10px 20px;
   font-size: 16px;
@@ -58,28 +54,40 @@ body .content .mainBlock .container .thirdBtn {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-body .content .mainBlock .container .mainBtn .mainBtn,
-body .content .mainBlock .container .secBtn .mainBtn,
-body .content .mainBlock .container .thirdBtn .mainBtn {
+body .mainBlock .container .mainBtn .mainBtn,
+body .mainBlock .container .secBtn .mainBtn,
+body .mainBlock .container .thirdBtn .mainBtn {
+  background-color: #f348a4;
+  color: #fff;
+  border: none;
+}
+body .mainBlock .container .mainBtn .mainBtn .mainBtn:hover,
+body .mainBlock .container .secBtn .mainBtn .mainBtn:hover,
+body .mainBlock .container .thirdBtn .mainBtn .mainBtn:hover {
+  background-color: #f0188c;
+}
+body .mainBlock .container .mainBtn .secBtn,
+body .mainBlock .container .secBtn .secBtn,
+body .mainBlock .container .thirdBtn .secBtn {
+  background-color: #fff;
   color: #f348a4;
-  font-size: 40px;
-  border: none;
-  background-color: #fff;
+  border: 2px solid #f348a4;
 }
-body .content .mainBlock .container .mainBtn .secBtn,
-body .content .mainBlock .container .secBtn .secBtn,
-body .content .mainBlock .container .thirdBtn .secBtn {
-  background-color: #fff;
-}
-body .content .mainBlock .container .mainBtn .secBtn .secBtn:hover,
-body .content .mainBlock .container .secBtn .secBtn .secBtn:hover,
-body .content .mainBlock .container .thirdBtn .secBtn .secBtn:hover {
+body .mainBlock .container .mainBtn .secBtn .secBtn:hover,
+body .mainBlock .container .secBtn .secBtn .secBtn:hover,
+body .mainBlock .container .thirdBtn .secBtn .secBtn:hover {
+  background-color: #f348a4;
   color: #fff;
 }
-body .content .mainBlock .container .mainBtn .thirdBtn,
-body .content .mainBlock .container .secBtn .thirdBtn,
-body .content .mainBlock .container .thirdBtn .thirdBtn {
+body .mainBlock .container .mainBtn .thirdBtn,
+body .mainBlock .container .secBtn .thirdBtn,
+body .mainBlock .container .thirdBtn .thirdBtn {
+  background-color: #35d0ba;
   color: #fff;
   border: none;
-  color: #fff;
+}
+body .mainBlock .container .mainBtn .thirdBtn .thirdBtn:hover,
+body .mainBlock .container .secBtn .thirdBtn .thirdBtn:hover,
+body .mainBlock .container .thirdBtn .thirdBtn .thirdBtn:hover {
+  background-color: #28aa98;
 }/*# sourceMappingURL=style.css.map */

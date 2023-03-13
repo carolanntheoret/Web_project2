@@ -1,0 +1,124 @@
+
+
+// Colors
+// almost white #fbf7ea
+// soft yellow #fefed5
+// p!nk #f348a4
+// reddish pink #f54674
+// light turquoise #65efce
+// logo turquoise #35d0ba
+// light grey #a8a8a8
+// middle gray #707070
+// deep blue #1f2833
+// almost black #222222
+
+// Variables
+$reddish-pink: #f348a4;
+$logo-turquoise: #35d0ba;
+$almost-white: #fefed5;
+$deep-blue: #1f2833;
+$almost-black: #222222;
+
+//can be used like:
+//background-color: darken($primary-color, 10%);
+
+// Styles
+body {
+    font-family: sans-serif;
+    color: $almost-white;
+    background-color: $almost-black;
+
+    .mainBlock {
+        border: 1px solid #fefed5;
+        border-radius: 4px;
+        padding: 20px;
+        margin: 20px;
+
+        .container {
+            max-width: 95vw;
+            margin: 0 auto;
+
+
+            h1 {
+                font-size: 36px;
+                font-weight: bold;
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+
+            h2 {
+                font-size: 28px;
+                font-weight: bold;
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+
+            h3 {
+                font-size: 24px;
+                font-weight: bold;
+                margin-top: 0;
+                margin-bottom: 20px;
+            }
+
+            .mainText {
+                font-size: 20px;
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+
+            .secText {
+                font-size: 15px;
+                line-height: 1.5;
+                margin-bottom: 20px;
+            }
+
+            .mainBtn,
+            .secBtn,
+            .thirdBtn {
+                display: inline-block;
+                padding: 10px 20px;
+                font-size: 16px;
+                font-weight: bold;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 4px;
+                cursor: pointer;
+                transition: all 0.3s ease-in-out;
+
+                .mainBtn {
+                    background-color: $reddish-pink;
+                    color: #fff;
+                    border: none;
+
+                    .mainBtn:hover {
+                        background-color: darken($reddish-pink, 10%);
+                    }
+                }
+
+
+                .secBtn {
+                    background-color: #fff;
+                    color: $reddish-pink;
+                    border: 2px solid $reddish-pink;
+
+                    .secBtn:hover {
+                        background-color: $reddish-pink;
+                        color: #fff;
+                    }
+                }
+
+
+                .thirdBtn {
+                    background-color: $logo-turquoise;
+                    color: #fff;
+                    border: none;
+
+                    .thirdBtn:hover {
+                        background-color: darken($logo-turquoise, 10%);
+                    }
+                }
+            }
+        }
+    }
+
+}
