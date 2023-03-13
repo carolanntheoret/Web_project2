@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
@@ -32,13 +33,13 @@ Route::post('/connect', [UserController::class, 'connect']);
 Route::get('/disconnect', [UserController::class, 'disconnect']);
 
 /* User */
-Route::post('/create-user', [UserController::class, 'createUser']);
-Route::post('/modify-user', [UserController::class, 'modifyUser']);
-Route::get('/delete-user/{id}', [UserController::class, 'deleteUser']);
+Route::post('/create-user', [UserController::class, 'create']);
+Route::post('/modify-user', [UserController::class, 'modify']);
+Route::get('/delete-user/{id}', [UserController::class, 'delete']);
 
 /* Reservation */
 Route::post('/reservation', [ReservationController::class, 'reserve']);
 Route::get('/delete-reservation', [ReservationController::class, 'cancel']);
 
-
-
+/* Activity */
+Route::post('/create-activity', [ActivityController::class, 'create']);

@@ -1,12 +1,20 @@
-<form action="/onverra" method="post">
+<form action="/create-activity" method="post">
+    @csrf
     <div>
         <span>Title :</span>
         <input name="title" type="text">
     </div>
     <div>
         <span>Description :</span>
-        <input name="description" type="text">
+        <textarea name="description" cols="30" rows="10"></textarea>
     </div>
-    <div></div>
-    <div></div>
+    <div>
+        <span>Presentation Time :</span>
+        <input type="datetime-local" value="2023-03-08T11:30">
+    </div>
+    <div>
+        <span>Image :</span>
+        <input type="file" name="image">
+    </div>
+    <input type="submit" value="Submit">
 </form>
