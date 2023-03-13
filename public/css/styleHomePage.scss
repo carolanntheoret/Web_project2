@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+
+    .firstSection {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 95.5vh;
+        margin-top: 0;
+    }
+    .festivalTitle {
+        width: 30%;
+        height: 100%;
+        align-self: end;
+        justify-content: left;
+        border: 2px solid black;
+        background-color: rgb(197, 197, 197);
+    }
+
+    .multipleScreen {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+    }
+
+    .topRow {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 50%;
+        background-color: rgb(197, 197, 197);
+        border: 1px solid black;
+
+        span {
+            width: 33.333333%;
+            height: 100%;
+            border: 1px solid black;
+        }
+    }
+    .downRow {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 50%;
+        background-color: rgb(197, 197, 197);
+        border: 1px solid black;
+
+            span {
+                width: 33.333333%;
+                height: 100%;
+                border: 1px solid black;
+        }
+    }
+    .aboutSection {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        height: 110vh;
+        align-items: center;
+        justify-content: center;
+        gap: 12%;
+        .aboutInfo {
+            display: flex;
+            flex-direction: column;
+            width: 25%;
+        }
+        .aboutImage span {
+            display: flex;
+            background-color: rgba(212, 212, 212, 0.426);
+            width: 500px;
+            height: 500px;
+            padding: 15px 20px 15px 70px;
+        }
+    }
+    .latestNews {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        .news {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            height: 100vh;
+            justify-content: center;
+            margin-top: 25px;
+            gap: 20%;
+            .newsPicture {
+                display: flex;
+                align-self: auto;
+                background-color: rgba(212, 212, 212, 0.426);
+                width: 442px;
+                height: 284px;
+                position: relative;
+            }
+            .banner {
+                position: absolute;
+                top: 13px;
+                font-size: 25px;
+                font-size: bold;
+                align-items: center;
+                left: -25px;
+                width: 365px;
+                height: 66px;
+                padding: 15px 55px 15px 35px;
+                background-color: #35d0ba;
+            }
+        }
+        .mainNews {
+            margin-top: 0;
+            max-width: 600px;
+            .newsPicture {
+                width: 900px;
+                height: 500px;
+
+            }
+        }
+
+    }
+    .showEvents {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100vh;
+       align-items: center;
+       .eventTop {
+            display: flex;
+            flex-direction: row;
+            gap: 0;
+        }
+
+        .eventDown {
+            display: flex;
+            flex-direction: row;
+            gap: 0;
+        }
+        .event {
+            width: 350px;
+            height: 450px;
+            padding-left: 55px;
+            padding-top: 100px;
+        }
+
+        .showEvents img {
+            width: 25px;
+            height: 20px;
+        }
+
+        .image {
+            width: 350px;
+            height: 450px;
+            background-color: rgb(190, 190, 190);
+            background-size: cover;
+        }
+        span {
+            width: 150px;
+            height: 200px;
+            background-color: black;
+        }
+     }
+}
