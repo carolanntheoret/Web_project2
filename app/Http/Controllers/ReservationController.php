@@ -26,6 +26,7 @@ class ReservationController extends Controller
         $pass->user_id = auth()->user()->id;
         $pass->open_day = date('Y-m-d'); // à modifier
         $pass->closed_day = date('Y-m-d'); // à modifier
+        // ajouter quantité
 
         if($pass->save()) return back()->with('reservation_successful', 'Your reservation has been recorded sucessfully');
         return back()->with('reservation_fail', 'Something went wrong when recording your reservation');
@@ -48,6 +49,8 @@ class ReservationController extends Controller
         if(!Reservation::find($request->id)) return back()->with('reservation_missing', "La réservation est introubable");
 
         $reservation = Reservation::where('id', '=', $request->id)->first();
+
+        // ajouter condition si plusieurs
 
         // si ce n'est ni un admin, ni l'utilisateur qui a la réservation
         if(auth()->user()->admin == 0 && auth()->user()->id != $reservation->user_id) return back();

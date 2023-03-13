@@ -20,12 +20,12 @@
         <span>Retype Password :</span>
         <input type="password_confirmation" name="password" <?= isset($user) ? '' : 'required' ?>>
     </div>
-    @if ($admin)
+    @if ($admin && !isset($user))
         <div>
             <span>Role :</span>
             <select name="admin" required>
-                <option value="false" <?= isset($user) && $user->admin == 0 ? 'selected' : '' ?>>User</option>
-                <option value="true" <?= isset($user) && $user->admin == 1 ? 'selected' : '' ?>>Admin</option>
+                <option value="false">User</option>
+                <option value="true">Admin</option>
             </select>
         </div>
     @endif

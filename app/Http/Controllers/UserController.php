@@ -47,7 +47,7 @@ class UserController extends Controller
      * @param Request $request
      * @return object
      */
-    public function createUser(Request $request)
+    public function create(Request $request)
     {
         $request->validate([
             'first_name' => 'required|max:255',
@@ -78,7 +78,7 @@ class UserController extends Controller
      * @param Request $request
      * @return void
      */
-    public function modifyUser(Request $request)
+    public function modify(Request $request)
     {
         $request->validate([
             'first_name' => 'required|max:255',
@@ -107,7 +107,7 @@ class UserController extends Controller
      * @param Request $request
      * @return object
      */
-    public function deleteUser(Request $request)
+    public function delete(Request $request)
     {
         if(!auth()->user()->admin) return back();
         if(!User::find($request->id)) return back()->with('user_missing', "L'utilisateur est introubable");
