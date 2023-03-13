@@ -5,9 +5,10 @@
             <div class="container py-5">
                 <h1 class="text-center text-color m-0 fs-1">Titre H1 - ouais c'est gros</h1>
 
-                <p maintext></p>
-                <div class="mt-5">
-                    <p>patate dynamique - homepage</p>
+                <p mainText>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, officiis! Quibusdam asper </p>
+
+
+                    <p secText>patate dynamique - homepage</p>
 
                     <a class="mainbtn" href="/admin">space Admin</a>
                     |
@@ -17,7 +18,6 @@
                     |
                     <a href="disconnect">Log Out</a>
 
-                </div>
 
             </div>
         </main>
