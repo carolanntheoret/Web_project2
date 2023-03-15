@@ -12,6 +12,13 @@ use Illuminate\Support\Facades\DB;
 
 class SiteController extends Controller
 {
+    public function test()
+    {
+        return view('test', [
+            'pass' => Pass::where('id', '=', 4)->first(),
+        ]);
+    }
+
     /**
      * Display the homepage view
      *
