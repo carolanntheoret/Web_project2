@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\ActivityHour;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -19,6 +20,7 @@ class DatabaseSeeder extends Seeder
             ReservationSeeder::class,
             ActivitySeeder::class,
             NewsSeeder::class,
+            ActivityHourSeeder::class,
         ]);
     }
 }

@@ -2,9 +2,10 @@
 
 namespace Database\Factories;
 
+use App\Models\Activity;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
-class ActivityFactory extends Factory
+class ActivityHourFactory extends Factory
 {
     /**
      * Define the model's default state.
@@ -14,9 +15,8 @@ class ActivityFactory extends Factory
     public function definition()
     {
         return [
-            'title' => $this->faker->word(),
-            'description' => $this->faker->text(150),
-            'image' => 'https://i.pravatar.cc/300',
+            'activity_id' => Activity::inRandomOrder()->first()->id,
+            'begin_time' => $this->faker->unixTime(),
         ];
     }
 }
