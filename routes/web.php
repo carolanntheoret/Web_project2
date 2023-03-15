@@ -25,8 +25,6 @@ Route::get('/activities', [SiteController::class, 'listActivities']);
 Route::get('/admin', [SiteController::class, 'showAdmin'] );
 Route::get('/user-zone', [SiteController::class, 'showUser'] );
 
-/***** form views *****/
-
 /***** submit pages *****/
 /* log in/out */
 Route::post('/connect', [UserController::class, 'connect']);
@@ -44,3 +42,4 @@ Route::get('/delete-reservation', [ReservationController::class, 'cancel']);
 /* Activity */
 Route::post('/create-activity', [ActivityController::class, 'create']);
 Route::post('/modify-activity', [ActivityController::class, 'modify']);
+Route::get('/delete-activity', [ActivityController::class, 'delete']);

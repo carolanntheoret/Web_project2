@@ -1,1 +1,1 @@
-<x-activity_form :activity="$activity"/>
+<a href="/delete-activity?id=<?= $activity->id ?>">Delete</a>

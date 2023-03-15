@@ -17,6 +17,9 @@ class ActivityController extends Controller
      */
     public function create(Request $request)
     {
+        if(!auth()->check()) return redirect('/user-zone');
+        if(!auth()->user()->admin) return back();
+
         $request->validate([
             'title' => 'required|max:255',
             'description' => 'required',
@@ -49,6 +52,9 @@ class ActivityController extends Controller
      */
     public function modify(Request $request)
     {
+        if(!auth()->check()) return redirect('/user-zone');
+        if(!auth()->user()->admin) return back();
+
         $request->validate([
             'id' => 'required',
             'title' => 'required|max:255',
@@ -64,5 +70,15 @@ class ActivityController extends Controller
 
         if(!$success) return back()->with('modify_error', 'An error occurred while updating the activity');
         return back()->with('modify_success', 'Modification successful');
+    }
+
+    public function delete(Request $request)
+    {
+        // if(!auth()->check()) return redirect('/user-zone');
+        // if(!auth()->user()->admin) return back();
+
+        $request->validate(['id' => 'required']);
+        if(Activity::where('id', $request->id)->delete()) return back()->with(['delete_successful', 'The activity has been deleted sucessfully']);
+        return back()->withInput(['delete_fail', 'An error occurred while deleting the activity']);
     }
 }
