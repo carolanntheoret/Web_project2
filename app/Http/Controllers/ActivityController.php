@@ -74,8 +74,8 @@ class ActivityController extends Controller
 
     public function delete(Request $request)
     {
-        // if(!auth()->check()) return redirect('/user-zone');
-        // if(!auth()->user()->admin) return back();
+        if(!auth()->check()) return redirect('/user-zone');
+        if(!auth()->user()->admin) return back();
 
         $request->validate(['id' => 'required']);
         if(Activity::where('id', $request->id)->delete()) return back()->with(['delete_successful', 'The activity has been deleted sucessfully']);
