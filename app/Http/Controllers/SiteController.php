@@ -11,13 +11,6 @@ use Illuminate\Support\Facades\DB;
 
 class SiteController extends Controller
 {
-    public function test()
-    {
-        return view('test', [
-            'id' => 4,
-        ]);
-    }
-
     /**
      * Display the homepage view
      *
