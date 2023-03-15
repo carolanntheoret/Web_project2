@@ -72,6 +72,12 @@ class ActivityController extends Controller
         return back()->with('modify_success', 'Modification successful');
     }
 
+    /**
+     * Delete an activity in the database
+     *
+     * @param Request $request
+     * @return object
+     */
     public function delete(Request $request)
     {
         if(!auth()->check()) return redirect('/user-zone');
@@ -80,5 +86,49 @@ class ActivityController extends Controller
         $request->validate(['id' => 'required']);
         if(Activity::where('id', $request->id)->delete()) return back()->with(['delete_successful', 'The activity has been deleted sucessfully']);
         return back()->withInput(['delete_fail', 'An error occurred while deleting the activity']);
+    }
+
+    /**
+     * Add an activity time in the database
+     *
+     * @param Request $request
+     * @return object
+     */
+    public function addTime(Request $request)
+    {
+        if(!auth()->check()) return redirect('/user-zone');
+        if(!auth()->user()->admin) return back();
+
+        $request->validate([
+            'id' => "required",
+            'time' => "required",
+        ]);
+
+        $activity_hour = new ActivityHour();
+
+        $activity_hour->activity_id = $request->id;
+        $activity_hour->begin_time = strtotime($request->time);
+
+        if(!$activity_hour->save()) return back()->with('add_time_error', 'An error occurred while addind activity time');
+        return back()->with('add_time_success', 'Activity time was added successfully');
+    }
+
+    /**
+     * Delete an activity time of the database
+     *
+     * @param Request $request
+     * @return object
+     */
+    public function deleteTime(Request $request)
+    {
+        if(!auth()->check()) return redirect('/user-zone');
+        if(!auth()->user()->admin) return back();
+
+        $request->validate([
+            'id' => "required",
+        ]);
+
+        if(!ActivityHour::where('id', '=', $request->id)->delete()) return back()->with('delete_time_error', 'An error occurred while deleting the activity time');
+        return back()->with('delete_time_success', 'The activity time was deleted sucessfully');
     }
 }

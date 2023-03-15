@@ -1,1 +1,1 @@
-<a href="/delete-activity?id=<?= $activity->id ?>">Delete</a>
+<a href="/delete-activity-time?id=4">Delete</a>

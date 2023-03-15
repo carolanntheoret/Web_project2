@@ -13,9 +13,8 @@ class SiteController extends Controller
 {
     public function test()
     {
-        $activity = DB::table('activities')->first();
         return view('test', [
-            'activity' => $activity,
+            'id' => 4,
         ]);
     }
 

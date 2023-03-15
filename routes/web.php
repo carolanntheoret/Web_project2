@@ -43,3 +43,5 @@ Route::get('/delete-reservation', [ReservationController::class, 'cancel']);
 Route::post('/create-activity', [ActivityController::class, 'create']);
 Route::post('/modify-activity', [ActivityController::class, 'modify']);
 Route::get('/delete-activity', [ActivityController::class, 'delete']);
+Route::post('/add-activity-time', [ActivityController::class, 'addTime']);
+Route::get('/delete-activity-time', [ActivityController::class, 'deleteTime']);
