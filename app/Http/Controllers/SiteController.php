@@ -11,6 +11,14 @@ use Illuminate\Support\Facades\DB;
 
 class SiteController extends Controller
 {
+    public function test()
+    {
+        $activity = DB::table('activities')->first();
+        return view('test', [
+            'activity' => $activity,
+        ]);
+    }
+
     /**
      * Display the homepage view
      *

@@ -1,1 +1,1 @@
-<x-create_activity></x-create_activity>
+<x-activity_form :activity="$activity"/>

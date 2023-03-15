@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test', function () { return view('test');});
+Route::get('/test', [SiteController::class, 'test']);
 
 /***** simple views *****/
 Route::get('/', [SiteController::class, 'homepage']);
@@ -43,3 +43,4 @@ Route::get('/delete-reservation', [ReservationController::class, 'cancel']);
 
 /* Activity */
 Route::post('/create-activity', [ActivityController::class, 'create']);
+Route::post('/modify-activity', [ActivityController::class, 'modify']);
