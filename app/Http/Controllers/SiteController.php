@@ -15,7 +15,7 @@ class SiteController extends Controller
     public function test()
     {
         return view('test', [
-            'pass' => Pass::where('id', '=', 4)->first(),
+            'reservation' => Reservation::first(),
         ]);
     }
 

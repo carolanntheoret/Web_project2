@@ -1,1 +1,1 @@
-<x-take_reservation :pass="$pass"/>
+<x-modify_reservation :reservation="$reservation"/>
