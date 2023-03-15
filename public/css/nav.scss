@@ -1,0 +1,148 @@
+// Colors
+// almost white #fbf7ea
+// soft yellow #fefed5
+// p!nk #f348a4
+// reddish pink #f54674
+// light turquoise #65efce
+// logo turquoise #35d0ba
+// light grey #a8a8a8
+// middle gray #707070
+// deep blue #1f2833
+// almost black #222222
+
+// Variables
+@font-face {
+    font-family: SupaMegaFantastic;
+    src: url("../font/Nicky Laatz  - SupaMegaFantastic-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SupaMegaFantasticCAPS;
+    font-weight: bold;
+    src: url("../font/Nicky Laatz  - SupaMegaFantasticCaps-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: SupaMegaFantasticTHIN;
+    font-weight: bold;
+    src: url("../font/Nicky Laatz  - SupaMegaFantasticThin-Regular.otf") format("opentype");
+}
+
+
+$reddish-pink: #f54674;
+$pink: #f348a4;
+$logo-turquoise: #35d0ba;
+$almost-white: #fefed5;
+$deep-blue: #1f2833;
+$almost-black: #222222;
+
+.navigation {
+    background-color: $deep-blue;
+    left: 0px;
+    width: 100vw;
+    //height: 135px;
+
+    #navBlock {
+        display: flex;
+
+        .navLogo {
+            display: flex;
+            font-family: SupaMegaFantasticCAPS;
+
+            .navName1 {
+                font-size: 25px;
+                margin: 0;
+            }
+
+            .navName2 {
+                /* font-size: 6em; */
+                font-size: 11vh;
+                margin: 0;
+            }
+        }
+
+        .navLinks {
+            //display: flex;
+            margin-top: 9vh;
+
+            .navList {
+                display: inline-block;
+                padding: 10px 20px;
+
+                a {
+                    text-decoration: none;
+                    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                    color: $almost-white;
+                    font-size: large;
+
+                    a:hover {
+                        //background-color: lighten($deep-blue, $amount: 10);
+                        background: linear-gradient(to right, $reddish-pink, $pink);
+                    }
+                }
+            }
+        }
+
+        .mainBtn {
+            background: linear-gradient(to right, $reddish-pink, $pink);
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 8px;
+            margin: auto;
+            cursor: pointer;
+            //transition: all 0.3s ease-in-out;
+            color: $almost-white;
+            border: none;
+
+            .mainBtn:hover {
+                background-color: darken($reddish-pink, 10%);
+            }
+        }
+
+        .navIcon {
+            margin: auto;
+            /* Style du menu déroulant */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+
+        }
+
+        /* Style du contenu du menu déroulant */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            z-index: 1;
+
+            min-width: 160px;
+            padding: 5px 0;
+            border: 1px solid $almost-black;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            background-color: lighten($deep-blue, $amount: 10);
+        }
+
+        /* Style des liens dans le contenu du menu déroulant */
+        .dropdown-content a {
+            color: $almost-white;
+            padding: 10px 16px;
+            text-decoration: none;
+            display: block;
+
+        }
+
+        /* Style des liens au survol de la souris */
+        .dropdown-content a:hover {
+            background-color: lighten($deep-blue, $amount: 20);
+        }
+
+        /* Afficher le contenu du menu déroulant au survol du bouton principal */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+        }
+
+
+    }
+}
