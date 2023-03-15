@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Activity;
 use App\Models\Pass;
 use App\Models\Reservation;
 use App\Models\User;
@@ -67,10 +68,23 @@ class SiteController extends Controller
      */
     public function showAdmin()
     {
-        if (Auth::check() && auth()->user()->admin == 1) return view('spaceAdmin', ['title' => 'Admin Zone']);
-        return redirect('/user-zone');
+        if (!Auth::check() || !auth()->user()->admin == 1) return redirect('/user-zone');
+        return view('spaceAdmin', ['title' => 'Admin Zone',
+        "users" => DB::table('users')->where('admin', '=', '1')->get(),
+        "employees" => DB::table('users')->where('admin', '=', '0')->get(),
+        "activities" => Activity::all(),
+        ]);
     }
 
+    /**
+     * Display create user space
+     *
+     * @return object
+     */
+    public function createUser()
+    {
+        return view('spaceUser', ['title' => 'User Zone']);
+    }
     /**
      * Display user space
      *

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styleHomePage.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styleAdmin.css') }}">
 </head>
 
 <body class="body">

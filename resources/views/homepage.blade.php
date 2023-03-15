@@ -1,7 +1,7 @@
 <x-layout :title="$title">
         <main class="">
 
-            {{-- <div class="container py-5">
+            <div class="container py-5">
                 <h1 class="text-center text-color m-0 fs-1">Titre H1 - ouais c'est gros</h1>
 
                 <p mainText>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus, officiis! Quibusdam asper </p>
@@ -18,7 +18,7 @@
                     <a href="disconnect">Log Out</a>
 
 
-            </div> --}}
+            </div>
         </div>
         <section class="firstSection">
             <div class="festivalTitle">
