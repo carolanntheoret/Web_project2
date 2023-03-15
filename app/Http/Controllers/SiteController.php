@@ -73,6 +73,7 @@ class SiteController extends Controller
         "users" => DB::table('users')->where('admin', '=', '1')->get(),
         "employees" => DB::table('users')->where('admin', '=', '0')->get(),
         "activities" => Activity::all(),
+        "passes" => Pass::find(auth()->user()->id)->pass,
         ]);
     }
 
