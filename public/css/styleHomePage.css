@@ -59,7 +59,7 @@ body .aboutSection {
 body .aboutSection .aboutInfo {
   display: flex;
   flex-direction: column;
-  width: 25%;
+  width: 35%;
 }
 body .aboutSection .aboutImage span {
   display: flex;
