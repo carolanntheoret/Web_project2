@@ -17,6 +17,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::get('/test', [SiteController::class, 'test']);
+
 /***** simple views *****/
 Route::get('/', [SiteController::class, 'homepage']);
 Route::get('/activities', [SiteController::class, 'listActivities']);
@@ -39,6 +41,7 @@ Route::get('/delete-user/{id}', [UserController::class, 'delete']);
 /* Reservation */
 Route::post('/reservation', [ReservationController::class, 'reserve']);
 Route::get('/delete-reservation', [ReservationController::class, 'cancel']);
+Route::get('/modify-reservation', [ReservationController::class, 'modify']);
 
 /* Activity */
 Route::post('/create-activity', [ActivityController::class, 'create']);

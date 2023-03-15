@@ -49,6 +49,8 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
+        if(auth()->check()) return back();
+
         $request->validate([
             'first_name' => 'required|max:255',
             'last_name' => 'required|max:255',
@@ -80,6 +82,9 @@ class UserController extends Controller
      */
     public function modify(Request $request)
     {
+        if(!auth()->check()) return redirect('/user-zone');
+        if(!auth()->user()->admin) return back();
+
         $request->validate([
             'first_name' => 'required|max:255',
             'last_name' => 'required|max:255',
