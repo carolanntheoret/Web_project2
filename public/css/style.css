@@ -56,45 +56,6 @@ body .mainBlock .container .secBtn .mainBtn {
   border-radius: 8px;
   margin: auto;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-body .mainBlock .container .mainBtn .mainBtn,
-body .mainBlock .container .secBtn .mainBtn,
-body .mainBlock .container .thirdBtn .mainBtn {
-  background-color: #f54674;
-  color: #fff;
-  border: none;
-}
-body .mainBlock .container .mainBtn .mainBtn .mainBtn:hover,
-body .mainBlock .container .secBtn .mainBtn .mainBtn:hover,
-body .mainBlock .container .thirdBtn .mainBtn .mainBtn:hover {
-  background-color: #f21650;
-}
-body .mainBlock .container .mainBtn .secBtn,
-body .mainBlock .container .secBtn .secBtn,
-body .mainBlock .container .thirdBtn .secBtn {
-  background-color: #fff;
-  color: #f54674;
-  border: 2px solid #f54674;
-}
-body .mainBlock .container .mainBtn .secBtn .secBtn:hover,
-body .mainBlock .container .secBtn .secBtn .secBtn:hover,
-body .mainBlock .container .thirdBtn .secBtn .secBtn:hover {
-  background-color: #f54674;
-  color: #fff;
-}
-body .mainBlock .container .mainBtn .thirdBtn,
-body .mainBlock .container .secBtn .thirdBtn,
-body .mainBlock .container .thirdBtn .thirdBtn {
-  background-color: #35d0ba;
-  color: #fff;
-  border: none;
-}
-body .mainBlock .container .mainBtn .thirdBtn .thirdBtn:hover,
-body .mainBlock .container .secBtn .thirdBtn .thirdBtn:hover,
-body .mainBlock .container .thirdBtn .thirdBtn .thirdBtn:hover {
-  background-color: #28aa98;
-}/*# sourceMappingURL=style.css.map */
   border: none;
 }
 body .mainBlock .container .mainBtn .mainBtn .mainBtn:hover,

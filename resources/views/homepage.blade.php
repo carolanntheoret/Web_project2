@@ -1,4 +1,5 @@
 <x-layout :title="$title">
+    <link rel="stylesheet" href="{{ asset('css/styleHomePage.css') }}">
         <main class="">
 
             <div class="container py-5">
