@@ -78,64 +78,119 @@
 .sectionAdmin .menuAdmin .menu .reservations:hover {
   background: linear-gradient(90deg, rgb(53, 208, 186) 0%, rgb(29, 133, 118) 100%);
 }
-.sectionAdmin .listeEmployes {
-  display: flex;
-  flex-direction: column;
-  width: 1240px;
-  height: 1080px;
-}
-.sectionAdmin .listeEmployes .employeSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: #8E8E8E;
-}
-.sectionAdmin .listeUsers {
-  display: flex;
-  flex-direction: column;
-  width: 1240px;
-  height: 1080px;
-}
-.sectionAdmin .listeUsers .usersSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: #8E8E8E;
-}
-.sectionAdmin .listeActivities {
-  display: flex;
-  flex-direction: column;
-  width: 1240px;
-  height: 1080px;
-}
-.sectionAdmin .listeActivities .activitiesSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: #8E8E8E;
-}
-.sectionAdmin .listeReservations {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 1240px;
-  height: 1080px;
-}
-.sectionAdmin .listeReservations .reservationSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  height: 100%;
-  background-color: #8E8E8E;
-}
 .sectionAdmin .sectionName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100px;
+  background-color: rgb(88, 88, 88);
+}
+.sectionAdmin .listEmployes {
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+  height: 1080px;
+}
+.sectionAdmin .listEmployes .employeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #C8C8C8;
+}
+.sectionAdmin .listEmployes .employeSection ul {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 10%;
+  gap: 20%;
+  justify-content: left;
+  align-items: center;
+  border-radius: 50px;
+  margin-top: 5%;
+  font-size: 25px;
+  color: black;
+  border: 1px solid #35D0BA;
+  background-color: rgba(53, 208, 186, 0.1);
+}
+.sectionAdmin .listUsers {
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+  height: 1080px;
+}
+.sectionAdmin .listUsers .usersSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #C8C8C8;
+}
+.sectionAdmin .listActivities {
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+  height: 1080px;
+}
+.sectionAdmin .listActivities .activitiesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #C8C8C8;
+}
+.sectionAdmin .listReservations {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1240px;
+  height: 1080px;
+}
+.sectionAdmin .listReservations .reservationSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 2%;
+}
+.sectionAdmin .listReservations .reservationSection .sectionMember {
+  width: 25%;
+  height: 100%;
+  background-color: #C8C8C8;
+}
+.sectionAdmin .listReservations .reservationSection .sectionMember .listMembers {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 5%;
+}
+.sectionAdmin .listReservations .reservationSection .sectionReservation {
+  width: 70%;
+  height: 100%;
+  background-color: #C8C8C8;
+}
+.sectionAdmin .listReservations .reservationSection .sectionReservation .listReservations {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 2.5%;
+}
+.sectionAdmin .titleReservation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100px;
+  background-color: rgb(88, 88, 88);
+}
+.sectionAdmin .titleMember {
   display: flex;
   align-items: center;
   justify-content: center;

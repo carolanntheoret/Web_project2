@@ -1,21 +1,21 @@
 
-$('.listeEmployes').hide()
+$('.listEmployes').hide()
 jQuery('.employes').on('click',function(){
-  jQuery('.listeEmployes').toggle() & $('.listeActivities').hide() & $('.listeReservations').hide() & $('.listeUsers').hide();
+  jQuery('.listEmployes').toggle() & $('.listActivities').hide() & $('.listReservations').hide() & $('.listUsers').hide();
 })
 
-$('.listeUsers').hide()
+$('.listUsers').hide()
 jQuery('.users').on('click',function(){
-  jQuery('.listeUsers').toggle() & $('.listeActivities').hide() & $('.listeReservations').hide() & $('.listeEmployes').hide();
+  jQuery('.listUsers').toggle() & $('.listActivities').hide() & $('.listReservations').hide() & $('.listEmployes').hide();
 })
 
-$('.listeActivities').hide()
+$('.listActivities').hide()
 jQuery('.activities').on('click',function(){
-  jQuery('.listeActivities').toggle() & $('.listeEmployes').hide() & $('.listeReservations').hide() & $('.listeUsers').hide();
+  jQuery('.listActivities').toggle() & $('.listEmployes').hide() & $('.listReservations').hide() & $('.listUsers').hide();
 })
 
 
 jQuery('.reservations').on('click',function(){
-  jQuery('.listeReservations').toggle() & $('.listeEmployes').hide() & $('.listeActivities').hide() & $('.listeUsers').hide();
+  jQuery('.listReservations').toggle() & $('.listEmployes').hide() & $('.listActivities').hide() & $('.listUsers').hide();
 })
 
