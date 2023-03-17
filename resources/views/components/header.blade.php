@@ -25,7 +25,7 @@
             {{-- au survol apparition du dropdown --}}
             <div class="dropdown-content">
                 {{-- soit il a un panier avec un item --}}
-                <a href="space-user">Voir les tickets - route a faire</a>
+                <a href="user-zone">Voir les tickets - route a faire</a>
                 {{-- soit il est diriger vers les packages a acheter --}}
                 <a href="package">Si pas d'achat fait, aller package </a>
 
