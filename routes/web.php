@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
@@ -24,7 +25,6 @@ Route::get('/', [SiteController::class, 'homepage']);
 Route::get('/activities', [SiteController::class, 'listActivities']);
 Route::get('/admin', [SiteController::class, 'showAdmin'] );
 Route::get('/user-zone', [SiteController::class, 'showUser'] );
-Route::get('/news', [SiteController::class, 'showNews']);
 Route::get('/package', [SiteController::class, 'showPackage']);
 Route::get('/contact', [SiteController::class, 'showContact']);
 
@@ -46,3 +46,7 @@ Route::get('/delete-reservation', [ReservationController::class, 'cancel']);
 
 /* Activity */
 Route::post('/create-activity', [ActivityController::class, 'create']);
+
+/* News Routes */
+Route::get('/news', [NewsController::class, 'showNewsPage']);
+Route::get('/news/{article}', [NewsController::class, 'show']);

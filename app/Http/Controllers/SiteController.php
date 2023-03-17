@@ -30,15 +30,6 @@ class SiteController extends Controller
     {
         return view('activities', ['title' => 'HIFF Activities']);
     }
-        /**
-     * Display news view
-     *
-     * @return object
-     */
-    public function showNews()
-    {
-        return view('news', ['title' => 'HIFF News']);
-    }
 
     /**
      * Display packages view
