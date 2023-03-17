@@ -11,21 +11,30 @@
                 <button class="reservations"><h2>Reservation</h2></div>
             </div>
             </section>
-            <section class="listeEmployes">
-                <div class="sectionName">Admin</div>
-                <div class="employeSection"><x-liste-admins :users="$users"/></div>
-            </section>
-            <section class="listeUsers">
-                <div class="sectionName">Employees</div>
-                <div class="usersSection"><x-liste-users :employees="$employees"/></div>
-            </section>
-            <section class="listeActivities">
-                <div class="sectionName">Activities</div>
-                <div class="activitiesSection"><x-liste-activities :activities="$activities"/></div>
-            </section>
-            <section class="listeReservations">
-                <div class="sectionName">Reservations</div>
-                <div class="reservationSection">Bonjour</div>
+                <section class="listEmployes">
+                    <div class="sectionName"><h3>Admin</h3></div>
+                    <div class="employeSection" style="overflow-y:scroll"><x-liste-admins :users="$users"/></div>
+                </section>
+                <section class="listUsers">
+                    <div class="sectionName"><h3>Employees</h3></div>
+                    <div class="usersSection" style="overflow-y:scroll"><x-liste-users :employees="$employees"/></div>
+                </section>
+                <section class="listActivities">
+                    <div class="sectionName"><h3>Activities</h3></div>
+                    <div class="activitiesSection" style="overflow-y:scroll"><x-liste-activities :activities="$activities"/></div>
+                </section>
+                <section class="listReservations">
+
+                <div class="reservationSection">
+                    <div class="sectionMember">
+                        <div class="titleMember"><h3>Membres</h3></div>
+                        <div class="listMembers"><x-liste-users :employees="$employees"/></div>
+                    </div>
+                    <div class="sectionReservation">
+                        <div class="titleReservation"><h3>Reservations</h3></div>
+                        <div class="listReservations">bonjour</div>
+                    </div>
+                </div>
             </section>
 
 

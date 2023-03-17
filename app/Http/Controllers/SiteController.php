@@ -55,6 +55,15 @@ class SiteController extends Controller
      */
     public function showPackage()
     {
+        if(Auth::check())
+        {
+            $user = null;
+            $user = auth()->user();
+            if(!Reservation::where('user_id', '=', auth()->user()->id)->first()) return view('spaceUser', [
+                'title' => 'User Zone',
+                'user' => $user,
+            ]);
+        }
         return view('packages', ['title' => 'HIFF Packages']);
     }
 
@@ -99,4 +108,6 @@ class SiteController extends Controller
             'user' => $user,
         ]);
     }
+
+
 }
