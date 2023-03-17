@@ -1,0 +1,67 @@
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.connect-form {
+  border-radius: 20px;
+  border: 7px white solid;
+  width: 40%;
+  height: 702px;
+}
+
+.login,
+.create-account {
+  width: 65%;
+  margin: 12.25% auto 0 auto;
+}
+
+input {
+  font-size: 20px;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 13px;
+  border: 0px;
+  background-color: #404851;
+  padding: 16px 0 16px 40px;
+  color: white;
+}
+
+input::-moz-placeholder {
+  color: white;
+}
+
+input:-ms-input-placeholder {
+  color: white;
+}
+
+input::placeholder {
+  color: white;
+}
+
+h2 {
+  margin-bottom: 22px;
+}
+
+.login-input {
+  width: 36%;
+  background: linear-gradient(to right, #f54674, #f348a4);
+  font-size: 21px;
+  font-weight: bold;
+  border-radius: 24px;
+  cursor: pointer;
+  color: #fbf7ea;
+  border: none;
+  display: flex;
+}
+.login-input .submit {
+  background-color: transparent;
+  padding-left: 16px;
+}
+.login-input img {
+  position: absolute;
+}
+
+.login-input:hover {
+  background: linear-gradient(to left, #f54674, #f348a4);
+}/*# sourceMappingURL=styleUserZone.css.map */

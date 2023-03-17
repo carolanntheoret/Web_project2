@@ -1,6 +1,6 @@
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  color: #fefed5;
+  color: #fbf7ea;
   background-color: #222222;
 }
 body .mainBlock {
@@ -57,26 +57,26 @@ body .mainBlock .container .thirdBtn {
 body .mainBlock .container .mainBtn .mainBtn,
 body .mainBlock .container .secBtn .mainBtn,
 body .mainBlock .container .thirdBtn .mainBtn {
-  background-color: #f348a4;
+  background-color: #f54674;
   color: #fff;
   border: none;
 }
 body .mainBlock .container .mainBtn .mainBtn .mainBtn:hover,
 body .mainBlock .container .secBtn .mainBtn .mainBtn:hover,
 body .mainBlock .container .thirdBtn .mainBtn .mainBtn:hover {
-  background-color: #f0188c;
+  background-color: #f21650;
 }
 body .mainBlock .container .mainBtn .secBtn,
 body .mainBlock .container .secBtn .secBtn,
 body .mainBlock .container .thirdBtn .secBtn {
   background-color: #fff;
-  color: #f348a4;
-  border: 2px solid #f348a4;
+  color: #f54674;
+  border: 2px solid #f54674;
 }
 body .mainBlock .container .mainBtn .secBtn .secBtn:hover,
 body .mainBlock .container .secBtn .secBtn .secBtn:hover,
 body .mainBlock .container .thirdBtn .secBtn .secBtn:hover {
-  background-color: #f348a4;
+  background-color: #f54674;
   color: #fff;
 }
 body .mainBlock .container .mainBtn .thirdBtn,

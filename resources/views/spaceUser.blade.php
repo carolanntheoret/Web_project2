@@ -1,12 +1,17 @@
 <x-layout :title="$title">
-        <main class="w-80 m-auto mt-5">
+    <link rel="stylesheet" href="{{ asset('css/styleUserZone.css') }}">
+        <main>
+            <div class="connect-form">
+                <div class="login">
+                    <h2>LOGIN</h2>
+                    <x-login/>
+                </div>
+            </div>
 
-            <div class="container py-5">
-                <h1 class="text-center text-color m-0 fs-1">Titre H1 - ouais c'est gros</h1>
-                <div class="mt-5">
-                    <p>espace utilisateur</p>
-                    <x-login></x-login>
-                    <a href="/">Homepage</a>
+            <div class="connect-form">
+                <div class="create-account">
+                    <h2>CREATE AN ACCOUNT</h2>
+                    <x-user_form :admin='$user'/>
                 </div>
             </div>
         </main>

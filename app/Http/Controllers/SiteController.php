@@ -85,21 +85,18 @@ class SiteController extends Controller
     }
 
     /**
-     * Display create user space
-     *
-     * @return object
-     */
-    public function createUser()
-    {
-        return view('spaceUser', ['title' => 'User Zone']);
-    }
-    /**
      * Display user space
      *
      * @return object
      */
     public function showUser()
     {
-        return view('spaceUser', ['title' => 'User Zone']);
+        $user = null;
+        if(Auth::check()) $user = auth()->user();
+
+        return view('spaceUser', [
+            'title' => 'User Zone',
+            'user' => $user,
+        ]);
     }
 }
