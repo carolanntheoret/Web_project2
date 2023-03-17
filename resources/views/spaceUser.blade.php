@@ -1,15 +1,15 @@
 <x-layout :title="$title">
     <link rel="stylesheet" href="{{ asset('css/styleUserZone.css') }}">
         <main>
-            <div class="connect-form">
+            <div class="connectForm">
                 <div class="login">
                     <h2>LOGIN</h2>
                     <x-login/>
                 </div>
             </div>
 
-            <div class="connect-form">
-                <div class="create-account">
+            <div class="connectForm">
+                <div class="createAccount">
                     <h2>CREATE AN ACCOUNT</h2>
                     <x-user_form :admin='$user'/>
                 </div>

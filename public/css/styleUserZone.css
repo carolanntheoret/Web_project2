@@ -3,15 +3,15 @@ main {
   justify-content: space-evenly;
 }
 
-.connect-form {
+.connectForm {
   border-radius: 20px;
-  border: 7px white solid;
+  border: 7px #fbf7ea solid;
   width: 40%;
   height: 702px;
 }
 
 .login,
-.create-account {
+.createAccount {
   width: 65%;
   margin: 12.25% auto 0 auto;
 }
@@ -24,44 +24,51 @@ input {
   border: 0px;
   background-color: #404851;
   padding: 16px 0 16px 40px;
-  color: white;
+  color: #fbf7ea;
 }
 
 input::-moz-placeholder {
-  color: white;
+  color: #fbf7ea;
 }
 
 input:-ms-input-placeholder {
-  color: white;
+  color: #fbf7ea;
 }
 
 input::placeholder {
-  color: white;
+  color: #fbf7ea;
 }
 
 h2 {
   margin-bottom: 22px;
 }
 
-.login-input {
-  width: 36%;
+.loginInput {
+  margin-top: 9px;
+  width: 160px;
   background: linear-gradient(to right, #f54674, #f348a4);
   font-size: 21px;
-  font-weight: bold;
   border-radius: 24px;
   cursor: pointer;
   color: #fbf7ea;
   border: none;
   display: flex;
+  align-items: center;
+  position: relative;
 }
-.login-input .submit {
+.loginInput .submit {
   background-color: transparent;
-  padding-left: 16px;
+  margin: 0;
+  width: auto;
+  font-weight: 500;
+  padding: 15px 0 15px 30px;
 }
-.login-input img {
+.loginInput img {
   position: absolute;
+  right: 30px;
+  width: 30px;
 }
 
-.login-input:hover {
+.loginInput:hover {
   background: linear-gradient(to left, #f54674, #f348a4);
 }/*# sourceMappingURL=styleUserZone.css.map */

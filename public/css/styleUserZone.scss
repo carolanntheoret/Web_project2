@@ -12,17 +12,16 @@ main
     justify-content: space-evenly;
 }
 
-.connect-form
+.connectForm
 {
     border-radius: 20px;
-    border: 7px white solid;
-    // border: 3px $almost-white solid;
+    border: 7px $almost-white solid;
     width: 40%;
     height: 702px;
 }
 
 .login,
-.create-account
+.createAccount
 {
     width: 65%;
     margin: 12.25% auto 0 auto;
@@ -37,19 +36,12 @@ input
     border: 0px;
     background-color: #404851;
     padding: 16px 0 16px 40px;
-    color: white;
-    // color: $almost-white;
+    color: $almost-white;
 }
 
 input::placeholder
 {
-    color: white;
-    // color: $almost-white;
-}
-
-.login-submit
-{
-
+    color: $almost-white;
 }
 
 h2
@@ -57,30 +49,37 @@ h2
     margin-bottom: 22px;
 }
 
-.login-input
+.loginInput
 {
-    width: 36%;
+    margin-top: 9px;
+    width: 160px;
     background: linear-gradient(to right, $reddish-pink, $pink);
     font-size: 21px;
-    font-weight: bold;
     border-radius: 24px;
     cursor: pointer;
     color: $almost-white;
     border: none;
     display: flex;
+    align-items: center;
+    position: relative;
 
     .submit
     {
         background-color: transparent;
-        padding-left: 16px;
+        margin: 0;
+        width: auto;
+        font-weight: 500;
+        padding: 15px 0 15px 30px;
     }
 
     img
     {
         position: absolute;
+        right: 30px;
+        width: 30px;
     }
 }
 
-.login-input:hover {
+.loginInput:hover {
     background: linear-gradient(to left, $reddish-pink, $pink);
 }

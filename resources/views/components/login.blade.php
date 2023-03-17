@@ -3,7 +3,7 @@
         @csrf
         <input type="email" name="email" placeholder="Email">
         <input type="password" name="password" placeholder="Password">
-        <div class="login-input">
+        <div class="loginInput">
             <input class="submit" type="submit" value="LOGIN">
             <img src="{{ asset('arrow.png') }}">
         </div>
