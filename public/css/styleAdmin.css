@@ -1,0 +1,200 @@
+.sectionAdmin {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  margin: 0;
+}
+.sectionAdmin .menuAdmin {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+}
+.sectionAdmin .menuAdmin .user {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  height: 185px;
+  background-color: #6d6d6d;
+  border: 2px solid #555555;
+}
+.sectionAdmin .menuAdmin .menu {
+  width: 100%;
+}
+.sectionAdmin .menuAdmin .menu .employes {
+  display: flex;
+  align-items: center;
+  padding: 15px 55px 15px 60px;
+  width: 100%;
+  height: 90px;
+  border: 2px solid #707070;
+  color: whitesmoke;
+  background: linear-gradient(90deg, rgb(29, 133, 118) 0%, rgb(53, 208, 186) 100%);
+  margin-left: 0;
+}
+.sectionAdmin .menuAdmin .menu .employes:hover {
+  background: linear-gradient(90deg, rgb(53, 208, 186) 0%, rgb(29, 133, 118) 100%);
+}
+.sectionAdmin .menuAdmin .menu .users {
+  display: flex;
+  align-items: center;
+  padding: 15px 55px 15px 60px;
+  width: 100%;
+  height: 90px;
+  border: 2px solid #707070;
+  color: whitesmoke;
+  background: linear-gradient(90deg, rgb(29, 133, 118) 0%, rgb(53, 208, 186) 100%);
+  margin-left: 0;
+}
+.sectionAdmin .menuAdmin .menu .users:hover {
+  background: linear-gradient(90deg, rgb(53, 208, 186) 0%, rgb(29, 133, 118) 100%);
+}
+.sectionAdmin .menuAdmin .menu .activities {
+  display: flex;
+  align-items: center;
+  padding: 15px 55px 15px 60px;
+  width: 100%;
+  height: 90px;
+  color: whitesmoke;
+  border: 2px solid #707070;
+  background: linear-gradient(90deg, rgb(29, 133, 118) 0%, rgb(53, 208, 186) 100%);
+  margin-left: 0;
+}
+.sectionAdmin .menuAdmin .menu .activities:hover {
+  background: linear-gradient(90deg, rgb(53, 208, 186) 0%, rgb(29, 133, 118) 100%);
+}
+.sectionAdmin .menuAdmin .menu .reservations {
+  display: flex;
+  align-items: center;
+  padding: 15px 55px 15px 60px;
+  color: whitesmoke;
+  width: 100%;
+  height: 90px;
+  border: 2px solid #707070;
+  background: linear-gradient(90deg, rgb(29, 133, 118) 0%, rgb(53, 208, 186) 100%);
+  margin-left: 0;
+}
+.sectionAdmin .menuAdmin .menu .reservations:hover {
+  background: linear-gradient(90deg, rgb(53, 208, 186) 0%, rgb(29, 133, 118) 100%);
+}
+.sectionAdmin .sectionName {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100px;
+  background-color: rgb(88, 88, 88);
+}
+.sectionAdmin .listEmployes {
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+  height: 1080px;
+}
+.sectionAdmin .listEmployes .employeSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #C8C8C8;
+}
+.sectionAdmin .listEmployes .employeSection ul {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  height: 10%;
+  gap: 20%;
+  justify-content: left;
+  align-items: center;
+  border-radius: 50px;
+  margin-top: 5%;
+  font-size: 25px;
+  color: black;
+  border: 1px solid #35D0BA;
+  background-color: rgba(53, 208, 186, 0.1);
+}
+.sectionAdmin .listUsers {
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+  height: 1080px;
+}
+.sectionAdmin .listUsers .usersSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #C8C8C8;
+}
+.sectionAdmin .listActivities {
+  display: flex;
+  flex-direction: column;
+  width: 1240px;
+  height: 1080px;
+}
+.sectionAdmin .listActivities .activitiesSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: #C8C8C8;
+}
+.sectionAdmin .listReservations {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 1240px;
+  height: 1080px;
+}
+.sectionAdmin .listReservations .reservationSection {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 2%;
+}
+.sectionAdmin .listReservations .reservationSection .sectionMember {
+  width: 25%;
+  height: 100%;
+  background-color: #C8C8C8;
+}
+.sectionAdmin .listReservations .reservationSection .sectionMember .listMembers {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 5%;
+}
+.sectionAdmin .listReservations .reservationSection .sectionReservation {
+  width: 70%;
+  height: 100%;
+  background-color: #C8C8C8;
+}
+.sectionAdmin .listReservations .reservationSection .sectionReservation .listReservations {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  margin-top: 2.5%;
+}
+.sectionAdmin .titleReservation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100px;
+  background-color: rgb(88, 88, 88);
+}
+.sectionAdmin .titleMember {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  min-height: 100px;
+  background-color: rgb(88, 88, 88);
+}/*# sourceMappingURL=styleAdmin.css.map */

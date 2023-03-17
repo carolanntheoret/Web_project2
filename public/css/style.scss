@@ -1,4 +1,4 @@
-
+@import url(nav.css);
 
 // Colors
 // almost white #fbf7ea
@@ -13,18 +13,18 @@
 // almost black #222222
 
 // Variables
-$reddish-pink: #f348a4;
+$reddish-pink: #f54674;
+$pink: #f348a4;
 $logo-turquoise: #35d0ba;
-$almost-white: #fefed5;
+$light-turquoise: #65efce;
+$almost-white: #fbf7ea;
 $deep-blue: #1f2833;
 $almost-black: #222222;
 
-//can be used like:
-//background-color: darken($primary-color, 10%);
 
 // Styles
 body {
-    font-family: sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: $almost-white;
     background-color: $almost-black;
 
@@ -40,28 +40,27 @@ body {
 
 
             h1 {
-                font-size: 36px;
+                font-size: 90px;
                 font-weight: bold;
                 margin-top: 0;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
             }
 
             h2 {
-                font-size: 28px;
+                font-size: 50px;
                 font-weight: bold;
                 margin-top: 0;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
             }
 
             h3 {
-                font-size: 24px;
-                font-weight: bold;
+                font-size: 40px;
                 margin-top: 0;
-                margin-bottom: 20px;
+                margin-bottom: 10px;
             }
 
             .mainText {
-                font-size: 20px;
+                font-size: 25px;
                 line-height: 1.5;
                 margin-bottom: 20px;
             }
@@ -73,48 +72,42 @@ body {
             }
 
             .mainBtn,
-            .secBtn,
-            .thirdBtn {
-                display: inline-block;
-                padding: 10px 20px;
-                font-size: 16px;
-                font-weight: bold;
-                text-align: center;
-                text-decoration: none;
-                border-radius: 4px;
-                cursor: pointer;
-                transition: all 0.3s ease-in-out;
+            .secBtn {
+                // display: inline-block;
+                // padding: 10px 20px;
+                // font-size: 16px;
+                // font-weight: bold;
+                // text-align: center;
+                // text-decoration: none;
+                // border-radius: 4px;
+                color: $almost-white;
+                 cursor: pointer;
+                // transition: all 0.3s ease-in-out;
 
                 .mainBtn {
-                    background-color: $reddish-pink;
-                    color: #fff;
+                    background: linear-gradient(to right, $reddish-pink, $pink);
+                    font-size: 16px;
+                    font-weight: bold;
+                    text-align: center;
+                    text-decoration: none;
+                    border-radius: 8px;
+                    margin: auto;
+                    cursor: pointer;
+                    //transition: all 0.3s ease-in-out;
                     border: none;
 
                     .mainBtn:hover {
-                        background-color: darken($reddish-pink, 10%);
+                        background: linear-gradient(to left, $reddish-pink, $pink);
                     }
                 }
 
-
                 .secBtn {
-                    background-color: #fff;
-                    color: $reddish-pink;
+                    background: linear-gradient(to left, $logo-turquoise, $light-turquoise);
+
                     border: 2px solid $reddish-pink;
 
                     .secBtn:hover {
-                        background-color: $reddish-pink;
-                        color: #fff;
-                    }
-                }
-
-
-                .thirdBtn {
-                    background-color: $logo-turquoise;
-                    color: #fff;
-                    border: none;
-
-                    .thirdBtn:hover {
-                        background-color: darken($logo-turquoise, 10%);
+                        background: linear-gradient(to left, $light-turquoise, $logo-turquoise);
                     }
                 }
             }

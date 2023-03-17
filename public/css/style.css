@@ -1,6 +1,7 @@
+@import url(nav.css);
 body {
-  font-family: sans-serif;
-  color: #fefed5;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fbf7ea;
   background-color: #222222;
 }
 body .mainBlock {
@@ -14,25 +15,24 @@ body .mainBlock .container {
   margin: 0 auto;
 }
 body .mainBlock .container h1 {
-  font-size: 36px;
+  font-size: 90px;
   font-weight: bold;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 body .mainBlock .container h2 {
-  font-size: 28px;
+  font-size: 50px;
   font-weight: bold;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 body .mainBlock .container h3 {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 40px;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 body .mainBlock .container .mainText {
-  font-size: 20px;
+  font-size: 25px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -42,52 +42,32 @@ body .mainBlock .container .secText {
   margin-bottom: 20px;
 }
 body .mainBlock .container .mainBtn,
-body .mainBlock .container .secBtn,
-body .mainBlock .container .thirdBtn {
-  display: inline-block;
-  padding: 10px 20px;
+body .mainBlock .container .secBtn {
+  color: #fbf7ea;
+  cursor: pointer;
+}
+body .mainBlock .container .mainBtn .mainBtn,
+body .mainBlock .container .secBtn .mainBtn {
+  background: linear-gradient(to right, #f54674, #f348a4);
   font-size: 16px;
   font-weight: bold;
   text-align: center;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 8px;
+  margin: auto;
   cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-body .mainBlock .container .mainBtn .mainBtn,
-body .mainBlock .container .secBtn .mainBtn,
-body .mainBlock .container .thirdBtn .mainBtn {
-  background-color: #f348a4;
-  color: #fff;
   border: none;
 }
 body .mainBlock .container .mainBtn .mainBtn .mainBtn:hover,
-body .mainBlock .container .secBtn .mainBtn .mainBtn:hover,
-body .mainBlock .container .thirdBtn .mainBtn .mainBtn:hover {
-  background-color: #f0188c;
+body .mainBlock .container .secBtn .mainBtn .mainBtn:hover {
+  background: linear-gradient(to left, #f54674, #f348a4);
 }
 body .mainBlock .container .mainBtn .secBtn,
-body .mainBlock .container .secBtn .secBtn,
-body .mainBlock .container .thirdBtn .secBtn {
-  background-color: #fff;
-  color: #f348a4;
-  border: 2px solid #f348a4;
+body .mainBlock .container .secBtn .secBtn {
+  background: linear-gradient(to left, #35d0ba, #65efce);
+  border: 2px solid #f54674;
 }
 body .mainBlock .container .mainBtn .secBtn .secBtn:hover,
-body .mainBlock .container .secBtn .secBtn .secBtn:hover,
-body .mainBlock .container .thirdBtn .secBtn .secBtn:hover {
-  background-color: #f348a4;
-  color: #fff;
-}
-body .mainBlock .container .mainBtn .thirdBtn,
-body .mainBlock .container .secBtn .thirdBtn,
-body .mainBlock .container .thirdBtn .thirdBtn {
-  background-color: #35d0ba;
-  color: #fff;
-  border: none;
-}
-body .mainBlock .container .mainBtn .thirdBtn .thirdBtn:hover,
-body .mainBlock .container .secBtn .thirdBtn .thirdBtn:hover,
-body .mainBlock .container .thirdBtn .thirdBtn .thirdBtn:hover {
-  background-color: #28aa98;
+body .mainBlock .container .secBtn .secBtn .secBtn:hover {
+  background: linear-gradient(to left, #65efce, #35d0ba);
 }/*# sourceMappingURL=style.css.map */

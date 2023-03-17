@@ -1,0 +1,85 @@
+$reddish-pink: #f54674;
+$pink: #f348a4;
+$logo-turquoise: #35d0ba;
+$light-turquoise: #65efce;
+$almost-white: #fbf7ea;
+$deep-blue: #1f2833;
+$almost-black: #222222;
+
+main
+{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.connectForm
+{
+    border-radius: 20px;
+    border: 7px $almost-white solid;
+    width: 40%;
+    height: 702px;
+}
+
+.login,
+.createAccount
+{
+    width: 65%;
+    margin: 12.25% auto 0 auto;
+}
+
+input
+{
+    font-size: 20px;
+    width: 100%;
+    height: 60px;
+    margin-bottom: 13px;
+    border: 0px;
+    background-color: #404851;
+    padding: 16px 0 16px 40px;
+    color: $almost-white;
+}
+
+input::placeholder
+{
+    color: $almost-white;
+}
+
+h2
+{
+    margin-bottom: 22px;
+}
+
+.loginInput
+{
+    margin-top: 9px;
+    width: 160px;
+    background: linear-gradient(to right, $reddish-pink, $pink);
+    font-size: 21px;
+    border-radius: 24px;
+    cursor: pointer;
+    color: $almost-white;
+    border: none;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    .submit
+    {
+        background-color: transparent;
+        margin: 0;
+        width: auto;
+        font-weight: 500;
+        padding: 15px 0 15px 30px;
+    }
+
+    img
+    {
+        position: absolute;
+        right: 30px;
+        width: 30px;
+    }
+}
+
+.loginInput:hover {
+    background: linear-gradient(to left, $reddish-pink, $pink);
+}

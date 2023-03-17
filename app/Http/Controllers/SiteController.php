@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Activity;
 use App\Models\Pass;
 use App\Models\Reservation;
 use App\Models\User;
@@ -11,6 +12,13 @@ use Illuminate\Support\Facades\DB;
 
 class SiteController extends Controller
 {
+    public function test()
+    {
+        return view('test', [
+            'reservation' => Reservation::first(),
+        ]);
+    }
+
     /**
      * Display the homepage view
      *
@@ -38,6 +46,15 @@ class SiteController extends Controller
      */
     public function showPackage()
     {
+        if(Auth::check())
+        {
+            $user = null;
+            $user = auth()->user();
+            if(!Reservation::where('user_id', '=', auth()->user()->id)->first()) return view('spaceUser', [
+                'title' => 'User Zone',
+                'user' => $user,
+            ]);
+        }
         return view('packages', ['title' => 'HIFF Packages']);
     }
 
@@ -58,8 +75,13 @@ class SiteController extends Controller
      */
     public function showAdmin()
     {
-        if (Auth::check() && auth()->user()->admin == 1) return view('spaceAdmin', ['title' => 'Admin Zone']);
-        return redirect('/user-zone');
+        if (!Auth::check() || !auth()->user()->admin == 1) return redirect('/user-zone');
+        return view('spaceAdmin', ['title' => 'Admin Zone',
+        "users" => DB::table('users')->where('admin', '=', '1')->get(),
+        "employees" => DB::table('users')->where('admin', '=', '0')->get(),
+        "activities" => Activity::all(),
+        "passes" => Pass::find(auth()->user()->id)->pass,
+        ]);
     }
 
     /**
@@ -69,6 +91,14 @@ class SiteController extends Controller
      */
     public function showUser()
     {
-        return view('spaceUser', ['title' => 'User Zone']);
+        $user = null;
+        if(Auth::check()) $user = auth()->user();
+
+        return view('spaceUser', [
+            'title' => 'User Zone',
+            'user' => $user,
+        ]);
     }
+
+
 }

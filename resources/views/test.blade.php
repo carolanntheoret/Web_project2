@@ -1,1 +1,1 @@
-<x-create_activity></x-create_activity>
+<x-modify_reservation :reservation="$reservation"/>

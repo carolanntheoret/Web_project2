@@ -18,7 +18,7 @@ class CreateReservationsTable extends Migration
             $table->foreignId('user_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->foreignId('pass_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
             $table->date('open_day');
-            $table->date('closed_day');
+            $table->date('closed_day')->nullable();
             $table->integer('quantity');
             $table->timestamps();
         });

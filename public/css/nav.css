@@ -1,0 +1,133 @@
+@charset "UTF-8";
+@font-face {
+  font-family: SupaMegaFantastic;
+  src: url("../font/Nicky Laatz  - SupaMegaFantastic-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: SupaMegaFantasticCAPS;
+  font-weight: bold;
+  src: url("../font/Nicky Laatz  - SupaMegaFantasticCaps-Regular.otf") format("opentype");
+}
+@font-face {
+  font-family: SupaMegaFantasticTHIN;
+  font-weight: bold;
+  src: url("../font/Nicky Laatz  - SupaMegaFantasticThin-Regular.otf") format("opentype");
+}
+.navigation {
+  background-color: #1f2833;
+  left: 0px;
+  width: 100vw;
+}
+.navigation #navBlock {
+  display: flex;
+}
+.navigation #navBlock .navLogo {
+  display: flex;
+  font-family: SupaMegaFantasticCAPS;
+}
+.navigation #navBlock .navLogo .navName1 {
+  font-size: 25px;
+  margin: 0;
+}
+.navigation #navBlock .navLogo .navName2 {
+  /* font-size: 6em; */
+  font-size: 11vh;
+  margin: 0;
+}
+.navigation #navBlock .navLinks {
+  margin: auto;
+}
+.navigation #navBlock .navLinks .navList {
+  display: inline-block;
+  padding: 10px 20px;
+  /* Style du contenu du menu déroulant */
+  /* Style des liens dans le contenu du menu déroulant */
+  /* Style des liens au survol de la souris */
+  /* Afficher le contenu du menu déroulant au survol du bouton principal */
+}
+.navigation #navBlock .navLinks .navList a:visited {
+  text-decoration: underline;
+}
+.navigation #navBlock .navLinks .navList .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.navigation #navBlock .navLinks .navList .dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  min-width: 160px;
+  padding: 5px 0;
+  border: 1px solid #222222;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #324153;
+}
+.navigation #navBlock .navLinks .navList .dropdown-content a {
+  color: #fbf7ea;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+.navigation #navBlock .navLinks .navList .dropdown-content a:hover {
+  background-color: #465a72;
+}
+.navigation #navBlock .navLinks .navList .dropdown:hover .dropdown-content {
+  display: block;
+}
+.navigation #navBlock .navLinks .navList a {
+  text-decoration: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fbf7ea;
+  font-size: 28px;
+}
+.navigation #navBlock .mainBtn {
+  background: linear-gradient(to right, #f54674, #f348a4);
+  padding: 2vh 2vw 2vh;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 24px;
+  margin: auto;
+  cursor: pointer;
+  color: #fbf7ea;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+.navigation #navBlock .mainBtn:hover {
+  background: linear-gradient(to left, #f54674, #f348a4);
+}
+.navigation #navBlock .navIcon {
+  margin: auto;
+  /* Style du menu déroulant */
+  /* Style du contenu du menu déroulant */
+  /* Style des liens dans le contenu du menu déroulant */
+  /* Style des liens au survol de la souris */
+  /* Afficher le contenu du menu déroulant au survol du bouton principal */
+}
+.navigation #navBlock .navIcon .dropdown {
+  position: relative;
+  display: inline-block;
+}
+.navigation #navBlock .navIcon .dropdown-content {
+  display: none;
+  position: absolute;
+  z-index: 1;
+  min-width: 160px;
+  padding: 5px 0;
+  border: 1px solid #222222;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  background-color: #324153;
+}
+.navigation #navBlock .navIcon .dropdown-content a {
+  color: #fbf7ea;
+  padding: 10px 16px;
+  text-decoration: none;
+  display: block;
+}
+.navigation #navBlock .navIcon .dropdown-content a:hover {
+  background-color: #465a72;
+}
+.navigation #navBlock .navIcon .dropdown:hover .dropdown-content {
+  display: block;
+}/*# sourceMappingURL=nav.css.map */
