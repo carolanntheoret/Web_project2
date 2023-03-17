@@ -1,4 +1,5 @@
 <x-layout :title="$title">
+    <link rel="stylesheet" href="{{ asset('css/styleAdmin.css') }}">
         <main class="sectionAdmin">
             <section class="menuAdmin">
             {{-- <a href="{{ url('/disconnect') }}" class="btn btn-primary">Déconnexion</a> --}}
