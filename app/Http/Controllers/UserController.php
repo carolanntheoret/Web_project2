@@ -49,6 +49,8 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
+        if(auth()->check()) return back();
+
         $request->validate([
             'first_name' => 'required|max:255',
             'last_name' => 'required|max:255',
@@ -80,6 +82,9 @@ class UserController extends Controller
      */
     public function modify(Request $request)
     {
+        if(!auth()->check()) return redirect('/user-zone');
+        if(!auth()->user()->admin) return back();
+
         $request->validate([
             'first_name' => 'required|max:255',
             'last_name' => 'required|max:255',
@@ -110,8 +115,8 @@ class UserController extends Controller
     public function delete(Request $request)
     {
         if(!auth()->user()->admin) return back();
-        if(!User::find($request->id)) return back()->with('user_missing', "L'utilisateur est introubable");
-        if(User::where('id', $request->id)->delete()) return back()->with(['delete_successful', 'Le compte a été supprimé avec succès']);
-        return back()->withInput(['delete_fail', 'La suppression a échouée']);
+        if(!User::find($request->id)) return back()->with('user_missing', "User not found");
+        if(User::where('id', $request->id)->delete()) return back()->with(['delete_successful', 'The account has been deleted sucessfully']);
+        return back()->withInput(['delete_fail', 'AN error occurred while deleting the account']);
     }
 }

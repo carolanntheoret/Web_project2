@@ -16,6 +16,8 @@ class ReservationController extends Controller
      */
     public function reserve(Request $request)
     {
+        if(!auth()->check()) return redirect('/user-zone');
+
         $request->validate([
             'id' => 'required',
         ]);
@@ -24,9 +26,9 @@ class ReservationController extends Controller
 
         $pass->pass_id = $request->id;
         $pass->user_id = auth()->user()->id;
-        $pass->open_day = date('Y-m-d'); // à modifier
-        $pass->closed_day = date('Y-m-d'); // à modifier
-        // ajouter quantité
+        $pass->open_day = $request->first_day;
+        $pass->closed_day = $request->second_day;
+        $pass->quantity = $request->quantity;
 
         if($pass->save()) return back()->with('reservation_successful', 'Your reservation has been recorded sucessfully');
         return back()->with('reservation_fail', 'Something went wrong when recording your reservation');
@@ -46,7 +48,7 @@ class ReservationController extends Controller
             'id' => 'required',
         ]);
 
-        if(!Reservation::find($request->id)) return back()->with('reservation_missing', "La réservation est introubable");
+        if(!Reservation::find($request->id)) return back()->with('reservation_missing', "Reservation cannot be find");
 
         $reservation = Reservation::where('id', '=', $request->id)->first();
 
@@ -57,5 +59,22 @@ class ReservationController extends Controller
 
         if(Reservation::where('id', '=', $request->id)->delete()) return back()->with('cancel_success', 'Reservation has been canceled');
         return back()->with('cancel_fail', 'An error occurred while cancelling the reservation');
+    }
+
+    public function modify(Request $request)
+    {
+        $request->validate([
+            'id' => 'required',
+            'first_day' => 'required', // second_day can be null if it's the 'ONE DAY PASS' that has been modified
+        ]);
+
+        $success = Reservation::where('id', '=', $request->id)->update([
+            'open_day' => $request->first_day,
+            'closed_day' => $request->scond_day,
+        ]);
+        var_dump($success); exit();
+
+        if(!$success) return back()->with('reservation_modification_error', 'An error occurred while modifying the reservation');
+        return back()->with('reservation_modification_success', 'The modification ont he reservation is successful');
     }
 }
