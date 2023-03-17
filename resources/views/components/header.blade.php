@@ -1,4 +1,5 @@
 <nav class="navigation">
+
     <div id="navBlock">
         <div class="navLogo">
             <img src="<?= asset('images/Mascotte_logo.svg') ?>" width="92px" alt="HIFF logo" class="HIFF logo">
@@ -22,7 +23,7 @@
                 </div>
             </li>
             <li class="navList"><a href="news">News</a></li>
-            <li class="navList"><a href="contact">Contact Us</a></li>
+            <li class="navList"><a href="contact">Contact</a></li>
         </ul>
 
         <div class="navIcon">

@@ -11,24 +11,6 @@
 // almost black #222222
 
 // Variables
-@font-face {
-    font-family: SupaMegaFantastic;
-    src: url("../font/Nicky Laatz  - SupaMegaFantastic-Regular.otf") format("opentype");
-}
-
-@font-face {
-    font-family: SupaMegaFantasticCAPS;
-    font-weight: bold;
-    src: url("../font/Nicky Laatz  - SupaMegaFantasticCaps-Regular.otf") format("opentype");
-}
-
-@font-face {
-    font-family: SupaMegaFantasticTHIN;
-    font-weight: bold;
-    src: url("../font/Nicky Laatz  - SupaMegaFantasticThin-Regular.otf") format("opentype");
-}
-
-
 $reddish-pink: #f54674;
 $pink: #f348a4;
 $logo-turquoise: #35d0ba;
@@ -39,24 +21,25 @@ $deep-blue: #1f2833;
 $almost-black: #222222;
 
 .navigation {
-    background-color: $deep-blue;
     left: 0px;
     width: 100vw;
 
     #navBlock {
         display: flex;
+        background-color: $deep-blue;
 
         .navLogo {
             display: flex;
-            font-family: SupaMegaFantasticCAPS;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
             .navName1 {
                 font-size: 25px;
                 margin: 0;
             }
+
             .navName2 {
                 /* font-size: 6em; */
-                font-size: 11vh;
+                font-size: 8vh;
                 margin: 0;
             }
         }
@@ -68,7 +51,7 @@ $almost-black: #222222;
                 display: inline-block;
                 padding: 10px 20px;
 
-                a:visited{
+                a:visited {
                     //padding: 2px;
                     text-decoration: underline;
                 }
@@ -77,6 +60,7 @@ $almost-black: #222222;
                     position: relative;
                     display: inline-block;
                 }
+
                 /* Style du contenu du menu déroulant */
                 .dropdown-content {
                     display: none;
@@ -111,7 +95,7 @@ $almost-black: #222222;
                     text-decoration: none;
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     color: $almost-white;
-                    font-size: 28px;
+                    font-size: 25px;
                 }
 
             }
@@ -132,6 +116,7 @@ $almost-black: #222222;
             border: none;
 
         }
+
         .mainBtn:hover {
             background: linear-gradient(to left, $reddish-pink, $pink);
         }
@@ -173,6 +158,62 @@ $almost-black: #222222;
             /* Afficher le contenu du menu déroulant au survol du bouton principal */
             .dropdown:hover .dropdown-content {
                 display: block;
+            }
+        }
+    }
+
+    #footer{
+        margin-bottom: 0;
+
+        .footerBlock {
+            display: flex;
+            background-color: $light-turquoise;
+            //padding-left: 10vw;
+            //padding-right: 5vw;
+            padding: 2vh 5vh 2vw 10vw;
+            width: 100%;
+
+            .footerLogo {
+                display: flex;
+                color: $almost-black;
+            }
+            #footerSection{
+                display: flex;
+                flex-direction: column;
+
+                #footerText {
+                    display: flex;
+                    flex-direction: column;
+                    color: $almost-black;
+                }
+
+                .socialIcons {
+
+                    ul{
+                        display: flex;
+
+
+                    }
+                }
+            }
+
+            .footerLinks {
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+
+                .footerList {
+                    display: inline-block;
+                    //padding: 10px 20px;
+
+                        a {
+                            text-decoration: none;
+                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                            color: $almost-black;
+                            font-size: 25px;
+                        }
+
+                }
             }
         }
     }

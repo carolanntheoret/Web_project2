@@ -1,0 +1,15 @@
+<svg id="Circle_Button_SIZE_MEDIUM_STATE_DEFAULT_STYLE_STYLE3_" data-name="Circle Button [SIZE=MEDIUM][STATE=DEFAULT][STYLE=STYLE3]" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+  <g id="Area_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE3_" data-name="Area [SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE3]" fill="#fbf7ea" stroke="#34ffc8" stroke-width="2">
+    <rect width="55" height="55" rx="27.5" stroke="none"/>
+    <rect x="1" y="1" width="53" height="53" rx="26.5" fill="none"/>
+  </g>
+  <g id="Icon_ICON_feather_facebook_SIZE_MEDIUM_STATE_DEFAULT_STYLE_STYLE3_" data-name="Icon [ICON=feather/facebook][SIZE=MEDIUM][STATE=DEFAULT][STYLE=STYLE3]" transform="translate(17.5 17.195)">
+    <g id="Area_ICON:feather_facebook_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE3_" data-name="Area [ICON:feather/facebook][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE3]" transform="translate(0 0.271)" fill="#fbf7ea" stroke="#fd49c6" stroke-width="1" opacity="0">
+      <rect width="20" height="20" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" height="19" fill="none"/>
+    </g>
+    <g id="Icon" transform="translate(4.273)">
+      <path id="be1742c3-f01c-4070-88c1-d96b9a1aba81" d="M18,2H15a5,5,0,0,0-5,5v3H7v4h3v8h4V14h3l1-4H14V7a1,1,0,0,1,1-1h3Z" transform="translate(-7 -2)" fill="#fbf7ea" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

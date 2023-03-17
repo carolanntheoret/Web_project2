@@ -1,0 +1,15 @@
+<svg id="Circle_Button_SIZE_MEDIUM_STATE_DEFAULT_STYLE_STYLE3_" data-name="Circle Button [SIZE=MEDIUM][STATE=DEFAULT][STYLE=STYLE3]" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+  <g id="Area_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE3_" data-name="Area [SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE3]" fill="#fbf7ea" stroke="#34ffc8" stroke-width="2">
+    <rect width="55" height="55" rx="27.5" stroke="none"/>
+    <rect x="1" y="1" width="53" height="53" rx="26.5" fill="none"/>
+  </g>
+  <g id="Icon_ICON_feather_phone_SIZE_MEDIUM_STATE_DEFAULT_STYLE_STYLE3_" data-name="Icon [ICON=feather/phone][SIZE=MEDIUM][STATE=DEFAULT][STYLE=STYLE3]" transform="translate(17.08 17.195)">
+    <g id="Area_ICON:feather_phone_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE3_" data-name="Area [ICON:feather/phone][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE3]" transform="translate(0.373 0.271)" fill="#fbf7ea" stroke="#fd49c6" stroke-width="1" opacity="0">
+      <rect width="20" height="20" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" height="19" fill="none"/>
+    </g>
+    <g id="Icon">
+      <path id="_306ce006-3a21-4955-8e3f-2ab7c36dd31e" data-name="306ce006-3a21-4955-8e3f-2ab7c36dd31e" d="M22.079,16.981v3.011A2.007,2.007,0,0,1,19.891,22a19.873,19.873,0,0,1-8.661-3.081A19.57,19.57,0,0,1,5.209,12.9,19.856,19.856,0,0,1,2.128,4.2a2.006,2.006,0,0,1,2-2.188H7.136A2.008,2.008,0,0,1,9.143,3.733a12.932,12.932,0,0,0,.7,2.821,2.006,2.006,0,0,1-.451,2.117L8.119,9.946a16.055,16.055,0,0,0,6.022,6.021l1.274-1.274a2.008,2.008,0,0,1,2.118-.452,12.868,12.868,0,0,0,2.82.7A2.006,2.006,0,0,1,22.079,16.981Z" transform="translate(-2.12 -2.007)" fill="#fbf7ea" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="2.007"/>
+    </g>
+  </g>
+</svg>
