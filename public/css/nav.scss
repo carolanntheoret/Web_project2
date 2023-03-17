@@ -32,7 +32,9 @@
 $reddish-pink: #f54674;
 $pink: #f348a4;
 $logo-turquoise: #35d0ba;
-$almost-white: #fefed5;
+$light-turquoise: #65efce;
+$almost-white: #fbf7ea;
+// $soft-yellow: #fefed5;
 $deep-blue: #1f2833;
 $almost-black: #222222;
 
@@ -40,7 +42,6 @@ $almost-black: #222222;
     background-color: $deep-blue;
     left: 0px;
     width: 100vw;
-    //height: 135px;
 
     #navBlock {
         display: flex;
@@ -53,7 +54,6 @@ $almost-black: #222222;
                 font-size: 25px;
                 margin: 0;
             }
-
             .navName2 {
                 /* font-size: 6em; */
                 font-size: 11vh;
@@ -62,87 +62,118 @@ $almost-black: #222222;
         }
 
         .navLinks {
-            //display: flex;
-            margin-top: 9vh;
+            margin: auto;
 
             .navList {
                 display: inline-block;
                 padding: 10px 20px;
 
+                a:visited{
+                    //padding: 2px;
+                    text-decoration: underline;
+                }
+
+                .dropdown {
+                    position: relative;
+                    display: inline-block;
+                }
+                /* Style du contenu du menu déroulant */
+                .dropdown-content {
+                    display: none;
+                    position: absolute;
+                    z-index: 1;
+                    min-width: 160px;
+                    padding: 5px 0;
+                    border: 1px solid $almost-black;
+                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                    background-color: lighten($deep-blue, $amount: 10);
+                }
+
+                /* Style des liens dans le contenu du menu déroulant */
+                .dropdown-content a {
+                    color: $almost-white;
+                    padding: 10px 16px;
+                    text-decoration: none;
+                    display: block;
+                }
+
+                /* Style des liens au survol de la souris */
+                .dropdown-content a:hover {
+                    background-color: lighten($deep-blue, $amount: 20);
+                }
+
+                /* Afficher le contenu du menu déroulant au survol du bouton principal */
+                .dropdown:hover .dropdown-content {
+                    display: block;
+                }
+
                 a {
                     text-decoration: none;
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     color: $almost-white;
-                    font-size: large;
-
-                    a:hover {
-                        //background-color: lighten($deep-blue, $amount: 10);
-                        background: linear-gradient(to right, $reddish-pink, $pink);
-                    }
+                    font-size: 28px;
                 }
+
             }
         }
 
         .mainBtn {
             background: linear-gradient(to right, $reddish-pink, $pink);
-            font-size: 16px;
+            padding: 2vh 2vw 2vh;
+            font-size: 25px;
             font-weight: bold;
             text-align: center;
             text-decoration: none;
-            border-radius: 8px;
+            border-radius: 24px;
             margin: auto;
             cursor: pointer;
-            //transition: all 0.3s ease-in-out;
             color: $almost-white;
+            transition: all 0.3s ease-in-out;
             border: none;
 
-            .mainBtn:hover {
-                background-color: darken($reddish-pink, 10%);
-            }
+        }
+        .mainBtn:hover {
+            background: linear-gradient(to left, $reddish-pink, $pink);
         }
 
         .navIcon {
             margin: auto;
+
             /* Style du menu déroulant */
-        .dropdown {
-            position: relative;
-            display: inline-block;
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
 
+            /* Style du contenu du menu déroulant */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                z-index: 1;
+                min-width: 160px;
+                padding: 5px 0;
+                border: 1px solid $almost-black;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                background-color: lighten($deep-blue, $amount: 10);
+            }
+
+            /* Style des liens dans le contenu du menu déroulant */
+            .dropdown-content a {
+                color: $almost-white;
+                padding: 10px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            /* Style des liens au survol de la souris */
+            .dropdown-content a:hover {
+                background-color: lighten($deep-blue, $amount: 20);
+            }
+
+            /* Afficher le contenu du menu déroulant au survol du bouton principal */
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
         }
-
-        /* Style du contenu du menu déroulant */
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            z-index: 1;
-
-            min-width: 160px;
-            padding: 5px 0;
-            border: 1px solid $almost-black;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            background-color: lighten($deep-blue, $amount: 10);
-        }
-
-        /* Style des liens dans le contenu du menu déroulant */
-        .dropdown-content a {
-            color: $almost-white;
-            padding: 10px 16px;
-            text-decoration: none;
-            display: block;
-
-        }
-
-        /* Style des liens au survol de la souris */
-        .dropdown-content a:hover {
-            background-color: lighten($deep-blue, $amount: 20);
-        }
-
-        /* Afficher le contenu du menu déroulant au survol du bouton principal */
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-        }
-
-
     }
 }
