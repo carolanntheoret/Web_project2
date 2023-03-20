@@ -6,7 +6,9 @@
     </div>
     <input type="email" name="email" value="<?= $user->email ?? '' ?>" placeholder="Email" required>
     <input type="password" name="password" <?= isset($user) ? '' : 'required' ?> placeholder="Password">
-    <input type="password_confirmation" name="password" <?= isset($user) ? '' : 'required' ?> placeholder="Confirm Password">
+    @if (strpos(url()->current(), '/user-zone'))
+        <input type="password_confirmation" name="password" <?= isset($user) ? '' : 'required' ?> placeholder="Confirm Password">
+    @endif
     @if ($admin && strpos(url()->current(), '/admin'))
         <div>
             <span>Role :</span>
@@ -20,7 +22,11 @@
         <input name="id" type="hidden" value="<?= $user->id ?>">
     @endif
     <div class="createAccountInput">
-        <input class="submit" type="submit" value="CREATE ACCOUNT">
-        <p class="plus">+</p>
+        @if (strpos(url()->current(), '/admin'))
+            <input class="submit" type="submit" value="">
+        @else
+            <input class="submit" type="submit" value="CREATE ACCOUNT">
+            <p class="plus">+</p>
+        @endif
     </div>
 </form>
