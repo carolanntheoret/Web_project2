@@ -3,7 +3,7 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin: 0;
+    margin: 100px 0px 0px 0px;
 
     .menuAdmin {
             display: flex;
@@ -55,7 +55,7 @@
                 .activities {
                     display: flex;
                     align-items: center;
-                    padding: 15px 55px 15px 60px;;
+                    padding: 15px 55px 15px 60px;
                     width: 100%;
                     height: 90px;
                     color: whitesmoke;
@@ -94,6 +94,7 @@
         .listEmployes {
             display: flex;
             flex-direction: column;
+            border: 6px solid #707070;
             width: 1240px;
             height: 1080px;
 
@@ -101,6 +102,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                overflow: auto;
                 width: 100%;
                 height: 100%;
                 background-color: #C8C8C8;
@@ -119,12 +121,16 @@
                     color: black;
                     border: 1px solid #35D0BA;
                     background-color: rgba(53, 208, 186, 0.1);
+                    p {
+                        margin-top: 10px;
+                    }
                 }
             }
         }
         .listUsers {
             display: flex;
             flex-direction: column;
+            border: 6px solid #707070;
             width: 1240px;
             height: 1080px;
 
@@ -132,14 +138,34 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                overflow: auto;
                 width: 100%;
                 height: 100%;
                 background-color: #C8C8C8;
+                ul {
+                    display: flex;
+                    flex-direction: row;
+                    width: 90%;
+                    height: 10%;
+                    gap: 20%;
+                    justify-content: left;
+                    align-items: center;
+                    border-radius: 50px;
+                    margin-top: 5%;
+                    font-size: 25px;
+                    color: black;
+                    border: 1px solid #35D0BA;
+                    background-color: rgba(53, 208, 186, 0.1);
+                    p {
+                        margin-top: 10px;
+                    }
+                }
             }
         }
         .listActivities {
             display: flex;
             flex-direction: column;
+            border: 6px solid #707070;
             width: 1240px;
             height: 1080px;
 
@@ -147,6 +173,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                overflow: auto;
                 width: 100%;
                 height: 100%;
                 background-color: #C8C8C8;
@@ -165,26 +192,33 @@
                 justify-content: center;
                 width: 100%;
                 height: 100%;
-                gap: 2%;
+                gap: 1%;
                 .sectionMember {
-                    width: 25%;
+                    width: 27%;
                     height: 100%;
+                    border: 6px solid #707070;
                     background-color: #C8C8C8;
                     .listMembers{
                         display: flex;
                         flex-direction: column;
+                        overflow: auto;
                         width: 100%;
                         align-items: center;
                         margin-top: 5%;
+                        a {
+                            color: black;
+                        }
                     }
                 }
                 .sectionReservation {
                     width: 70%;
                     height: 100%;
+                    border: 6px solid #707070;
                     background-color: #C8C8C8;
                     .listReservations{
                         display: flex;
                         flex-direction: column;
+                        overflow: auto;
                         width: 100%;
                         align-items: center;
                         margin-top: 2.5%;

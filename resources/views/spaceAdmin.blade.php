@@ -1,4 +1,5 @@
 <x-layout :title="$title">
+    <link rel="stylesheet" href="{{ asset('css/styleAdmin.css') }}">
         <main class="sectionAdmin">
             <section class="menuAdmin">
             {{-- <a href="{{ url('/disconnect') }}" class="btn btn-primary">Déconnexion</a> --}}
@@ -13,22 +14,22 @@
             </section>
                 <section class="listEmployes">
                     <div class="sectionName"><h3>Admin</h3></div>
-                    <div class="employeSection" style="overflow-y:scroll"><x-liste-admins :users="$users"/></div>
+                    <div class="employeSection"><x-liste-admins :users="$users"/></div>
                 </section>
                 <section class="listUsers">
                     <div class="sectionName"><h3>Employees</h3></div>
-                    <div class="usersSection" style="overflow-y:scroll"><x-liste-users :employees="$employees"/></div>
+                    <div class="usersSection"><x-liste-users :employees="$employees"/></div>
                 </section>
                 <section class="listActivities">
                     <div class="sectionName"><h3>Activities</h3></div>
-                    <div class="activitiesSection" style="overflow-y:scroll"><x-liste-activities :activities="$activities"/></div>
+                    <div class="activitiesSection"><x-liste-activities :activities="$activities"/></div>
                 </section>
                 <section class="listReservations">
 
                 <div class="reservationSection">
                     <div class="sectionMember">
                         <div class="titleMember"><h3>Membres</h3></div>
-                        <div class="listMembers"><x-liste-users :employees="$employees"/></div>
+                        <div class="listMembers" ><x-liste-members :employees="$employees"/></div>
                     </div>
                     <div class="sectionReservation">
                         <div class="titleReservation"><h3>Reservations</h3></div>
