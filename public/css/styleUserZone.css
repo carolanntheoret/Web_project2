@@ -31,10 +31,6 @@ input::-moz-placeholder {
   color: #fbf7ea;
 }
 
-input:-ms-input-placeholder {
-  color: #fbf7ea;
-}
-
 input::placeholder {
   color: #fbf7ea;
 }
