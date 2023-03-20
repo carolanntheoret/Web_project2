@@ -81,12 +81,13 @@ class SiteController extends Controller
 
         if(Auth::check()) $user = auth()->user();
 
-        return view('spaceAdmin', ['title' => 'Admin Zone',
-        "users" => DB::table('users')->where('admin', '=', '1')->get(),
-        "employees" => DB::table('users')->where('admin', '=', '0')->get(),
-        "activities" => Activity::all(),
-        "passes" => Pass::find(auth()->user()->id)->pass,
-        'user' => auth()->user(),
+        return view('spaceAdmin', [
+            'title' => 'Admin Zone',
+            "users" => DB::table('users')->where('admin', '=', '1')->get(),
+            "employees" => DB::table('users')->where('admin', '=', '0')->get(),
+            "activities" => Activity::all(),
+            "passes" => Pass::find(auth()->user()->id)->pass,
+            'user' => auth()->user(),
         ]);
     }
 
@@ -97,14 +98,22 @@ class SiteController extends Controller
      */
     public function showUser()
     {
-        $user = null;
-        if(Auth::check()) $user = auth()->user();
+        if(Auth::check()) return redirect('my-tickets');
 
         return view('spaceUser', [
             'title' => 'User Zone',
-            'user' => $user,
+            'user' => null,
         ]);
     }
 
-
+    /**
+     * Display tickets of the user
+     *
+     * @return object
+     */
+    public function showTickets()
+    {
+        if(!Auth::check()) return redirect('user-zone');
+        return view('myTickets', ['title' => 'My Tickets']);
+    }
 }
