@@ -38,7 +38,7 @@ class UserController extends Controller
     public function disconnect()
     {
         auth()->logout(auth()->user());
-        return redirect('/')->with('logout_successful', 'Log out successfully');
+        return back()->with('logout_successful', 'Log out successfully');
     }
 
     /**
