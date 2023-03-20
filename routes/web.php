@@ -18,8 +18,6 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test', [SiteController::class, 'test']);
-
 /***** simple views *****/
 Route::get('/', [SiteController::class, 'homepage']);
 Route::get('/activities', [SiteController::class, 'listActivities']);
@@ -28,6 +26,10 @@ Route::get('/user-zone', [SiteController::class, 'showUser'] );
 Route::get('/my-tickets', [SiteController::class, 'showTickets']);
 Route::get('/package', [SiteController::class, 'showPackage']);
 Route::get('/contact', [SiteController::class, 'showContact']);
+
+/* News Routes */
+Route::get('/news', [NewsController::class, 'showNewsPage']);
+Route::get('/news/{article}', [NewsController::class, 'show']);
 
 /***** submit pages *****/
 /* log in/out */
@@ -50,9 +52,3 @@ Route::post('/modify-activity', [ActivityController::class, 'modify']);
 Route::get('/delete-activity', [ActivityController::class, 'delete']);
 Route::post('/add-activity-time', [ActivityController::class, 'addTime']);
 Route::get('/delete-activity-time', [ActivityController::class, 'deleteTime']);
-
-/* News Routes */
-Route::get('/news', [NewsController::class, 'showNewsPage']);
-Route::get('/news/{article}', [NewsController::class, 'show']);
-
-

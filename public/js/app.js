@@ -7,6 +7,7 @@ const msnry = new Masonry(elem, {
     itemSelector: '.grid-item',
     fitWidth: true,
     gutter: 45,
+    horizontalOrder: true,
 })
 
 
