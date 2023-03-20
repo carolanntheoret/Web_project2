@@ -58,8 +58,6 @@ class UserController extends Controller
             'password' => 'required|max:255',
             'password_confirmation' => 'required|same:password',
         ]);
-        var_dump($_POST); exit();
-
 
         $user = new User();
         $user->first_name = $request->first_name;
