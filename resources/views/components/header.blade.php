@@ -21,7 +21,7 @@
                     </div>
                 </div>
             </li>
-            <li class="navList"><a href="news">News</a></li>
+            <li class="navList"><a href="/news">News</a></li>
             <li class="navList"><a href="contact">Contact Us</a></li>
         </ul>
 
