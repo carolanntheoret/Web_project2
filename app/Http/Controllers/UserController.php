@@ -56,8 +56,10 @@ class UserController extends Controller
             'last_name' => 'required|max:255',
             'email' => 'required|max:255|email',
             'password' => 'required|max:255',
-            'password_confirmation' => 'confirmed',
+            'password_confirmation' => 'required|same:password',
         ]);
+        var_dump($_POST); exit();
+
 
         $user = new User();
         $user->first_name = $request->first_name;
@@ -71,7 +73,7 @@ class UserController extends Controller
         if(Auth::check() && auth()->user()->admin == 1) return redirect('/admin')->with('creation_successful','Account created with success');
 
         auth()->login($user);
-        return view('spaceUser', ['user' => auth()->user()])->with('creation_successful', 'Account created with success');
+        return redirect('my-tickets');
     }
 
     /**
@@ -90,7 +92,6 @@ class UserController extends Controller
             'last_name' => 'required|max:255',
             'email' => 'required|max:255|email',
             'password' => 'max:255',
-            'password_confirmation' => 'confirmed',
             'id' => 'required',
         ]);
 
