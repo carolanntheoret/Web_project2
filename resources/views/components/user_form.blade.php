@@ -1,36 +1,26 @@
 <form action="<?= isset($user) ? '/modify-user' : '/create-user' ?>" method="post">
     @csrf
-    <div>
-        <span>First Name :</span>
-        <input type="text" name="first_name" value="<?= $user->first_name ?? '' ?>" placeholder="Your first name" required>
+    <div class="createAccountName">
+        <input type="text" name="first_name" value="<?= $user->first_name ?? '' ?>" placeholder="First Name" required>
+        <input type="text" name="last_name" value="<?= $user->last_name ?? '' ?>" placeholder="Last Name" required>
     </div>
-    <div>
-        <span>Last Name :</span>
-        <input type="text" name="last_name" value="<?= $user->last_name ?? '' ?>" placeholder="Your last name" required>
-    </div>
-    <div>
-        <span>Email :</span>
-        <input type="email" name="email" value="<?= $user->email ?? '' ?>" placeholder="Your email" required>
-    </div>
-    <div>
-        <span>Password :</span>
-        <input type="password" name="password" <?= isset($user) ? '' : 'required' ?> placeholder="Your password">
-    </div>
-    <div>
-        <span>Retype Password :</span>
-        <input type="password_confirmation" name="password" <?= isset($user) ? '' : 'required' ?> placeholder="Retype your password">
-    </div>
-    @if ($admin && !isset($user))
-        <div>
-            <span>Role :</span>
-            <select name="admin" required>
-                <option value="false">User</option>
-                <option value="true">Admin</option>
-            </select>
-        </div>
+    <input type="email" name="email" value="<?= $user->email ?? '' ?>" placeholder="Email" required>
+    <input type="password" name="password" <?= isset($user) ? '' : 'required' ?> placeholder="Password">
+    @if (!isset($user))
+        <input id="password_confirmation" type="password" name="password_confirmation" <?= isset($user) ? '' : 'required' ?> placeholder="Confirm Password">
+    @endif
+    @if ($admin && strpos(url()->current(), '/admin'))
+        <input type="hidden" name="admin" value="<?= isset($create_admin) ?? '' ?>">
     @endif
     @if (isset($user))
         <input name="id" type="hidden" value="<?= $user->id ?>">
     @endif
-    <input type="submit" value="Submit">
+    <div class="createAccountInput">
+        @if (strpos(url()->current(), '/admin'))
+            <input class="submit" type="submit" value="">
+        @else
+            <input class="submit" type="submit" value="CREATE ACCOUNT">
+            <p class="plus">+</p>
+        @endif
+    </div>
 </form>

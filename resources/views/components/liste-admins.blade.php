@@ -1,7 +1,8 @@
 @props(["users"])
 
 @forelse ($users as $user)
-<ul><p><strong>ID {{ $user->id }}</strong> <p>{{ $user->first_name }}</p></ul>
+<ul><a href="/delete-user/{{ $user->id }}">🚫</a><x-user_form :admin="$user" :user="$user"/>
+</ul>
  @empty
-    <p>Aucun user à afficher</p>
+    <p>Aucun admin à afficher</p>
  @endforelse

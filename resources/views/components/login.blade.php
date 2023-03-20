@@ -1,14 +1,11 @@
 <div>
     <form action="/connect" method="post">
         @csrf
-        <div>
-            <span>Email :</span>
-            <input type="email" name="email" placeholder="Enter Email">
+        <input type="email" name="email" placeholder="Email">
+        <input type="password" name="password" placeholder="Password">
+        <div class="loginInput">
+            <input class="submit" type="submit" value="LOGIN">
+            <img src="{{ asset('arrow.png') }}">
         </div>
-        <div>
-            <span>Password :</span>
-            <input type="password" name="password" placeholder="Enter Password">
-        </div>
-        <input type="submit" value="Submit">
     </form>
 </div>

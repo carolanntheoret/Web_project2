@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActivityController;
+use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
@@ -17,16 +18,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/test', [SiteController::class, 'test']);
-
 /***** simple views *****/
 Route::get('/', [SiteController::class, 'homepage']);
 Route::get('/admin', [SiteController::class, 'showAdmin'] );
 Route::get('/user-zone', [SiteController::class, 'showUser'] );
-Route::get('/news', [SiteController::class, 'showNews']);
 Route::get('/packages', [SiteController::class, 'showPackage']);
+Route::get('/my-tickets', [SiteController::class, 'showTickets']);
 Route::get('/contact', [SiteController::class, 'showContact']);
 Route::get('/schedule', [SiteController::class, 'showSchedule']);
+
+/* News Routes */
+Route::get('/news', [NewsController::class, 'showNewsPage']);
+Route::get('/news/{article}', [NewsController::class, 'show']);
 
 /***** submit pages *****/
 /* log in/out */

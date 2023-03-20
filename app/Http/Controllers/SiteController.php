@@ -86,23 +86,19 @@ class SiteController extends Controller
     public function showAdmin()
     {
         if (!Auth::check() || !auth()->user()->admin == 1) return redirect('/user-zone');
-        return view('spaceAdmin', ['title' => 'Admin Zone',
-        "users" => DB::table('users')->where('admin', '=', '1')->get(),
-        "employees" => DB::table('users')->where('admin', '=', '0')->get(),
-        "activities" => Activity::all(),
-        "passes" => Pass::find(auth()->user()->id)->pass,
-        'actif' => 'spaceAdmin'
-    ]);
-    }
 
-    /**
-     * Display create user space
-     *
-     * @return object
-     */
-    public function createUser()
-    {
-        return view('spaceUser', ['title' => 'User Zone', 'actif' => 'spaceUser']);
+        $user = null;
+
+        if(Auth::check()) $user = auth()->user();
+
+        return view('spaceAdmin', [
+            'title' => 'Admin Zone',
+            "users" => DB::table('users')->where('admin', '=', '1')->get(),
+            "employees" => DB::table('users')->where('admin', '=', '0')->get(),
+            "activities" => Activity::all(),
+            "passes" => Pass::find(auth()->user()->id)->pass,
+            'user' => auth()->user(),
+        ]);
     }
 
     /**
@@ -112,18 +108,22 @@ class SiteController extends Controller
      */
     public function showUser()
     {
-        return view('spaceUser', ['title' => 'User Zone', 'actif' => 'spaceUser']);
+        if(Auth::check()) return redirect('my-tickets');
+
+        return view('spaceUser', [
+            'title' => 'User Zone',
+            'user' => null,
+        ]);
     }
 
-        /**
-     * Display schedule view
+    /**
+     * Display tickets of the user
      *
      * @return object
      */
-    public function showSchedule()
+    public function showTickets()
     {
-        return view('schedule', ['title' => 'HIFF News' , 'actif' => 'schedule']);
+        if(!Auth::check()) return redirect('user-zone');
+        return view('myTickets', ['title' => 'My Tickets']);
     }
-
-
 }

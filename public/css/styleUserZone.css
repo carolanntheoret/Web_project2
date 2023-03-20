@@ -1,0 +1,168 @@
+@import url(nav.css);
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fbf7ea;
+  background-color: #222222;
+}
+body .mainBlock {
+  border: 1px solid #fefed5;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px;
+}
+body .mainBlock .container {
+  max-width: 95vw;
+  margin: 0 auto;
+}
+body .mainBlock .container h1 {
+  font-size: 90px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+body .mainBlock .container h2 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+body .mainBlock .container h3 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+body .mainBlock .container .mainText {
+  font-size: 25px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+body .mainBlock .container .secText {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+body .mainBlock .container .mainBtn,
+body .mainBlock .container .secBtn {
+  color: #fbf7ea;
+  cursor: pointer;
+}
+body .mainBlock .container .mainBtn .mainBtn,
+body .mainBlock .container .secBtn .mainBtn {
+  background: linear-gradient(to right, #f54674, #f348a4);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: auto;
+  cursor: pointer;
+  border: none;
+}
+body .mainBlock .container .mainBtn .mainBtn .mainBtn:hover,
+body .mainBlock .container .secBtn .mainBtn .mainBtn:hover {
+  background: linear-gradient(to left, #f54674, #f348a4);
+}
+body .mainBlock .container .mainBtn .secBtn,
+body .mainBlock .container .secBtn .secBtn {
+  background: linear-gradient(to left, #35d0ba, #65efce);
+  border: 2px solid #f54674;
+}
+body .mainBlock .container .mainBtn .secBtn .secBtn:hover,
+body .mainBlock .container .secBtn .secBtn .secBtn:hover {
+  background: linear-gradient(to left, #65efce, #35d0ba);
+}
+
+body {
+  background-color: #1f2833;
+}
+
+main {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.connectForm {
+  border-radius: 20px;
+  border: 7px #fbf7ea solid;
+  width: 40%;
+}
+
+.login,
+.createAccount {
+  width: 65%;
+  margin: 12.25% auto;
+}
+
+input {
+  font-size: 20px;
+  width: 100%;
+  height: 60px;
+  margin-bottom: 20px;
+  border: 0px;
+  background-color: #404851;
+  padding: 16px 0 16px 40px;
+  color: #fbf7ea;
+}
+
+input::-moz-placeholder {
+  color: #fbf7ea;
+}
+
+input::placeholder {
+  color: #fbf7ea;
+}
+
+h2 {
+  margin-bottom: 22px;
+}
+
+.loginInput,
+.createAccountInput {
+  margin-top: 9px;
+  background: linear-gradient(to right, #f54674, #f348a4);
+  font-size: 21px;
+  border-radius: 24px;
+  cursor: pointer;
+  color: #fbf7ea;
+  border: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.loginInput img,
+.createAccountInput img {
+  position: absolute;
+  right: 30px;
+  width: 30px;
+}
+
+.loginInput {
+  width: 160px;
+}
+
+.createAccountInput {
+  width: 263px;
+}
+
+.submit {
+  background-color: transparent;
+  margin: 0;
+  width: auto;
+  font-weight: 500;
+  padding: 15px 0 15px 30px;
+}
+
+.plus {
+  font-size: 40px;
+  margin: -10px 0 0 12px;
+}
+
+.loginInput:hover,
+.createAccountInput:hover {
+  background: linear-gradient(to left, #f54674, #f348a4);
+}
+
+.createAccountName {
+  display: flex;
+  gap: 25px;
+}/*# sourceMappingURL=styleUserZone.css.map */
