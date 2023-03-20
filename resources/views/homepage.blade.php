@@ -1,5 +1,5 @@
-<x-layout :title="$title">
-        <main class="">
+<x-layout :title="$title" :actif="$actif">
+        <main class="content">
 
             <div class="container py-5">
                 <h1 class="text-center text-color m-0 fs-1">Titre H1 - ouais c'est gros</h1>

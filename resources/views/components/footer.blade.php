@@ -4,7 +4,7 @@
         <div class="footerBlock">
             <div class="footerLogo">
                 <!-- Logo Image -->
-                <img src="<?= asset('images/Mascot_festival.svg') ?>" width="150vw" alt="HIFF Mascotte" class="Mascotte">
+                <img id="dudeLogo" src="<?= asset('images/Mascot_festival.svg') ?>" width="150vw" alt="HIFF Mascotte" >
             </div>
             <div id="footerSection">
                 <div id="footerText">
@@ -33,16 +33,10 @@
                 <li class="footerList"><a href="news">News</a></li>
                 <li class="footerList"><a href="contact">Contact Us</a></li>
                 {{-- <li class="footerList"><a href="activities">Festival</a></li> --}}
-                <li class="footerList"><a href="package">Tickets and Packages </a></li>
+                <li class="footerList"><a href="package">Tickets & Packages </a></li>
                 <li class="footerList"><a href="test">2023 Schedule</a></li>
-
-
             </ul>
-
         </div>
-
-
-    </div>
-    <p class="copyright-text">Copyright &copy; 2023 All Rights Reserved</p>
+        <p id="copyright-text">Copyright &copy; 2023 All Rights Reserved</p>
     </div>
 </footer>

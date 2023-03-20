@@ -1,4 +1,4 @@
-<x-layout :title="$title">
+<x-layout :title="$title" :actif="$actif">
         <main class="sectionAdmin">
             <section class="menuAdmin">
             {{-- <a href="{{ url('/disconnect') }}" class="btn btn-primary">Déconnexion</a> --}}

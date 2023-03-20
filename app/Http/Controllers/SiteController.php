@@ -26,26 +26,27 @@ class SiteController extends Controller
      */
     public function homepage()
     {
-        return view('homepage', ['title' => 'HIFF']);
+        return view('homepage', ['title' => 'HIFF', 'actif' => 'homepage']);
     }
 
+    // /**
+    //  * Display the activity list view
+    //  *
+    //  * @return object
+    //  */
+    // public function listActivities()
+    // {
+    //     return view('activities', ['title' => 'HIFF Activities', 'actif' => 'activities']);
+    // }
+
     /**
-     * Display the activity list view
-     *
-     * @return object
-     */
-    public function listActivities()
-    {
-        return view('activities', ['title' => 'HIFF Activities']);
-    }
-        /**
      * Display news view
      *
      * @return object
      */
     public function showNews()
     {
-        return view('news', ['title' => 'HIFF News']);
+        return view('news', ['title' => 'HIFF News' , 'actif' => 'news']);
     }
 
     /**
@@ -64,7 +65,7 @@ class SiteController extends Controller
                 'user' => $user,
             ]);
         }
-        return view('packages', ['title' => 'HIFF Packages']);
+        return view('packages', ['title' => 'HIFF Packages', 'actif' => 'packages']);
     }
 
     /**
@@ -74,7 +75,7 @@ class SiteController extends Controller
      */
     public function showContact()
     {
-        return view('contact', ['title' => 'HIFF contact us']);
+        return view('contact', ['title' => 'HIFF contact us', 'actif' => 'contact']);
     }
 
     /**
@@ -90,7 +91,8 @@ class SiteController extends Controller
         "employees" => DB::table('users')->where('admin', '=', '0')->get(),
         "activities" => Activity::all(),
         "passes" => Pass::find(auth()->user()->id)->pass,
-        ]);
+        'actif' => 'spaceAdmin'
+    ]);
     }
 
     /**
@@ -100,8 +102,9 @@ class SiteController extends Controller
      */
     public function createUser()
     {
-        return view('spaceUser', ['title' => 'User Zone']);
+        return view('spaceUser', ['title' => 'User Zone', 'actif' => 'spaceUser']);
     }
+
     /**
      * Display user space
      *
@@ -109,7 +112,17 @@ class SiteController extends Controller
      */
     public function showUser()
     {
-        return view('spaceUser', ['title' => 'User Zone']);
+        return view('spaceUser', ['title' => 'User Zone', 'actif' => 'spaceUser']);
+    }
+
+        /**
+     * Display schedule view
+     *
+     * @return object
+     */
+    public function showSchedule()
+    {
+        return view('schedule', ['title' => 'HIFF News' , 'actif' => 'schedule']);
     }
 
 

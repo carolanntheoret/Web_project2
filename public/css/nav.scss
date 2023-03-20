@@ -24,34 +24,33 @@ $almost-black: #222222;
     left: 0px;
     width: 100vw;
 
-    #navBlock {
+    #headBlock {
+
         display: flex;
         background-color: $deep-blue;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        padding: 2vh 5vh 2vw 10vw;
+        z-index: 10000;
 
-        .navLogo {
+        .headLogo {
             display: flex;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
-            .navName1 {
-                font-size: 25px;
-                margin: 0;
-            }
-
-            .navName2 {
-                /* font-size: 6em; */
-                font-size: 8vh;
-                margin: 0;
+            #logo{
+                max-height: 4rem;
             }
         }
 
-        .navLinks {
+        .headLinks {
             margin: auto;
 
-            .navList {
+            .headList {
                 display: inline-block;
                 padding: 10px 20px;
 
-                a:visited {
+                a.actif {
                     //padding: 2px;
                     text-decoration: underline;
                 }
@@ -95,7 +94,7 @@ $almost-black: #222222;
                     text-decoration: none;
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
                     color: $almost-white;
-                    font-size: 25px;
+                    font-size: 1.5rem;
                 }
 
             }
@@ -103,8 +102,8 @@ $almost-black: #222222;
 
         .mainBtn {
             background: linear-gradient(to right, $reddish-pink, $pink);
-            padding: 2vh 2vw 2vh;
-            font-size: 25px;
+            padding: 1.2vh 2vw 1.3vh;
+            font-size: 2.5vh;
             font-weight: bold;
             text-align: center;
             text-decoration: none;
@@ -112,7 +111,7 @@ $almost-black: #222222;
             margin: auto;
             cursor: pointer;
             color: $almost-white;
-            transition: all 0.3s ease-in-out;
+            //transition: all 0.3s ease-in-out;
             border: none;
 
         }
@@ -121,7 +120,7 @@ $almost-black: #222222;
             background: linear-gradient(to left, $reddish-pink, $pink);
         }
 
-        .navIcon {
+        .headIcon {
             margin: auto;
 
             /* Style du menu déroulant */
@@ -164,18 +163,24 @@ $almost-black: #222222;
 
     #footer{
         margin-bottom: 0;
+        width: 100vw;
+        //position: absolute;
+        //z-index: 10;
 
         .footerBlock {
             display: flex;
             background-color: $light-turquoise;
-            //padding-left: 10vw;
-            //padding-right: 5vw;
-            padding: 2vh 5vh 2vw 10vw;
+            padding: 0vh 5vh 2vw 10vw;
             width: 100%;
 
             .footerLogo {
                 display: flex;
                 color: $almost-black;
+
+                #dudeLogo{
+                    height:30vh;
+                }
+
             }
             #footerSection{
                 display: flex;
@@ -191,8 +196,7 @@ $almost-black: #222222;
 
                     ul{
                         display: flex;
-
-
+                        list-style-type: none;
                     }
                 }
             }
@@ -212,9 +216,11 @@ $almost-black: #222222;
                             color: $almost-black;
                             font-size: 25px;
                         }
-
                 }
             }
+        }
+        #copyright-text{
+            padding: 0vh 2vh 0vw 10vw;
         }
     }
 }

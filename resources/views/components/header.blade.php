@@ -1,44 +1,46 @@
 <nav class="navigation">
 
-    <div id="navBlock">
-        <div class="navLogo">
-            <img src="<?= asset('images/Mascotte_logo.svg') ?>" width="92px" alt="HIFF logo" class="HIFF logo">
-            <div>
-                <p class="navName1">HORIZON INDEPENDENT FILM</p>
-                <p class="navName2">FESTIVAL</p>
-            </div>
+    <div id="headBlock">
+        <div class="headLogo">
+            <img id="logo" src="<?= asset('images/HIFF_logo.png') ?>"  alt="HIFF logo" class="HIFF logo">
         </div>
 
-        <ul class="navLinks">
-            <li class="navList"><a href="/">Home</a></li>
+
+        <ul class="headLinks">
+            <li class="headList"><a @if($actif=='homepage') class="actif" @endif href="/">Home</a></li>
             {{-- href du about= mettre l'ancre quand la page sera faite --}}
-            <li class="navList"><a href="/">About</a></li>
-            <li class="navList">
+            <li class="headList"><a href="/">About</a></li>
+            <li class="headList">
                 <div class="dropdown">
-                    <a href="activities">Festival</a>
+                    <a @if($actif=='packages' || $actif=='schedule') class="actif" @endif>Festival</a>
                     <div class="dropdown-content">
-                        <a href="package">See Packages </a>
-                        <a href="test">Calendar </a>
+                        <a href="/packages">Tickets & Packages </a>
+                        <a href="/schedule">Schedule</a>
                     </div>
                 </div>
             </li>
-            <li class="navList"><a href="news">News</a></li>
-            <li class="navList"><a href="contact">Contact</a></li>
+            <li class="headList"><a @if($actif=='news') class="actif" @endif href="/news">News</a></li>
+            <li class="headList"><a @if($actif=='contact') class="actif" @endif href="/contact">Contact</a></li>
         </ul>
 
-        <div class="navIcon">
-            <a class="mainBtn" href="user-zone"> My tickets</a>
-            {{-- Condition à ajouter => si connecter on voit les initiale, sinon un icone basique --}}
+        <div class="headIcon">
+            <a class="mainBtn" href="/user-zone"> My tickets</a>
             <div class="dropdown">
-                BLAM IMAGE
-                {{-- au survol apparition du dropdown --}}
-                <div class="dropdown-content">
-                    <a href="user-zone">User Zone</a>
-                    <a href="disconnect">Logout</a>
-                </div>
+                <?php if (auth()->check()): ?>
+                    <div><?= substr(auth()->user()->first_name, 0, 1) ?><?= substr(auth()->user()->last_name, 0, 1) ?></div>
+                    <img src="<?= asset('images/connectPlain.icon.svg') ?>" width="50px" alt="HIFF logo" class="HIFF logo">
+                    <div class="dropdown-content">
+                        <a href="/user-zone">User Zone</a>
+                        <a href="/disconnect">Logout</a>
+                    </div>
+                <?php else: ?>
+                    <a href="user-zone">
+                        <img src="<?= asset('images/connect.icon.svg') ?>" width="50px" alt="HIFF logo" class="HIFF logo">
+                    </a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
 </nav>
-<script src="nav.js"></script>
+{{-- <script src="nav.js"></script> --}}
 <script src="main.js"></script>
