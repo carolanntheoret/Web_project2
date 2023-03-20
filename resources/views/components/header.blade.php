@@ -7,20 +7,20 @@
 
 
         <ul class="headLinks">
-            <li class="headList"><a @if($actif=='homepage') class="actif" @endif href="/">Home</a></li>
+            <li class="headList"><a @if(isset($actif) && $actif=='homepage') class="actif" @endif href="/">Home</a></li>
             {{-- href du about= mettre l'ancre quand la page sera faite --}}
             <li class="headList"><a href="/">About</a></li>
             <li class="headList">
                 <div class="dropdown">
-                    <a @if($actif=='packages' || $actif=='schedule') class="actif" @endif>Festival</a>
+                    <a @if(isset($actif) && $actif=='packages' || isset($actif) && $actif=='schedule') class="actif" @endif>Festival</a>
                     <div class="dropdown-content">
                         <a href="/packages">Tickets & Packages </a>
                         <a href="/schedule">Schedule</a>
                     </div>
                 </div>
             </li>
-            <li class="headList"><a @if($actif=='news') class="actif" @endif href="/news">News</a></li>
-            <li class="headList"><a @if($actif=='contact') class="actif" @endif href="/contact">Contact</a></li>
+            <li class="headList"><a @if(isset($actif) && $actif=='news') class="actif" @endif href="/news">News</a></li>
+            <li class="headList"><a @if(isset($actif) && $actif=='contact') class="actif" @endif href="/contact">Contact</a></li>
         </ul>
 
         <div class="headIcon">

@@ -1,4 +1,4 @@
-<x-layout :title="$title">
+<x-layout :title="$title" :actif='$actif'>
     <main>
 
     </main>

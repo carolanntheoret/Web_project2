@@ -1,4 +1,5 @@
 <x-layout :title="$title" :actif="$actif">
+    <link rel="stylesheet" href="<?= asset('css/styleHomePage.css') ?>">
         <main class="content">
             <section class="aboutSection">
                 <div class="aboutInfo">

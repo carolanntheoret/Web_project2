@@ -1,4 +1,4 @@
-<x-layout>
+<x-layout :title="$title" :actif="$actif">
     <link rel="stylesheet" href="{{ asset('css/news.css') }}">
     <main>
         <div class="article-head" style="background-image: url('{{ $article->image }}');">
