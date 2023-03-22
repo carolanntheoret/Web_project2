@@ -140,7 +140,7 @@ body .showEvents .showEvents img {
 }
 body .showEvents .image {
   width: 350px;
-  height: 450px;
+  height: 350px;
   background-color: rgb(190, 190, 190);
   background-size: cover;
 }

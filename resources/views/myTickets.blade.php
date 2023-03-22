@@ -1,3 +1,5 @@
-<x-layout :title="$title">
-    test
+<x-layout :title="$title" :actif='$actif'>
+    <main>
+
+    </main>
 </x-layout>

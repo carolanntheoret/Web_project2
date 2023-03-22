@@ -21,7 +21,8 @@ class NewsController extends Controller
     {
         return view('news', [
             'title' => 'HIFF News',
-            'news' =>  News::all()
+            'news' =>  News::orderBy('created_at', 'desc')->get(),
+            'actif' => 'news',
         ]);
     }
 
@@ -32,7 +33,9 @@ class NewsController extends Controller
      */
     public function show(News $article){
         return view('article', [
-            "article" => $article
+            "article" => $article,
+            'title' => $article->title,
+            'actif' => 'news',
         ]);
     }
 

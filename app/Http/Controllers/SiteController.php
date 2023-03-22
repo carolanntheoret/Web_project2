@@ -12,13 +12,6 @@ use Illuminate\Support\Facades\DB;
 
 class SiteController extends Controller
 {
-    public function test()
-    {
-        return view('test', [
-            'reservation' => Reservation::first(),
-        ]);
-    }
-
     /**
      * Display the homepage view
      *
@@ -26,17 +19,17 @@ class SiteController extends Controller
      */
     public function homepage()
     {
-        return view('homepage', ['title' => 'HIFF']);
+        return view('homepage', ['title' => 'HIFF', 'actif' => 'homepage']);
     }
 
     /**
-     * Display the activity list view
+     * Display news view
      *
      * @return object
      */
-    public function listActivities()
+    public function showNews()
     {
-        return view('activities', ['title' => 'HIFF Activities']);
+        return view('news', ['title' => 'HIFF News' , 'actif' => 'news']);
     }
 
     /**
@@ -53,9 +46,10 @@ class SiteController extends Controller
             if(!Reservation::where('user_id', '=', auth()->user()->id)->first()) return view('spaceUser', [
                 'title' => 'User Zone',
                 'user' => $user,
+                'actif' => 'spaceUser',
             ]);
         }
-        return view('packages', ['title' => 'HIFF Packages']);
+        return view('packages', ['title' => 'HIFF Packages', 'actif' => 'packages']);
     }
 
     /**
@@ -65,7 +59,7 @@ class SiteController extends Controller
      */
     public function showContact()
     {
-        return view('contact', ['title' => 'HIFF contact us']);
+        return view('contact', ['title' => 'HIFF contact us', 'actif' => 'contact']);
     }
 
     /**
@@ -88,6 +82,7 @@ class SiteController extends Controller
             "activities" => Activity::all(),
             "passes" => Pass::find(auth()->user()->id)->pass,
             'user' => auth()->user(),
+            'actif' => 'spaceAdmin',
         ]);
     }
 
@@ -103,6 +98,7 @@ class SiteController extends Controller
         return view('spaceUser', [
             'title' => 'User Zone',
             'user' => null,
+            'actif' => 'spaceUser'
         ]);
     }
 
@@ -114,6 +110,17 @@ class SiteController extends Controller
     public function showTickets()
     {
         if(!Auth::check()) return redirect('user-zone');
-        return view('myTickets', ['title' => 'My Tickets']);
+        return view('myTickets', [
+            'title' => 'My Tickets',
+            'actif' => 'myTickets',
+        ]);
+    }
+
+    public function showSchedule()
+    {
+        return view('schedule', [
+            'title' => 'Schedule',
+            'actif' => 'schedule',
+        ]);
     }
 }
