@@ -19,3 +19,7 @@ jQuery('.reservations').on('click',function(){
   jQuery('.listReservations').toggle() & $('.listEmployes').hide() & $('.listActivities').hide() & $('.listUsers').hide();
 })
 
+jQuery('.listMembers').on('click',function(){
+    jQuery('.sectionReservation').toggle();
+  })
+

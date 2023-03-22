@@ -79,13 +79,15 @@ class SiteController extends Controller
 
         $user = null;
 
+        // var_dump(Reservation::where('id','=',1)->get()[0]->user_id); exit;
+
         if(Auth::check()) $user = auth()->user();
 
         return view('spaceAdmin', ['title' => 'Admin Zone',
         "users" => DB::table('users')->where('admin', '=', '1')->get(),
-        "employees" => DB::table('users')->where('admin', '=', '0')->get(),
+        "members" => DB::table('users')->where('admin', '=', '0')->get(),
         "activities" => Activity::all(),
-        "passes" => Pass::find(auth()->user()->id)->pass,
+        "reservations" => DB::table('reservations')->join('passes', 'pass_id', '=', 'passes.id')->get(),
         'user' => auth()->user(),
         ]);
     }

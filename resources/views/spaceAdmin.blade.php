@@ -18,7 +18,7 @@
                 </section>
                 <section class="listUsers">
                     <div class="sectionName"><h3>Employees</h3></div>
-                    <div class="usersSection"><x-liste-users :employees="$employees"/></div>
+                    <div class="usersSection"><x-liste-users :members="$members"/></div>
                 </section>
                 <section class="listActivities">
                     <div class="sectionName"><h3>Activities</h3></div>
@@ -29,11 +29,12 @@
                 <div class="reservationSection">
                     <div class="sectionMember">
                         <div class="titleMember"><h3>Membres</h3></div>
-                        <div class="listMembers" ><x-liste-members :employees="$employees"/></div>
+                        <div class="listMembers" ><x-liste-members :members="$members"/></div>
                     </div>
                     <div class="sectionReservation">
                         <div class="titleReservation"><h3>Reservations</h3></div>
-                        <div class="listReservations">bonjour</div>
+                        <div class="listReservations"></div>
+                        {{-- <x-liste-reservations :users="$reservations"/> --}}
                     </div>
                 </div>
             </section>
