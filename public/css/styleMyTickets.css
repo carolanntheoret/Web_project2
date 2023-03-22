@@ -96,7 +96,8 @@ main {
   font-size: 44px;
 }
 .headerImage h3 {
-  left: 56.7vw;
+  width: 36vw;
+  right: 7.3vw;
   bottom: 40px;
 }
 
@@ -117,6 +118,8 @@ main {
 
 .passes {
   display: flex;
+  margin: 0 7.3vw;
+  justify-content: space-between;
 }
 
 h1 {
@@ -128,4 +131,10 @@ h1 {
   position: relative;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.pass {
+  width: 17.5vw;
+  background-size: cover;
+  background-position: center;
 }/*# sourceMappingURL=styleMyTickets.css.map */
