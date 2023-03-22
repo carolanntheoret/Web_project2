@@ -1,3 +1,78 @@
+@import url(nav.css);
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fbf7ea;
+  background-color: #222222;
+  padding-top: 5rem;
+}
+body .mainBlock {
+  border: 1px solid #fefed5;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px;
+}
+body .mainBlock .container {
+  max-width: 95vw;
+  margin: 0 auto;
+}
+body .mainBlock .container h1 {
+  font-size: 90px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+body .mainBlock .container h2 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+body .mainBlock .container h3 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+body .mainBlock .container .mainText {
+  font-size: 25px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+body .mainBlock .container .secText {
+  font-size: 15px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+body .mainBlock .container .mainBtn,
+body .mainBlock .container .secBtn {
+  color: #fbf7ea;
+  cursor: pointer;
+}
+body .mainBlock .container .mainBtn .mainBtn,
+body .mainBlock .container .secBtn .mainBtn {
+  background: linear-gradient(to right, #f54674, #f348a4);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: auto;
+  cursor: pointer;
+  border: none;
+}
+body .mainBlock .container .mainBtn .mainBtn .mainBtn:hover,
+body .mainBlock .container .secBtn .mainBtn .mainBtn:hover {
+  background: linear-gradient(to left, #f54674, #f348a4);
+}
+body .mainBlock .container .mainBtn .secBtn,
+body .mainBlock .container .secBtn .secBtn {
+  background: linear-gradient(to left, #35d0ba, #65efce);
+  border: 2px solid #f54674;
+}
+body .mainBlock .container .mainBtn .secBtn .secBtn:hover,
+body .mainBlock .container .secBtn .secBtn .secBtn:hover {
+  background: linear-gradient(to left, #65efce, #35d0ba);
+}
+
 body main a {
   display: block;
   color: #fbf7ea;
@@ -7,6 +82,62 @@ body main .highlighted-news {
   background-position: center;
   height: 850px;
   margin-bottom: 50px;
+}
+body main .highlighted-news .overlay {
+  width: 100%;
+  height: 850px;
+  position: absolute;
+  background-color: rgba(34, 34, 34, 0.4156862745);
+}
+body main .highlighted-news h1 {
+  position: relative;
+  top: 35%;
+  left: 39%;
+  font-size: 75px;
+  font-weight: bold;
+}
+body main .highlighted-news .content {
+  position: relative;
+  top: 65%;
+  left: 5%;
+}
+body main .highlighted-news .content h2 {
+  font-weight: bold;
+}
+body main .highlighted-news .content .festi-line {
+  display: flex;
+  align-items: center;
+}
+body main .highlighted-news .content .festi-line p {
+  margin: 0;
+}
+body main .highlighted-news .content .festi-line img {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+body main .highlighted-news .content .festi-line .date {
+  color: #a8a8a8;
+}
+body main .highlighted-news .content .button-header {
+  border: 3px solid #fbf7ea;
+  padding: 15px 35px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-weight: bold;
+  margin-top: 10px;
+}
+body main .highlighted-news .content .button-header a {
+  text-decoration: none;
+}
+body main .highlighted-news .content .button-header:hover {
+  background-color: #fbf7ea;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+body main .highlighted-news .content .button-header:hover a {
+  color: #222222;
 }
 body main .container {
   max-width: 2000px;
@@ -24,18 +155,116 @@ body main .container .grid .grid-item {
   margin-bottom: 50px;
   border: 3px solid #222;
   padding: 0px 0px 10px 0px;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
 }
 body main .container .grid .grid-item img {
   max-width: 100%;
+}
+body main .container .grid .grid-item .author {
+  color: #65efce;
+}
+body main .container .grid .grid-item .date {
+  color: #35d0ba;
 }
 body main .container .grid .hidden {
   opacity: 0;
   visibility: hidden;
 }
+body main .container .grid .grid-item--width2 {
+  transition: all 1s ease-in-out;
+}
 body main .container .grid .grid-item--width2 img {
   max-width: 100%;
 }
-body main .container .grid .grid-item:hover {
-  border: 3px solid #fbf7ea;
-  box-sizing: border-box;
+body main .container .grid .grid-item:hover img {
+  transform: scale(1.02);
+  filter: contrast(75%);
+  transition: all 0.3s ease-in-out;
+}
+body main .container .button {
+  background: linear-gradient(to right, #f54674, #f348a4);
+  padding: 2.3vh 2vw 2.3vh;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 22px;
+  margin: auto;
+  cursor: pointer;
+  color: #fbf7ea;
+  transition: all 0.3s ease-in-out;
+  border: none;
+  width: 218px;
+}
+body main .container .button:hover {
+  background: linear-gradient(to left, #f54674, #f348a4);
+}
+body main .article-head {
+  background-size: cover;
+  height: 425px;
+  position: relative;
+  background-size: cover;
+  background-position: center center;
+}
+body main .article-head .overlay {
+  width: 100%;
+  height: 425px;
+  position: absolute;
+  background-color: rgba(34, 34, 34, 0.4156862745);
+}
+body main .article-head .title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 5;
+}
+body main .article-head .title h1 {
+  color: #fbf7ea;
+  font-size: 48px;
+  font-weight: bold;
+}
+body main .article-head .title h4 {
+  margin: 0 50px;
+}
+body main .band {
+  width: 100%;
+  height: 50px;
+  background-color: rgba(53, 208, 185, 0.7176470588);
+}
+body main .article {
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  padding: 40px;
+  margin: 5% 15%;
+  color: #fbf7ea;
+}
+body main .article-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+body main .article-header p {
+  margin: 0;
+}
+body main .article-header img {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+body main .article-author {
+  font-size: 24px;
+  font-style: italic;
+  margin-left: 10px;
+}
+body main .article-date {
+  font-size: 20px;
+  color: #a8a8a8;
+}
+body main .article-content {
+  margin-top: 45px;
+  font-size: 22px;
+  line-height: 1.5;
 }/*# sourceMappingURL=news.css.map */

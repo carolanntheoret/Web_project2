@@ -1,0 +1,17 @@
+<svg id="Circle_Button_SIZE_MEDIUM_STATE_DEFAULT_STYLE_STYLE3_" data-name="Circle Button [SIZE=MEDIUM][STATE=DEFAULT][STYLE=STYLE3]" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+  <g id="Area_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE3_" data-name="Area [SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE3]" fill="#fbf7ea" stroke="#34ffc8" stroke-width="2">
+    <rect width="55" height="55" rx="27.5" stroke="none"/>
+    <rect x="1" y="1" width="53" height="53" rx="26.5" fill="none"/>
+  </g>
+  <g id="Icon_ICON_feather_linkedin_SIZE_MEDIUM_STATE_DEFAULT_STYLE_STYLE3_" data-name="Icon [ICON=feather/linkedin][SIZE=MEDIUM][STATE=DEFAULT][STYLE=STYLE3]" transform="translate(17.282 17.5)">
+    <g id="Area_ICON:feather_linkedin_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE3_" data-name="Area [ICON:feather/linkedin][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE3]" transform="translate(0.194)" fill="#fbf7ea" stroke="#fd49c6" stroke-width="1" opacity="0">
+      <rect width="20" height="20" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" height="19" fill="none"/>
+    </g>
+    <g id="Icon" transform="translate(0 0.229)">
+      <path id="_527f1054-c33a-4787-a0c6-0cededc78b0c" data-name="527f1054-c33a-4787-a0c6-0cededc78b0c" d="M16,8a6,6,0,0,1,6,6v7H18V14a2,2,0,0,0-4,0v7H10V14A6,6,0,0,1,16,8Z" transform="translate(-2 -2)" fill="#fbf7ea" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <rect id="_54f531c7-fc96-41cf-aeef-c4059251ace7" data-name="54f531c7-fc96-41cf-aeef-c4059251ace7" width="4" height="12" transform="translate(0 7)" fill="#fbf7ea" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+      <circle id="_8435c73d-1e4c-4c41-8e99-2ec63b5e1a2a" data-name="8435c73d-1e4c-4c41-8e99-2ec63b5e1a2a" cx="2" cy="2" r="2" fill="#fbf7ea" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+    </g>
+  </g>
+</svg>

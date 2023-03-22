@@ -1,4 +1,4 @@
-<x-layout :title="$title">
+<x-layout :title="$title" :actif="$actif">
     <link rel="stylesheet" href="{{ asset('css/styleAdmin.css') }}">
         <main class="sectionAdmin">
             <section class="menuAdmin">

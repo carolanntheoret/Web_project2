@@ -38,7 +38,7 @@ class UserController extends Controller
     public function disconnect()
     {
         auth()->logout(auth()->user());
-        return redirect('/')->with('logout_successful', 'Log out successfully');
+        return back()->with('logout_successful', 'Log out successfully');
     }
 
     /**
@@ -56,7 +56,7 @@ class UserController extends Controller
             'last_name' => 'required|max:255',
             'email' => 'required|max:255|email',
             'password' => 'required|max:255',
-            'password_confirmation' => 'confirmed',
+            'password_confirmation' => 'required|same:password',
         ]);
 
         $user = new User();
@@ -71,7 +71,7 @@ class UserController extends Controller
         if(Auth::check() && auth()->user()->admin == 1) return redirect('/admin')->with('creation_successful','Account created with success');
 
         auth()->login($user);
-        return view('spaceUser', ['user' => auth()->user()])->with('creation_successful', 'Account created with success');
+        return redirect('my-tickets');
     }
 
     /**
@@ -90,7 +90,6 @@ class UserController extends Controller
             'last_name' => 'required|max:255',
             'email' => 'required|max:255|email',
             'password' => 'max:255',
-            'password_confirmation' => 'confirmed',
             'id' => 'required',
         ]);
 

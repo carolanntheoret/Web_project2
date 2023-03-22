@@ -8,6 +8,7 @@ const msnry = new Masonry(elem, {
     itemSelector: '.grid-item',
     fitWidth: true,
     gutter: 45,
+    horizontalOrder: true,
 })
 
 
@@ -21,6 +22,10 @@ window.onload = () => {
 function display() {
     const articles = document.querySelectorAll('.grid-item')
     let lastIndex = quantite - 1
+
+    if(quantite >= articles.length){
+        bouton.style.display = 'none'
+    }
 
     for (let i = 0; i < articles.length; i++) {
         if (i > lastIndex) {

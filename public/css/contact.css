@@ -3,6 +3,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fbf7ea;
   background-color: #222222;
+  padding-top: 5rem;
 }
 body .mainBlock {
   border: 1px solid #fefed5;
@@ -74,104 +75,4 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
 
 body {
   background-color: #1f2833;
-}
-
-main {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin-top: 11vh;
-  height: 89vh;
-}
-
-.connectForm {
-  border-radius: 20px;
-  border: 7px #fbf7ea solid;
-  width: 40%;
-  height: 648px;
-  background-color: #252f3d;
-}
-
-.login,
-.createAccount {
-  width: 65%;
-  margin: 12.25% auto;
-}
-
-input {
-  font-size: 20px;
-  width: 100%;
-  height: 60px;
-  margin-bottom: 20px;
-  border: 0px;
-  background-color: #404851;
-  padding: 16px 0 16px 40px;
-  color: #fbf7ea;
-}
-
-input::-moz-placeholder {
-  color: #fbf7ea;
-}
-
-input:-ms-input-placeholder {
-  color: #fbf7ea;
-}
-
-input::placeholder {
-  color: #fbf7ea;
-}
-
-h2 {
-  margin-bottom: 22px;
-}
-
-.loginInput,
-.createAccountInput {
-  margin-top: 9px;
-  background: linear-gradient(to right, #f54674, #f348a4);
-  font-size: 21px;
-  border-radius: 24px;
-  cursor: pointer;
-  color: #fbf7ea;
-  border: none;
-  display: flex;
-  align-items: center;
-  position: relative;
-}
-.loginInput img,
-.createAccountInput img {
-  position: absolute;
-  right: 30px;
-  width: 30px;
-}
-
-.loginInput {
-  width: 160px;
-}
-
-.createAccountInput {
-  width: 263px;
-}
-
-.submit {
-  background-color: transparent;
-  margin: 0;
-  width: auto;
-  font-weight: 500;
-  padding: 15px 0 15px 30px;
-}
-
-.plus {
-  font-size: 40px;
-  margin: -10px 0 0 12px;
-}
-
-.loginInput:hover,
-.createAccountInput:hover {
-  background: linear-gradient(to left, #f54674, #f348a4);
-}
-
-.createAccountName {
-  display: flex;
-  gap: 25px;
-}/*# sourceMappingURL=styleUserZone.css.map */
+}/*# sourceMappingURL=contact.css.map */

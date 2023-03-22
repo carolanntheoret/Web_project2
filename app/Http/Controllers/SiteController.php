@@ -12,13 +12,6 @@ use Illuminate\Support\Facades\DB;
 
 class SiteController extends Controller
 {
-    public function test()
-    {
-        return view('test', [
-            'reservation' => Reservation::first(),
-        ]);
-    }
-
     /**
      * Display the homepage view
      *
@@ -26,17 +19,23 @@ class SiteController extends Controller
      */
     public function homepage()
     {
-        return view('homepage', ['title' => 'HIFF']);
+        return view('homepage', [
+            'title' => 'HIFF | Home',
+            'actif' => 'homepage'
+        ]);
     }
 
     /**
-     * Display the activity list view
+     * Display news view
      *
      * @return object
      */
-    public function listActivities()
+    public function showNews()
     {
-        return view('activities', ['title' => 'HIFF Activities']);
+        return view('news', [
+            'title' => 'HIFF |  News' ,
+            'actif' => 'news'
+        ]);
     }
 
     /**
@@ -51,11 +50,15 @@ class SiteController extends Controller
             $user = null;
             $user = auth()->user();
             if(!Reservation::where('user_id', '=', auth()->user()->id)->first()) return view('spaceUser', [
-                'title' => 'User Zone',
+                'title' => 'HIFF | Login',
                 'user' => $user,
+                'actif' => 'spaceUser',
             ]);
         }
-        return view('packages', ['title' => 'HIFF Packages']);
+        return view('packages', [
+            'title' => 'HIFF | Packages',
+            'actif' => 'packages'
+        ]);
     }
 
     /**
@@ -65,7 +68,7 @@ class SiteController extends Controller
      */
     public function showContact()
     {
-        return view('contact', ['title' => 'HIFF contact us']);
+        return view('contact', ['title' => 'HIFF | Contact Us', 'actif' => 'contact']);
     }
 
     /**
@@ -83,12 +86,14 @@ class SiteController extends Controller
 
         if(Auth::check()) $user = auth()->user();
 
-        return view('spaceAdmin', ['title' => 'Admin Zone',
-        "users" => DB::table('users')->where('admin', '=', '1')->get(),
-        "members" => DB::table('users')->where('admin', '=', '0')->get(),
-        "activities" => Activity::all(),
-        "reservations" => DB::table('reservations')->join('passes', 'pass_id', '=', 'passes.id')->get(),
-        'user' => auth()->user(),
+        return view('spaceAdmin', [
+            'title' => 'HIFF | Admin',
+            "users" => DB::table('users')->where('admin', '=', '1')->get(),
+            "members" => DB::table('users')->where('admin', '=', '0')->get(),
+            "activities" => Activity::all(),
+            "reservations" => DB::table('reservations')->join('passes', 'pass_id', '=', 'passes.id')->get(),
+            'user' => auth()->user(),
+            'actif' => 'spaceAdmin',
         ]);
     }
 
@@ -99,14 +104,34 @@ class SiteController extends Controller
      */
     public function showUser()
     {
-        $user = null;
-        if(Auth::check()) $user = auth()->user();
+        if(Auth::check()) return redirect('my-tickets');
 
         return view('spaceUser', [
-            'title' => 'User Zone',
-            'user' => $user,
+            'title' => 'HIFF | Login',
+            'user' => null,
+            'actif' => 'spaceUser'
         ]);
     }
 
+    /**
+     * Display tickets of the user
+     *
+     * @return object
+     */
+    public function showTickets()
+    {
+        if(!Auth::check()) return redirect('user-zone');
+        return view('myTickets', [
+            'title' => 'HIFF | My Tickets',
+            'actif' => 'myTickets',
+        ]);
+    }
 
+    public function showSchedule()
+    {
+        return view('schedule', [
+            'title' => 'HIFF | Schedule 2023',
+            'actif' => 'schedule',
+        ]);
+    }
 }
