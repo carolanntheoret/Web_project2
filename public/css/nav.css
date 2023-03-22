@@ -9,7 +9,7 @@
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 2vh 5vh 2vw 10vw;
+  padding: 2vh 7.3vw 2vh 7.3vw;
   z-index: 10000;
 }
 .navigation #headBlock .headLogo {
@@ -17,7 +17,7 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 .navigation #headBlock .headLogo #logo {
-  max-height: 4rem;
+  max-height: 7vh;
 }
 .navigation #headBlock .headLinks {
   margin: auto;
@@ -115,50 +115,59 @@
 .navigation #headBlock .headIcon .dropdown:hover .dropdown-content {
   display: block;
 }
-.navigation #footer {
+.navigation .footerBlock {
+  display: flex;
+  background-color: #65efce;
+  padding: 3vh 7.3vw 3vh 7.3vw;
   margin-bottom: 0;
   width: 100vw;
 }
-.navigation #footer .footerBlock {
-  display: flex;
-  background-color: #65efce;
-  padding: 0vh 5vh 2vw 10vw;
-  width: 100%;
-}
-.navigation #footer .footerBlock .footerLogo {
+.navigation .footerBlock .footerLogo {
   display: flex;
   color: #222222;
+  width: 15vw;
 }
-.navigation #footer .footerBlock .footerLogo #dudeLogo {
-  height: 30vh;
+.navigation .footerBlock .footerLogo .dudeLogo {
+  height: auto;
+  max-width: 100%;
 }
-.navigation #footer .footerBlock #footerSection {
+.navigation .footerBlock #footerSection {
   display: flex;
   flex-direction: column;
+  padding-left: 2vw;
 }
-.navigation #footer .footerBlock #footerSection #footerText {
+.navigation .footerBlock #footerSection #footerText {
   display: flex;
   flex-direction: column;
   color: #222222;
+  max-width: 30vw;
 }
-.navigation #footer .footerBlock #footerSection .socialIcons ul {
+.navigation .footerBlock #footerSection .socialIcons ul {
   display: flex;
   list-style-type: none;
+  padding: 0;
 }
-.navigation #footer .footerBlock .footerLinks {
+.navigation .footerBlock .footerLinks {
   margin: auto;
   display: flex;
   flex-direction: column;
+  -webkit-margin-start: auto;
+          margin-inline-start: auto;
+  margin-right: 6.8vw;
+  text-align: end;
 }
-.navigation #footer .footerBlock .footerLinks .footerList {
+.navigation .footerBlock .footerLinks .footerList {
   display: inline-block;
 }
-.navigation #footer .footerBlock .footerLinks .footerList a {
+.navigation .footerBlock .footerLinks .footerList a {
   text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #222222;
   font-size: 25px;
 }
-.navigation #footer #copyright-text {
-  padding: 0vh 2vh 0vw 10vw;
+.navigation .footerBlock .footerLinks .footerList a:hover {
+  color: #35d0ba;
+}
+.navigation #copyright-text {
+  padding: 0vh 2vw 0vh 10vw;
 }/*# sourceMappingURL=nav.css.map */

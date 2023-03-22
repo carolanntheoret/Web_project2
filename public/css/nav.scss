@@ -31,7 +31,7 @@ $almost-black: #222222;
         position: fixed;
         top: 0;
         width: 100%;
-        padding: 2vh 5vh 2vw 10vw;
+        padding: 2vh 7.3vw 2vh 7.3vw;
         z-index: 10000;
 
         .headLogo {
@@ -39,7 +39,7 @@ $almost-black: #222222;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
             #logo{
-                max-height: 4rem;
+                max-height: 7vh;
             }
         }
 
@@ -161,66 +161,72 @@ $almost-black: #222222;
         }
     }
 
-    #footer{
+    .footerBlock {
+        display: flex;
+        background-color: $light-turquoise;
+        padding: 3vh 7.3vw 3vh 7.3vw;
         margin-bottom: 0;
         width: 100vw;
-        //position: absolute;
-        //z-index: 10;
 
-        .footerBlock {
+        .footerLogo {
             display: flex;
-            background-color: $light-turquoise;
-            padding: 0vh 5vh 2vw 10vw;
-            width: 100%;
+            color: $almost-black;
+            width: 15vw;
 
-            .footerLogo {
+            .dudeLogo{
+                height: auto;
+                max-width: 100%;
+            }
+
+        }
+        #footerSection{
+            display: flex;
+            flex-direction: column;
+            padding-left: 2vw;
+
+            #footerText {
                 display: flex;
+                flex-direction: column;
                 color: $almost-black;
-
-                #dudeLogo{
-                    height:30vh;
-                }
+                max-width: 30vw;
 
             }
-            #footerSection{
-                display: flex;
-                flex-direction: column;
 
-                #footerText {
+            .socialIcons {
+                ul{
                     display: flex;
-                    flex-direction: column;
-                    color: $almost-black;
+                    list-style-type: none;
+                    padding: 0;
                 }
+            }
+        }
 
-                .socialIcons {
+        .footerLinks {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            margin-inline-start: auto;
+            margin-right: 6.8vw;
+            text-align: end;
 
-                    ul{
-                        display: flex;
-                        list-style-type: none;
+            .footerList {
+                display: inline-block;
+                //padding: 10px 20px;
+
+                    a {
+                        text-decoration: none;
+                        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                        color: $almost-black;
+                        font-size: 25px;
                     }
-                }
-            }
 
-            .footerLinks {
-                margin: auto;
-                display: flex;
-                flex-direction: column;
-
-                .footerList {
-                    display: inline-block;
-                    //padding: 10px 20px;
-
-                        a {
-                            text-decoration: none;
-                            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                            color: $almost-black;
-                            font-size: 25px;
-                        }
-                }
+                    a:hover{
+                        color: $logo-turquoise;
+                    }
             }
         }
-        #copyright-text{
-            padding: 0vh 2vh 0vw 10vw;
-        }
+    }
+    #copyright-text{
+        padding: 0vh 2vw 0vh 10vw;
     }
 }

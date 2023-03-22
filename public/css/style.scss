@@ -27,7 +27,7 @@ body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: $almost-white;
     background-color: $almost-black;
-    padding-top: 5rem;
+    padding-top: 6rem;
 
     .mainBlock {
         border: 1px solid #fefed5;
@@ -60,6 +60,12 @@ body {
                 margin-bottom: 10px;
             }
 
+            h4 {
+                font-size: 25px;
+                margin-top: 0;
+                margin-bottom: 10px;
+            }
+
             .mainText {
                 font-size: 25px;
                 line-height: 1.5;
@@ -67,7 +73,7 @@ body {
             }
 
             .secText {
-                font-size: 15px;
+                font-size: 22px;
                 line-height: 1.5;
                 margin-bottom: 20px;
             }
