@@ -73,18 +73,21 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
 }
 
 body {
-  background-color: #1f2833;
+  background-color: #fff;
 }
 
 main {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  height: 100vh;
 }
 
 .connectForm {
   border-radius: 20px;
   border: 7px #fbf7ea solid;
   width: 40%;
+  height: 603px;
 }
 
 .login,
@@ -105,6 +108,10 @@ input {
 }
 
 input::-moz-placeholder {
+  color: #fbf7ea;
+}
+
+input:-ms-input-placeholder {
   color: #fbf7ea;
 }
 

@@ -1,6 +1,25 @@
 <x-layout :title="$title" :actif="$actif">
     <link rel="stylesheet" href="<?= asset('css/styleHomePage.css') ?>">
         <main class="content">
+            <section class="firstSection">
+                <div class="festivalTitle">
+                    <h1>2023</h1>
+                    <p>HORIZON INDEPENDENT FILM FESTIVAL</p>
+                </div>
+                <div class="multipleScreen">
+                    <div class="topRow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                    <div class="downRow">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </section>
+
             <section class="aboutSection">
                 <div class="aboutInfo">
                     <h1>ABOUT HIFF.</h1>
