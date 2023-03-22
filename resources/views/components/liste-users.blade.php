@@ -1,8 +1,8 @@
-@props(["employees"])
+@props(["members"])
 
-@forelse ($employees as $employee)
+@forelse ($members as $member)
 <ul>
-    <a href="/delete-user/{{ $employee->id }}">🚫</a><x-user_form :admin="$employee" :user="$employee"/>
+    <a href="/delete-user/{{ $member->id }}">🚫</a><x-user_form :admin="$member" :user="$member"/>
     {{-- <p><strong>ID{{ $employee->id }}</strong></p> <p>{{ $employee->first_name }} {{ $employee->last_name }}</p> --}}
 </ul>
  @empty
