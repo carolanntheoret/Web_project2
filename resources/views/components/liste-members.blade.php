@@ -1,7 +1,7 @@
-@props(["employees"])
+@props(["members"])
 
-@forelse ($employees as $employee)
-<ul><a href="#">{{ $employee->first_name }}<br><strong>{{ $employee->last_name }}</strong></a></ul>
+@forelse ($members as $member)
+<ul><a href="chooseMember(member)">{{ $member->first_name }}<br><strong>{{ $member->last_name }}</strong></a></ul>
  @empty
     <p>Aucun user à afficher</p>
  @endforelse
