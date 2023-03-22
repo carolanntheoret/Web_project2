@@ -1,3 +1,4 @@
+const employee_selectionner = ref(null);
 
 let quantite = 10
 
@@ -46,3 +47,6 @@ bouton.addEventListener('click', () => {
     msnry.layout()
 })
 
+function selectionnerEmployee(employee) {
+    employee_selectionner.value = employee;
+  }

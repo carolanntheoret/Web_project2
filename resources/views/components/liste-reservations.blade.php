@@ -1,5 +1,5 @@
 @props(["users"])
-@props(["passes"])
+@props(["reservations"])
 
 @forelse ($users as $user)
 <ul>{{ $user->id }} {{ $user->first_name }}</ul>
@@ -7,8 +7,8 @@
     <p>Aucun user à afficher</p>
  @endforelse
 
- @forelse ($passes as $pass)
-<ul>{{ $pass->id }} {{ $pass->name }}</ul>
+ @forelse ($reservations as $reservation)
+<ul>{{ $reservation->id }} {{ $reservation->name }}</ul>
  @empty
     <p>Aucun user à afficher</p>
  @endforelse
