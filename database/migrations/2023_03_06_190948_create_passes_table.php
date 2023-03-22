@@ -18,6 +18,7 @@ class CreatePassesTable extends Migration
             $table->text('name', 255);
             $table->float('price');
             $table->text('description');
+            $table->text('image', 63);
             $table->timestamps();
         });
     }
