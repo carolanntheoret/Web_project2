@@ -2,7 +2,7 @@
 
 body
 {
-    background-color: #fff;
+    background-color: #1f2833;
 }
 
 main
@@ -10,7 +10,8 @@ main
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    height: 100vh;
+    margin-top: 11vh;
+    height: 89vh;
 }
 
 .connectForm
@@ -19,6 +20,7 @@ main
     border: 7px $almost-white solid;
     width: 40%;
     height: 603px;
+    background-color: lighten($deep-blue, $amount: 3);
 }
 
 .login,

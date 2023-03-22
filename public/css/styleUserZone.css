@@ -73,14 +73,15 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
 }
 
 body {
-  background-color: #fff;
+  background-color: #1f2833;
 }
 
 main {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
+  margin-top: 11vh;
+  height: 89vh;
 }
 
 .connectForm {
@@ -88,6 +89,7 @@ main {
   border: 7px #fbf7ea solid;
   width: 40%;
   height: 603px;
+  background-color: #252f3d;
 }
 
 .login,
