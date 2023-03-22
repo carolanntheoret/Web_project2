@@ -1,0 +1,16 @@
+<svg id="Circle_Button_SIZE_MEDIUM_STATE_DEFAULT_STYLE_STYLE3_" data-name="Circle Button [SIZE=MEDIUM][STATE=DEFAULT][STYLE=STYLE3]" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+  <g id="Area_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE3_" data-name="Area [SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE3]" fill="#fbf7ea" stroke="#34ffc8" stroke-width="2">
+    <rect width="55" height="55" rx="27.5" stroke="none"/>
+    <rect x="1" y="1" width="53" height="53" rx="26.5" fill="none"/>
+  </g>
+  <g id="Icon_ICON_feather_youtube_SIZE_MEDIUM_STATE_DEFAULT_STYLE_STYLE3_" data-name="Icon [ICON=feather/youtube][SIZE=MEDIUM][STATE=DEFAULT][STYLE=STYLE3]" transform="translate(17.169 17.5)">
+    <g id="Area_ICON:feather_youtube_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE3_" data-name="Area [ICON:feather/youtube][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE3]" transform="translate(0.294)" fill="#fbf7ea" stroke="#fd49c6" stroke-width="1" opacity="0">
+      <rect width="20" height="20" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" height="19" fill="none"/>
+    </g>
+    <g id="Icon" transform="translate(0 2.702)">
+      <path id="_9a93912b-34b5-47a5-99fe-4a9963dd0ad9" data-name="9a93912b-34b5-47a5-99fe-4a9963dd0ad9" d="M20.49,5.836a2.528,2.528,0,0,0-1.764-1.818,65.427,65.427,0,0,0-7.818-.382s-6.254,0-7.817.418A2.529,2.529,0,0,0,1.327,5.872a26.379,26.379,0,0,0-.418,4.809,26.4,26.4,0,0,0,.418,4.845,2.528,2.528,0,0,0,1.764,1.746c1.563.418,7.817.418,7.817.418s6.255,0,7.818-.418a2.529,2.529,0,0,0,1.764-1.818,26.344,26.344,0,0,0,.418-4.773A26.416,26.416,0,0,0,20.49,5.836Z" transform="translate(-0.908 -3.636)" fill="#fbf7ea" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.818"/>
+      <path id="_733edcb3-f531-4b1e-b1ea-e40407d8c55c" data-name="733edcb3-f531-4b1e-b1ea-e40407d8c55c" d="M8.863,13.654l5.227-2.973L8.863,7.709Z" transform="translate(-0.908 -3.636)" fill="#fbf7ea" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.818"/>
+    </g>
+  </g>
+</svg>

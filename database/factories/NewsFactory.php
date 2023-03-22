@@ -22,6 +22,7 @@ class NewsFactory extends Factory
             'subtitle' => $this->faker->paragraph(),
             'text' => $this->faker->text(1000),
             'image' => 'https://loremflickr.com/'. rand(520, 940) . '/'. rand(440, 940) . '/news',
+            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
         ];
     }
 }

@@ -1,0 +1,15 @@
+<svg id="Circle_Button_SIZE_MEDIUM_STATE_DEFAULT_STYLE_STYLE3_" data-name="Circle Button [SIZE=MEDIUM][STATE=DEFAULT][STYLE=STYLE3]" xmlns="http://www.w3.org/2000/svg" width="55" height="55" viewBox="0 0 55 55">
+  <g id="Area_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE3_" data-name="Area [SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE3]" fill="#fbf7ea" stroke="#34ffc8" stroke-width="2">
+    <rect width="55" height="55" rx="27.5" stroke="none"/>
+    <rect x="1" y="1" width="53" height="53" rx="26.5" fill="none"/>
+  </g>
+  <g id="Icon_ICON_feather_twitter_SIZE_MEDIUM_STATE_DEFAULT_STYLE_STYLE3_" data-name="Icon [ICON=feather/twitter][SIZE=MEDIUM][STATE=DEFAULT][STYLE=STYLE3]" transform="translate(17.244 17.5)">
+    <g id="Area_ICON:feather_twitter_SIZE:MEDIUM_STATE:DEFAULT_STYLE:STYLE3_" data-name="Area [ICON:feather/twitter][SIZE:MEDIUM][STATE:DEFAULT][STYLE:STYLE3]" transform="translate(0.227)" fill="#fbf7ea" stroke="#fd49c6" stroke-width="1" opacity="0">
+      <rect width="20" height="20" stroke="none"/>
+      <rect x="0.5" y="0.5" width="19" height="19" fill="none"/>
+    </g>
+    <g id="Icon" transform="translate(0 1.573)">
+      <path id="_61b02a02-28b6-4ce0-b5eb-bcf24881d9e9" data-name="61b02a02-28b6-4ce0-b5eb-bcf24881d9e9" d="M20.909,2.727a9.9,9.9,0,0,1-2.854,1.391,4.073,4.073,0,0,0-7.146,2.727v.91A9.691,9.691,0,0,1,2.727,3.636S-.909,11.818,7.273,15.455A10.59,10.59,0,0,1,.909,17.273c8.182,4.545,18.182,0,18.182-10.455a4.056,4.056,0,0,0-.073-.754A7.017,7.017,0,0,0,20.909,2.727Z" transform="translate(-0.909 -2.718)" fill="#fbf7ea" stroke="#212121" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.818"/>
+    </g>
+  </g>
+</svg>

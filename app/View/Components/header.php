@@ -6,14 +6,16 @@ use Illuminate\View\Component;
 
 class header extends Component
 {
+    public $actif;
+
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct($actif)
     {
-        //
+        $this->actif = $actif;
     }
 
     /**
