@@ -27,15 +27,19 @@
             <a class="mainBtn" href="/user-zone"> My tickets</a>
             <div class="dropdown">
                 <?php if (auth()->check()): ?>
-                    <div><?= substr(auth()->user()->first_name, 0, 1) ?><?= substr(auth()->user()->last_name, 0, 1) ?></div>
-                    <img src="<?= asset('images/connectPlain.icon.svg') ?>" width="50px" alt="HIFF logo" class="HIFF logo">
+                    <div id="userId"><?= substr(auth()->user()->first_name, 0, 1) ?><?= substr(auth()->user()->last_name, 0, 1) ?></div>
+                    <img id="userImg"src="<?= asset('images/connectPlain.icon.svg') ?>" alt="user connection">
                     <div class="dropdown-content">
-                        <a href="/user-zone">User Zone</a>
+                        <?php if (auth()->user()->admin): ?>
+                            <a href="/admin">Admin Zone</a>
+                        <?php else: ?>
+                            <a href="/user-zone">User Zone</a>
+                        <?php endif; ?>
                         <a href="/disconnect">Logout</a>
                     </div>
                 <?php else: ?>
                     <a href="user-zone">
-                        <img src="<?= asset('images/connect.icon.svg') ?>" width="50px" alt="HIFF logo" class="HIFF logo">
+                        <img id="userNone"src="<?= asset('images/connect.icon.svg') ?>" alt="icon connection" >
                     </a>
                 <?php endif; ?>
             </div>
