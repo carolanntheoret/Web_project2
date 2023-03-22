@@ -3,6 +3,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fbf7ea;
   background-color: #222222;
+  padding-top: 5rem;
 }
 body .mainBlock {
   border: 1px solid #fefed5;
@@ -175,12 +176,9 @@ body main .container .grid .grid-item--width2 img {
   max-width: 100%;
 }
 body main .container .grid .grid-item:hover img {
-  transform: scale(1.05);
-  transition: transform 0.2s ease-in-out;
-}
-body main .container .grid .grid-item:hover h4 {
-  color: #707070;
-  transition: color 0.2s ease-in-out;
+  transform: scale(1.02);
+  filter: contrast(75%);
+  transition: all 0.3s ease-in-out;
 }
 body main .container .button {
   background: linear-gradient(to right, #f54674, #f348a4);
@@ -239,7 +237,7 @@ body main .article {
   border: 2px solid #ccc;
   border-radius: 10px;
   padding: 40px;
-  margin: 30px 15%;
+  margin: 5% 15%;
   color: #fbf7ea;
 }
 body main .article-header {
