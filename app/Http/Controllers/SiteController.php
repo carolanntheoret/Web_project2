@@ -124,6 +124,7 @@ class SiteController extends Controller
         return view('myTickets', [
             'title' => 'HIFF | My Tickets',
             'actif' => 'myTickets',
+            'passes' => Pass::all(),
         ]);
     }
 

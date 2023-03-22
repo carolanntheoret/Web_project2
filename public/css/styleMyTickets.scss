@@ -52,3 +52,20 @@ main
     height: 50px;
     background-color: #35d0b9b7;
 }
+
+.passes
+{
+    display: flex;
+}
+
+h1
+{
+    margin: 60px auto;
+    text-align: center;
+    padding-bottom: 7px;
+    display: inline-block;
+    border-bottom: 3px solid $almost-white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}

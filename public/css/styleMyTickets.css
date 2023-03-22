@@ -113,4 +113,19 @@ main {
   width: 100%;
   height: 50px;
   background-color: rgba(53, 208, 185, 0.7176470588);
+}
+
+.passes {
+  display: flex;
+}
+
+h1 {
+  margin: 60px auto;
+  text-align: center;
+  padding-bottom: 7px;
+  display: inline-block;
+  border-bottom: 3px solid #fbf7ea;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
 }/*# sourceMappingURL=styleMyTickets.css.map */
