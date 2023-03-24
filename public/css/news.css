@@ -3,7 +3,7 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fbf7ea;
   background-color: #222222;
-  padding-top: 5rem;
+  padding-top: 6rem;
 }
 body .mainBlock {
   border: 1px solid #fefed5;
@@ -32,13 +32,18 @@ body .mainBlock .container h3 {
   margin-top: 0;
   margin-bottom: 10px;
 }
+body .mainBlock .container h4 {
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
 body .mainBlock .container .mainText {
   font-size: 25px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
 body .mainBlock .container .secText {
-  font-size: 15px;
+  font-size: 22px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
@@ -251,6 +256,7 @@ body main .article-header p {
   margin: 0;
 }
 body main .article-header img {
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
