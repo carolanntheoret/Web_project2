@@ -17,6 +17,7 @@ class CreatePassesTable extends Migration
             $table->id();
             $table->text('name', 255);
             $table->float('price');
+            $table->text('resume', 127);
             $table->text('description');
             $table->text('image', 63);
             $table->timestamps();
