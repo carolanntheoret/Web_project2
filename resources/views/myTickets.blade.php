@@ -17,7 +17,7 @@
                     <h6>MY TICKETS</h6>
                     <h3>{{ $pass->name }}</h3>
                     <p>{{ $pass->resume }}</p>
-                    <div class="remove fw-semibold">Remove ticket</div>
+                    <div class="remove fw-semibold" id="<?= $pass->id ?>">Remove ticket</div>
                 </div>
             @empty
                 y'en a po tsé
@@ -34,13 +34,6 @@
                 </div>
                 <div class="line"></div>
                 <div class="infos">
-                    <!-- adadpter selon le pass -->
-                    <h4>passname</h4>
-                    <h4>passprice</h4>
-                    <div class="select">
-                        <select name="" id="">qtt</select>
-                    </div>
-                    <h4 class="last">passtotal</h4>
                 </div>
                 <div class="loginInput">
                     <input class="submit" type="submit" value="REMOVE">

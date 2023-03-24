@@ -124,7 +124,7 @@ class SiteController extends Controller
         return view('myTickets', [
             'title' => 'HIFF | My Tickets',
             'actif' => 'myTickets',
-            'passes' => Pass::all(),
+            'passes' => DB::table('passes')->select(['passes.id', 'name', 'resume', 'image'])->join('reservations', 'passes.id', '=', 'pass_id')->where('user_id', '=', Auth::user()->id)->get(),
         ]);
     }
 

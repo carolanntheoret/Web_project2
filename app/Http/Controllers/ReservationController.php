@@ -90,6 +90,6 @@ class ReservationController extends Controller
     public function getReservation(Request $request)
     {
         if(!Auth::check()) return back('/');
-        echo json_encode(Reservation::where('pass_id', '=', $request->pass_id)->where('user_id', '=', Auth::user()->id)->get());
+        echo json_encode(Reservation::join('passes', 'pass_id', '=', 'passes.id')->where('pass_id', '=', $request->pass_id)->where('user_id', '=', Auth::user()->id)->get());
     }
 }
