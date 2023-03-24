@@ -12,13 +12,12 @@
         <h1>MY TICKETS</h1>
         <div class="passes">
             @forelse ($passes as $pass)
-                <div class="pass">
-                    <div class="overlay">
-                        <h5>My ticket</h5>
-                        <h3>{{ $pass->name }}</h3>
-                        <p>{{ $pass->description }}</p>
-                        <div class="remove">Remove ticket</div>
-                    </div>
+                <div class="pass" style="background-image: url('<?= $pass->image ?>');">
+                    <div class="overlay"></div>
+                    <h6>MY TRICKETS</h6>
+                    <h3>{{ $pass->name }}</h3>
+                    <p>{{ $pass->description }}</p>
+                    <div class="remove">Remove ticket</div>
                 </div>
             @empty
                 y'en a po tsé

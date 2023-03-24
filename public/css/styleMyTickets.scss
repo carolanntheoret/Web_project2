@@ -78,4 +78,35 @@ h1
     width: 17.5vw;
     background-size: cover;
     background-position: center;
+    border-radius: 25px;
+    padding: 43px 27px;
+    position: relative;
+    overflow: hidden;
+
+    h6,
+    h3,
+    p,
+    .remove
+    {
+        position: relative;
+    }
+
+    h3
+    {
+        width: 150px;
+    }
+
 }
+
+.overlay
+{
+    width: calc(100% + 150px);
+    height: calc(100% + 150px);
+    background: linear-gradient(315deg, rgba(245, 70, 116, 0), rgba(245, 70, 116, 1));
+    border-radius: 25px;
+    position: absolute;
+    top: -150px;
+    left: -150px;
+}
+
+

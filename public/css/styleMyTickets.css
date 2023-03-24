@@ -143,4 +143,27 @@ h1 {
   width: 17.5vw;
   background-size: cover;
   background-position: center;
+  border-radius: 25px;
+  padding: 43px 27px;
+  position: relative;
+  overflow: hidden;
+}
+.pass h6,
+.pass h3,
+.pass p,
+.pass .remove {
+  position: relative;
+}
+.pass h3 {
+  width: 150px;
+}
+
+.overlay {
+  width: calc(100% + 150px);
+  height: calc(100% + 150px);
+  background: linear-gradient(315deg, rgba(245, 70, 116, 0), rgb(245, 70, 116));
+  border-radius: 25px;
+  position: absolute;
+  top: -150px;
+  left: -150px;
 }/*# sourceMappingURL=styleMyTickets.css.map */
