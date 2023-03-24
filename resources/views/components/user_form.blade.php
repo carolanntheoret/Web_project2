@@ -17,9 +17,9 @@
     @endif
     <div class="createAccountInput">
         @if (strpos(url()->current(), '/admin'))
-            <input class="submit" type="submit" value="">
+            <input class="submit" type="submit" value="" style="background: url('{{ asset('images/edit-button.png') }}'); background-size:cover; width: 25px; height:25px; border: none;">
         @else
-            <input class="submit" type="submit" value="CREATE ACCOUNT">
+            <input class="submit" type="submit" value="CREATE ACCOUNT" >
             <p class="plus">+</p>
         @endif
     </div>

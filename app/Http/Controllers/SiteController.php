@@ -33,7 +33,7 @@ class SiteController extends Controller
     public function showNews()
     {
         return view('news', [
-            'title' => 'HIFF |  News' ,
+            'title' => 'HIFF |  News',
             'actif' => 'news'
         ]);
     }
@@ -45,11 +45,10 @@ class SiteController extends Controller
      */
     public function showPackage()
     {
-        if(Auth::check())
-        {
+        if (Auth::check()) {
             $user = null;
             $user = auth()->user();
-            if(!Reservation::where('user_id', '=', auth()->user()->id)->first()) return view('spaceUser', [
+            if (!Reservation::where('user_id', '=', auth()->user()->id)->first()) return view('spaceUser', [
                 'title' => 'HIFF | Login',
                 'user' => $user,
                 'actif' => 'spaceUser',
@@ -82,10 +81,15 @@ class SiteController extends Controller
 
         $user = null;
 
-        // var_dump(Reservation::where('id','=',1)->get()[0]->user_id); exit;
+        // var_dump(Reservation::where('id', '=', 1)->get()[0]->user_id);
+        // exit;
 
-        if(Auth::check()) $user = auth()->user();
-
+        if (Auth::check()) $user = auth()->user();
+        /* create a json file with all comments to manipulate with JS */
+        $reservations = json_encode((new Reservation)->all());
+        $file = fopen('utils/reservations.json', 'w');
+        fwrite($file, $reservations);
+        fclose($file);
         return view('spaceAdmin', [
             'title' => 'HIFF | Admin',
             "users" => DB::table('users')->where('admin', '=', '1')->get(),
@@ -104,7 +108,7 @@ class SiteController extends Controller
      */
     public function showUser()
     {
-        if(Auth::check()) return redirect('my-tickets');
+        if (Auth::check()) return redirect('my-tickets');
 
         return view('spaceUser', [
             'title' => 'HIFF | Login',
@@ -120,7 +124,7 @@ class SiteController extends Controller
      */
     public function showTickets()
     {
-        if(!Auth::check()) return redirect('user-zone');
+        if (!Auth::check()) return redirect('user-zone');
         return view('myTickets', [
             'title' => 'HIFF | My Tickets',
             'actif' => 'myTickets',

@@ -33,7 +33,7 @@
                     </div>
                     <div class="sectionReservation">
                         <div class="titleReservation"><h3>Reservations</h3></div>
-                        <div class="listReservations"></div>
+                        <div class="listReservations"><x-liste-reservations :members="$reservations"/></div>
                         {{-- <x-liste-reservations :users="$reservations"/> --}}
                     </div>
                 </div>

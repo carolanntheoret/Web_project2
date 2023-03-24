@@ -100,7 +100,7 @@
   overflow: auto;
   width: 100%;
   height: 100%;
-  background-color: #C8C8C8;
+  background-color: #c8c8c8;
 }
 .sectionAdmin .listEmployes .employeSection ul {
   display: flex;
@@ -108,7 +108,7 @@
   width: 98%;
   height: 10%;
   margin-top: 10px;
-  border: 1px solid #35D0BA;
+  border: 1px solid #35d0ba;
   border-radius: 25px;
   background-color: rgba(53, 208, 186, 0.1);
 }
@@ -141,7 +141,7 @@
   overflow: auto;
   width: 100%;
   height: 100%;
-  background-color: #C8C8C8;
+  background-color: #c8c8c8;
 }
 .sectionAdmin .listUsers .usersSection ul {
   display: flex;
@@ -149,7 +149,7 @@
   width: 98%;
   height: 10%;
   margin-top: 10px;
-  border: 1px solid #35D0BA;
+  border: 1px solid #35d0ba;
   border-radius: 25px;
   background-color: rgba(53, 208, 186, 0.1);
 }
@@ -182,7 +182,7 @@
   overflow: auto;
   width: 100%;
   height: 100%;
-  background-color: #C8C8C8;
+  background-color: #c8c8c8;
 }
 .sectionAdmin .listActivities .activitiesSection ul {
   display: flex;
@@ -190,7 +190,7 @@
   width: 98%;
   height: 10%;
   margin-top: 10px;
-  border: 1px solid #35D0BA;
+  border: 1px solid #35d0ba;
   border-radius: 25px;
   background-color: rgba(53, 208, 186, 0.1);
 }
@@ -219,12 +219,12 @@
 }
 .sectionAdmin .listReservations {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  width: 1240px;
-  height: 1080px;
+  width: 100%;
+  height: 100%;
 }
-.sectionAdmin .listReservations .reservationSection {
+.sectionAdmin .reservationSection {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -232,13 +232,13 @@
   height: 100%;
   gap: 1%;
 }
-.sectionAdmin .listReservations .reservationSection .sectionMember {
+.sectionAdmin .reservationSection .sectionMember {
   width: 27%;
   height: 100%;
   border: 6px solid #707070;
-  background-color: #C8C8C8;
+  background-color: #c8c8c8;
 }
-.sectionAdmin .listReservations .reservationSection .sectionMember .listMembers {
+.sectionAdmin .reservationSection .sectionMember .listMembers {
   display: flex;
   flex-direction: column;
   overflow: auto;
@@ -246,22 +246,15 @@
   align-items: center;
   margin-top: 5%;
 }
-.sectionAdmin .listReservations .reservationSection .sectionMember .listMembers a {
+.sectionAdmin .reservationSection .sectionMember .listMembers a {
   color: black;
 }
-.sectionAdmin .listReservations .reservationSection .sectionReservation {
+.sectionAdmin .reservationSection .sectionReservation {
   width: 70%;
   height: 100%;
-  border: 6px solid #707070;
-  background-color: #C8C8C8;
-}
-.sectionAdmin .listReservations .reservationSection .sectionReservation .listReservations {
-  display: flex;
-  flex-direction: column;
   overflow: auto;
-  width: 100%;
-  align-items: center;
-  margin-top: 2.5%;
+  border: 6px solid #707070;
+  background-color: #c8c8c8;
 }
 .sectionAdmin .titleReservation {
   display: flex;
