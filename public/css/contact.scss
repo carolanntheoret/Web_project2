@@ -5,5 +5,43 @@ body {
 }
 
 main {
+    padding: 150px 0px;
+
+
+    .contenu {
+        margin: 0 7.3vw;
+
+        .contact-info {
+            height: fit-content;
+            position: relative;
+            top: 60px;
+            left: 100px;
+            width: 400px;
+            margin-right: 215px;
+
+            .blob {
+                position: absolute;
+                height: 900px;
+                width: 900px;
+                background-size: contain;
+                top: -185px;
+                left: -300px;
+            }
+
+            h1 {
+                font-size: 7rem;
+            }
+
+            p {
+                font-size: 2rem;
+            }
+        }
+
+        .map {
+            border: 5px solid #f348a4;
+            background-color: #f348a4;
+        }
+    }
+
 
 }
