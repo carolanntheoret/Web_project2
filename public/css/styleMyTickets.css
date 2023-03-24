@@ -106,8 +106,7 @@ main {
   right: 7.3vw;
   bottom: 40px;
 }
-
-.line {
+.headerImage .line {
   position: absolute;
   right: 7.3vw;
   bottom: 37px;
@@ -185,4 +184,66 @@ h1 {
   color: rgba(53, 208, 185, 0.7176470588);
   text-decoration: underline;
   cursor: pointer;
+}
+
+.removeItem {
+  margin-top: 150px;
+}
+.removeItem .line {
+  background-color: white;
+  width: 65%;
+  height: 3px;
+  margin: 0 17.5%;
+}
+.removeItem .loginInput {
+  background: linear-gradient(to right, #f54674, #f348a4);
+  font-size: 21px;
+  border-radius: 24px;
+  cursor: pointer;
+  color: #fbf7ea;
+  border: none;
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 185px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.removeItem .loginInput img {
+  position: absolute;
+  right: 30px;
+  width: 30px;
+  margin-bottom: 5px;
+}
+.removeItem .loginInput .submit {
+  background-color: transparent;
+  margin: 0;
+  width: auto;
+  font-weight: 500;
+  padding: 15px 0 15px 30px;
+  border: 0px;
+  color: #fbf7ea;
+}
+.removeItem .loginInput:hover {
+  background: linear-gradient(to left, #f54674, #f348a4);
+}
+
+.titles,
+.infos {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 17.5%;
+  width: 65%;
+}
+.titles *,
+.infos * {
+  width: 30%;
+}
+.titles .last,
+.infos .last {
+  width: 10%;
+}
+
+.infos {
+  margin-top: 100px;
 }/*# sourceMappingURL=styleMyTickets.css.map */

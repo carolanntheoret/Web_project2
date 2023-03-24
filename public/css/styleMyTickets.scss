@@ -35,16 +35,16 @@ main
         right: 7.3vw;
         bottom: 40px;
     }
-}
 
-.line
-{
-    position: absolute;
-    right: 7.3vw;
-    bottom: 37px;
-    background-color: white;
-    width: 36vw;
-    height: 3px;
+    .line
+    {
+        position: absolute;
+        right: 7.3vw;
+        bottom: 37px;
+        background-color: white;
+        width: 36vw;
+        height: 3px;
+    }
 }
 
 .band
@@ -128,4 +128,106 @@ h1
     color: rgba(53, 208, 185, 0.7176470588);
     text-decoration: underline;
     cursor: pointer;
+}
+
+.removeItem
+{
+    margin-top: 150px;
+
+    .line
+    {
+        background-color: white;
+        width: 65%;
+        height: 3px;
+        margin: 0 17.5%;
+    }
+
+    .loginInput
+    {
+        background: linear-gradient(to right, $reddish-pink, $pink);
+        font-size: 21px;
+        border-radius: 24px;
+        cursor: pointer;
+        color: $almost-white;
+        border: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 185px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img
+        {
+            position: absolute;
+            right: 30px;
+            width: 30px;
+            margin-bottom: 5px;
+        }
+
+        .submit
+        {
+            background-color: transparent;
+            margin: 0;
+            width: auto;
+            font-weight: 500;
+            padding: 15px 0 15px 30px;
+            border: 0px;
+            color: $almost-white;
+        }
+    }
+
+    .loginInput:hover
+    {
+        background: linear-gradient(to left, $reddish-pink, $pink);
+    }
+    // input
+    // {
+    //     width: 160px;
+    //     background: linear-gradient(to right, $reddish-pink, $pink);
+    //     font-size: 21px;
+    //     border-radius: 24px;
+    //     cursor: pointer;
+    //     color: $almost-white;
+    //     border: none;
+    //     display: flex;
+    //     align-items: center;
+    //     position: relative;
+
+    //     img
+    //     {
+    //         position: absolute;
+    //         right: 30px;
+    //         width: 30px;
+    //     }
+    // }
+
+    // input:hover
+    // {
+    //     background: linear-gradient(to left, $reddish-pink, $pink);
+    // }
+}
+
+.titles,
+.infos
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 17.5%;
+    width: 65%;
+
+    *
+    {
+        width: 30%;
+    }
+
+    .last
+    {
+        width: 10%;
+    }
+}
+
+.infos
+{
+    margin-top: 100px;
 }

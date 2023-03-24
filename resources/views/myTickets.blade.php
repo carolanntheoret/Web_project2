@@ -24,8 +24,31 @@
             @endforelse
         </div>
 
-        <div >
-
+        <div class="removeItem">
+            <form action="">
+                <div class="titles">
+                    <h5>PRODUCT</h5>
+                    <h5>PRICE</h5>
+                    <h5>QUANTITY</h5>
+                    <h5 class="last">TOTAL</h5>
+                </div>
+                <div class="line"></div>
+                <div class="infos">
+                    <!-- adadpter selon le pass -->
+                    <h4>passname</h4>
+                    <h4>passprice</h4>
+                    <div class="select">
+                        <select name="" id="">qtt</select>
+                    </div>
+                    <h4 class="last">passtotal</h4>
+                </div>
+                <div class="loginInput">
+                    <input class="submit" type="submit" value="REMOVE">
+                    <img src="{{ asset('images/wastebasket.png') }}">
+                </div>
+            </form>
         </div>
+
+        <script src="<?= asset('js/myTickets.js') ?>"></script>
     </main>
 </x-layout>
