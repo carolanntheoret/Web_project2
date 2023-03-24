@@ -85,11 +85,7 @@ class SiteController extends Controller
         // exit;
 
         if (Auth::check()) $user = auth()->user();
-        /* create a json file with all comments to manipulate with JS */
-        $reservations = json_encode((new Reservation)->all());
-        $file = fopen('utils/reservations.json', 'w');
-        fwrite($file, $reservations);
-        fclose($file);
+
         return view('spaceAdmin', [
             'title' => 'HIFF | Admin',
             "users" => DB::table('users')->where('admin', '=', '1')->get(),
