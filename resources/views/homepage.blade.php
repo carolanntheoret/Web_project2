@@ -1,6 +1,7 @@
 <x-layout :title="$title" :actif="$actif">
     <link rel="stylesheet" href="<?= asset('css/styleHomePage.css') ?>">
         <main class="content">
+
             <section class="firstSection">
                 <div class="festivalTitle">
                     <h1>2023</h1>
