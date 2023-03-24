@@ -5,19 +5,10 @@ for (const pass of passes) {
         //display block
         fetch(`/get-reservation/${pass.getAttribute('id')}`).then(reply => reply.json()).then(data => {
             const pass = data[0]
-            console.log(pass)
+
             //delete tout dans .infos
 
-            // <div class="infos">
-            //     <!-- adadpter selon le pass -->
-            //     <h4>passname</h4>
-            //     <h4>passprice</h4>
-            //     <div class="select">
-            //         <select name="" id="">qtt</select>
-            //     </div>
-            //     <h4 class="last">passtotal</h4>
-            // </div>
-            const infos = document.querySelector('.infos')
+            let infos = document.querySelector('.infos')
 
             const name = document.createElement('h4')
             name.innerHTML = pass.name
@@ -27,8 +18,12 @@ for (const pass of passes) {
             price.innerHTML = '$' + pass.price
             infos.appendChild(price)
 
+            const div_select = document.createElement('div')
+            div_select.setAttribute('class', 'select')
+            infos.appendChild(div_select)
+
             const select = document.createElement('select')
-            infos.appendChild(select)
+            div_select.appendChild(select)
 
             for(let i = pass.quantity; i > 0; i--)
             {
@@ -40,6 +35,7 @@ for (const pass of passes) {
 
             const total = document.createElement('h4')
             total.innerHTML = '$' + (pass.price * pass.quantity)
+            total.setAttribute('class', 'last')
             infos.appendChild(total)
         })
     })
