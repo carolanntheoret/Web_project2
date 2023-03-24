@@ -14,14 +14,18 @@
             @forelse ($passes as $pass)
                 <div class="pass" style="background-image: url('<?= $pass->image ?>');">
                     <div class="overlay"></div>
-                    <h6>MY TRICKETS</h6>
+                    <h6>MY TICKETS</h6>
                     <h3>{{ $pass->name }}</h3>
-                    <p>{{ $pass->description }}</p>
-                    <div class="remove">Remove ticket</div>
+                    <p>{{ $pass->resume }}</p>
+                    <div class="remove fw-semibold">Remove ticket</div>
                 </div>
             @empty
                 y'en a po tsé
             @endforelse
+        </div>
+
+        <div >
+
         </div>
     </main>
 </x-layout>
