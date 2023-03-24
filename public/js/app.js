@@ -1,4 +1,4 @@
-const employee_selectionner = ref(null);
+//const employee_selectionner = ref(null);
 
 let quantite = 10
 
@@ -50,3 +50,9 @@ bouton.addEventListener('click', () => {
 function selectionnerEmployee(employee) {
     employee_selectionner.value = employee;
   }
+
+
+// Used for the burger menu in the nav
+document.querySelector('.burger-menu').addEventListener('click', function() {
+document.querySelector('.navigation').classList.toggle('show');
+});

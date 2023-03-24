@@ -5,11 +5,15 @@
             <img id="logo" src="<?= asset('images/HIFF_logo.png') ?>"  alt="HIFF logo" class="HIFF logo">
         </div>
 
-
-        <ul class="headLinks">
+        <button class="burger-menu">
+        <div class="burger-icon">
+            <span>---</span>
+            <span>burger!</span>
+            <span>---</span>
+        </div>
+        </button>
+        <ul class="headLinks fw-semibold">
             <li class="headList"><a @if(isset($actif) && $actif=='homepage') class="actif" @endif href="/">Home</a></li>
-            {{-- href du about= mettre l'ancre quand la page sera faite --}}
-            <li class="headList"><a href="/">About</a></li>
             <li class="headList">
                 <div class="dropdown">
                     <a @if(isset($actif) && $actif=='packages' || isset($actif) && $actif=='schedule') class="actif" @endif>Festival</a>
@@ -21,10 +25,11 @@
             </li>
             <li class="headList"><a @if(isset($actif) && $actif=='news') class="actif" @endif href="/news">News</a></li>
             <li class="headList"><a @if(isset($actif) && $actif=='contact') class="actif" @endif href="/contact">Contact</a></li>
+            <a class="mainBtn fw-semibold" href="/user-zone"> My tickets</a>
         </ul>
 
+
         <div class="headIcon">
-            <a class="mainBtn" href="/user-zone"> My tickets</a>
             <div class="dropdown">
                 <?php if (auth()->check()): ?>
                     <div id="userId"><?= substr(auth()->user()->first_name, 0, 1) ?><?= substr(auth()->user()->last_name, 0, 1) ?></div>
@@ -46,5 +51,5 @@
         </div>
     </div>
 </nav>
-{{-- <script src="nav.js"></script> --}}
+ <script src="app.js"></script>
 <script src="main.js"></script>

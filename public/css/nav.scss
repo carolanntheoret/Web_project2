@@ -1,14 +1,3 @@
-// Colors
-// almost white #fbf7ea
-// soft yellow #fefed5
-// p!nk #f348a4
-// reddish pink #f54674
-// light turquoise #65efce
-// logo turquoise #35d0ba
-// light grey #a8a8a8
-// middle gray #707070
-// deep blue #1f2833
-// almost black #222222
 
 // Variables
 $reddish-pink: #f54674;
@@ -20,9 +9,25 @@ $almost-white: #fbf7ea;
 $deep-blue: #1f2833;
 $almost-black: #222222;
 
+// <nav class="navigation">
+// <div class="headLogo">
+// <img id="logo" src="<?= asset('images/HIFF_logo.png') ?>"alt="HIFF logo" class="HIFF logo">
+// </div>
+// <button class="burger-menu"></button>
+// <ul class="headLinks">
+// <!-- Your existing navigation menu items -->
+// </ul>
+// <div class="headIcon">
+// <!-- Your existing user icon and dropdown menu -->
+// </div>
+// </nav>
+
+
+
 .navigation {
     left: 0px;
     max-width: 100vw;
+    min-height: 70px;
 
     #headBlock {
 
@@ -31,24 +36,46 @@ $almost-black: #222222;
         position: fixed;
         top: 0;
         width: 100%;
-        padding: 2vh 7.3vw 2vh 7.3vw;
+        padding: 2.5vh 7.3vw 2.5vh 7.3vw;
         z-index: 10000;
+
+        .burger-menu {
+            display: none;
+            width: 40px;
+            height: 40px;
+            border: none;
+            //background: transparent url('burger-icon.png') no-repeat center center;
+            cursor: pointer;
+
+            @media screen and (max-width: 1200px) {
+                &{
+                 display: block;
+                 background-color: $deep-blue;
+                 color: #fbf7ea;
+                 }
+                }
+            }
 
         .headLogo {
             display: flex;
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
             #logo{
-                max-height: 7vh;
+                max-height: 9vh;
             }
         }
 
         .headLinks {
             margin: auto;
-
+            //On doit faire apparaitre le headlink de la navigation en cliquant sur le toggle
+            @media screen and (max-width: 1200px) {
+                display: none;
+            }
             .headList {
                 display: inline-block;
+                //display: none;
                 padding: 10px 20px;
+
 
                 a.actif {
                     //padding: 2px;
@@ -70,12 +97,11 @@ $almost-black: #222222;
                 .dropdown-content {
                     display: none;
                     position: absolute;
-                    z-index: 1;
+                    z-index: 10;
                     min-width: 160px;
-                    padding: 5px 0;
-                    border: 1px solid $almost-black;
-                    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-                    background-color: lighten($deep-blue, $amount: 10);
+                    //padding: 5px 0;
+                    background-color: $deep-blue;
+                    //padding-top: 4vh;
                 }
 
                 /* Style des liens dans le contenu du menu déroulant */
@@ -84,7 +110,8 @@ $almost-black: #222222;
                     padding: 10px 16px;
                     text-decoration: none;
                     display: block;
-                    font-size: small;
+                    //font-size: small;
+                    border-top: #fbf7ea;
                 }
 
                 /* Style des liens au survol de la souris */
@@ -95,25 +122,25 @@ $almost-black: #222222;
                 /* Afficher le contenu du menu déroulant au survol du bouton principal */
                 .dropdown:hover .dropdown-content {
                     display: block;
-                    //margin-top: 8vh;
+                    padding-top: 4vh;
+
                 }
             }
         }
 
         .mainBtn {
             background: linear-gradient(to right, $reddish-pink, $pink);
-            padding: 1.2vh 2vw 1.3vh;
-            font-size: 2.5vh;
-            font-weight: bold;
+            padding: 1.1vh 2vw 1.3vh;
+            //padding: 20px 43px;
+            //font-size: 2.5vh;
+            font-size: 25px;
             text-align: center;
             text-decoration: none;
-            border-radius: 24px;
+            border-radius: 20px;
             margin: auto;
             cursor: pointer;
             color: $almost-white;
-            //transition: all 0.3s ease-in-out;
             border: none;
-
         }
 
         .mainBtn:hover {
@@ -121,14 +148,14 @@ $almost-black: #222222;
         }
 
         .headIcon {
-            margin: auto;
             align-items: center;
             display: flex;
 
             .dropdown {
                 position: relative;
                 display: flex;
-                padding: 0.5vh 0.5vw;
+                //padding: 0.5vh 0.5vw;
+                padding: 10px 20px;
 
                 #userId{
                     padding-left: 0.7vw;
@@ -246,4 +273,6 @@ $almost-black: #222222;
     #copyright-text{
         padding: 0vh 2vw 0vh 10vw;
     }
+
+
 }
