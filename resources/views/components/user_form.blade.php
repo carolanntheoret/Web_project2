@@ -10,7 +10,7 @@
         <input id="password_confirmation" type="password" name="password_confirmation" <?= isset($user) ? '' : 'required' ?> placeholder="Confirm Password">
     @endif
     @if ($admin && strpos(url()->current(), '/admin'))
-        <input type="hidden" name="admin" value="<?= isset($create_admin) ?? '' ?>">
+        <input type="hidden" name="admin" value="<?= isset($create_admin) ?? '0' ?>">
     @endif
     @if (isset($user))
         <input name="id" type="hidden" value="<?= $user->id ?>">

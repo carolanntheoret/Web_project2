@@ -97,8 +97,7 @@ class UserController extends Controller
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
-            'password' => $request->password == null ? DB::table('users')->select('password')->where('id', '=', $request->id)->first()->password : Hash::make($request->password),
-            'admin' => $request->admin == "true" ? 1 : 0,
+            'password' => $request->password == null ? DB::table('users')->select('password')->where('id', '=', $request->id)->first()->password : Hash::make($request->password)
         ]);
 
         if(!$success) return back()->with('modify_error', 'An error occurred while updating the user');

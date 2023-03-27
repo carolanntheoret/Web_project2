@@ -5,6 +5,7 @@
     width: 100%;
     margin: 100px 0px 0px 0px;
 
+
     .menuAdmin {
         display: flex;
         flex-direction: column;
@@ -115,13 +116,21 @@
             }
         }
     }
+
     .sectionName {
         display: flex;
         align-items: center;
         justify-content: center;
         width: 100%;
         min-height: 100px;
+        gap: 1%;
         background-color: rgb(88, 88, 88);
+        img {
+            cursor: pointer;
+            margin-bottom: 3px;
+            width: 30px;
+            height: 30px;
+        }
     }
     .listEmployes {
         display: flex;
@@ -138,6 +147,31 @@
             width: 100%;
             height: 100%;
             background-color: #c8c8c8;
+            .create {
+                display: flex;
+                width: 98%;
+                height: 10%;
+                margin-top: 10px;
+                border: 1px solid #35d0ba;
+                border-radius: 25px;
+                background-color: rgba(53, 208, 186, 0.1);
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: 5%;
+                    width: 70%;
+                    gap: 2.5%;
+                    justify-content: left;
+                    align-items: center;
+
+                    input {
+                        font-size: 15px;
+                        color: black;
+                        border: 1px solid #8d8d8d;
+                        background-color: #35d0b921;
+                    }
+                }
+            }
             ul {
                 display: flex;
                 align-items: center;
@@ -289,6 +323,7 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+                overflow: auto;
                 background-color: #c8c8c8;
             }
         }

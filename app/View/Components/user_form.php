@@ -8,12 +8,13 @@ class user_form extends Component
 {
     public $admin;
     public $user;
+    public $create_admin;
     /**
      * Create a new component instance.
      *
      * @return void
      */
-    public function __construct($connected_user, $user_to_modify)
+    public function __construct($connected_user, $user_to_modify, $create_admin = null)
     {
         $this->admin = $connected_user->admin ? true : false;
         $this->user = $user_to_modify ?? null;
