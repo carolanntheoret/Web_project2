@@ -54,9 +54,11 @@ class SiteController extends Controller
                 'actif' => 'spaceUser',
             ]);
         }
+
         return view('packages', [
             'title' => 'HIFF | Packages',
-            'actif' => 'packages'
+            'actif' => 'packages',
+            'packages' => Pass::all(),
         ]);
     }
 

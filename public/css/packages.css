@@ -85,6 +85,38 @@ body {
 }
 
 main {
-  height: 5000px;
-  width: 100%;
+  margin: 0 7.3vw;
+  color: #1f2833;
+}
+
+h1 {
+  color: #fbf7ea;
+}
+
+.oneThree {
+  width: 85.4vw;
+  height: 600px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.oneThree * {
+  width: 60%;
+  position: absolute;
+}
+.oneThree .infos {
+  background-color: rgba(251, 247, 234, 0.9);
+  height: 75%;
+  left: 0;
+}
+.oneThree .infos * {
+  position: relative;
+}
+.oneThree .img {
+  height: 600px;
+  background-image: url("../images/youtube.icon.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  right: 0;
 }/*# sourceMappingURL=packages.css.map */
