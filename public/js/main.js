@@ -33,14 +33,26 @@ const members = document.querySelectorAll('.member')
 for (let member of members) {
 member.addEventListener('click', function member_manage(id) {
     document.querySelector(".sectionReservation .listReservations").innerHTML = "";
-   fetch(`get-reservations/${id.pointerId}`, { credentials: "include", headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', }}).then(reply => reply.json()).then(data => {
+   fetch(`get-reservations/${member.getAttribute("data-member")}`, { credentials: "include", headers: { 'Accept': 'application/json', 'Content-Type': 'application/json', }}).then(reply => reply.json()).then(data => {
         const reservations = data
         for (let reservation of reservations) {
             let div = document.createElement('div');
         div.innerHTML = `<p>${reservation.name}</p><p>${reservation.open_day}-${reservation.closed_day}</p><p>${reservation.quantity}</p>`;
         document.querySelector(".sectionReservation .listReservations").appendChild(div);
         }
+        console.log(id.pointerId)
    })
 })
 }
+
+
+$(".addAdmin").click(function () {
+    $(".createAdmin").css("display", "flex");});
+
+$(".addUser").click(function () {
+        $(".createUser").css("display", "flex");});
+
+$(".addActivity").click(function () {
+            $(".createActivity").css("display", "flex");});
+
 

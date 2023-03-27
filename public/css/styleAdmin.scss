@@ -3,8 +3,22 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin: 100px 0px 0px 0px;
 
+    .sectionName {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 100px;
+        gap: 1%;
+        background-color: rgb(88, 88, 88);
+        img {
+            cursor: pointer;
+            margin-bottom: 3px;
+            width: 30px;
+            height: 30px;
+        }
+    }
     .menuAdmin {
         display: flex;
         flex-direction: column;
@@ -115,14 +129,7 @@
             }
         }
     }
-    .sectionName {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        min-height: 100px;
-        background-color: rgb(88, 88, 88);
-    }
+
     .listEmployes {
         display: flex;
         flex-direction: column;
@@ -138,6 +145,31 @@
             width: 100%;
             height: 100%;
             background-color: #c8c8c8;
+            .createAdmin {
+                display: flex;
+                width: 98%;
+                height: 10%;
+                margin-top: 10px;
+                border: 1px solid #35d0ba;
+                border-radius: 25px;
+                background-color: rgba(53, 208, 186, 0.1);
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: 5%;
+                    width: 70%;
+                    gap: 2.5%;
+                    justify-content: left;
+                    align-items: center;
+
+                    input {
+                        font-size: 15px;
+                        color: black;
+                        border: 1px solid #8d8d8d;
+                        background-color: #35d0b921;
+                    }
+                }
+            }
             ul {
                 display: flex;
                 align-items: center;
@@ -181,6 +213,31 @@
             width: 100%;
             height: 100%;
             background-color: #c8c8c8;
+            .createUser {
+                display: flex;
+                width: 98%;
+                height: 10%;
+                margin-top: 10px;
+                border: 1px solid #35d0ba;
+                border-radius: 25px;
+                background-color: rgba(53, 208, 186, 0.1);
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    margin-left: 5%;
+                    width: 70%;
+                    gap: 2.5%;
+                    justify-content: left;
+                    align-items: center;
+
+                    input {
+                        font-size: 15px;
+                        color: black;
+                        border: 1px solid #8d8d8d;
+                        background-color: #35d0b921;
+                    }
+                }
+            }
             ul {
                 display: flex;
                 align-items: center;
@@ -224,7 +281,7 @@
             width: 100%;
             height: 100%;
             background-color: #c8c8c8;
-            ul {
+            .createActivity {
                 display: flex;
                 align-items: center;
                 width: 98%;
@@ -240,9 +297,45 @@
                 form {
                     display: flex;
                     flex-direction: row;
-                    width: 18%;
+                    margin-left: 5%;
+                    width: 5%;
                     height: 20%;
                     gap: 30%;
+                    justify-content: left;
+                    align-items: center;
+                    textarea {
+                        width: 400px;
+                        height: 45px;
+                    }
+
+                    input {
+                        font-size: 15px;
+                        color: black;
+                        border: 1px solid #8d8d8d;
+                        background-color: #35d0b921;
+                    }
+                }
+            }
+            ul {
+                display: flex;
+                align-items: center;
+                width: 98%;
+                height: 10%;
+                padding: 150px 0 150px 40px;
+                margin-top: 10px;
+                border: 1px solid #35d0ba;
+                border-radius: 25px;
+                background-color: rgba(53, 208, 186, 0.1);
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    width: 18%;
+                    height: 20%;
+                    gap: 10%;
                     justify-content: left;
                     align-items: center;
                     textarea {
@@ -270,14 +363,22 @@
         .sectionMember {
             border: 6px solid #707070;
             background-color: #c8c8c8;
+            overflow: auto;
             .listMembers {
                 width: 200px;
-            height: 100%;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
                 overflow: auto;
                 align-items: center;
                 margin-top: 5%;
+
+
+                .members{
+                    width: 80%;
+                    height: 30px;
+                    border: 2px solid black;
+                }
             }
         }
         .sectionReservation {
@@ -285,6 +386,7 @@
             height: 100%;
             border: 6px solid #707070;
             background-color: #c8c8c8;
+            overflow: auto;
             .listReservations {
                 display: flex;
                 flex-direction: column;
