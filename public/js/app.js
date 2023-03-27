@@ -53,6 +53,17 @@ function selectionnerEmployee(employee) {
 
 
 // Used for the burger menu in the nav
-document.querySelector('.burger-menu').addEventListener('click', function() {
-document.querySelector('.navigation').classList.toggle('show');
+// const burgerMenu = document.querySelector('.burgerMenu');
+// const headLinks = document.querySelector('.headLinks');
+
+// burgerMenu.addEventListener('click', () => {
+//   headLinks.classList.toggle('burgerMenu-active');
+// });
+const burgerMenu = document.querySelector('.burgerMenu');
+const dropdownMenu = document.querySelector('.headLink__dropdown');
+
+burgerMenu.addEventListener('click', function() {
+  dropdownMenu.classList.toggle('is-open');
 });
+
+

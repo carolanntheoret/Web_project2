@@ -5,28 +5,30 @@
             <img id="logo" src="<?= asset('images/HIFF_logo.png') ?>"  alt="HIFF logo" class="HIFF logo">
         </div>
 
-        <button class="burger-menu">
-        <div class="burger-icon">
-            <span>---</span>
-            <span>burger!</span>
-            <span>---</span>
-        </div>
-        </button>
-        <ul class="headLinks fw-semibold">
-            <li class="headList"><a @if(isset($actif) && $actif=='homepage') class="actif" @endif href="/">Home</a></li>
-            <li class="headList">
+        <div class="headContent">
+            <button class="burgerMenu burgerMenu-icon">
+              <div class="burger-icon">
+                <img id="userImg"src="<?= asset('images/test.webp') ?>" alt="icon menu">
+              </div>
+            </button>
+
+            <ul class="headLinks fw-semibold">
+              {{-- <li class="headList burgerMenu"><a href="#">Menu</a></li> --}}
+              <li class="headList"><a @if(isset($actif) && $actif=='homepage') class="actif" @endif href="/">Home</a></li>
+              <li class="headList">
                 <div class="dropdown">
-                    <a @if(isset($actif) && $actif=='packages' || isset($actif) && $actif=='schedule') class="actif" @endif>Festival</a>
-                    <div class="dropdown-content">
-                        <a href="/packages">Tickets & Packages </a>
-                        <a href="/schedule">Schedule</a>
-                    </div>
+                  <a @if(isset($actif) && $actif=='packages' || isset($actif) && $actif=='schedule') class="actif" @endif>Festival</a>
+                  <div class="dropdown-content">
+                    <a href="/packages">Tickets & Packages</a>
+                    <a href="/schedule">Schedule</a>
+                  </div>
                 </div>
-            </li>
-            <li class="headList"><a @if(isset($actif) && $actif=='news') class="actif" @endif href="/news">News</a></li>
-            <li class="headList"><a @if(isset($actif) && $actif=='contact') class="actif" @endif href="/contact">Contact</a></li>
-            <a class="mainBtn fw-semibold" href="/user-zone"> My tickets</a>
-        </ul>
+              </li>
+              <li class="headList"><a @if(isset($actif) && $actif=='news') class="actif" @endif href="/news">News</a></li>
+              <li class="headList"><a @if(isset($actif) && $actif=='contact') class="actif" @endif href="/contact">Contact</a></li>
+              <a class="mainBtn fw-semibold" href="/user-zone">My tickets</a>
+            </ul>
+          </div>
 
 
         <div class="headIcon">

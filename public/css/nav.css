@@ -1,10 +1,10 @@
-@charset "UTF-8";
 .navigation {
   left: 0px;
   max-width: 100vw;
   min-height: 70px;
 }
 .navigation #headBlock {
+  align-items: center;
   display: flex;
   background-color: #1f2833;
   position: fixed;
@@ -13,20 +13,6 @@
   padding: 2.5vh 7.3vw 2.5vh 7.3vw;
   z-index: 10000;
 }
-.navigation #headBlock .burger-menu {
-  display: none;
-  width: 40px;
-  height: 40px;
-  border: none;
-  cursor: pointer;
-}
-@media screen and (max-width: 1200px) {
-  .navigation #headBlock .burger-menu {
-    display: block;
-    background-color: #1f2833;
-    color: #fbf7ea;
-  }
-}
 .navigation #headBlock .headLogo {
   display: flex;
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
@@ -34,57 +20,82 @@
 .navigation #headBlock .headLogo #logo {
   max-height: 9vh;
 }
-.navigation #headBlock .headLinks {
-  margin: auto;
+.navigation #headBlock .headContent .burgerMenu {
+  display: block;
 }
-@media screen and (max-width: 1200px) {
-  .navigation #headBlock .headLinks {
+@media screen and (min-width: 1200px) {
+  .navigation #headBlock .headContent .burgerMenu {
     display: none;
   }
 }
-.navigation #headBlock .headLinks .headList {
+.navigation #headBlock .headContent .burgerMenu__dropdown {
+  display: none;
+}
+.navigation #headBlock .headContent .burgerMenu__dropdown.is-open {
+  display: block;
+}
+.navigation #headBlock .headContent .headLinks {
+  margin-left: auto;
+}
+@media screen and (max-width: 1200px) {
+  .navigation #headBlock .headContent .headLinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: #1f2833;
+  }
+  .navigation #headBlock .headContent .headLinks.active {
+    display: block;
+  }
+}
+.navigation #headBlock .headContent .headLinks .headList {
   display: inline-block;
   padding: 10px 20px;
-  /* Style du contenu du menu déroulant */
-  /* Style des liens dans le contenu du menu déroulant */
-  /* Style des liens au survol de la souris */
-  /* Afficher le contenu du menu déroulant au survol du bouton principal */
+  /* show the dropdown*/
 }
-.navigation #headBlock .headLinks .headList a.actif {
+.navigation #headBlock .headContent .headLinks .headList a.actif {
   text-decoration: underline;
 }
-.navigation #headBlock .headLinks .headList a {
+.navigation #headBlock .headContent .headLinks .headList a {
   text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fbf7ea;
   font-size: 1.5rem;
 }
-.navigation #headBlock .headLinks .headList .dropdown {
+.navigation #headBlock .headContent .headLinks .headList .dropdown {
   position: relative;
   display: inline-block;
 }
-.navigation #headBlock .headLinks .headList .dropdown-content {
+.navigation #headBlock .headContent .headLinks .headList .dropdown-content {
   display: none;
   position: absolute;
-  z-index: 10;
-  min-width: 160px;
-  background-color: #1f2833;
-}
-.navigation #headBlock .headLinks .headList .dropdown-content a {
-  color: #fbf7ea;
-  padding: 10px 16px;
+  padding: 10px 5px;
   text-decoration: none;
+  z-index: 10;
+}
+.navigation #headBlock .headContent .headLinks .headList .dropdown-content a {
   display: block;
-  border-top: #fbf7ea;
+  font-size: medium;
+  min-width: 10vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding-left: -20%;
 }
-.navigation #headBlock .headLinks .headList .dropdown-content a:hover {
-  background-color: #465a72;
+.navigation #headBlock .headContent .headLinks .headList .dropdown-content a:hover {
+  background-color: #fbf7ea;
+  color: #1f2833;
+  border-radius: 0% 20% 20% 20%;
 }
-.navigation #headBlock .headLinks .headList .dropdown:hover .dropdown-content {
+.navigation #headBlock .headContent .headLinks .headList .dropdown:hover .dropdown-content {
   display: block;
-  padding-top: 4vh;
 }
-.navigation #headBlock .mainBtn {
+.navigation #headBlock .headContent .mainBtn {
   background: linear-gradient(to right, #f54674, #f348a4);
   padding: 1.1vh 2vw 1.3vh;
   font-size: 25px;
@@ -96,15 +107,15 @@
   color: #fbf7ea;
   border: none;
 }
-.navigation #headBlock .mainBtn:hover {
+.navigation #headBlock .headContent .mainBtn:hover {
   background: linear-gradient(to left, #f54674, #f348a4);
 }
 .navigation #headBlock .headIcon {
   align-items: center;
   display: flex;
-  /* Style des liens dans le contenu du menu déroulant */
-  /* Style des liens au survol de la souris */
-  /* Afficher le contenu du menu déroulant au survol du bouton principal */
+  margin-left: auto;
+  visibility: visible;
+  /* Ajout des styles pour le hover */
 }
 .navigation #headBlock .headIcon .dropdown {
   position: relative;
@@ -112,12 +123,13 @@
   padding: 10px 20px;
 }
 .navigation #headBlock .headIcon .dropdown #userId {
-  padding-left: 0.7vw;
-  padding-top: 0.3vh;
   color: #222222;
   position: absolute;
   font-size: 28px;
   font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .navigation #headBlock .headIcon .dropdown #userImg,
 .navigation #headBlock .headIcon .dropdown #userNone {
@@ -126,24 +138,39 @@
 .navigation #headBlock .headIcon .dropdown-content {
   display: none;
   position: absolute;
-  z-index: 1;
-  min-width: 160px;
-  padding: 5px 0;
-  border: 1px solid #222222;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  background-color: #324153;
+  z-index: 10;
+  border-radius: 20%;
+  background-color: #1f2833;
 }
 .navigation #headBlock .headIcon .dropdown-content a {
   color: #fbf7ea;
-  padding: 10px 16px;
+  font-size: medium;
+  padding: 5px 5px;
   text-decoration: none;
   display: block;
+  border-radius: 100%;
+  min-width: 8vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 .navigation #headBlock .headIcon .dropdown-content a:hover {
-  background-color: #465a72;
+  background-color: #fbf7ea;
+  color: #1f2833;
 }
 .navigation #headBlock .headIcon .dropdown:hover .dropdown-content {
   display: block;
+}
+.navigation #headBlock .headIcon .dropdown:hover #userImg {
+  background-color: #1f2833;
+}
+.navigation #headBlock .headIcon .dropdown:hover #userId {
+  background-color: #1f2833;
+}
+.navigation #headBlock .headIcon .dropdown:hover .headIcon {
+  display: none;
 }
 .navigation .footerBlock {
   display: flex;
