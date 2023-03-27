@@ -1,4 +1,4 @@
-const employee_selectionner = ref(null);
+// const employee_selectionner = ref(null);
 
 let quantite = 10
 
@@ -16,7 +16,7 @@ window.onload = () => {
     setTimeout(() => {
         msnry.layout();
         elem.style.visibility = 'visible';
-    }, 1000)
+    }, 500)
 }
 
 function display() {

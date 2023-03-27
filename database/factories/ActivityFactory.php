@@ -13,10 +13,6 @@ class ActivityFactory extends Factory
      */
     public function definition()
     {
-        return [
-            'title' => $this->faker->word(),
-            'description' => $this->faker->text(150),
-            'image' => 'https://i.pravatar.cc/300',
-        ];
+      //
     }
 }
