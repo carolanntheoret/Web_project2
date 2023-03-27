@@ -52,4 +52,7 @@ $(".addAdmin").click(function () {
 $(".addUser").click(function () {
         $(".createUser").css("display", "flex");});
 
+$(".addActivity").click(function () {
+            $(".createActivity").css("display", "flex");});
+
 
