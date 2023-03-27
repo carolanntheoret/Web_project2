@@ -241,8 +241,8 @@ h1 {
 .infos * {
   width: 30%;
 }
-.titles .totalPrice,
-.infos .totalPrice {
+.titles .last,
+.infos .last {
   width: 10%;
 }
 

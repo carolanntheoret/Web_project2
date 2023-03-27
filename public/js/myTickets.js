@@ -49,7 +49,7 @@ for (const pass of passes) {
 
             const total = document.createElement('h4')
             total.innerHTML = '$' + (pass.price * pass.quantity).toFixed(2)
-            total.setAttribute('class', 'totalPrice')
+            total.setAttribute('class', 'totalPrice last')
             infos.appendChild(total)
 
             const quantity = document.querySelector('.select select')
