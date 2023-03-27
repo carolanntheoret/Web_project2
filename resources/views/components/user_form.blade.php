@@ -10,16 +10,16 @@
         <input id="password_confirmation" type="password" name="password_confirmation" <?= isset($user) ? '' : 'required' ?> placeholder="Confirm Password">
     @endif
     @if ($admin && strpos(url()->current(), '/admin'))
-        <input type="hidden" name="admin" value="<?= isset($create_admin) ?? '' ?>">
+        <input type="hidden" name="admin" value="<?= isset($createAdmin) ?? '0' ?>">
     @endif
     @if (isset($user))
         <input name="id" type="hidden" value="<?= $user->id ?>">
     @endif
     <div class="createAccountInput">
         @if (strpos(url()->current(), '/admin'))
-            <input class="submit" type="submit" value="">
+            <input class="submit" type="submit" value="" style="background: url('{{ asset('images/edit-button.png') }}'); background-size:cover; width: 25px; height:25px; border: none;">
         @else
-            <input class="submit" type="submit" value="CREATE ACCOUNT">
+            <input class="submit" type="submit" value="CREATE ACCOUNT" >
             <p class="plus">+</p>
         @endif
     </div>

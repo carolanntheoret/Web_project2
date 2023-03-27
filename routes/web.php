@@ -5,6 +5,7 @@ use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
+use App\Models\Reservation;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -52,3 +53,7 @@ Route::post('/modify-activity', [ActivityController::class, 'modify']);
 Route::get('/delete-activity', [ActivityController::class, 'delete']);
 Route::post('/add-activity-time', [ActivityController::class, 'addTime']);
 Route::get('/delete-activity-time', [ActivityController::class, 'deleteTime']);
+
+/* API */
+Route::get('/get-reservations/{user_id}', [ReservationController::class, 'getReservations']);
+Route::get('/get-reservation/{pass_id}', [ReservationController::class, 'getReservation']);

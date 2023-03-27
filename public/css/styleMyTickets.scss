@@ -1,14 +1,13 @@
 @import 'style.scss';
 
-main
+body
 {
-    margin-top: 11vh;
+    background-color: $deep-blue;
 }
 
 .headerImage
 {
     position: relative;
-    margin-top: 11vh;
     width: 100%;
     height: 37vh;
     background-image: url('../images/header_image_mytickets.webp');
@@ -31,19 +30,20 @@ main
 
     h3
     {
-        left: 56.7vw;
+        width: 36vw;
+        right: 7.3vw;
         bottom: 40px;
     }
-}
 
-.line
-{
-    position: absolute;
-    right: 7.3vw;
-    bottom: 37px;
-    background-color: white;
-    width: 36vw;
-    height: 3px;
+    .line
+    {
+        position: absolute;
+        right: 7.3vw;
+        bottom: 37px;
+        background-color: white;
+        width: 36vw;
+        height: 3px;
+    }
 }
 
 .band
@@ -51,4 +51,160 @@ main
     width: 100%;
     height: 50px;
     background-color: #35d0b9b7;
+}
+
+.passes
+{
+    display: flex;
+    margin: 0 7.3vw;
+    justify-content: space-evenly;
+    margin-bottom: 150px;
+}
+
+h1
+{
+    margin: 60px auto;
+    text-align: center;
+    padding-bottom: 7px;
+    display: inline-block;
+    border-bottom: 3px solid $almost-white;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.pass
+{
+    width: 17.5vw;
+    background-size: cover;
+    background-position: center;
+    border-radius: 25px;
+    padding: 43px 27px 86px 27px;
+    position: relative;
+    overflow: hidden;
+
+    h6,
+    h3,
+    p
+    {
+        position: relative;
+    }
+
+    h3
+    {
+        width: 150px;
+        margin: 20px 0
+    }
+
+}
+
+.overlay
+{
+    width: calc(100% + 150px);
+    height: calc(100% + 150px);
+    background: linear-gradient(315deg, rgba(245, 70, 116, 0), rgba(245, 70, 116, 1));
+    border-radius: 25px;
+    position: absolute;
+    top: -150px;
+    left: -150px;
+}
+
+.remove
+{
+    width: 100%;
+    position: absolute;
+    left: 0;
+    height: 41px;
+    background: rgba(101, 239, 206, 0.60);
+    color: lighten(#65efce, 25%);
+    font-size: 25px;
+    text-align: center;
+}
+
+.remove:hover
+{
+    transition: background 0.2s ease-in-out;
+    background: lighten(#65efcfe1, 18%);
+    color: rgba(53, 208, 185, 0.7176470588);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.removeItem
+{
+    display: none;
+
+    .line
+    {
+        background-color: white;
+        width: 65%;
+        height: 3px;
+        margin: 0 17.5%;
+    }
+
+    .loginInput
+    {
+        margin-top: 100px;
+        margin-bottom: 150px;
+        background: linear-gradient(to right, $reddish-pink, $pink);
+        font-size: 21px;
+        border-radius: 24px;
+        cursor: pointer;
+        color: $almost-white;
+        border: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+        width: 185px;
+        left: 50%;
+        transform: translateX(-50%);
+
+        img
+        {
+            position: absolute;
+            right: 30px;
+            width: 30px;
+            margin-bottom: 5px;
+        }
+
+        .submit
+        {
+            background-color: transparent;
+            margin: 0;
+            width: auto;
+            font-weight: 500;
+            padding: 15px 0 15px 30px;
+            border: 0px;
+            color: $almost-white;
+        }
+    }
+
+    .loginInput:hover
+    {
+        background: linear-gradient(to left, $reddish-pink, $pink);
+    }
+}
+
+.titles,
+.infos
+{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 17.5%;
+    width: 65%;
+
+    *
+    {
+        width: 30%;
+    }
+
+    .last
+    {
+        width: 10%;
+    }
+}
+
+.infos
+{
+    margin-top: 100px;
 }

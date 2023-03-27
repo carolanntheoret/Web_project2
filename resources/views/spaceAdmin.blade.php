@@ -13,15 +13,15 @@
             </div>
             </section>
                 <section class="listEmployes">
-                    <div class="sectionName"><h3>Admin</h3></div>
-                    <div class="employeSection"><x-liste-admins :users="$users"/></div>
+                    <div class="sectionName"><h3>Admin</h3><img src="{{ asset('images/add.png') }}" alt="" class="addAdmin"></div>
+                    <div class="employeSection"><x-liste-admins :users="$users" :user="$user"/></div>
                 </section>
                 <section class="listUsers">
-                    <div class="sectionName"><h3>Employees</h3></div>
+                    <div class="sectionName"><h3>Employees<img src="{{ asset('images/add.png') }}" alt="" class="addUser"></h3></div>
                     <div class="usersSection"><x-liste-users :members="$members"/></div>
                 </section>
                 <section class="listActivities">
-                    <div class="sectionName"><h3>Activities</h3></div>
+                    <div class="sectionName"><h3>Activities</h3><img src="{{ asset('images/add.png') }}" alt="" class="addActivity"></div>
                     <div class="activitiesSection"><x-liste-activities :activities="$activities"/></div>
                 </section>
                 <section class="listReservations">
@@ -37,7 +37,6 @@
                         {{-- <x-liste-reservations :users="$reservations"/> --}}
                     </div>
                 </div>
-            </section>
 
 
             <script src="js/main.js" type="module"></script>
