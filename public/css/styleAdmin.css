@@ -109,7 +109,7 @@
   height: 100%;
   background-color: #c8c8c8;
 }
-.sectionAdmin .listEmployes .employeSection .create {
+.sectionAdmin .listEmployes .employeSection .createAdmin {
   display: flex;
   width: 98%;
   height: 10%;
@@ -118,7 +118,7 @@
   border-radius: 25px;
   background-color: rgba(53, 208, 186, 0.1);
 }
-.sectionAdmin .listEmployes .employeSection .create form {
+.sectionAdmin .listEmployes .employeSection .createAdmin form {
   display: flex;
   flex-direction: row;
   margin-left: 5%;
@@ -127,7 +127,7 @@
   justify-content: left;
   align-items: center;
 }
-.sectionAdmin .listEmployes .employeSection .create form input {
+.sectionAdmin .listEmployes .employeSection .createAdmin form input {
   font-size: 15px;
   color: black;
   border: 1px solid #8d8d8d;
@@ -278,7 +278,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  overflow: auto;
   background-color: #c8c8c8;
 }
 .sectionAdmin .titleReservation {

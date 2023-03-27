@@ -147,7 +147,7 @@
             width: 100%;
             height: 100%;
             background-color: #c8c8c8;
-            .create {
+            .createAdmin {
                 display: flex;
                 width: 98%;
                 height: 10%;
@@ -323,7 +323,6 @@
                 display: flex;
                 flex-direction: column;
                 align-items: center;
-                overflow: auto;
                 background-color: #c8c8c8;
             }
         }
