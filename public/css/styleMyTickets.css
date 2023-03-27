@@ -82,13 +82,8 @@ body {
   background-color: #1f2833;
 }
 
-main {
-  margin-top: 11vh;
-}
-
 .headerImage {
   position: relative;
-  margin-top: 11vh;
   width: 100%;
   height: 37vh;
   background-image: url("../images/header_image_mytickets.webp");
@@ -246,8 +241,8 @@ h1 {
 .infos * {
   width: 30%;
 }
-.titles .last,
-.infos .last {
+.titles .totalPrice,
+.infos .totalPrice {
   width: 10%;
 }
 

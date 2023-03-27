@@ -48,11 +48,15 @@ for (const pass of passes) {
             }
 
             const total = document.createElement('h4')
-            total.innerHTML = '$' + (pass.price * pass.quantity)
-            total.setAttribute('class', 'last')
+            total.innerHTML = '$' + (pass.price * pass.quantity).toFixed(2)
+            total.setAttribute('class', 'totalPrice')
             infos.appendChild(total)
-        })
 
-        // fetch quantity to change total price
+            const quantity = document.querySelector('.select select')
+            quantity.addEventListener('change', (e) => {
+                const total_price = document.querySelector('.totalPrice')
+                total_price.innerHTML = '$' + (quantity.value * pass.price).toFixed(2)
+            })
+        })
     })
 }
