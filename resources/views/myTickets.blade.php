@@ -25,7 +25,7 @@
         </div>
 
         <div class="removeItem">
-            <form action="">
+            <form action="/delete-reservation" method="get">
                 <div class="titles">
                     <h5>PRODUCT</h5>
                     <h5>PRICE</h5>

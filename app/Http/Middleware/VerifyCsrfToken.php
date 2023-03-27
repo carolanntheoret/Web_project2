@@ -13,5 +13,6 @@ class VerifyCsrfToken extends Middleware
      */
     protected $except = [
         'get-reservations/{id}',
+        'delete-reservation/{id}',
     ];
 }

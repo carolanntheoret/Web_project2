@@ -78,6 +78,10 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
   background: linear-gradient(to left, #65efce, #35d0ba);
 }
 
+body {
+  background-color: #1f2833;
+}
+
 main {
   margin-top: 11vh;
 }
@@ -124,7 +128,8 @@ main {
 .passes {
   display: flex;
   margin: 0 7.3vw;
-  justify-content: space-between;
+  justify-content: space-evenly;
+  margin-bottom: 150px;
 }
 
 h1 {
@@ -187,7 +192,7 @@ h1 {
 }
 
 .removeItem {
-  margin-top: 150px;
+  display: none;
 }
 .removeItem .line {
   background-color: white;
@@ -196,6 +201,8 @@ h1 {
   margin: 0 17.5%;
 }
 .removeItem .loginInput {
+  margin-top: 100px;
+  margin-bottom: 150px;
   background: linear-gradient(to right, #f54674, #f348a4);
   font-size: 21px;
   border-radius: 24px;

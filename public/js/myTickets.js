@@ -6,7 +6,14 @@ for (const pass of passes) {
         fetch(`/get-reservation/${pass.getAttribute('id')}`).then(reply => reply.json()).then(data => {
             const pass = data[0]
 
-            //delete tout dans .infos
+            const removeItem = document.querySelector('.removeItem')
+            removeItem.style.display = 'block'
+
+            let elements = document.querySelectorAll('.infos *')
+            for(let element of elements)
+            {
+                element.remove()
+            }
 
             let infos = document.querySelector('.infos')
 
@@ -18,11 +25,18 @@ for (const pass of passes) {
             price.innerHTML = '$' + pass.price
             infos.appendChild(price)
 
+            const id = document.createElement('input')
+            id.setAttribute('name', 'reservation_id')
+            id.setAttribute('type', 'hidden')
+            id.setAttribute('value', pass.reservation_id)
+            infos.appendChild(id)
+
             const div_select = document.createElement('div')
             div_select.setAttribute('class', 'select')
             infos.appendChild(div_select)
 
             const select = document.createElement('select')
+            select.setAttribute('name', 'quantity')
             div_select.appendChild(select)
 
             for(let i = pass.quantity; i > 0; i--)
@@ -38,5 +52,7 @@ for (const pass of passes) {
             total.setAttribute('class', 'last')
             infos.appendChild(total)
         })
+
+        // fetch quantity to change total price
     })
 }
