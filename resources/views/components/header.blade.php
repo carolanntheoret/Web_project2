@@ -53,5 +53,3 @@
         </div>
     </div>
 </nav>
- <script src="app.js"></script>
-<script src="main.js"></script>

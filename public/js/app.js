@@ -1,4 +1,4 @@
-//const employee_selectionner = ref(null);
+const employee_selectionner = ref(null);
 
 let quantite = 10
 
@@ -52,18 +52,15 @@ function selectionnerEmployee(employee) {
   }
 
 
-// Used for the burger menu in the nav
-// const burgerMenu = document.querySelector('.burgerMenu');
-// const headLinks = document.querySelector('.headLinks');
 
-// burgerMenu.addEventListener('click', () => {
-//   headLinks.classList.toggle('burgerMenu-active');
-// });
+// Used for the burger menu in the nav
 const burgerMenu = document.querySelector('.burgerMenu');
-const dropdownMenu = document.querySelector('.headLink__dropdown');
+const dropdownMenu = document.querySelector('.headLinks');
+
 
 burgerMenu.addEventListener('click', function() {
   dropdownMenu.classList.toggle('is-open');
+  console.log(burgerMenu)
 });
 
 

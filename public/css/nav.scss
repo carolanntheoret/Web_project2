@@ -161,6 +161,10 @@ $almost-black: #222222;
             .headLinks {
                 margin-left: auto;
 
+                &.is-open {
+                    display: block;
+                }
+
                     @media screen and (max-width: 1200px) {
                         display: none;
                         position: absolute;

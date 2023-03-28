@@ -49,11 +49,15 @@ class SiteController extends Controller
         {
             $user = null;
             $user = auth()->user();
-            if(!Reservation::where('user_id', '=', auth()->user()->id)->first()) return view('spaceUser', [
-                'title' => 'HIFF | Login',
-                'user' => $user,
-                'actif' => 'spaceUser',
-            ]);
+
+            if(Reservation::where('user_id', '=', auth()->user()->id)->first() != null) {
+                return redirect("/user-zone");
+                // return view('spaceUser', [
+                //     'title' => 'HIFF | Login',
+                //     'user' => $user,
+                //     'actif' => 'spaceUser',
+                // ]);
+            }
         }
         return view('packages', [
             'title' => 'HIFF | Packages',
