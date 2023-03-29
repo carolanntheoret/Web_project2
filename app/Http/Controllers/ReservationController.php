@@ -84,7 +84,7 @@ class ReservationController extends Controller
 
     public function getReservations(Request $request)
     {
-        if(!Auth::check() || Auth::user()->admin == 1) return redirect('/');
+        if(!Auth::check() || Auth::user()->admin == 0) return redirect('/');
         echo json_encode(DB::table('reservations')->select(['reservations.id as reservation_id', 'user_id', 'pass_id', 'open_day', 'closed_day', 'quantity', 'name'])
                             ->join('passes', 'pass_id', '=', 'passes.id')
                             ->where('user_id', '=', $request->user_id)
