@@ -78,6 +78,10 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
   background: linear-gradient(to left, #65efce, #35d0ba);
 }
 
+@font-face {
+  font-family: FormulaCondensed;
+  src: url("/fonts/FormulaCondensed-Light.otf") format("truetype");
+}
 .content {
   display: flex;
   justify-content: center;
@@ -89,7 +93,7 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
   display: flex;
   width: 1640px;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 180px;
 }
 
 .schedule {
@@ -97,9 +101,54 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
   margin-right: 2%;
 }
 
+h1 {
+  font-family: FormulaCondensed;
+  font-size: 5rem;
+}
+
+h2 {
+  font-size: 3rem;
+  margin: 0;
+}
+
+.line-title {
+  width: 400px;
+  height: 4px;
+  background-color: #a8a8a8;
+}
+
+.overlay {
+  width: calc(100% + 150px);
+  height: calc(100% + 150px);
+  background: linear-gradient(315deg, rgba(245, 70, 116, 0), rgb(245, 70, 116));
+  border-radius: 40px;
+  position: absolute;
+  top: -150px;
+  left: -150px;
+}
+
 .image {
   width: 1130px;
   margin-left: 2%;
+}
+
+.img1 {
+  border-radius: 40px;
+  height: 630px;
+  width: 1130px;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+}
+
+.text-film {
+  position: relative;
+  width: 375px;
+  left: 50px;
+}
+.text-film h2 {
+  text-transform: uppercase;
+  margin: 50px 0;
 }
 
 .small {
@@ -110,8 +159,42 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
 }
 
 .small-item {
+  position: relative;
   margin-top: 2%;
-  height: auto;
+  border-radius: 40px;
+  overflow: hidden;
+  height: 380px;
+  width: 537px;
+  background-size: cover;
+  background-position: center;
+}
+
+.small-img {
+  height: 180px;
+  width: 350px;
+  background-size: cover;
+  background-position: center;
+}
+
+.med-img {
+  height: 335px;
+  width: 482px;
+  background-size: cover;
+  background-position: center;
+}
+
+.grd-img {
+  height: 400px;
+  width: 760px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.hours {
+  width: 350px;
 }
 
 .line {

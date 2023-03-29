@@ -130,9 +130,26 @@ class SiteController extends Controller
 
     public function showSchedule()
     {
+        $activities = DB::select('SELECT DISTINCT activities.title, activities.description, activities.image, activity_hours.activity_id,
+        (SELECT begin_time FROM activity_hours WHERE activity_id = activities.id LIMIT 1 OFFSET 0) AS first_time,
+        (SELECT begin_time FROM activity_hours WHERE activity_id = activities.id LIMIT 1 OFFSET 1) AS second_time,
+        (SELECT begin_time FROM activity_hours WHERE activity_id = activities.id LIMIT 1 OFFSET 2) AS third_time
+        FROM activities
+        JOIN activity_hours ON activities.id = activity_hours.activity_id;');
+
+        foreach($activities as $activity)
+        {
+            $times = [ $activity->first_time, $activity->second_time, $activity->third_time];
+            sort($times);
+            $activity->first_time = $times[0];
+            $activity->second_time = $times[1];
+            $activity->third_time = $times[2];
+        };
+
         return view('schedule', [
             'title' => 'HIFF | Schedule 2023',
             'actif' => 'schedule',
+            'activities' => $activities,
         ]);
     }
 }
