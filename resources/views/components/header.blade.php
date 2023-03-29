@@ -8,7 +8,7 @@
         <div class="headContent">
             <button class="burgerMenu burgerMenu-icon">
               <div class="burger-icon">
-                <img id="userImg"src="<?= asset('images/test.webp') ?>" alt="icon menu">
+                <img id="userImg"src="<?= asset('images/burgerIcon.png') ?>" alt="icon menu">
               </div>
             </button>
 
@@ -26,7 +26,7 @@
               </li>
               <li class="headList"><a @if(isset($actif) && $actif=='news') class="actif" @endif href="/news">News</a></li>
               <li class="headList"><a @if(isset($actif) && $actif=='contact') class="actif" @endif href="/contact">Contact</a></li>
-              <a class="mainBtn fw-semibold" href="/user-zone">My tickets</a>
+              <a class="mainBtn fw-semibold" href="/user-zone">Tickets</a>
             </ul>
           </div>
 
@@ -34,7 +34,11 @@
         <div class="headIcon">
             <div class="dropdown">
                 <?php if (auth()->check()): ?>
-                    <div id="userId"><?= substr(auth()->user()->first_name, 0, 1) ?><?= substr(auth()->user()->last_name, 0, 1) ?></div>
+                    <div id="userId">
+                        <?= strtoupper(auth()->user()->first_name[0])?>
+                        <?= strtoupper(auth()->user()->last_name[0])?>
+                    </div>
+
                     <img id="userImg"src="<?= asset('images/connectPlain.icon.svg') ?>" alt="user connection">
                     <div class="dropdown-content">
                         <?php if (auth()->user()->admin): ?>

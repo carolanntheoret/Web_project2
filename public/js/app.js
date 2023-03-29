@@ -1,4 +1,35 @@
+// Used for the burger menu in the navigation
+const burgerMenu = document.querySelector(".burgerMenu");
+const dropdownMenu = document.querySelector(".headLinks");
+
+//console.log(burgerMenu)
+burgerMenu.addEventListener('click', function() {
+  dropdownMenu.classList.toggle('is-open');
+});
+
+// const userImg = document.querySelector("#userImg");
+// const dropdownContent = document.querySelector(".dropdown-content");
+
+// userImg.addEventListener('click', function() {
+//     dropdownContent.classList.toggle('show');
+// });
+
+// // Fermer le dropdown si l'utilisateur clique en dehors de celui-ci
+// window.addEventListener('click', function(event) {
+//     if (!event.target.matches('#userImg')) {
+//         if (dropdownContent.classList.contains('show')) {
+//             dropdownContent.classList.remove('show');
+//         }
+//     }
+// });
+
+
+//end Navigation
+
+
+
 const elem = document.querySelector(".grid");
+let quantite = 10
 const msnry = new Masonry(elem, {
     // options
     itemSelector: ".grid-item",
@@ -48,15 +79,24 @@ function selectionnerEmployee(employee) {
 
 
 
-// Used for the burger menu in the nav
-const burgerMenu = document.querySelector('.burgerMenu');
-const dropdownMenu = document.querySelector('.headLinks');
 
 
-burgerMenu.addEventListener('click', function() {
-  dropdownMenu.classList.toggle('is-open');
-  console.log(burgerMenu)
-});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 const member_selected = document.getElementById("member");
