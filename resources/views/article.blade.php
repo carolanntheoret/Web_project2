@@ -18,6 +18,7 @@
             <div class="article-content">
                 <p>{{ $article->text }}</p>
             </div>
+            <a class="pt-3" href="/news">Back ↺</a>
         </div>
 
     </main>

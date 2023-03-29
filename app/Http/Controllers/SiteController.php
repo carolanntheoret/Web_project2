@@ -33,7 +33,7 @@ class SiteController extends Controller
     public function showNews()
     {
         return view('news', [
-            'title' => 'HIFF |  News' ,
+            'title' => 'HIFF |  News',
             'actif' => 'news'
         ]);
     }
@@ -52,11 +52,6 @@ class SiteController extends Controller
 
             if(Reservation::where('user_id', '=', auth()->user()->id)->first() != null) {
                 return redirect("/user-zone");
-                // return view('spaceUser', [
-                //     'title' => 'HIFF | Login',
-                //     'user' => $user,
-                //     'actif' => 'spaceUser',
-                // ]);
             }
         }
         return view('packages', [
@@ -86,9 +81,10 @@ class SiteController extends Controller
 
         $user = null;
 
-        // var_dump(Reservation::where('id','=',1)->get()[0]->user_id); exit;
+        // var_dump(Reservation::where('id', '=', 1)->get()[0]->user_id);
+        // exit;
 
-        if(Auth::check()) $user = auth()->user();
+        if (Auth::check()) $user = auth()->user();
 
         return view('spaceAdmin', [
             'title' => 'HIFF | Admin',
@@ -108,7 +104,7 @@ class SiteController extends Controller
      */
     public function showUser()
     {
-        if(Auth::check()) return redirect('my-tickets');
+        if (Auth::check()) return redirect('my-tickets');
 
         return view('spaceUser', [
             'title' => 'HIFF | Login',
@@ -124,10 +120,11 @@ class SiteController extends Controller
      */
     public function showTickets()
     {
-        if(!Auth::check()) return redirect('user-zone');
+        if (!Auth::check()) return redirect('user-zone');
         return view('myTickets', [
             'title' => 'HIFF | My Tickets',
             'actif' => 'myTickets',
+            'passes' => DB::table('passes')->select(['passes.id', 'name', 'resume', 'image'])->join('reservations', 'passes.id', '=', 'pass_id')->where('user_id', '=', Auth::user()->id)->get(),
         ]);
     }
 

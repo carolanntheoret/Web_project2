@@ -80,4 +80,39 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
 
 body {
   background-color: #1f2833;
+}
+
+main {
+  padding: 150px 0px;
+}
+main .contenu {
+  margin: 0 7.3vw;
+}
+main .contenu .contact-info {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  top: 60px;
+  left: 100px;
+  width: 400px;
+  margin-right: 215px;
+}
+main .contenu .contact-info .blob {
+  position: absolute;
+  height: 900px;
+  width: 900px;
+  background-size: contain;
+  top: -185px;
+  left: -300px;
+}
+main .contenu .contact-info h1 {
+  font-size: 7rem;
+}
+main .contenu .contact-info p {
+  font-size: 2rem;
+}
+main .contenu .map {
+  border: 5px solid #f348a4;
+  background-color: #f348a4;
 }/*# sourceMappingURL=contact.css.map */
