@@ -55,7 +55,7 @@ class ReservationController extends Controller
 
         $reservation = Reservation::where('id', '=', $request->reservation_id)->first();
 
-        if(auth()->user()->id != $reservation->user_id) return back();
+        if(auth()->user()->id != $reservation->user_id && auth()->user()->admin != 1) return back();
 
         $success = false;
         if($reservation->quantity == $request->quantity) $success = Reservation::where('id', '=', $request->reservation_id)->delete();
