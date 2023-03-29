@@ -3,8 +3,22 @@
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin: 100px 0px 0px 0px;
 
+    .sectionName {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        min-height: 100px;
+        gap: 1%;
+        background-color: rgb(88, 88, 88);
+        img {
+            cursor: pointer;
+            margin-bottom: 3px;
+            width: 30px;
+            height: 30px;
+        }
+    }
     .menuAdmin {
         display: flex;
         flex-direction: column;
@@ -115,14 +129,7 @@
             }
         }
     }
-    .sectionName {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 100%;
-        min-height: 100px;
-        background-color: rgb(88, 88, 88);
-    }
+
     .listEmployes {
         display: flex;
         flex-direction: column;
@@ -138,20 +145,21 @@
             width: 100%;
             height: 100%;
             background-color: #c8c8c8;
-            ul {
+
+            .createAdmin {
                 display: flex;
-                align-items: center;
                 width: 98%;
                 height: 10%;
                 margin-top: 10px;
                 border: 1px solid #35d0ba;
                 border-radius: 25px;
                 background-color: rgba(53, 208, 186, 0.1);
+
                 form {
                     display: flex;
                     flex-direction: row;
-                    width: 25%;
-                    height: 15%;
+                    margin-left: 5%;
+                    width: 70%;
                     gap: 2.5%;
                     justify-content: left;
                     align-items: center;
@@ -162,6 +170,40 @@
                         border: 1px solid #8d8d8d;
                         background-color: #35d0b921;
                     }
+                }
+            }
+            ul {
+                display: flex;
+                align-items: center;
+                position: relative;
+                width: 98%;
+                height: 10%;
+                margin-top: 10px;
+                border: 1px solid #35d0ba;
+                border-radius: 25px;
+                background-color: rgba(53, 208, 186, 0.1);
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    width: 90%;
+                    height: 15%;
+                    gap: 5%;
+                    justify-content: left;
+                    align-items: center;
+
+                    input {
+                        font-size: 15px;
+                        color: black;
+                        border: 1px solid #8d8d8d;
+                        background-color: #35d0b921;
+                    }
+                }
+                a {
+                    font-size: 25px;
+                    position: absolute;
+                    top: 25px;
+                    right: 150px;
+                    text-decoration: none;
                 }
             }
         }
@@ -181,9 +223,12 @@
             width: 100%;
             height: 100%;
             background-color: #c8c8c8;
-            ul {
+
+            a {
+                text-decoration: none;
+            }
+            .createUser {
                 display: flex;
-                align-items: center;
                 width: 98%;
                 height: 10%;
                 margin-top: 10px;
@@ -193,9 +238,9 @@
                 form {
                     display: flex;
                     flex-direction: row;
-                    width: 18%;
-                    height: 15%;
-                    gap: 1.5%;
+                    margin-left: 5%;
+                    width: 90%;
+                    gap: 2.5%;
                     justify-content: left;
                     align-items: center;
 
@@ -205,6 +250,41 @@
                         border: 1px solid #8d8d8d;
                         background-color: #35d0b921;
                     }
+                }
+            }
+            ul {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                position: relative;
+                width: 98%;
+                height: 10%;
+                margin-top: 10px;
+                border: 1px solid #35d0ba;
+                border-radius: 25px;
+                background-color: rgba(53, 208, 186, 0.1);
+                form {
+                    display: flex;
+                    flex-direction: row;
+                    width: 90%;
+                    height: 15%;
+                    gap: 5%;
+                    justify-content: left;
+                    align-items: center;
+
+                    input {
+                        font-size: 15px;
+                        color: black;
+                        border: 1px solid #8d8d8d;
+                        background-color: #35d0b921;
+                    }
+                }
+                a {
+                    font-size: 25px;
+                    position: absolute;
+                    top: 25px;
+                    right: 150px;
+                    text-decoration: none;
                 }
             }
         }
@@ -219,31 +299,27 @@
         .activitiesSection {
             display: flex;
             flex-direction: column;
-            align-items: center;
             overflow: auto;
             width: 100%;
             height: 100%;
             background-color: #c8c8c8;
-            ul {
+            .createActivity {
                 display: flex;
                 align-items: center;
                 width: 98%;
-                height: 10%;
+                height: 20%;
                 margin-top: 10px;
                 border: 1px solid #35d0ba;
+                padding: 10px;
                 border-radius: 25px;
                 background-color: rgba(53, 208, 186, 0.1);
-                img {
-                    width: 50px;
-                    height: 50px;
-                }
                 form {
                     display: flex;
                     flex-direction: row;
-                    width: 18%;
+                    margin-left: 5%;
+                    width: 5%;
                     height: 20%;
-                    gap: 30%;
-                    justify-content: left;
+                    gap: 10px;
                     align-items: center;
                     textarea {
                         width: 400px;
@@ -258,6 +334,53 @@
                     }
                 }
             }
+            ul {
+                display: flex;
+                width: 95%;
+                height: 10%;
+                position: relative;
+                padding: 150px 0 150px 40px;
+                margin: 15px auto 0 auto;
+                border: 1px solid #35d0ba;
+                border-radius: 25px;
+                background-color: rgba(53, 208, 186, 0.1);
+                align-items: center;
+                img {
+                    width: 150px;
+                    height: 150px;
+                }
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    height: 30%;
+                    margin-left: 60px;
+                    gap: 10px;
+                    justify-content: center;
+                    .submit {
+                        position: absolute;
+                        top: 20px;
+                        right: 110px;
+                    }
+                    textarea {
+                        width: 400px;
+                        height: 45px;
+                    }
+
+                    input {
+                        font-size: 15px;
+                        color: black;
+                        border: 1px solid #8d8d8d;
+                        background-color: #35d0b921;
+                    }
+                }
+                a {
+                    font-size: 25px;
+                    position: absolute;
+                    top: 13px;
+                    right: 50px;
+                    text-decoration: none;
+                }
+            }
         }
     }
 
@@ -270,14 +393,25 @@
         .sectionMember {
             border: 6px solid #707070;
             background-color: #c8c8c8;
+            overflow: auto;
             .listMembers {
                 width: 200px;
-            height: 100%;
+                height: 100%;
                 display: flex;
                 flex-direction: column;
+                color: black;
+                gap: 25px;
                 overflow: auto;
-                align-items: center;
-                margin-top: 5%;
+                margin: 20px 0 0 15px;
+
+                .member{
+                   cursor: pointer;
+                }
+                .members{
+                    width: 80%;
+                    height: 30px;
+                    border: 2px solid black;
+                }
             }
         }
         .sectionReservation {
@@ -285,11 +419,33 @@
             height: 100%;
             border: 6px solid #707070;
             background-color: #c8c8c8;
+            overflow: auto;
             .listReservations {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 background-color: #c8c8c8;
+
+                div {
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    color: black;
+                    font-size: 20px;
+                    width: 95%;
+                    height: 5%;
+                    position: relative;
+                    padding: 40px 0 40px 40px;
+                    margin: 15px auto 0 auto;
+                    border: 1px solid #35d0ba;
+                    border-radius: 25px;
+                    background-color: rgba(53, 208, 186, 0.1);
+
+                    input {
+                        background-color: transparent;
+                        border: none;
+                    }
+                }
             }
         }
     }

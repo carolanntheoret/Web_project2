@@ -1,0 +1,131 @@
+@import url(nav.css);
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #fbf7ea;
+  background-color: #222222;
+  padding-top: 6rem;
+}
+body .mainBlock {
+  border: 1px solid #fefed5;
+  border-radius: 4px;
+  padding: 20px;
+  margin: 20px;
+}
+body .mainBlock .container {
+  max-width: 95vw;
+  margin: 0 auto;
+}
+body .mainBlock .container h1 {
+  font-size: 90px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+body .mainBlock .container h2 {
+  font-size: 50px;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+body .mainBlock .container h3 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+body .mainBlock .container h4 {
+  font-size: 25px;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+body .mainBlock .container .mainText {
+  font-size: 25px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+body .mainBlock .container .secText {
+  font-size: 22px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+body .mainBlock .container .mainBtn,
+body .mainBlock .container .secBtn {
+  color: #fbf7ea;
+  cursor: pointer;
+}
+body .mainBlock .container .mainBtn .mainBtn,
+body .mainBlock .container .secBtn .mainBtn {
+  background: linear-gradient(to right, #f54674, #f348a4);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  margin: auto;
+  cursor: pointer;
+  border: none;
+}
+body .mainBlock .container .mainBtn .mainBtn .mainBtn:hover,
+body .mainBlock .container .secBtn .mainBtn .mainBtn:hover {
+  background: linear-gradient(to left, #f54674, #f348a4);
+}
+body .mainBlock .container .mainBtn .secBtn,
+body .mainBlock .container .secBtn .secBtn {
+  background: linear-gradient(to left, #35d0ba, #65efce);
+  border: 2px solid #f54674;
+}
+body .mainBlock .container .mainBtn .secBtn .secBtn:hover,
+body .mainBlock .container .secBtn .secBtn .secBtn:hover {
+  background: linear-gradient(to left, #65efce, #35d0ba);
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contenu {
+  display: flex;
+  width: 1640px;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.schedule {
+  width: 430px;
+  margin-right: 2%;
+}
+
+.image {
+  width: 1130px;
+  margin-left: 2%;
+}
+
+.small {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+.small-item {
+  margin-top: 2%;
+  height: auto;
+}
+
+.line {
+  width: 1400px;
+  height: 5px;
+  background-color: #a8a8a8;
+}
+
+.image-bottom {
+  width: 1640px;
+}
+
+.tickets {
+  height: 300px;
+  width: 1640px;
+  background-color: #1f2833;
+}/*# sourceMappingURL=schedule.css.map */

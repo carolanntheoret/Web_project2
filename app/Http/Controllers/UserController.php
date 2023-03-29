@@ -49,7 +49,7 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-        if(auth()->check()) return back();
+        if(auth()->check() && auth()->user()->admin == 0) return back();
 
         $request->validate([
             'first_name' => 'required|max:255',
@@ -64,7 +64,7 @@ class UserController extends Controller
         $user->last_name = $request->last_name;
         $user->email = $request->email;
         $user->password = Hash::make($request->password);
-        $user->admin = $request->admin == "true" ? 1 : 0;
+        $user->admin = $request->admin == 1 ? 1 : 0;
 
         $user->save();
 
@@ -97,8 +97,7 @@ class UserController extends Controller
             'first_name' => $request->first_name,
             'last_name' => $request->last_name,
             'email' => $request->email,
-            'password' => $request->password == null ? DB::table('users')->select('password')->where('id', '=', $request->id)->first()->password : Hash::make($request->password),
-            'admin' => $request->admin == "true" ? 1 : 0,
+            'password' => $request->password == null ? DB::table('users')->select('password')->where('id', '=', $request->id)->first()->password : Hash::make($request->password)
         ]);
 
         if(!$success) return back()->with('modify_error', 'An error occurred while updating the user');

@@ -1,0 +1,53 @@
+@import 'style.scss';
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.contenu {
+  display: flex;
+  width: 1640px;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.schedule {
+  width: 430px;
+  margin-right: 2%;
+}
+
+.image {
+  width: 1130px;
+  margin-left: 2%;
+}
+
+.small {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 2%;
+}
+
+.small-item {
+  margin-top: 2%;
+  height: auto;
+}
+
+.line {
+    width: 1400px;
+    height: 5px;
+    background-color: #a8a8a8;
+}
+
+.image-bottom {
+    width: 1640px;
+  }
+
+  .tickets {
+    height: 300px;
+    width: 1640px;
+    background-color: $deep-blue;
+  }

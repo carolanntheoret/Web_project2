@@ -1,5 +1,3 @@
-let quantite = 10;
-
 const elem = document.querySelector(".grid");
 const msnry = new Masonry(elem, {
     // options
@@ -12,9 +10,9 @@ const msnry = new Masonry(elem, {
 window.onload = () => {
     setTimeout(() => {
         msnry.layout();
-        elem.style.visibility = "visible";
-    }, 1000);
-};
+        elem.style.visibility = 'visible';
+    }, 500)
+}
 
 function display() {
     const articles = document.querySelectorAll(".grid-item");
