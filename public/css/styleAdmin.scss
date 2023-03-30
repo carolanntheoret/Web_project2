@@ -158,11 +158,17 @@
                 form {
                     display: flex;
                     flex-direction: row;
-                    margin-left: 5%;
-                    width: 70%;
-                    gap: 2.5%;
+                    margin-left: 2.5%;
+                    width: 90%;
+                    gap: 5px;
                     justify-content: left;
                     align-items: center;
+
+                    .createAccountName {
+                        display: flex;
+                        flex-direction: row;
+                        gap: 5px;
+                    }
 
                     input {
                         font-size: 15px;
@@ -238,7 +244,7 @@
                 form {
                     display: flex;
                     flex-direction: row;
-                    margin-left: 5%;
+                    margin-left: 2.5%;
                     width: 90%;
                     gap: 2.5%;
                     justify-content: left;
@@ -404,10 +410,10 @@
                 overflow: auto;
                 margin: 20px 0 0 15px;
 
-                .member{
-                   cursor: pointer;
+                .member {
+                    cursor: pointer;
                 }
-                .members{
+                .members {
                     width: 80%;
                     height: 30px;
                     border: 2px solid black;
