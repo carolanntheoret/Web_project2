@@ -120,11 +120,16 @@
 .sectionAdmin .listEmployes .employeSection .createAdmin form {
   display: flex;
   flex-direction: row;
-  margin-left: 5%;
-  width: 70%;
-  gap: 2.5%;
+  margin-left: 2.5%;
+  width: 90%;
+  gap: 5px;
   justify-content: left;
   align-items: center;
+}
+.sectionAdmin .listEmployes .employeSection .createAdmin form .createAccountName {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 .sectionAdmin .listEmployes .employeSection .createAdmin form input {
   font-size: 15px;
@@ -196,7 +201,7 @@
 .sectionAdmin .listUsers .usersSection .createUser form {
   display: flex;
   flex-direction: row;
-  margin-left: 5%;
+  margin-left: 2.5%;
   width: 90%;
   gap: 2.5%;
   justify-content: left;
