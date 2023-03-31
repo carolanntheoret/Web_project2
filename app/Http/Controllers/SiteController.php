@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Activity;
+use App\Models\News;
 use App\Models\Pass;
 use App\Models\Reservation;
 use Illuminate\Support\Facades\Auth;
@@ -19,8 +20,10 @@ class SiteController extends Controller
     {
         return view('homepage', [
             'title' => 'HIFF | Home',
-            'actif' => 'homepage'
+            'actif' => 'homepage',
+            'news' =>  News::orderBy('created_at', 'desc')->limit(3)->get(),
         ]);
+
     }
 
     /**

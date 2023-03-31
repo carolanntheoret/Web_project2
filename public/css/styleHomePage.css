@@ -2,15 +2,16 @@ body {
   margin: 0;
 }
 body .firstSection {
-  display: flex;
+  margin-top: -59px;
   width: 100%;
-  height: 110vh;
-  margin: 0;
-  justify-content: center;
+  height: 100vh;
 }
-body .festivalImage {
+body .firstSection .festivalImage {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 body .multipleScreen {
   display: flex;
@@ -47,34 +48,74 @@ body .aboutSection {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   align-items: center;
   justify-content: center;
   gap: 12%;
 }
+body .aboutSection .imageBack {
+  position: relative;
+}
+body .aboutSection .imageBack img {
+  margin: 125px 0px 0px 50px;
+  width: 850px;
+  height: 750px;
+}
 body .aboutSection .aboutInfo {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  gap: 30px;
+  left: 180px;
   width: 35%;
 }
-body .aboutSection .aboutImage span {
+body .aboutSection .aboutInfo h1 {
+  font-size: 50px;
+  max-width: 25%;
+}
+body .aboutSection .borderBack {
+  position: relative;
+  left: 0px;
+  top: 60px;
+  width: 450px;
+  height: 550px;
+  border: 5px solid whitesmoke;
+}
+body .aboutSection .aboutImage img {
   display: flex;
-  background-color: rgba(212, 212, 212, 0.426);
-  width: 500px;
-  height: 500px;
-  padding: 15px 20px 15px 70px;
+  position: absolute;
+  left: 1080px;
+  top: 1025px;
+  width: 400px;
+  height: 550px;
 }
 body .latestNews {
   display: flex;
   flex-direction: column;
   width: 100%;
+  padding: 2.5% 0 4% 0;
+  background-color: #dff0f0;
+  color: black;
   align-items: center;
+}
+body .latestNews p {
+  max-width: 450px;
+}
+body .latestNews .titleLast {
+  display: flex;
+  flex-direction: row;
+  gap: 60px;
+}
+body .latestNews .titleLast span {
+  transform: rotate(90deg);
+  font-size: 50px;
+  margin-top: -10px;
 }
 body .latestNews .news {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 100vh;
+  height: 75%;
   justify-content: center;
   margin-top: 25px;
   gap: 20%;
@@ -82,16 +123,19 @@ body .latestNews .news {
 body .latestNews .news .newsPicture {
   display: flex;
   align-self: auto;
-  background-color: rgba(212, 212, 212, 0.426);
-  width: 442px;
-  height: 284px;
+  width: 422px;
+  height: 264px;
+  background-size: cover;
+  background-position: center;
   position: relative;
 }
 body .latestNews .news .banner {
   position: absolute;
   top: 13px;
   font-size: 25px;
-  font-size: bold;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 600;
+  color: white;
   align-items: center;
   left: -25px;
   width: 365px;
@@ -104,15 +148,35 @@ body .latestNews .mainNews {
   max-width: 600px;
 }
 body .latestNews .mainNews .newsPicture {
-  width: 900px;
-  height: 500px;
+  width: 825px;
+  height: 450px;
+}
+body .latestNews .mainNews .more {
+  background: linear-gradient(to right, #f54674, #f348a4);
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  color: white;
+  padding: 2.5px 16px 5px 15px;
+  text-decoration: none;
+  border-radius: 25px;
+  margin: auto;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+body .latestNews .mainNews .more:hover {
+  background: linear-gradient(to left, #f54674, #f348a4);
+  border: 2px solid black;
 }
 body .showEvents {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-column: 4;
+  grid-row: 2;
   width: 100%;
-  height: 100vh;
+  min-height: 100vh;
+  padding: 150px 75px 150px 75px;
   align-items: center;
+  background-color: #2D2D2D;
 }
 body .showEvents .eventTop {
   display: flex;
@@ -125,20 +189,31 @@ body .showEvents .eventDown {
   gap: 0;
 }
 body .showEvents .event {
-  width: 350px;
-  height: 450px;
+  width: 25%;
+  height: 42.5vh;
   padding-left: 55px;
   padding-top: 100px;
+  color: black;
+  background-color: #FBF7EA;
 }
-body .showEvents .showEvents img {
+body .showEvents p {
+  margin-top: 25px;
+}
+body .showEvents a {
+  color: rgb(1, 206, 221);
+  text-decoration: none;
+}
+body .showEvents .book {
+  margin: 0 0 2.5px 25px;
   width: 25px;
   height: 20px;
 }
 body .showEvents .image {
-  width: 350px;
-  height: 350px;
+  width: 25%;
+  height: 42.5vh;
   background-color: rgb(190, 190, 190);
   background-size: cover;
+  background-position: center;
 }
 body .showEvents span {
   width: 150px;
