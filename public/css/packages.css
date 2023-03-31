@@ -78,6 +78,10 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
   background: linear-gradient(to left, #65efce, #35d0ba);
 }
 
+@font-face {
+  font-family: FormulaCondensed;
+  src: url("/fonts/FormulaCondensed-Light.otf") format("truetype");
+}
 body {
   background-image: url("../images/ticket_background.png");
   background-position: center;
@@ -90,9 +94,16 @@ main {
 }
 
 h1 {
-  color: #fbf7ea;
-  margin: 125px auto 125px auto;
+  margin: 60px auto 60px auto;
+  font-family: FormulaCondensed;
   font-size: 5rem;
+  color: #ff6e97;
+  background: linear-gradient(to right, #ff6e97, #fe8c4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+h1 .et {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .package {
@@ -116,6 +127,9 @@ h1 {
   width: 72%;
   margin: 0 auto;
   position: relative;
+}
+.package .infos h2 {
+  padding-bottom: 5px;
 }
 .package .infos h3 {
   font-size: 2.5rem;
@@ -219,4 +233,8 @@ h1 {
   cursor: pointer;
   color: #fbf7ea;
   border: none;
+}
+
+.buyBTN:hover {
+  background: linear-gradient(to left, #f54674, #f348a4);
 }/*# sourceMappingURL=packages.css.map */

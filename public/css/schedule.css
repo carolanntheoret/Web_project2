@@ -93,7 +93,6 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
   display: flex;
   width: 1640px;
   justify-content: space-between;
-  margin-top: 180px;
 }
 
 .schedule {
@@ -196,24 +195,31 @@ h2 {
   background-position: center;
 }
 
+.title-cat {
+  margin-top: 7%;
+}
+
 .small-cat {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 5%;
+  margin-top: 2%;
 }
-.small-cat .small-img {
-  height: 180px;
-  width: 350px;
-  background-size: contain;
-  background-position: top;
+.small-cat .small-cat-content {
   position: relative;
 }
-.small-cat p {
-  position: absolute;
-  bottom: 0;
+.small-cat .small-cat-content .small-img {
+  height: 180px;
+  width: 350px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.small-cat .small-cat-content p {
+  background-color: rgba(53, 208, 185, 0.4156862745);
+  bottom: -44px;
   width: 100%;
-  color: white;
+  color: #fbf7ea;
   padding: 10px;
   margin: 0;
 }
@@ -234,6 +240,20 @@ h2 {
   overflow: hidden;
   border-radius: 40px;
 }
+.grd-img .text-film-grd {
+  position: relative;
+  width: 535px;
+  left: 50px;
+  top: 65px;
+}
+.grd-img .text-film-grd h4 {
+  text-transform: uppercase;
+  margin-bottom: 55px;
+  font-size: 3rem;
+}
+.grd-img .text-film-grd p {
+  font-size: 1.2rem;
+}
 
 .hours {
   width: 350px;
@@ -243,6 +263,7 @@ h2 {
   width: 1400px;
   height: 5px;
   background-color: #a8a8a8;
+  margin-top: 7%;
 }
 
 .image-bottom {
@@ -250,7 +271,102 @@ h2 {
 }
 
 .tickets {
+  display: flex;
+  align-items: center;
   height: 300px;
   width: 1640px;
   background-color: #1f2833;
+  margin-top: 7%;
+  margin-bottom: 10%;
+  position: relative;
+}
+
+.tickets-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.tickets-image img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.tickets-content {
+  margin-left: 35px;
+  padding: 0 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: #fff;
+}
+
+.tickets-content h2 {
+  font-size: 36px;
+  margin-bottom: 25px;
+  font-weight: bold;
+}
+
+.tickets-content h3 {
+  font-size: 24px;
+  margin-bottom: 40px;
+}
+
+.tickets-content button {
+  background: linear-gradient(to right, #f54674, #f348a4);
+  border: none;
+  padding: 20px 35px;
+  font-size: 25px;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 24px;
+  cursor: pointer;
+  color: #fbf7ea;
+  transition: background 0.3s ease-in-out;
+  width: 212px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.tickets-content button a {
+  color: #fbf7ea;
+  text-decoration: none;
+  z-index: 2;
+}
+
+.tickets-content button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: radial-gradient(circle at center, #de3f69, #de4396);
+  border-radius: 50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+  z-index: -1;
+}
+
+.tickets-content button:hover::after {
+  width: 300px;
+  height: 300px;
+  opacity: 1;
+}
+
+.tickets::after {
+  content: "";
+  position: absolute;
+  /* to position the pseudo-element relative to the .tickets div */
+  border: 7px solid #fbf7ea;
+  top: 71px;
+  right: -73px;
+  bottom: -63px;
+  left: 118px;
+  z-index: -1;
+  /* to make sure the border is behind the .tickets div */
 }/*# sourceMappingURL=schedule.css.map */
