@@ -14,6 +14,9 @@
     </div>
     @if (isset($activity))
         <input type="hidden" name="id" value="<?= $activity->activity_id ?>">
+        <input type="hidden" name="hour_id1" value="<?= $activity->first_id ?>">
+        <input type="hidden" name="hour_id2" value="<?= $activity->second_id ?>">
+        <input type="hidden" name="hour_id3" value="<?= $activity->third_id ?>">
     @endif
     <div>
         <input name="image" type="text" value="<?= isset($activity) ? $activity->image : '' ?>" placeholder="Image URL">
