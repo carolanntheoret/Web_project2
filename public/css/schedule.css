@@ -103,6 +103,10 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
 h1 {
   font-family: FormulaCondensed;
   font-size: 5rem;
+  color: #ff6e97;
+  background: linear-gradient(to right, #ff6e97, #fe8c4d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 h2 {
