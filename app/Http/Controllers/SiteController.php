@@ -54,9 +54,11 @@ class SiteController extends Controller
                 return redirect("/user-zone");
             }
         }
+
         return view('packages', [
             'title' => 'HIFF | Packages',
-            'actif' => 'packages'
+            'actif' => 'packages',
+            'packages' => Pass::all(),
         ]);
     }
 
@@ -80,9 +82,6 @@ class SiteController extends Controller
         if (!Auth::check() || !auth()->user()->admin == 1) return redirect('/user-zone');
 
         $user = null;
-
-        // var_dump(Reservation::where('id', '=', 1)->get()[0]->user_id);
-        // exit;
 
         if (Auth::check()) $user = auth()->user();
 

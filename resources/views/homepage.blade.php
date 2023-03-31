@@ -3,21 +3,8 @@
         <main class="content">
 
             <section class="firstSection">
-                <div class="festivalTitle">
-                    <h1>2023</h1>
-                    <p>HORIZON INDEPENDENT FILM FESTIVAL</p>
-                </div>
-                <div class="multipleScreen">
-                    <div class="topRow">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                    <div class="downRow">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
+                <div class="festivalImage" style="background: url('{{ asset('images/background_accueil.webp') }}'); background-size:cover; background-repeat: no-repeat;">
+
                 </div>
             </section>
 
