@@ -43,16 +43,6 @@ class SiteController extends Controller
      */
     public function showPackage()
     {
-        if(Auth::check())
-        {
-            $user = null;
-            $user = auth()->user();
-
-            if(Reservation::where('user_id', '=', auth()->user()->id)->first() != null) {
-                return redirect("/user-zone");
-            }
-        }
-
         return view('packages', [
             'title' => 'HIFF | Packages',
             'actif' => 'packages',
