@@ -2,16 +2,15 @@ body {
     margin: 0;
 
     .firstSection {
-        display: flex;
+        margin-top: -69px;
         width: 100%;
-        height: 110vh;
-        margin: 0;
-        justify-content: center;
+        height: 100vh;
+        .festivalImage {
+            width: 100%;
+            height: 100%;
+        }
     }
-    .festivalImage {
-        width: 100%;
-        height: 100%;
-    }
+
 
     .multipleScreen {
         display: flex;
@@ -51,21 +50,49 @@ body {
         display: flex;
         flex-direction: row;
         width: 100%;
-        height: 110vh;
+        height: 100vh;
         align-items: center;
         justify-content: center;
         gap: 12%;
+
+        .imageBack {
+            position: relative;
+
+            img {
+                margin: 125px 0px 0px 50px;
+                width: 850px;
+                height: 750px;
+            }
+        }
         .aboutInfo {
             display: flex;
             flex-direction: column;
+            position: absolute;
+            gap: 30px;
+            left: 180px;
             width: 35%;
+
+            h1{
+                font-size: 50px;
+                max-width: 25%;
+            }
         }
-        .aboutImage span {
+
+        .borderBack {
+            position: relative;
+            left: 0px;
+            top: 60px;
+            width: 450px;
+            height: 550px;
+            border: 5px solid whitesmoke;
+        }
+        .aboutImage img {
             display: flex;
-            background-color: rgba(212, 212, 212, 0.426);
-            width: 500px;
-            height: 500px;
-            padding: 15px 20px 15px 70px;
+            position: absolute;
+            left: 1080px;
+            top: 1025px;
+            width: 400px;
+            height: 550px;
         }
     }
     .latestNews {

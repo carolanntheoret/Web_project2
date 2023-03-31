@@ -9,18 +9,21 @@
             </section>
 
             <section class="aboutSection">
+                <div class="imageBack"><img src="{{ asset('images/Path 2.png') }}" alt=""></div>
                 <div class="aboutInfo">
                     <h1>ABOUT HIFF.</h1>
-                    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
-                    <p>At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. </p>
+                    <p>Horizon Independent Film Festival (HIFF) is a celebration of the art and craft of independent cinema from around the world. Our mission is to showcase the most innovative and inspiring films, support emerging filmmakers, and foster a vibrant community of film lovers and industry professionals.
+
+                        Each year, we curate a diverse and innovative program of films that represent the best in contemporary independent cinema. In addition to our screenings, we offer workshops, panel discussions, and Q&A sessions that provide filmmakers with the tools they need to succeed. </p>
+                    <p>Each year, we curate a diverse and innovative program of films that represent the best in contemporary independent cinema. From narrative features and documentaries to short films and experimental works, our lineup is designed to challenge, entertain, and engage our audience.Join us for a week of unforgettable screenings, discussions, and events that explore the power of the cinematic medium to entertain, enlighten, and inspire. </p>
                 </div>
+                <div class="borderBack"></div>
                 <div class="aboutImage">
-                    {{-- <img src="" alt=""> --}}
-                    <span></span>
+                    <img src="{{ asset('images/pexels-cottonbro-studio-2773557.jpg') }}" alt="">
                 </div>
             </section>
 
-            <section class="latestNews">
+            {{-- <section class="latestNews">
                 <h1>LATEST NEWS</h1>
                 <div class="news">
                     <div class="mainNews">
@@ -74,6 +77,6 @@
                         <a href="">Book ticket <img src="/storage/img/right-arrow.png" alt=""></a>
                     </div>
                     <div class="image"></div>
-            </section>
+            </section> --}}
         </main>
 </x-layout>

@@ -2,13 +2,11 @@ body {
   margin: 0;
 }
 body .firstSection {
-  display: flex;
+  margin-top: -69px;
   width: 100%;
-  height: 110vh;
-  margin: 0;
-  justify-content: center;
+  height: 100vh;
 }
-body .festivalImage {
+body .firstSection .festivalImage {
   width: 100%;
   height: 100%;
 }
@@ -47,22 +45,46 @@ body .aboutSection {
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 110vh;
+  height: 100vh;
   align-items: center;
   justify-content: center;
   gap: 12%;
 }
+body .aboutSection .imageBack {
+  position: relative;
+}
+body .aboutSection .imageBack img {
+  margin: 125px 0px 0px 50px;
+  width: 850px;
+  height: 750px;
+}
 body .aboutSection .aboutInfo {
   display: flex;
   flex-direction: column;
+  position: absolute;
+  gap: 30px;
+  left: 180px;
   width: 35%;
 }
-body .aboutSection .aboutImage span {
+body .aboutSection .aboutInfo h1 {
+  font-size: 50px;
+  max-width: 25%;
+}
+body .aboutSection .borderBack {
+  position: relative;
+  left: 0px;
+  top: 60px;
+  width: 450px;
+  height: 550px;
+  border: 5px solid whitesmoke;
+}
+body .aboutSection .aboutImage img {
   display: flex;
-  background-color: rgba(212, 212, 212, 0.426);
-  width: 500px;
-  height: 500px;
-  padding: 15px 20px 15px 70px;
+  position: absolute;
+  left: 1080px;
+  top: 1025px;
+  width: 400px;
+  height: 550px;
 }
 body .latestNews {
   display: flex;
