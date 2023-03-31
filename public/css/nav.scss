@@ -26,17 +26,14 @@ $almost-black: #222222;
 
 
         .headLogo {
-            display: flex;
-            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
             #logo{
-                max-height: 9vh;
+                max-height: 15vh;
             }
         }
 
 
         .headContent {
-            margin-left: auto;
 
 
         .burgerMenu
@@ -46,6 +43,7 @@ $almost-black: #222222;
             background-color: transparent;
             border: none;
             cursor: pointer;
+            margin-left: auto;
 
 
             // hide burgerMenu for bigger screen
@@ -76,20 +74,23 @@ $almost-black: #222222;
 
 
             .headLinks {
-                margin-left: auto;
+                //margin-left: auto;
+                text-align: center;
 
                 &.is-open {
                     display: block;
                 }
 
                 @media screen and (max-width: 1142px) {
-                    display: none;
+                //display: none;
                     position: absolute;
                     left: 0;
-                    background-color: $deep-blue;
-                    text-align: center;
-                    top: 100%;
+                    //background-color: $deep-blue;
+                    background-color: #35d0ba;
+
+                    top: 90%;
                     width: 100%;
+                    padding: 0.5%;
 
                     &.active {
                         // show the menu on active state
@@ -97,14 +98,15 @@ $almost-black: #222222;
                     }
                 }
 
-                @media screen and (max-width: 820px) {
+                @media screen and (max-width: 835px) {
                 display: none;
                 position: absolute;
                 left: 0;
-                background-color: $deep-blue;
+                //background-color: $deep-blue;
+                background-color: #48f364;
                 text-align: center;
                 top: 100%;
-                width: 100%;
+                //width: 100%;
 
                     &.active {
                         // show the menu on active state
@@ -131,11 +133,13 @@ $almost-black: #222222;
                 .headList {
                     display: inline-block;
                     padding: 10px 20px;
+                    margin-left: auto;
 
-                    @media screen and (max-width: 820px) {
+                    @media screen and (max-width: 835px) {
                         display: block;
                         width: 100%;
-                        background-color: $deep-blue;
+                        //background-color: $deep-blue;
+                        background-color: #f348a4;
                         //text-align: end;
                       }
 
@@ -198,29 +202,139 @@ $almost-black: #222222;
                         transform: translateX(0);
                     }
                 }
-                .mainBtn {
+
+                // .mainBtn {
+                //     background: linear-gradient(to right, $reddish-pink, $pink);
+                //     padding: 1.1vh 2vw 1.3vh;
+                //     font-size: 1.5rem;
+                //     text-align: center;
+                //     text-decoration: none;
+                //     border-radius: 20px;
+                //     margin: auto;
+                //     cursor: pointer;
+                //     color: $almost-white;
+                //     border: none;
+                //     flex-wrap: nowrap;
+                //     margin-left: auto;
+                //   }
+
+                //   .mainBtn:hover {
+                //     background: linear-gradient(to left, $reddish-pink, $pink);
+                //   }
+
+                .headBtn button{
                     background: linear-gradient(to right, $reddish-pink, $pink);
                     padding: 1.1vh 2vw 1.3vh;
-                    font-size: 1,5rem;
+                    font-size: 1.5rem;
                     text-align: center;
                     text-decoration: none;
-                    border-radius: 20px;
-                    margin: auto;
+                    border-radius: 24px;
+                    //margin: auto;
                     cursor: pointer;
                     color: $almost-white;
                     border: none;
+                    flex-wrap: nowrap;
+                    margin-left: auto;
+                    transition: background 0.3s ease-in-out;
+                    position: relative;
+                    overflow: hidden;
+                    z-index: 10001;
                   }
-
-                  .mainBtn:hover {
+                .headBtn button:hover {
                     background: linear-gradient(to left, $reddish-pink, $pink);
                   }
+
+                  .headBtn button a {
+                    color: $almost-white;
+                    text-decoration: none;
+                    z-index: 10002;
+                   }
+
+                  .headBtn button::after {
+                    content: "";
+                    position: absolute;
+                    top: 50%;
+                    left: 50%;
+                    width: 0;
+                    height: 0;
+                    background: radial-gradient(circle at center, #de3f69,#de4396,);
+                    border-radius: 50%;
+                    opacity: 0;
+                    transform: translate(-50%, -50%);
+                    transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+                    z-index: -9999;
+                }
+
+                .headBtn:hover::after {
+                    width: 300px;
+                     height: 300px;
+                     opacity: 1;
+                }
+
+
+                  //test bouton
+                //   .tickets-content button {
+                //      background: linear-gradient(to right, $reddish-pink, $pink);
+                //      border: none;
+                //      padding: 20px 35px;
+                //      font-size: 25px;
+                //      font-weight: 600;
+                //     text-align: center;
+                //      text-decoration: none;
+                //      border-radius: 24px;
+                //      cursor: pointer;
+                //      color: $almost-white;
+                //      transition: background 0.3s ease-in-out;
+                //      width: 212px;
+                //     position: relative;
+                //      overflow: hidden;
+                //      z-index: 1;
+                //     }
+
+
+
+
+                    //   .tickets-content button:hover {
+                    //     background: linear-gradient(to left, $reddish-pink, $pink);
+                    //   }
+
+                    //  .tickets-content button a {
+                    //  color: $almost-white;
+                    //  text-decoration: none;
+                    //  z-index: 2;
+                    // }
+
+
+                    // .tickets-content button::after {
+                    // content: "";
+                    // position: absolute;
+                    // top: 50%;
+                    // left: 50%;
+                    // width: 0;
+                    // height: 0;
+                    // background: radial-gradient(circle at center, #de3f69,#de4396,);
+                    // border-radius: 50%;
+                    // opacity: 0;
+                    // transform: translate(-50%, -50%);
+                    // transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
+                    // z-index: -1;
+                    // }
+
+
+
+
+                //  .tickets-content button:hover::after {
+                //     width: 300px;
+                //      height: 300px;
+                //      opacity: 1;
+                //  }
                 }
             }
 
         .headIcon {
             align-items: center;
             display: flex;
-            //margin-left: auto;
+            margin-left: auto;
             visibility: visible;
 
 
@@ -301,7 +415,7 @@ $almost-black: #222222;
         background-color: $light-turquoise;
         padding: 3vh 7.3vw 3vh 7.3vw;
         margin-bottom: 0;
-        width: 100vw;
+        //width: 100vw;
 
         .footerLogo {
             display: flex;
@@ -311,6 +425,10 @@ $almost-black: #222222;
             .dudeLogo{
                 height: auto;
                 max-width: 100%;
+
+                @media screen and (max-width: 835px) {
+                    display: none;
+                }
             }
 
         }
