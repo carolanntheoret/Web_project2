@@ -45,18 +45,20 @@ class SiteController extends Controller
      */
     public function showPackage()
     {
-        if (Auth::check()) {
+        if(Auth::check())
+        {
             $user = null;
             $user = auth()->user();
-            if (!Reservation::where('user_id', '=', auth()->user()->id)->first()) return view('spaceUser', [
-                'title' => 'HIFF | Login',
-                'user' => $user,
-                'actif' => 'spaceUser',
-            ]);
+
+            if(Reservation::where('user_id', '=', auth()->user()->id)->first() != null) {
+                return redirect("/user-zone");
+            }
         }
+
         return view('packages', [
             'title' => 'HIFF | Packages',
-            'actif' => 'packages'
+            'actif' => 'packages',
+            'packages' => Pass::all(),
         ]);
     }
 
@@ -80,9 +82,6 @@ class SiteController extends Controller
         if (!Auth::check() || !auth()->user()->admin == 1) return redirect('/user-zone');
 
         $user = null;
-
-        // var_dump(Reservation::where('id', '=', 1)->get()[0]->user_id);
-        // exit;
 
         if (Auth::check()) $user = auth()->user();
 
