@@ -11,13 +11,7 @@
             <input name="time" type="datetime-local"  value="2023-03-08T11:00">
         </div>
     @else
-        <div>
-            <input name="day" type="date" value="">
-            <input name="hour1" type="time" value="">
-            <input name="hour2" type="time" value="">
-            <input name="hour3" type="time" value="">
-        </div>
-        <input type="hidden" name="id" value="<?= $activity->activity_id ?>">
+        <input type="hidden" name="id" value="<?= $activity->id ?>">
     @endif
     <div>
         <input name="image" type="text" value="<?= isset($activity) ? $activity->image : '' ?>" placeholder="Image URL">
