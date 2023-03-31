@@ -5,13 +5,14 @@ const price = ref('')
 
 function displayPurchase(data)
 {
+    if(data["quantity"] >= 5) return "" // display error
     (document.querySelector('.mask')).style.display = 'flex'
     price.value = (data["price"] * data["quantity"]).toFixed(2)
     name.value = data["name"]
 
     const select = document.querySelector('.quantity')
     console.log(data["quantity"]);
-    for(let i = 5 - data["quantity"]; i >= 0; i--)
+    for(let i = 5 - parseInt(data["quantity"]); i > 0; i--)
     {
         const option = document.createElement('option')
         option.setAttribute('value', i)
