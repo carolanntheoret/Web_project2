@@ -32,7 +32,7 @@ class SiteController extends Controller
     {
         return view('news', [
             'title' => 'HIFF |  News',
-            'actif' => 'news'
+            'actif' => 'news',
         ]);
     }
 
@@ -43,10 +43,16 @@ class SiteController extends Controller
      */
     public function showPackage()
     {
+        if(!Auth::check()) return redirect('/user-zone');
+
         return view('packages', [
             'title' => 'HIFF | Packages',
             'actif' => 'packages',
             'packages' => Pass::all(),
+            'reservation1' => Reservation::select('pass_id', 'quantity', 'user_id', 'price', 'name')->join('passes', 'passes.id', '=', 'reservations.pass_id')->where('user_id', '=', auth()->user()->id)->where('pass_id', '=', 1)->first(),
+            'reservation2' => Reservation::select('pass_id', 'quantity', 'user_id', 'price', 'name')->join('passes', 'passes.id', '=', 'reservations.pass_id')->where('user_id', '=', auth()->user()->id)->where('pass_id', '=', 2)->first(),
+            'reservation3' => Reservation::select('pass_id', 'quantity', 'user_id', 'price', 'name')->join('passes', 'passes.id', '=', 'reservations.pass_id')->where('user_id', '=', auth()->user()->id)->where('pass_id', '=', 3)->first(),
+            'reservation4' => Reservation::select('pass_id', 'quantity', 'user_id', 'price', 'name')->join('passes', 'passes.id', '=', 'reservations.pass_id')->where('user_id', '=', auth()->user()->id)->where('pass_id', '=', 4)->first(),
         ]);
     }
 

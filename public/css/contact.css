@@ -89,6 +89,7 @@ main .contenu {
   margin: 0 7.3vw;
 }
 main .contenu .contact-info {
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
