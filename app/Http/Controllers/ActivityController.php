@@ -23,9 +23,13 @@ class ActivityController extends Controller
         $request->validate([
             'title' => 'required|max:255',
             'description' => 'required',
-            'time' => 'required',
+            'day' => 'required',
+            'hour1' => 'required',
+            'hour2' => 'required',
+            'hour3' => 'required',
             'image' => 'required|max:255' // it's a URL
         ]);
+
 
         $activity = new Activity();
 
@@ -35,12 +39,16 @@ class ActivityController extends Controller
 
         if(!$activity->save()) return back()->with('create_activity_failed', 'Activity creation failed');
 
-        $activity_hour = new ActivityHour();
 
-        $activity_hour->activity_id = $activity->id;
-        $activity_hour->begin_time = strtotime($request->time);
+        $hours = [$request->hour1, $request->hour2, $request->hour3];
+        foreach($hours as $hour)
+        {
+            $activity_hour = new ActivityHour();
+            $activity_hour->activity_id = $activity->id;
+            $activity_hour->begin_time = strtotime($request->day . ' ' . $hour);
+            if(!$activity_hour->save()) return back()->with('create_activity_failed', 'Activity creation failed');
+        }
 
-        if(!$activity_hour->save()) return back()->with('create_activity_failed', 'Activity creation failed');
         return back()->with('create_activity_successful', 'Activity created successfully');
     }
 

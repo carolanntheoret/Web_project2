@@ -5,8 +5,6 @@ namespace App\Http\Controllers;
 use App\Models\Activity;
 use App\Models\Pass;
 use App\Models\Reservation;
-use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -84,8 +82,6 @@ class SiteController extends Controller
         $user = null;
 
         if (Auth::check()) $user = auth()->user();
-
-        var_dump((new Activity())->getHours()); exit();
 
         return view('spaceAdmin', [
             'title' => 'HIFF | Admin',
