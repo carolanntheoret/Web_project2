@@ -3,7 +3,7 @@
         <main class="content">
 
             <section class="firstSection">
-                <div class="festivalImage" style="background: url('{{ asset('images/background_accueil.webp') }}'); background-size:cover; background-repeat: no-repeat;">
+                <div class="festivalImage" style="background-image: url('{{ asset('images/background_accueil.webp') }}');">
 
                 </div>
             </section>
@@ -23,43 +23,41 @@
                 </div>
             </section>
 
-            {{-- <section class="latestNews">
-                <h1>LATEST NEWS</h1>
+            <section class="latestNews">
+                <div class="titleLast">
+                <span>|</span><h1>LATEST NEWS</h1><span>|</span>
+            </div>
                 <div class="news">
                     <div class="mainNews">
-                    <div class="newsPicture"><div class="banner">Upcoming</div></div>
-
-                    <p>Nancy Meyers Returns to the Director's Chair for new upcoming movie</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla sem urna, commodo id sollicitudin ultricies, tempor nec purus. Proin aliquet mollis lectus, a aliquet erat lacinia in. Suspendisse egestas congue metus sit amet blandit.
-                    </p>
-                    <button>More</button>
+                    <div class="newsPicture" style="background-image: url('{{ $news[0]->image }}')"><div class="banner">Upcoming</div></div>
+                    <p><strong>{{ $news[0]->title }}</strong></p>
+                    <p>{{ $news[0]->subtitle }}</p>
+                    <a href="" class="more">More</a>
                     </div>
                     <div class="secondary">
-                        <div class="newsPicture"><div class="banner">Movies</div></div>
-                        <p>The 5 best new movies to watch in March, from Rye Lane to The Beasts
-                        </p>
-                        <div class="newsPicture"><div class="banner">Awards</div></div>
-                        <p>Award-winning indie film helping put Pembroke on the map, mayor says
-                        </p>
+                        <div class="newsPicture" style="background-image: url('{{ $news[1]->image }}')"><div class="banner">Movies</div></div>
+                        <p><strong>{{ $news[1]->title }}</strong></p>
+                        <div class="newsPicture" style="background-image: url('{{ $news[2]->image }}')"><div class="banner">Awards</div></div>
+                        <p><strong>{{ $news[2]->title }}</strong></p>
                     </div>
                 </div>
             </section>
 
             <section class="showEvents">
                     <div class="eventTop">
-                        <div class="image"></div>
+                        <div class="image" style="background-image: url('images/tim-cooper-1R7iHPt63Lc-unsplash.jpg')"></div>
                         <div class="event">
                         <p>02 June 2023</p>
                         <h2>Lorem ipsum</h2>
                         <p>From $45.00</p>
-                        <a href="">Book ticket <img src="/storage/img/right-arrow.png" alt=""></a>
+                        <a href="">Book ticket <img src="{{ asset('images/right-chevron.png') }}" alt="" class="book"></a>
                     </div>
-                    <div class="image"></div>
+                    <div class="image" style="background-image: url('images/samuel-ramos-YfsyWcoI9Ko-unsplash.jpg')"></div>
                     <div class="event">
                         <p>02 June 2023</p>
                         <h2>Lorem ipsum</h2>
                         <p>From $45.00</p>
-                        <a href="">Book ticket <img src="/storage/img/right-arrow.png" alt=""></a>
+                        <a href="">Book ticket <img src="{{ asset('images/right-chevron.png') }}" alt="" class="book"></a>
                     </div>
                     </div>
                     <div class="eventDown">
@@ -67,16 +65,16 @@
                         <p>02 June 2023</p>
                         <h2>Lorem ipsum</h2>
                         <p>From $45.00</p>
-                        <a href="">Book ticket <img src="/storage/img/right-arrow.png" alt=""></a>
+                        <a href="">Book ticket <img src="{{ asset('images/right-chevron.png') }}" alt="" class="book"></a>
                     </div>
-                    <div class="image"></div>
+                    <div class="image" style="background-image: url('images/stephen-mcfadden-1JOsn6qk8w4-unsplash.jpg')"></div>
                     <div class="event">
                         <p>02 June 2023</p>
                         <h2>Lorem ipsum</h2>
                         <p>From $45.00</p>
-                        <a href="">Book ticket <img src="/storage/img/right-arrow.png" alt=""></a>
+                        <a href="">Book ticket <img src="{{ asset('images/right-chevron.png') }}" alt="" class="book"></a>
                     </div>
-                    <div class="image"></div>
-            </section> --}}
+                    <div class="image" style="background-image: url('images/miguel-henriques-RfiBK6Y_upQ-unsplash.jpg')"></div>
+            </section>
         </main>
 </x-layout>
