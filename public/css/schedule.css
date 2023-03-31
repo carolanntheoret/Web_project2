@@ -93,6 +93,7 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
   display: flex;
   width: 1640px;
   justify-content: space-between;
+  margin-top: 100px;
 }
 
 .schedule {
