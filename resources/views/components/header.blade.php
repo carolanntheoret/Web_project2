@@ -5,29 +5,40 @@
             <img id="logo" src="<?= asset('images/HIFF_logo.png') ?>"  alt="HIFF logo" class="HIFF logo">
         </div>
 
+        <div class="headContent">
+            <button class="burgerMenu burgerMenu-icon">
+              <div class="burger-icon">
+                <img id="userImg"src="<?= asset('images/burgerIcon.png') ?>" alt="icon menu">
+              </div>
+            </button>
 
-        <ul class="headLinks">
-            <li class="headList"><a @if(isset($actif) && $actif=='homepage') class="actif" @endif href="/">Home</a></li>
-            {{-- href du about= mettre l'ancre quand la page sera faite --}}
-            <li class="headList"><a href="/">About</a></li>
-            <li class="headList">
+            <ul class="headLinks fw-semibold">
+              {{-- <li class="headList burgerMenu"><a href="#">Menu</a></li> --}}
+              <li class="headList"><a @if(isset($actif) && $actif=='homepage') class="actif" @endif href="/">Home</a></li>
+              <li class="headList">
                 <div class="dropdown">
-                    <a @if(isset($actif) && $actif=='packages' || isset($actif) && $actif=='schedule') class="actif" @endif>Festival</a>
-                    <div class="dropdown-content">
-                        <a href="/packages">Tickets & Packages </a>
-                        <a href="/schedule">Schedule</a>
-                    </div>
+                  <a @if(isset($actif) && $actif=='packages' || isset($actif) && $actif=='schedule') class="actif" @endif>Festival</a>
+                  <div class="dropdown-content">
+                    <a href="/packages">Tickets & Packages</a>
+                    <a href="/schedule">Schedule</a>
+                  </div>
                 </div>
-            </li>
-            <li class="headList"><a @if(isset($actif) && $actif=='news') class="actif" @endif href="/news">News</a></li>
-            <li class="headList"><a @if(isset($actif) && $actif=='contact') class="actif" @endif href="/contact">Contact</a></li>
-        </ul>
+              </li>
+              <li class="headList"><a @if(isset($actif) && $actif=='news') class="actif" @endif href="/news">News</a></li>
+              <li class="headList"><a @if(isset($actif) && $actif=='contact') class="actif" @endif href="/contact">Contact</a></li>
+              <a class="mainBtn fw-semibold" href="/user-zone">Tickets</a>
+            </ul>
+          </div>
+
 
         <div class="headIcon">
-            <a class="mainBtn" href="/user-zone"> My tickets</a>
             <div class="dropdown">
                 <?php if (auth()->check()): ?>
-                    <div id="userId"><?= substr(auth()->user()->first_name, 0, 1) ?><?= substr(auth()->user()->last_name, 0, 1) ?></div>
+                    <div id="userId">
+                        <?= strtoupper(auth()->user()->first_name[0])?>
+                        <?= strtoupper(auth()->user()->last_name[0])?>
+                    </div>
+
                     <img id="userImg"src="<?= asset('images/connectPlain.icon.svg') ?>" alt="user connection">
                     <div class="dropdown-content">
                         <?php if (auth()->user()->admin): ?>
@@ -46,5 +57,3 @@
         </div>
     </div>
 </nav>
-{{-- <script src="nav.js"></script> --}}
-<script src="main.js"></script>

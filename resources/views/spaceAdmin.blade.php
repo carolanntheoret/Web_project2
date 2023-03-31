@@ -39,7 +39,7 @@
                 </div>
 
 
-            <script src="js/main.js" type="module"></script>
+            <script src="{{asset('js/main.js')}}" type="module"></script>
             <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
         </main>
     </x-layout>

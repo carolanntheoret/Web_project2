@@ -1,15 +1,16 @@
-@charset "UTF-8";
 .navigation {
   left: 0px;
   max-width: 100vw;
+  min-height: 70px;
 }
 .navigation #headBlock {
+  align-items: center;
   display: flex;
   background-color: #1f2833;
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 2vh 7.3vw 2vh 7.3vw;
+  padding: 2.5vh 7.3vw 2.5vh 7.3vw;
   z-index: 10000;
 }
 .navigation #headBlock .headLogo {
@@ -17,117 +18,231 @@
   font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
 }
 .navigation #headBlock .headLogo #logo {
-  max-height: 7vh;
+  max-height: 9vh;
 }
-.navigation #headBlock .headLinks {
-  margin: auto;
+.navigation #headBlock .headContent {
+  margin-left: auto;
 }
-.navigation #headBlock .headLinks .headList {
+.navigation #headBlock .headContent .burgerMenu {
+  display: block;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+@media screen and (min-width: 1142px) {
+  .navigation #headBlock .headContent .burgerMenu {
+    display: none;
+  }
+  .navigation #headBlock .headContent .burgerMenu__dropdown {
+    display: none;
+  }
+  .navigation #headBlock .headContent .burgerMenu__dropdown.is-open {
+    display: block;
+  }
+}
+.navigation #headBlock .headContent .burgerMenu #userImg {
+  width: 50px;
+}
+@media screen and (max-width: 390px) {
+  .navigation #headBlock .headContent .burgerMenu #userImg {
+    width: 40px;
+  }
+}
+.navigation #headBlock .headContent .headLinks {
+  margin-left: auto;
+}
+.navigation #headBlock .headContent .headLinks.is-open {
+  display: block;
+}
+@media screen and (max-width: 1142px) {
+  .navigation #headBlock .headContent .headLinks {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #1f2833;
+    text-align: center;
+    top: 100%;
+    width: 100%;
+  }
+  .navigation #headBlock .headContent .headLinks.active {
+    display: flex;
+  }
+}
+@media screen and (max-width: 820px) {
+  .navigation #headBlock .headContent .headLinks {
+    display: none;
+    position: absolute;
+    left: 0;
+    background-color: #1f2833;
+    text-align: center;
+    top: 100%;
+    width: 100%;
+  }
+  .navigation #headBlock .headContent .headLinks.active {
+    display: flex;
+  }
+  .navigation #headBlock .headContent .headLinks a {
+    font-size: 1rem;
+  }
+}
+@media screen and (max-width: 390px) {
+  .navigation #headBlock .headContent .headLinks {
+    display: none;
+    position: absolute;
+    top: 100%;
+    width: 100%;
+    background-color: #1f2833;
+  }
+  .navigation #headBlock .headContent .headLinks.active {
+    display: block;
+  }
+}
+.navigation #headBlock .headContent .headLinks .headList {
   display: inline-block;
   padding: 10px 20px;
-  /* Style du contenu du menu déroulant */
-  /* Style des liens dans le contenu du menu déroulant */
-  /* Style des liens au survol de la souris */
-  /* Afficher le contenu du menu déroulant au survol du bouton principal */
+  /* show the dropdown*/
 }
-.navigation #headBlock .headLinks .headList a.actif {
+@media screen and (max-width: 820px) {
+  .navigation #headBlock .headContent .headLinks .headList {
+    display: block;
+    width: 100%;
+    background-color: #1f2833;
+  }
+}
+@media screen and (max-width: 390px) {
+  .navigation #headBlock .headContent .headLinks .headList {
+    display: block;
+    background-color: #1f2833;
+  }
+}
+.navigation #headBlock .headContent .headLinks .headList a.actif {
   text-decoration: underline;
 }
-.navigation #headBlock .headLinks .headList a {
+.navigation #headBlock .headContent .headLinks .headList a {
   text-decoration: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fbf7ea;
   font-size: 1.5rem;
 }
-.navigation #headBlock .headLinks .headList .dropdown {
+.navigation #headBlock .headContent .headLinks .headList .dropdown {
   position: relative;
   display: inline-block;
 }
-.navigation #headBlock .headLinks .headList .dropdown-content {
+.navigation #headBlock .headContent .headLinks .headList .dropdown-content {
   display: none;
-  position: absolute;
-  z-index: 1;
-  min-width: 160px;
-  padding: 5px 0;
-  border: 1px solid #222222;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  background-color: #324153;
-}
-.navigation #headBlock .headLinks .headList .dropdown-content a {
-  color: #fbf7ea;
-  padding: 10px 16px;
+  padding: 10px 5px;
   text-decoration: none;
+  z-index: 10;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+.navigation #headBlock .headContent .headLinks .headList .dropdown-content a {
   display: block;
-  font-size: small;
+  font-size: medium;
+  min-width: 10vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 100%;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  padding-left: -20%;
 }
-.navigation #headBlock .headLinks .headList .dropdown-content a:hover {
-  background-color: #465a72;
+.navigation #headBlock .headContent .headLinks .headList .dropdown-content a:hover {
+  background-color: #fbf7ea;
+  color: #1f2833;
+  border-radius: 20%;
 }
-.navigation #headBlock .headLinks .headList .dropdown:hover .dropdown-content {
+.navigation #headBlock .headContent .headLinks .headList .dropdown:hover .dropdown-content {
   display: block;
+  transform: translateX(0);
 }
-.navigation #headBlock .mainBtn {
+.navigation #headBlock .headContent .headLinks .mainBtn {
   background: linear-gradient(to right, #f54674, #f348a4);
-  padding: 1.2vh 2vw 1.3vh;
-  font-size: 2.5vh;
-  font-weight: bold;
+  padding: 1.1vh 2vw 1.3vh;
+  font-size: 1, 5rem;
   text-align: center;
   text-decoration: none;
-  border-radius: 24px;
+  border-radius: 20px;
   margin: auto;
   cursor: pointer;
   color: #fbf7ea;
   border: none;
 }
-.navigation #headBlock .mainBtn:hover {
+.navigation #headBlock .headContent .headLinks .mainBtn:hover {
   background: linear-gradient(to left, #f54674, #f348a4);
 }
 .navigation #headBlock .headIcon {
-  margin: auto;
   align-items: center;
   display: flex;
-  /* Style des liens dans le contenu du menu déroulant */
-  /* Style des liens au survol de la souris */
-  /* Afficher le contenu du menu déroulant au survol du bouton principal */
+  visibility: visible;
+  /* Ajout des styles pour le hover */
 }
 .navigation #headBlock .headIcon .dropdown {
   position: relative;
   display: flex;
-  padding: 0.5vh 0.5vw;
+  padding: 10px 20px;
+}
+@media screen and (max-width: 390px) {
+  .navigation #headBlock .headIcon .dropdown {
+    padding: 10px 10px;
+  }
 }
 .navigation #headBlock .headIcon .dropdown #userId {
-  padding-left: 0.7vw;
-  padding-top: 0.3vh;
   color: #222222;
   position: absolute;
   font-size: 28px;
   font-weight: bold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 .navigation #headBlock .headIcon .dropdown #userImg,
 .navigation #headBlock .headIcon .dropdown #userNone {
   width: 50px;
 }
+@media screen and (max-width: 390px) {
+  .navigation #headBlock .headIcon .dropdown #userImg,
+.navigation #headBlock .headIcon .dropdown #userNone {
+    width: 40px;
+  }
+}
 .navigation #headBlock .headIcon .dropdown-content {
   display: none;
   position: absolute;
-  z-index: 1;
-  min-width: 160px;
-  padding: 5px 0;
-  border: 1px solid #222222;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  background-color: #324153;
+  z-index: 10;
+  border-radius: 20%;
+  background-color: #1f2833;
 }
 .navigation #headBlock .headIcon .dropdown-content a {
   color: #fbf7ea;
-  padding: 10px 16px;
+  font-size: medium;
+  padding: 5px 5px;
   text-decoration: none;
   display: block;
+  border-radius: 100%;
+  min-width: 8vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
 }
 .navigation #headBlock .headIcon .dropdown-content a:hover {
-  background-color: #465a72;
+  background-color: #fbf7ea;
+  color: #1f2833;
 }
 .navigation #headBlock .headIcon .dropdown:hover .dropdown-content {
   display: block;
+}
+.navigation #headBlock .headIcon .dropdown:hover #userImg {
+  background-color: #1f2833;
+}
+.navigation #headBlock .headIcon .dropdown:hover #userId {
+  background-color: #1f2833;
+}
+.navigation #headBlock .headIcon .dropdown:hover .headIcon {
+  display: none;
 }
 .navigation .footerBlock {
   display: flex;

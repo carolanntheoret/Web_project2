@@ -1,5 +1,10 @@
 @import 'style.scss';
 
+@font-face {
+    font-family: FormulaCondensed;
+    src: url('/fonts/FormulaCondensed-Light.otf') format('truetype');
+}
+
 .content {
   display: flex;
   justify-content: center;
@@ -11,7 +16,7 @@
   display: flex;
   width: 1640px;
   justify-content: space-between;
-  margin-top: 100px;
+  margin-top: 180px;
 }
 
 .schedule {
@@ -19,21 +24,141 @@
   margin-right: 2%;
 }
 
+h1 {
+    font-family: FormulaCondensed;
+    font-size: 5rem;
+}
+
+h2 {
+    font-size: 3rem;
+    margin: 0;
+}
+
+.line-title {
+    width: 400px;
+    height: 4px;
+    background-color: #a8a8a8;
+}
+
+.overlay
+{
+    width: calc(100% + 150px);
+    height: calc(100% + 150px);
+    background: linear-gradient(315deg, rgba(245, 70, 116, 0), rgba(245, 70, 116, 1));
+    border-radius: 40px;
+    position: absolute;
+    top: -150px;
+    left: -150px;
+}
+
 .image {
   width: 1130px;
   margin-left: 2%;
 }
 
+.img1 {
+    border-radius: 40px;
+    height: 630px;
+    width: 1130px;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+}
+
+.text-film {
+    position: relative;
+    width: 605px;
+    left: 50px;
+    top: 115px;
+
+    h2 {
+        text-transform: uppercase;
+        margin-bottom: 85px;
+        font-size: 4.5rem;
+    }
+    p {
+        font-size: 1.5rem;
+    }
+}
+.text-film-med {
+    position: relative;
+    width: 360px;
+    left: 50px;
+    top: 65px;
+
+    h4 {
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
 .small {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 2%;
+  margin-top: 5%;
 }
 
 .small-item {
+    position: relative;
   margin-top: 2%;
-  height: auto;
+  border-radius: 40px;
+  overflow: hidden;
+  height: 380px;
+  width: 537px;
+  background-size: cover;
+    background-position: center;
+}
+
+.small-img {
+    height: 180px;
+    width: 350px;
+    background-size: cover;
+    background-position: center;
+}
+
+.small-cat {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 5%;
+    .small-img {
+        height: 180px;
+    width: 350px;
+        background-size: contain;
+        background-position: top;
+        position: relative;
+    }
+    p {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        padding: 10px;
+        margin: 0;
+      }
+}
+.med-img {
+    height: 335px;
+    width: 482px;
+    background-size: cover;
+    background-position: center;
+}
+.grd-img {
+    height: 400px;
+    width: 760px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.hours {
+    width: 350px;
 }
 
 .line {

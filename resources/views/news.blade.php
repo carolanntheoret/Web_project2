@@ -46,4 +46,6 @@
             <div class="button">MORE</div>
         </div>
     </main>
+    <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+    <script src="{{asset('js/masonry.js')}}"></script>
 </x-layout>
