@@ -55,6 +55,7 @@ h2 {
   width: 1130px;
   margin-left: 2%;
 }
+
 .img1 {
     border-radius: 40px;
     height: 630px;
@@ -66,20 +67,39 @@ h2 {
 
 .text-film {
     position: relative;
-    width: 375px;
+    width: 605px;
     left: 50px;
+    top: 115px;
 
     h2 {
         text-transform: uppercase;
-        margin: 50px 0;
+        margin-bottom: 85px;
+        font-size: 4.5rem;
+    }
+    p {
+        font-size: 1.5rem;
     }
 }
+.text-film-med {
+    position: relative;
+    width: 360px;
+    left: 50px;
+    top: 65px;
 
+    h4 {
+        text-transform: uppercase;
+        margin-bottom: 25px;
+        font-size: 2rem;
+    }
+    p {
+        font-size: 1rem;
+    }
+}
 .small {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 2%;
+  margin-top: 5%;
 }
 
 .small-item {
@@ -100,6 +120,27 @@ h2 {
     background-position: center;
 }
 
+.small-cat {
+    display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 5%;
+    .small-img {
+        height: 180px;
+    width: 350px;
+        background-size: contain;
+        background-position: top;
+        position: relative;
+    }
+    p {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        color: white;
+        padding: 10px;
+        margin: 0;
+      }
+}
 .med-img {
     height: 335px;
     width: 482px;

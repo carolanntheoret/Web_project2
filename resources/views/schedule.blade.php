@@ -119,17 +119,32 @@
                 </div>
                 <div class="small">
                     <div class="small-item" style="background-image: url({{ asset('images/activities/2.jpg') }})">
+                        <div class="text-film-med z-2">
+                            <p class="fw-semibold fs-4">OPENS FRIDAY</p>
+                            <h4 class="fw-semibold">{{ $activities[1]->title }}</h4>
+                            <p>{{ $activities[1]->description }}</p>
+                        </div>
                         <div class="overlay"></div>
                     </div>
                     <div class="small-item" style="background-image: url({{ asset('images/activities/16.jpg') }})">
+                        <div class="text-film-med z-2">
+                            <p class="fw-semibold fs-4">CLOSES SUNDAY</p>
+                            <h4 class="fw-semibold">{{ $activities[15]->title }}</h4>
+                            <p>{{ $activities[15]->description }}</p>
+                        </div>
                         <div class="overlay"></div>
                     </div>
                 </div>
-                <div class="small">
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/3.jpg') }})"></div>
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/4.jpg') }})"></div>
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/5.jpg') }})"></div>
+                <div class="small-cat">
+                    <h2></h2>
+                    <div class="small-img" style="background-image: url({{ asset('images/activities/3.jpg') }})"><p>{{ $activities[2]->title }}</p></div>
+
+                    <div class="small-img" style="background-image: url({{ asset('images/activities/4.jpg') }})"><p>{{ $activities[3]->title }}</p></div>
+
+                    <div class="small-img" style="background-image: url({{ asset('images/activities/5.jpg') }})"><p>{{ $activities[4]->title }}</p></div>
+
                 </div>
+
                 <div class="small">
                     <div class="small-img" style="background-image: url({{ asset('images/activities/6.jpg') }})"></div>
                     <div class="small-img" style="background-image: url({{ asset('images/activities/7.jpg') }})"></div>

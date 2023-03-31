@@ -143,19 +143,39 @@ h2 {
 
 .text-film {
   position: relative;
-  width: 375px;
+  width: 605px;
   left: 50px;
+  top: 115px;
 }
 .text-film h2 {
   text-transform: uppercase;
-  margin: 50px 0;
+  margin-bottom: 85px;
+  font-size: 4.5rem;
+}
+.text-film p {
+  font-size: 1.5rem;
+}
+
+.text-film-med {
+  position: relative;
+  width: 360px;
+  left: 50px;
+  top: 65px;
+}
+.text-film-med h4 {
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  font-size: 2rem;
+}
+.text-film-med p {
+  font-size: 1rem;
 }
 
 .small {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 2%;
+  margin-top: 5%;
 }
 
 .small-item {
@@ -174,6 +194,28 @@ h2 {
   width: 350px;
   background-size: cover;
   background-position: center;
+}
+
+.small-cat {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 5%;
+}
+.small-cat .small-img {
+  height: 180px;
+  width: 350px;
+  background-size: contain;
+  background-position: top;
+  position: relative;
+}
+.small-cat p {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  margin: 0;
 }
 
 .med-img {
