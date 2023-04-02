@@ -13,7 +13,6 @@
             </button>
 
             <ul class="headLinks fw-semibold">
-              {{-- <li class="headList burgerMenu"><a href="#">Menu</a></li> --}}
               <li class="headList"><a @if(isset($actif) && $actif=='homepage') class="actif" @endif href="/">Home</a></li>
               <li class="headList">
                 <div class="dropdown">
@@ -26,9 +25,11 @@
               </li>
               <li class="headList"><a @if(isset($actif) && $actif=='news') class="actif" @endif href="/news">News</a></li>
               <li class="headList"><a @if(isset($actif) && $actif=='contact') class="actif" @endif href="/contact">Contact</a></li>
-              <button class="headBtn">
+              {{-- <button class="headBtn"> --}}
+                <li class="headList">
                 <a class=" mainBtn fw-semibold" href="/user-zone">My Tickets</a>
-              </button>
+                </li>
+                {{-- </button> --}}
 
             </ul>
           </div>
