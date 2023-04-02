@@ -1,18 +1,48 @@
 import { createApp, ref, onMounted } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.js'
 
+const pass = ref('')
 const name = ref('')
 const price = ref('')
+const lessThanFive = ref(true)
 
 function displayPurchase(data)
 {
-    if(data["quantity"] >= 5) return "" // display error
     (document.querySelector('.mask')).style.display = 'flex'
-    price.value = (data["price"] * data["quantity"]).toFixed(2)
-    name.value = data["name"]
+
+    if(Number.isInteger(data))
+    {
+        fetch(`get-pass/${data}`).then(reply => reply.json()).then(result => {
+            pass.value = result
+            createForm(pass.value.price, pass.value.name, 0)
+        })
+    }
+    else
+    {
+        if(data["quantity"] >= 5) lessThanFive.value = false
+        else
+        {
+            pass.value = data
+            createForm(data["price"], data["name"], parseInt(data["quantity"]))
+        }
+    }
+}
+
+function createForm(html_price, pass_name, qtt)
+{
+    lessThanFive.value = true
+
+    if(qtt == 0) price.value = (html_price).toFixed(2)
+    else price.value = (html_price * qtt).toFixed(2)
+    name.value = pass_name
+
+    const elements = document.querySelectorAll('.quantity *')
+    for(let element of elements)
+    {
+        element.remove()
+    }
 
     const select = document.querySelector('.quantity')
-    console.log(data["quantity"]);
-    for(let i = 5 - parseInt(data["quantity"]); i > 0; i--)
+    for(let i = 5 - qtt; i > 0; i--)
     {
         const option = document.createElement('option')
         option.setAttribute('value', i)
@@ -20,6 +50,11 @@ function displayPurchase(data)
         option.innerHTML = i
         select.appendChild(option)
     }
+
+    const quantity = document.querySelector('.mask form div select')
+    quantity.addEventListener('change', (e) => {
+        price.value = (html_price * quantity.value).toFixed(2)
+    })
 }
 
 function close()
@@ -31,8 +66,10 @@ const root = {
     setup() {
         return {
             /* VARIABLES */
+            pass,
             name,
             price,
+            lessThanFive,
 
             /* FUNCTIONS */
             displayPurchase,
