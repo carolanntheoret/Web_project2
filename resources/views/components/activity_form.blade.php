@@ -6,6 +6,7 @@
     <div>
         <textarea name="description" cols="20" rows="5" placeholder="Write activity's description here"><?= isset($activity) ? $activity->description : '' ?></textarea>
     </div>
+    <div class="hours">
     <div>
         <input name="day" type="date" value="<?= isset($activity) ? gmdate('Y-m-d', $activity->first_time) : '2023-06-02' ?>">
         <input name="hour1" type="time" value="<?= isset($activity) ? gmdate('H:i', $activity->first_time) : '11:00' ?>">
@@ -13,11 +14,12 @@
         <input name="hour3" type="time" value="<?= isset($activity) ? gmdate('H:i', $activity->third_time) : '20:00' ?>">
     </div>
     @if (isset($activity))
-        <input type="hidden" name="id" value="<?= $activity->activity_id ?>">
-        <input type="hidden" name="hour_id1" value="<?= $activity->first_id ?>">
-        <input type="hidden" name="hour_id2" value="<?= $activity->second_id ?>">
-        <input type="hidden" name="hour_id3" value="<?= $activity->third_id ?>">
+        <p><input type="hidden" name="id" value="<?= $activity->activity_id ?>"></p>
+        <p><input type="hidden" name="hour_id1" value="<?= $activity->first_id ?>"></p>
+        <p><input type="hidden" name="hour_id2" value="<?= $activity->second_id ?>"></p>
+        <p><input type="hidden" name="hour_id3" value="<?= $activity->third_id ?>"></p>
     @endif
+</div>
     <div>
         <input name="image" type="text" value="<?= isset($activity) ? $activity->image : '' ?>" placeholder="Image URL">
     </div>

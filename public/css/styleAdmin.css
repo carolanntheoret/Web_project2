@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-top: 50px;
   width: 100%;
 }
 .sectionAdmin .sectionName {
@@ -97,7 +98,7 @@
   flex-direction: column;
   border: 6px solid #707070;
   width: 1240px;
-  height: 1080px;
+  height: 85vh;
 }
 .sectionAdmin .listEmployes .employeSection {
   display: flex;
@@ -166,8 +167,8 @@
 .sectionAdmin .listEmployes .employeSection ul a {
   font-size: 25px;
   position: absolute;
-  top: 25px;
-  right: 150px;
+  top: 7px;
+  right: 215px;
   text-decoration: none;
 }
 .sectionAdmin .listUsers {
@@ -175,7 +176,7 @@
   flex-direction: column;
   border: 6px solid #707070;
   width: 1240px;
-  height: 1080px;
+  height: 85vh;
 }
 .sectionAdmin .listUsers .usersSection {
   display: flex;
@@ -243,8 +244,8 @@
 .sectionAdmin .listUsers .usersSection ul a {
   font-size: 25px;
   position: absolute;
-  top: 25px;
-  right: 150px;
+  top: 7px;
+  right: 215px;
   text-decoration: none;
 }
 .sectionAdmin .listActivities {
@@ -252,7 +253,7 @@
   flex-direction: column;
   border: 6px solid #707070;
   width: 1240px;
-  height: 1080px;
+  height: 85vh;
 }
 .sectionAdmin .listActivities .activitiesSection {
   display: flex;
@@ -265,11 +266,11 @@
 .sectionAdmin .listActivities .activitiesSection .createActivity {
   display: flex;
   align-items: center;
-  width: 98%;
-  height: 20%;
-  margin-top: 10px;
+  width: 95%;
+  height: 25%;
+  margin: 10px auto 0px auto;
   border: 1px solid #35d0ba;
-  padding: 10px;
+  padding: 20px;
   border-radius: 25px;
   background-color: rgba(53, 208, 186, 0.1);
 }
@@ -277,7 +278,7 @@
   display: flex;
   flex-direction: row;
   margin-left: 5%;
-  width: 5%;
+  width: 10%;
   height: 20%;
   gap: 10px;
   align-items: center;
@@ -321,6 +322,17 @@
   top: 20px;
   right: 110px;
 }
+.sectionAdmin .listActivities .activitiesSection ul form .hours {
+  display: flex;
+  flex-direction: row;
+  width: 5%;
+  position: absolute;
+  right: 250px;
+  bottom: 100px;
+}
+.sectionAdmin .listActivities .activitiesSection ul form .hours input {
+  cursor: pointer;
+}
 .sectionAdmin .listActivities .activitiesSection ul form textarea {
   width: 400px;
   height: 45px;
@@ -342,7 +354,7 @@
   display: flex;
   flex-direction: row;
   width: 1240px;
-  height: 800px;
+  height: 85vh;
   gap: 1%;
 }
 .sectionAdmin .reservationSection .sectionMember {
@@ -391,7 +403,7 @@
   height: 5%;
   position: relative;
   padding: 40px 0 40px 40px;
-  margin: 15px auto 0 auto;
+  margin: 15px auto 15px auto;
   border: 1px solid #35d0ba;
   border-radius: 25px;
   background-color: rgba(53, 208, 186, 0.1);
@@ -399,6 +411,11 @@
 .sectionAdmin .reservationSection .sectionReservation .listReservations div input {
   background-color: transparent;
   border: none;
+}
+.sectionAdmin .reservationSection .sectionReservation .listReservations div .suppress {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
 }
 .sectionAdmin .titleReservation {
   display: flex;
