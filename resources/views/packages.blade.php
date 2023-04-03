@@ -66,16 +66,16 @@
                         <select class="quantity" name="quantity"></select>
                     </div>
 
-                    <div v-show="pass.id == 1">
+                    <div class="oneDay">
                         <select name="first_day">
                             <option value="2023-06-02">Friday</option>
                             <option value="2023-06-03">Saturday</option>
                             <option value="2023-06-04">Sunday</option>
                         </select>
-                        <input type="hidden" name="second_day" value="null">
+                        <input type="hidden" name="second_day" value="1970-01-01">
                     </div>
 
-                    <div v-show="pass.id == 2">
+                    {{-- <div class="twoDays">
                         <input type="hidden" name="first_day" value="2023-06-02">
                         <select name="second_day">
                             <option value="2023-06-03">Saturday</option>
@@ -83,17 +83,17 @@
                         </select>
                     </div>
 
-                    <div v-show="pass.id == 3">
+                    <div class="weekend">
                         <input type="hidden" name="first_day" value="2023-06-03">
                         <input type="hidden" name="second_day" value="2023-06-04">
                     </div>
 
-                    <div v-show="pass.id == 4">
+                    <div class="premium">
                         <input type="hidden" name="first_day" value="2023-06-02">
                         <input type="hidden" name="second_day" value="2023-06-04">
-                    </div>
+                    </div> --}}
 
-                    <input type="hidden" name="id" :value="pass.id">
+                    <input class="hidden_id" type="hidden" name="id">
                     <h3 class="totalPrice">Price : $@{{ price }}</h3>
                     <input class="submit" type="submit" value="Purchase">
                 </form>

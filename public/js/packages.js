@@ -11,9 +11,10 @@ function displayPurchase(data)
 
     if(Number.isInteger(data))
     {
+
         fetch(`get-pass/${data}`).then(reply => reply.json()).then(result => {
             pass.value = result
-            createForm(pass.value.price, pass.value.name, 0)
+            setTimeout(createForm(pass.value.price, pass.value.name, 0), 100);
         })
     }
     else
@@ -35,6 +36,9 @@ function createForm(html_price, pass_name, qtt)
     else price.value = (html_price * qtt).toFixed(2)
     name.value = pass_name
 
+    const id = document.querySelector('.hidden_id')
+    id.setAttribute('value', pass.value.pass_id)
+
     const elements = document.querySelectorAll('.quantity *')
     for(let element of elements)
     {
@@ -47,7 +51,7 @@ function createForm(html_price, pass_name, qtt)
         const option = document.createElement('option')
         option.setAttribute('value', i)
         if(i == 1) option.setAttribute('selected', 'true')
-        option.innerHTML = i
+    option.innerHTML = i
         select.appendChild(option)
     }
 

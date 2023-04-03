@@ -23,7 +23,28 @@ class ReservationController extends Controller
 
         $request->validate([
             'id' => 'required',
+            'quantity' => 'required',
+            'first_day' => 'required',
+            'second_day' => 'required',
         ]);
+
+        $reservation = Reservation::where('pass_id', '=', $request->id)->first();
+        if($request->id == 1)
+        {
+            $request->second_day = $request->first_day;
+            $reservation = Reservation::where('pass_id', '=', $request->id)->where('open_day', '=', $request->first_day)->first();
+        }
+        if($request->id == 2)
+        {
+            $reservation = Reservation::where('pass_id', '=', $request->id)->where('closed_day', '=', $request->second_day)->first();
+        }
+
+        if($reservation != NULL)
+        {
+            if($reservation->quantity >= 5) return back()->with('max_quantity', 'You already have the maximum number of reservation authorized for this pass');
+            if(Reservation::where('id', '=', $reservation->id)->increment('quantity', $request->quantity)) return redirect('/my-tickets')->with('reservation_successful', 'Your reservation has been recorded sucessfully');
+            return back()->with('reservation_fail', 'Something went wrong when recording your reservation');
+        }
 
         $pass = new Reservation();
 
@@ -32,8 +53,10 @@ class ReservationController extends Controller
         $pass->open_day = $request->first_day;
         $pass->closed_day = $request->second_day;
         $pass->quantity = $request->quantity;
+        $pass->created_at = date('Y-m-d H:i:s');
+        $pass->updated_at = date('Y-m-d H:i:s');
 
-        if($pass->save()) return back()->with('reservation_successful', 'Your reservation has been recorded sucessfully');
+        if($pass->save()) return redirect('/my-tickets')->with('reservation_successful', 'Your reservation has been recorded sucessfully');
         return back()->with('reservation_fail', 'Something went wrong when recording your reservation');
     }
 
