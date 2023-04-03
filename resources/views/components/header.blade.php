@@ -18,19 +18,16 @@
                 <div class="dropdown">
                   <a @if(isset($actif) && $actif=='packages' || isset($actif) && $actif=='schedule') class="actif" @endif>Festival</a>
                   <div class="dropdown-content">
-                    <a href="/packages">Tickets & Packages</a>
+                    <a href="/packages">Packages</a>
                     <a href="/schedule">Schedule</a>
                   </div>
                 </div>
               </li>
               <li class="headList"><a @if(isset($actif) && $actif=='news') class="actif" @endif href="/news">News</a></li>
               <li class="headList"><a @if(isset($actif) && $actif=='contact') class="actif" @endif href="/contact">Contact</a></li>
-              {{-- <button class="headBtn"> --}}
                 <li class="headList">
                 <a class=" mainBtn fw-semibold" href="/user-zone">My Tickets</a>
                 </li>
-                {{-- </button> --}}
-
             </ul>
           </div>
 
@@ -44,7 +41,7 @@
                 </div>
 
                 <img id="userImg" src="<?= asset('images/connectPlain.icon.svg') ?>" alt="user connection" onclick="toggleDropdown()">
-                <div class="dropdown-content" id="dropdownContent">
+                <div class="dropdown-content1">
                   <?php if (auth()->user()->admin): ?>
                     <a href="/admin">Admin Zone</a>
                   <?php else: ?>

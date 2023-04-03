@@ -14,14 +14,22 @@
   z-index: 10000;
 }
 .navigation #headBlock .headLogo #logo {
-  max-height: 15vh;
+  max-height: 10vh;
+  max-width: 50vw;
+}
+.navigation #headBlock .headContent {
+  margin-left: auto;
+}
+@media screen and (min-width: 1193px) {
+  .navigation #headBlock .headContent {
+    margin: auto;
+  }
 }
 .navigation #headBlock .headContent .burgerMenu {
   display: block;
   background-color: transparent;
   border: none;
   cursor: pointer;
-  margin-left: auto;
 }
 @media screen and (min-width: 1193px) {
   .navigation #headBlock .headContent .burgerMenu {
@@ -37,7 +45,7 @@
 .navigation #headBlock .headContent .burgerMenu #userImg {
   width: 50px;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 414px) {
   .navigation #headBlock .headContent .burgerMenu #userImg {
     width: 40px;
   }
@@ -86,7 +94,7 @@
     font-size: 1rem;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 414px) {
   .navigation #headBlock .headContent .headLinks {
     display: none;
     position: absolute;
@@ -111,7 +119,7 @@
     background-color: #1f2833;
   }
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 414px) {
   .navigation #headBlock .headContent .headLinks .headList {
     display: block;
     background-color: #1f2833;
@@ -140,6 +148,8 @@
   width: min-content;
 }
 .navigation #headBlock .headContent .headLinks .headList .dropdown-content {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
   display: none;
   position: absolute;
   z-index: 10;
@@ -188,16 +198,14 @@
 .navigation #headBlock .headIcon {
   align-items: center;
   display: flex;
-  margin-left: auto;
   visibility: visible;
-  /* show the dropdown */
 }
 .navigation #headBlock .headIcon .dropdown {
   position: relative;
   display: flex;
   padding: 1vw 2vh;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 414px) {
   .navigation #headBlock .headIcon .dropdown {
     padding: 10px 10px;
   }
@@ -205,11 +213,13 @@
 .navigation #headBlock .headIcon .dropdown #userId {
   color: #222222;
   position: absolute;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   text-transform: uppercase;
   font-weight: bold;
   top: 50%;
   left: 50%;
+  min-height: 40px;
+  min-width: 40px;
   transform: translate(-50%, -50%);
   transition: all 0.5s ease-in-out;
   background-color: #fbf7ea;
@@ -217,6 +227,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 500px) {
+  .navigation #headBlock .headIcon .dropdown #userId {
+    font-size: 1.2rem;
+  }
 }
 .navigation #headBlock .headIcon .dropdown #userImg,
 .navigation #headBlock .headIcon .dropdown #userNone {
@@ -227,66 +242,50 @@
   justify-content: center;
   align-items: center;
 }
-@media screen and (max-width: 390px) {
+@media screen and (max-width: 414px) {
   .navigation #headBlock .headIcon .dropdown #userImg,
 .navigation #headBlock .headIcon .dropdown #userNone {
     max-width: 40px;
   }
 }
-.navigation #headBlock .headIcon .dropdown.show #userId {
-  transform: translate(-200%, -50%);
-}
-.navigation #headBlock .headIcon .dropdown.show #userImg {
-  transform: translate(-100%, -50%);
-}
-.navigation #headBlock .headIcon .dropdown-content {
+.navigation #headBlock .headIcon .dropdown-content1 {
   display: none;
   position: absolute;
   z-index: 10;
   border-radius: 20%;
   right: 0;
   top: 0;
-  width: 0vw;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 50px;
 }
-.navigation #headBlock .headIcon .dropdown-content a {
+.navigation #headBlock .headIcon .dropdown-content1.show {
+  display: flex;
+  top: 7vh;
+}
+.navigation #headBlock .headIcon .dropdown-content1 a {
   color: #fbf7ea;
   font-size: 1rem;
   font-weight: bold;
   text-decoration: none;
-  border-radius: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   text-align: center;
-  min-width: 5.5vw;
-  min-height: 8vh;
-  display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1em;
+  flex: none;
 }
-.navigation #headBlock .headIcon .dropdown-content a:hover {
-  background-color: #fbf7ea;
-  color: #1f2833;
-}
-.navigation #headBlock .headIcon .dropdown:hover .dropdown-content {
-  display: block;
-  position: absolute;
-  top: -2vh;
-}
-.navigation #headBlock .headIcon .dropdown:hover #userImg {
-  background-color: #1f2833;
-}
-.navigation #headBlock .headIcon .dropdown:hover .headIcon {
-  display: none;
+.navigation #headBlock .headIcon .dropdown-content1 a:hover {
+  color: #35d0ba;
 }
 .navigation .footerBlock {
   display: flex;
   background-color: #65efce;
-  padding: 3vh 7.3vw 3vh 7.3vw;
+  padding: 3.5vh 7.3vw 3.5vh 7.3vw;
   margin-bottom: 0;
 }
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 200px) and (max-width: 500px) {
   .navigation .footerBlock {
     flex-direction: column;
   }
@@ -294,7 +293,7 @@
 .navigation .footerBlock .footerLogo {
   display: flex;
   color: #222222;
-  width: 15vw;
+  min-width: 20%;
 }
 .navigation .footerBlock .footerLogo .dudeLogo {
   height: auto;
@@ -314,37 +313,44 @@
   display: flex;
   flex-direction: column;
   color: #222222;
-  max-width: 100%;
+  max-width: 70%;
 }
 .navigation .footerBlock #footerSection #footerText #HIFF {
   overflow: hidden;
 }
-@media screen and (max-width: 500px) {
+@media screen and (min-width: 200px) and (max-width: 835px) {
   .navigation .footerBlock #footerSection #footerText #HIFF {
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-    overflow: overlay;
+    display: none;
   }
+}
+.navigation .footerBlock #footerSection .socialIcons {
+  width: 50%;
 }
 .navigation .footerBlock #footerSection .socialIcons ul {
   display: flex;
   list-style-type: none;
   padding: 0;
 }
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  .navigation .footerBlock #footerSection .socialIcons ul {
+    position: absolute;
+    margin-top: 37vh;
+    margin-left: 7vw;
+    z-index: 10;
+  }
+}
 .navigation .footerBlock .footerLinks {
   margin: auto;
-  display: flex;
   flex-direction: column;
+  margin-bottom: 1.5em;
   -webkit-margin-start: auto;
           margin-inline-start: auto;
-  margin-right: 6.8vw;
   text-align: end;
 }
 .navigation .footerBlock .footerLinks .footerList {
-  display: inline-block;
-  padding-bottom: 3vh;
+  display: block;
+  padding-bottom: 2.5vh;
+  width: 150px;
 }
 .navigation .footerBlock .footerLinks .footerList a {
   text-decoration: none;

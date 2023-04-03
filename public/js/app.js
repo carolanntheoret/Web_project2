@@ -6,18 +6,17 @@ burgerMenu.addEventListener('click', function() {
   dropdownMenu.classList.toggle('is-open');
 });
 
-const headIcon = document.querySelector(".headIcon");
-const userImg = document.querySelector("#userImg");
-const dropdownContent = document.querySelector("#dropdown-content");
+
+
+const headIcon = document.querySelector("#userId");
+const dropdownContent = document.querySelector(".dropdown-content1");
 
 headIcon.addEventListener('click', function() {
     dropdownContent.classList.toggle('show');
-    console.log('test')
+    console.log(dropdownContent)
 });
 
-userImg.addEventListener('click', function() {
-    dropdownContent.classList.toggle('show');
-});
+
 
 // // Fermer le dropdown si l'utilisateur clique en dehors de celui-ci
 // window.addEventListener('click', function(event) {

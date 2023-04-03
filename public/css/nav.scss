@@ -5,7 +5,6 @@ $pink: #f348a4;
 $logo-turquoise: #35d0ba;
 $light-turquoise: #65efce;
 $almost-white: #fbf7ea;
-// $soft-yellow: #fefed5;
 $deep-blue: #1f2833;
 $almost-black: #222222;
 
@@ -28,12 +27,19 @@ $almost-black: #222222;
         .headLogo {
 
             #logo{
-                max-height: 15vh;
+                max-height: 10vh;
+                max-width: 50vw;
             }
         }
 
 
         .headContent {
+
+            margin-left: auto;
+
+            @media screen and (min-width: 1193px) {
+                margin: auto;
+            }
 
 
         .burgerMenu
@@ -43,8 +49,6 @@ $almost-black: #222222;
             background-color: transparent;
             border: none;
             cursor: pointer;
-            margin-left: auto;
-            //background-color: #35d0ba;
 
 
             // hide burgerMenu for bigger screen
@@ -63,7 +67,7 @@ $almost-black: #222222;
             #userImg {
                 width: 50px;
 
-                @media screen and (max-width: 390px) {
+                @media screen and (max-width: 414px) {
                     width: 40px;
 
                     &__dropdown {
@@ -119,7 +123,7 @@ $almost-black: #222222;
                     }
                 }
 
-                @media screen and (max-width: 390px) {
+                @media screen and (max-width: 414px) {
                     display: none;
                     position: absolute;
                     top: 100%;
@@ -143,7 +147,7 @@ $almost-black: #222222;
                         background-color: $deep-blue;
                       }
 
-                    @media screen and (max-width: 390px) {
+                    @media screen and (max-width: 414px) {
                         display: block;
                         background-color: $deep-blue;
 
@@ -176,12 +180,11 @@ $almost-black: #222222;
                         // padding: 10px 5px;
                         // text-decoration: none;
                         // z-index: 10;
-                        // transform: translateX(100%);
-                        // transition: transform 0.3s ease-in-out;
+                         transform: translateX(100%);
+                         transition: transform 0.3s ease-in-out;
                         display: none;
                         position: absolute;
                         z-index: 10;
-
                         padding: 5px 0;
 
                     }
@@ -237,7 +240,6 @@ $almost-black: #222222;
         .headIcon {
             align-items: center;
             display: flex;
-            margin-left: auto;
             visibility: visible;
 
             .dropdown {
@@ -245,102 +247,83 @@ $almost-black: #222222;
               display: flex;
               padding: 1vw 2vh;
 
-              @media screen and (max-width: 390px) {
+              @media screen and (max-width: 414px) {
                 padding: 10px 10px;
             }
+
 
               #userId {
                 color: #222222;
                 position: absolute;
-                font-size: 1.2rem;
+                font-size: 1.4rem;
                 text-transform: uppercase;
                 font-weight: bold;
                 top: 50%;
                 left: 50%;
+                min-height: 40px;
+                min-width: 40px;
                 transform: translate(-50%, -50%);
                 transition: all 0.5s ease-in-out;
-                    //width: 40px;
-                    //height: 40px;
-                    background-color: $almost-white;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
+                background-color: $almost-white;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                @media screen and (max-width: 500px) {
+                font-size: 1.2rem;
+                }
               }
 
             #userImg,
               #userNone {
                 max-width: 50px;
-                    @media screen and (max-width: 390px) {
+                transition: all 0.5s ease-in-out;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                    @media screen and (max-width: 414px) {
                         max-width: 40px;
                     }
-                    transition: all 0.5s ease-in-out;
-                    //background-color: $almost-white;
-                    //min-width: 5vw;
-                    //min-height: 7vh;
-                    border-radius: 50%;
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    //margin-left: 10px;
-              }
-              &.show #userId {
-                transform: translate(-200%, -50%);
               }
 
-              &.show #userImg {
-               transform: translate(-100%, -50%);
-              }
             }
 
-            .dropdown-content {
-              display: none;
-              position: absolute;
-              z-index: 10;
-              border-radius: 20%;
-              //background-color: $deep-blue;
+            .dropdown-content1 {
+                display: none;
+                position: absolute;
+                z-index: 10;
+                border-radius: 20%;
                 right: 0;
                 top: 0;
-                width: 0vw;
-            }
+                width: fit-content;
+                min-width: 50px;
 
-            .dropdown-content a {
-              color: $almost-white;
-              font-size:1rem;
-              font-weight: bold;
-              text-decoration: none;
-              border-radius: 100%;
-              //min-width: 8vw;
-              width: fit-content;
-              font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-              text-align: center;
-            //   min-width: 50px;
-            //   min-height: 50px;
-            min-width: 5.5vw;
-            min-height: 8vh;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-            }
-
-            .dropdown-content a:hover {
-              background-color: $almost-white;
-              color: $deep-blue;
-            }
-
-            /* show the dropdown */
-            .dropdown:hover .dropdown-content {
-              display: block;
-              position: absolute;
-              top: -2vh;
-            }
-            .dropdown:hover #userImg {
-              background-color: $deep-blue;
-            }
-
-            .dropdown:hover .headIcon {
-                display: none;
+            &.show{
+                display: flex;
+                top: 7vh;
               }
+
+            }
+
+            .dropdown-content1 a {
+                color: $almost-white;
+                font-size:1rem;
+                font-weight: bold;
+                text-decoration: none;
+                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+                text-align: center;
+                justify-content: center;
+                align-items: center;
+                padding: 1em;
+                flex: none;
+            }
+
+            .dropdown-content1 a:hover {
+              color: $logo-turquoise;
+            }
           }
     }
 
@@ -348,17 +331,18 @@ $almost-black: #222222;
     .footerBlock {
         display: flex;
         background-color: $light-turquoise;
-        padding: 3vh 7.3vw 3vh 7.3vw;
+        padding: 3.5vh 7.3vw 3.5vh 7.3vw;
         margin-bottom: 0;
         //width: 100vw;
-        @media screen and (max-width: 500px) {
+        @media screen and (min-width: 200px) and (max-width: 500px) {
         flex-direction: column;
         }
+
 
         .footerLogo {
             display: flex;
             color: $almost-black;
-            width: 15vw;
+            min-width: 20%;
 
             .dudeLogo{
                 height: auto;
@@ -379,44 +363,48 @@ $almost-black: #222222;
                 display: flex;
                 flex-direction: column;
                 color: $almost-black;
-                max-width: 100%;
+                max-width: 70%;
 
 
                 #HIFF {
                     overflow: hidden;
 
-                    @media screen and (max-width: 500px) {
-                    //white-space: nowrap;
-                      text-overflow: ellipsis;
-                      display: -webkit-box;
-                      -webkit-line-clamp: 3;
-                      -webkit-box-orient: vertical;
-                      overflow: overlay;
+                    @media screen and (min-width: 200px) and (max-width: 835px){
+                        display: none;
                     }
                   }
             }
 
             .socialIcons {
+
+                width: 50%;
                 ul{
                     display: flex;
                     list-style-type: none;
                     padding: 0;
+
+                    @media screen and (min-width: 200px) and (max-width: 500px){
+                        position: absolute;
+                        margin-top: 37vh;
+                        margin-left: 7vw;
+                        z-index: 10;
+                    }
                 }
             }
         }
 
         .footerLinks {
             margin: auto;
-            display: flex;
+            //display: flex;
             flex-direction: column;
+            margin-bottom: 1.5em;
             margin-inline-start: auto;
-            margin-right: 6.8vw;
             text-align: end;
 
             .footerList {
-                display: inline-block;
-                padding-bottom: 3vh;
-
+                display: block;
+                padding-bottom: 2.5vh;
+                width: 150px;
                 a {
                     text-decoration: none;
                     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;

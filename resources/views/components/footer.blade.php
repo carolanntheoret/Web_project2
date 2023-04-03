@@ -27,10 +27,10 @@
             </div>
 
             <ul class="footerLinks fw-semibold">
-                <li class="footerList"><a href="home">About</a></li>
+                <li class="footerList"><a href="#aboutSection">About</a></li>
                 <li class="footerList"><a href="contact">Contact Us</a></li>
                 <li class="footerList"><a href="news">News</a></li>
-                <li class="footerList"><a href="packages">Tickets & Packages </a></li>
+                <li class="footerList"><a href="packages">Packages </a></li>
                 <li class="footerList"><a href="schedule">2023 Schedule</a></li>
             </ul>
         </div>
