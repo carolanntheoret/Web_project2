@@ -2,10 +2,10 @@
 
 use App\Http\Controllers\ActivityController;
 use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PassController;
 use App\Http\Controllers\ReservationController;
 use App\Http\Controllers\SiteController;
 use App\Http\Controllers\UserController;
-use App\Models\Reservation;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -55,3 +55,4 @@ Route::get('/delete-activity', [ActivityController::class, 'delete']);
 /* API */
 Route::get('/get-reservations/{user_id}', [ReservationController::class, 'getReservations']);
 Route::get('/get-reservation/{pass_id}', [ReservationController::class, 'getReservation']);
+Route::get('/get-pass/{id}', [PassController::class, 'getPass']);

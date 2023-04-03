@@ -3,7 +3,6 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fbf7ea;
   background-color: #222222;
-  padding-top: 6rem;
 }
 body .mainBlock {
   border: 1px solid #fefed5;
@@ -123,6 +122,7 @@ body main .highlighted-news .content .festi-line p {
   margin: 0;
 }
 body main .highlighted-news .content .festi-line img {
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -132,6 +132,7 @@ body main .highlighted-news .content .festi-line .date {
 body main .highlighted-news .content .button-header {
   border: 3px solid #fbf7ea;
   padding: 15px 35px;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-weight: bold;
@@ -260,6 +261,7 @@ body main .article-header p {
   margin: 0;
 }
 body main .article-header img {
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
