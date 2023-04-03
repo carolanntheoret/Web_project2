@@ -16,7 +16,7 @@ class CreateActivityHoursTable extends Migration
         Schema::create('activity_hours', function (Blueprint $table) {
             $table->id();
             $table->foreignId('activity_id')->constrained()->onUpdate('cascade')->onDelete('cascade');
-            $table->integer('begin_time');
+            $table->integer('begin_time')->nullable();
             $table->timestamps();
         });
     }

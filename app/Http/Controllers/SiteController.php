@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Activity;
+use App\Models\News;
 use App\Models\Pass;
 use App\Models\Reservation;
-use App\Models\User;
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
@@ -21,8 +20,10 @@ class SiteController extends Controller
     {
         return view('homepage', [
             'title' => 'HIFF | Home',
-            'actif' => 'homepage'
+            'actif' => 'homepage',
+            'news' =>  News::orderBy('created_at', 'desc')->limit(3)->get(),
         ]);
+
     }
 
     /**
@@ -34,7 +35,7 @@ class SiteController extends Controller
     {
         return view('news', [
             'title' => 'HIFF |  News',
-            'actif' => 'news'
+            'actif' => 'news',
         ]);
     }
 
@@ -45,20 +46,16 @@ class SiteController extends Controller
      */
     public function showPackage()
     {
-        if(Auth::check())
-        {
-            $user = null;
-            $user = auth()->user();
-
-            if(Reservation::where('user_id', '=', auth()->user()->id)->first() != null) {
-                return redirect("/user-zone");
-            }
-        }
+        if(!Auth::check()) return redirect('/user-zone');
 
         return view('packages', [
             'title' => 'HIFF | Packages',
             'actif' => 'packages',
             'packages' => Pass::all(),
+            'reservation1' => Reservation::select('pass_id', 'quantity', 'user_id', 'price', 'name')->join('passes', 'passes.id', '=', 'reservations.pass_id')->where('user_id', '=', auth()->user()->id)->where('pass_id', '=', 1)->first(),
+            'reservation2' => Reservation::select('pass_id', 'quantity', 'user_id', 'price', 'name')->join('passes', 'passes.id', '=', 'reservations.pass_id')->where('user_id', '=', auth()->user()->id)->where('pass_id', '=', 2)->first(),
+            'reservation3' => Reservation::select('pass_id', 'quantity', 'user_id', 'price', 'name')->join('passes', 'passes.id', '=', 'reservations.pass_id')->where('user_id', '=', auth()->user()->id)->where('pass_id', '=', 3)->first(),
+            'reservation4' => Reservation::select('pass_id', 'quantity', 'user_id', 'price', 'name')->join('passes', 'passes.id', '=', 'reservations.pass_id')->where('user_id', '=', auth()->user()->id)->where('pass_id', '=', 4)->first(),
         ]);
     }
 
@@ -89,7 +86,7 @@ class SiteController extends Controller
             'title' => 'HIFF | Admin',
             "users" => DB::table('users')->where('admin', '=', '1')->get(),
             "members" => DB::table('users')->where('admin', '=', '0')->get(),
-            "activities" => Activity::all(),
+            "activities" => (new Activity)->getHours(),
             "reservations" => DB::table('reservations')->join('passes', 'pass_id', '=', 'passes.id')->get(),
             'user' => auth()->user(),
             'actif' => 'spaceAdmin',

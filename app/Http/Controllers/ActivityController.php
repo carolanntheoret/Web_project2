@@ -23,9 +23,13 @@ class ActivityController extends Controller
         $request->validate([
             'title' => 'required|max:255',
             'description' => 'required',
-            'time' => 'required',
+            'day' => 'required',
+            'hour1' => 'required',
+            'hour2' => 'required',
+            'hour3' => 'required',
             'image' => 'required|max:255' // it's a URL
         ]);
+
 
         $activity = new Activity();
 
@@ -35,12 +39,16 @@ class ActivityController extends Controller
 
         if(!$activity->save()) return back()->with('create_activity_failed', 'Activity creation failed');
 
-        $activity_hour = new ActivityHour();
 
-        $activity_hour->activity_id = $activity->id;
-        $activity_hour->begin_time = strtotime($request->time);
+        $hours = [$request->hour1, $request->hour2, $request->hour3];
+        foreach($hours as $hour)
+        {
+            $activity_hour = new ActivityHour();
+            $activity_hour->activity_id = $activity->id;
+            $activity_hour->begin_time = strtotime($request->day . ' ' . $hour);
+            if(!$activity_hour->save()) return back()->with('create_activity_failed', 'Activity creation failed');
+        }
 
-        if(!$activity_hour->save()) return back()->with('create_activity_failed', 'Activity creation failed');
         return back()->with('create_activity_successful', 'Activity created successfully');
     }
 
@@ -59,6 +67,13 @@ class ActivityController extends Controller
             'id' => 'required',
             'title' => 'required|max:255',
             'description' => 'required',
+            'day' => 'required',
+            'hour1' => 'required',
+            'hour_id1' => 'required',
+            'hour2' => 'required',
+            'hour_id2' => 'required',
+            'hour3' => 'required',
+            'hour_id3' => 'required',
             'image' => 'required|max:255' // it's a URL
         ]);
 
@@ -69,6 +84,22 @@ class ActivityController extends Controller
         ]);
 
         if(!$success) return back()->with('modify_error', 'An error occurred while updating the activity');
+
+        $hours = [
+            ['time' => $request->hour1, 'id' => $request->hour_id1],
+            ['time' => $request->hour2, 'id' => $request->hour_id2],
+            ['time' => $request->hour3, 'id' => $request->hour_id3],
+        ];
+
+        foreach($hours as $hour)
+        {
+            $success = ActivityHour::where('activity_id', '=', $hour["id"])->update([
+                'begin_time' => strtotime($request->day . ' ' . $hour["time"]),
+            ]);
+
+            if(!$success) return back()->with('modify_error', 'An error occurred while updating the activity');
+        }
+
         return back()->with('modify_success', 'Modification successful');
     }
 
@@ -89,6 +120,8 @@ class ActivityController extends Controller
     }
 
     /**
+     * ******************* USELESS ??? **********************
+     *
      * Add an activity time in the database
      *
      * @param Request $request
@@ -114,6 +147,8 @@ class ActivityController extends Controller
     }
 
     /**
+     * ************ USELESS ??? ********************
+     *
      * Delete an activity time of the database
      *
      * @param Request $request

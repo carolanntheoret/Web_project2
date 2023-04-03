@@ -140,7 +140,6 @@
   display: block;
   font-size: medium;
   min-width: 10vw;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 100%;
@@ -203,7 +202,7 @@
 }
 @media screen and (max-width: 390px) {
   .navigation #headBlock .headIcon .dropdown #userImg,
-.navigation #headBlock .headIcon .dropdown #userNone {
+  .navigation #headBlock .headIcon .dropdown #userNone {
     width: 40px;
   }
 }
@@ -222,7 +221,6 @@
   display: block;
   border-radius: 100%;
   min-width: 8vw;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
@@ -249,7 +247,6 @@
   background-color: #65efce;
   padding: 3vh 7.3vw 3vh 7.3vw;
   margin-bottom: 0;
-  width: 100vw;
 }
 .navigation .footerBlock .footerLogo {
   display: flex;

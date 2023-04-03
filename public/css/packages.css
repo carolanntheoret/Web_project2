@@ -221,7 +221,8 @@ h1 .et {
   width: 100%;
 }
 
-.buyBTN {
+.buyBTN,
+.purchase {
   background: linear-gradient(to right, #f54674, #f348a4);
   padding: 0 2vw;
   font-size: 2rem;
@@ -233,8 +234,4 @@ h1 .et {
   cursor: pointer;
   color: #fbf7ea;
   border: none;
-}
-
-.buyBTN:hover {
-  background: linear-gradient(to left, #f54674, #f348a4);
 }/*# sourceMappingURL=packages.css.map */
