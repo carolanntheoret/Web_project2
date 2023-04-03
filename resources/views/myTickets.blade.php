@@ -20,7 +20,10 @@
                     <div class="remove fw-semibold" id="<?= $pass->id ?>">Remove ticket</div>
                 </div>
             @empty
-                y'en a po tsé
+                <div class="noReservation">
+                    <p>You have no reservation yet</p>
+                    <a class="getTicket" href="/packages">Get one now !</a>
+                </div>
             @endforelse
         </div>
 

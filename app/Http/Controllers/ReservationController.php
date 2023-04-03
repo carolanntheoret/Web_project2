@@ -7,8 +7,6 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 
-use function Ramsey\Uuid\v1;
-
 class ReservationController extends Controller
 {
     /**
@@ -19,7 +17,6 @@ class ReservationController extends Controller
      */
     public function reserve(Request $request)
     {
-        var_dump($request->all()); exit();
         if(!auth()->check()) return redirect('/user-zone');
 
         $request->validate([
