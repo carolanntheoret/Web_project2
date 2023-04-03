@@ -2,28 +2,30 @@
 const burgerMenu = document.querySelector(".burgerMenu");
 const dropdownMenu = document.querySelector(".headLinks");
 
-//console.log(burgerMenu)
 burgerMenu.addEventListener('click', function() {
   dropdownMenu.classList.toggle('is-open');
 });
 
-// const userImg = document.querySelector("#userImg");
-// const dropdownContent = document.querySelector(".dropdown-content");
 
-// userImg.addEventListener('click', function() {
-//     dropdownContent.classList.toggle('show');
-// });
+
+const headIcon = document.querySelector("#userId");
+const dropdownContent = document.querySelector(".dropdown-content1");
+
+headIcon.addEventListener('click', function() {
+    dropdownContent.classList.toggle('show');
+    console.log(dropdownContent)
+});
+
+
 
 // // Fermer le dropdown si l'utilisateur clique en dehors de celui-ci
 // window.addEventListener('click', function(event) {
-//     if (!event.target.matches('#userImg')) {
+//     if (!event.target.matches('#userImg') && !event.target.matches('.headIcon')) {
 //         if (dropdownContent.classList.contains('show')) {
 //             dropdownContent.classList.remove('show');
 //         }
 //     }
 // });
-
-
 //end Navigation
 
 const member_selected = document.getElementById("member");
