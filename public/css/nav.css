@@ -284,7 +284,11 @@
   background-color: #65efce;
   padding: 3.5vh 7.3vw 3.5vh 7.3vw;
   margin-bottom: 0;
-  width: 100vw;
+}
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  .navigation .footerBlock {
+    flex-direction: column;
+  }
 }
 .navigation .footerBlock .footerLogo {
   display: flex;
