@@ -247,4 +247,23 @@ h1 {
 
 .infos {
   margin-top: 100px;
+}
+
+.noReservation {
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.noReservation p {
+  margin: 0;
+}
+
+.getTicket {
+  margin-top: 60px;
+  color: #f348a4;
+}
+
+.getTicket:hover {
+  color: #35d0ba;
 }/*# sourceMappingURL=styleMyTickets.css.map */

@@ -8,6 +8,9 @@ use App\Models\Pass;
 use App\Models\Reservation;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Session;
+
+use function Ramsey\Uuid\v1;
 
 class SiteController extends Controller
 {
@@ -46,8 +49,7 @@ class SiteController extends Controller
      */
     public function showPackage()
     {
-        if(!Auth::check()) return redirect('/user-zone');
-
+        if(!Auth::check()) return redirect('user-zone');
         return view('packages', [
             'title' => 'HIFF | Packages',
             'actif' => 'packages',

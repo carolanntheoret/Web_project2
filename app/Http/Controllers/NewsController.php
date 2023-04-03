@@ -3,16 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\News;
-use App\Models\Pass;
-use App\Models\Reservation;
-use App\Models\User;
-use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Support\Facades\DB;
 
 class NewsController extends Controller
 {
-         /**
+    /**
      * Display news view
      *
      * @return object
@@ -29,7 +23,8 @@ class NewsController extends Controller
     /**
      * Displays the details of one news item
      *
-     * @param News $nouvelle La nouvelle
+     * @param object
+     * @return object
      */
     public function show(News $article){
         return view('article', [
