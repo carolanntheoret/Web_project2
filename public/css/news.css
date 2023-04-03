@@ -99,6 +99,7 @@ body main .highlighted-news h1 {
   left: 39%;
   font-size: 75px;
   font-weight: bold;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -106,6 +107,7 @@ body main .highlighted-news .content {
   position: relative;
   top: 65%;
   left: 5%;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
