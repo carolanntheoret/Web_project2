@@ -19,6 +19,7 @@ class ReservationController extends Controller
      */
     public function reserve(Request $request)
     {
+        var_dump($request->all()); exit();
         if(!auth()->check()) return redirect('/user-zone');
 
         $request->validate([

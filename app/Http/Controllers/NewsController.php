@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\DB;
 
 class NewsController extends Controller
 {
-         /**
+    /**
      * Display news view
      *
      * @return object
@@ -29,7 +29,8 @@ class NewsController extends Controller
     /**
      * Displays the details of one news item
      *
-     * @param News $nouvelle La nouvelle
+     * @param object
+     * @return object
      */
     public function show(News $article){
         return view('article', [
