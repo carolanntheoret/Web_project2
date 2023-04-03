@@ -135,26 +135,59 @@
                         <div class="overlay"></div>
                     </div>
                 </div>
+                <div class="title-cat">
+                    <h3 class="fw-semibold">SHORT FILM PROGRAMS</h3>
+                    <h4>Young Voices: A Collection of Short Films by Emerging Filmmakers</h4>
+                </div>
                 <div class="small-cat">
-                    <h2></h2>
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/3.jpg') }})"><p>{{ $activities[2]->title }}</p></div>
-
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/4.jpg') }})"><p>{{ $activities[3]->title }}</p></div>
-
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/5.jpg') }})"><p>{{ $activities[4]->title }}</p></div>
-
-                </div>
-
-                <div class="small">
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/6.jpg') }})"></div>
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/7.jpg') }})"></div>
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/8.jpg') }})"></div>
-                </div>
-                <div class="small">
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/9.jpg') }})"></div>
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/10.jpg') }})">
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/3.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[2]->title }}</p>
                     </div>
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/11.jpg') }})">
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/4.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[3]->title }}</p>
+                    </div>
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/5.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[4]->title }}</p>
+                    </div>
+                </div>
+
+                <div class="title-cat">
+                    <h3 class="fw-semibold">SPOTLIGHT FILMS</h3>
+                    <h4>A Celebration of Women in Film: Spotlight on Female Directors</h4>
+                </div>
+                <div class="small-cat">
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/6.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[5]->title }}</p>
+                    </div>
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/7.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[6]->title }}</p>
+                    </div>
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/25.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[24]->title }}</p>
+                    </div>
+                </div>
+                <div class="title-cat">
+                    <h3 class="fw-semibold">SOUND AND VISION</h3>
+                    <h4>The Art of Sound: Creating a Memorable Film Score</h4>
+                </div>
+                <div class="small-cat">
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/9.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[8]->title }}</p>
+                    </div>
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/10.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[9]->title }}</p>
+                    </div>
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/11.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[10]->title }}</p>
                     </div>
                 </div>
             </div>
@@ -162,32 +195,77 @@
         <div class="line"></div>
         <div class="contenu">
             <div class="image-bottom">
-                <div class="small">
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/12.jpg') }})">
+                <div class="title-cat">
+                    <h3 class="fw-semibold">PANEL DISCUSSIONS AND Q&A SESSIONS</h3>
+                    <h4 style="width: 60%">Cultural Journeys Through Cinema: A program of films that takes audiences on a journey around the world, exploring different cultures, landscapes, and ways of life.</h4>
+                </div>
+                <div class="small-cat">
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/12.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[11]->title }}</p>
                     </div>
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/13.jpg') }})">
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/13.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[12]->title }}</p>
                     </div>
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/14.jpg') }})">
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/14.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[13]->title }}</p>
                     </div>
-                    <div class="small-img" style="background-image: url({{ asset('images/activities/15.jpg') }})">
+                    <div class="small-cat-content">
+                        <div class="small-img" style="background-image: url({{ asset('images/activities/15.jpg') }})"></div>
+                        <p class="fw-semibold">{{ $activities[14]->title }}</p>
                     </div>
                 </div>
                 <div class="small">
-                    <div class="grd-img" style="background-image: url({{ asset('images/activities/17.jpg') }})">
+                    <div class="grd-img" style="background-image: url({{ asset('images/activities/17.jpg');}})">
+                        <div class="text-film-grd z-2">
+                            <p class="fw-semibold fs-4">OUTDOOR SCREENINGS</p>
+                            <h4 class="fw-semibold">{{ $activities[16]->title }}</h4>
+                            <p>{{ $activities[1]->description }}</p>
+                        </div>
                         <div class="overlay"></div>
                     </div>
-                    <div class="grd-img" style="background-image: url({{ asset('images/activities/18.jpg') }})">
+                    <div class="grd-img" style="background-image: url({{ asset('images/activities/18.jpg') }}); background-position: initial;">
+                        <div class="text-film-grd z-2">
+                            <p class="fw-semibold fs-4">OUTDOOR SCREENINGS</p>
+                            <h4 class="fw-semibold">{{ $activities[17]->title }}</h4>
+                            <p>{{ $activities[17]->description }}</p>
+                        </div>
                         <div class="overlay"></div>
                     </div>
                 </div>
-                <div class="small">
-                    <div class="med-img" style="background-image: url({{ asset('images/activities/19.jpg') }})"></div>
-                    <div class="med-img" style="background-image: url({{ asset('images/activities/20.jpg') }})"></div>
-                    <div class="med-img" style="background-image: url({{ asset('images/activities/21.jpg') }})"></div>
+
+                <div class="title-cat">
+                    <h3 class="fw-semibold">WORKSHOPS AND MASTERCLASSES</h3>
+                    <h4 style="width: 65%">Cinematography and Lighting Techniques: A series of masterclasses that explore the technical aspects of filmmaking, including camera angles, lighting setups, and shot composition.</h4>
+                </div>
+                <div class="small-cat">
+                    <div class="small-cat-content">
+                        <div class="med-img" style="background-image: url({{ asset('images/activities/19.jpg') }})"></div>
+                        <p class="fw-semibold fs-5">{{ $activities[18]->title }}</p>
+                    </div>
+                    <div class="small-cat-content">
+                        <div class="med-img" style="background-image: url({{ asset('images/activities/20.jpg') }})"></div>
+                        <p class="fw-semibold fs-5">{{ $activities[19]->title }}</p>
+                    </div>
+                    <div class="small-cat-content">
+                        <div class="med-img" style="background-image: url({{ asset('images/activities/21.jpg') }})"></div>
+                        <p class="fw-semibold fs-5">{{ $activities[20]->title }}</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="line my-5"></div>
-        <div class="tickets mb-5"></div>
+        <div class="line"></div>
+        <div class="tickets">
+            <div class="tickets-image">
+                <img src="{{ asset('images/activities/tickets-img.jpg')}}" alt="">
+              </div>
+              <div class="tickets-content">
+                <h2>GRAB YOUR TICKETS NOW</h2>
+                <h3 class="fw-semibold">to get an online selection period prior to public on-sale dates.</h3>
+                <button><a href="/packages">Buy Tickets</a></button>
+              </div>
+        </div>
     </main>
 </x-layout>
