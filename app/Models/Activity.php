@@ -11,7 +11,8 @@ class Activity extends Model
     use HasFactory;
 
     /**
-     * Get all activities with time
+     * Get all activities with times
+     * Each activity has three different times
      *
      * @return object
      */
