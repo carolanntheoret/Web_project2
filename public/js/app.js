@@ -6,26 +6,21 @@ burgerMenu.addEventListener('click', function() {
   dropdownMenu.classList.toggle('is-open');
 });
 
+// Used for the festival menu in the navigation
+const festivalDropdown = document.querySelector(".dropdown-festival");
+const festivalDropdownContent = document.querySelector(".dropdown-content-festival");
 
+festivalDropdown.addEventListener('click', function() {
+    festivalDropdownContent.classList.toggle('show');
+});
 
+// Used for the Icon user in the navigation
 const headIcon = document.querySelector("#userId");
 const dropdownContent = document.querySelector(".dropdown-content1");
 
 headIcon.addEventListener('click', function() {
     dropdownContent.classList.toggle('show');
-    console.log(dropdownContent)
 });
-
-
-
-// // Fermer le dropdown si l'utilisateur clique en dehors de celui-ci
-// window.addEventListener('click', function(event) {
-//     if (!event.target.matches('#userImg') && !event.target.matches('.headIcon')) {
-//         if (dropdownContent.classList.contains('show')) {
-//             dropdownContent.classList.remove('show');
-//         }
-//     }
-// });
 //end Navigation
 
 const member_selected = document.getElementById("member");
