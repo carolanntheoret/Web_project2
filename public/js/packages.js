@@ -11,7 +11,6 @@ function displayPurchase(data)
 
     if(Number.isInteger(data))
     {
-
         fetch(`get-pass/${data}`).then(reply => reply.json()).then(result => {
             pass.value = result
             setTimeout(createForm(pass.value.price, pass.value.name, 0), 100);
@@ -55,7 +54,7 @@ function createForm(html_price, pass_name, qtt)
         select.appendChild(option)
     }
 
-    const quantity = document.querySelector('.mask form div select')
+    const quantity = document.querySelector('.quantity')
     quantity.addEventListener('change', (e) => {
         price.value = (html_price * quantity.value).toFixed(2)
     })

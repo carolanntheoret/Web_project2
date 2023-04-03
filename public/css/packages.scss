@@ -246,20 +246,27 @@ h1
     height: 100vh;
     justify-content: center;
     align-items: center;
+
+    img
+    {
+        max-width: 100px;
+        max-height: 100px;
+    }
 }
 
 .buy
 {
     position: relative;
-    width: 40%;
-    height: 50%;
-    background-color: white;
+    width: 50%;
+    height: 55%;
+    background-color: rgba(206, 218, 218, 0.9);
     border-radius: 20px;
+    border: 7px solid rgba(31, 40, 51, 0.6);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    padding: 70px;
+    padding: 20px;
 }
 
 .purchase
@@ -292,4 +299,14 @@ h1
     border: none;
     font-weight: 500;
     padding: 15px 30px;
+}
+
+.max
+{
+    font-size: 25px;
+}
+
+.buy .submit
+{
+text-decoration: none;
 }

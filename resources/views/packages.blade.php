@@ -52,22 +52,22 @@
             </section>
 
             <div class="mask">
+
                 <div class="buy" v-show="!lessThanFive">
+                    <img src="<?= asset('/images/Mascotte_logo.svg') ?>" alt="">
                     <p class="close" @@click="close()">X</p>
-                    <p>You already reach maximum number of this pass</p>
+                    <p class="max">You have reached the maximum quantity for this package</p>
+                    <a class="submit" href="/my-tickets">My Tickets</a>
                 </div>
 
                 <form class="buy" action="/reservation" method="post" v-show="lessThanFive">
                     @csrf
+                    <img src="<?= asset('/images/Mascotte_logo.svg') ?>" alt="">
                     <p class="close" @@click="close()">X</p>
-                    <h2>Buy @{{ pass.name }}</h2>
-                    <div>
-                        <span>Quantity : </span>
-                        <select class="quantity" name="quantity"></select>
-                    </div>
+                    <h2>BUY @{{ pass.name }}</h2>
 
-                    <div class="oneDay">
-                        <select name="first_day">
+                    <div class="oneDay" v-if="pass.id == 1">
+                        Day : <select name="first_day">
                             <option value="2023-06-02">Friday</option>
                             <option value="2023-06-03">Saturday</option>
                             <option value="2023-06-04">Sunday</option>
@@ -75,27 +75,32 @@
                         <input type="hidden" name="second_day" value="1970-01-01">
                     </div>
 
-                    {{-- <div class="twoDays">
+                    <div class="twoDays" v-if="pass.id == 2">
                         <input type="hidden" name="first_day" value="2023-06-02">
-                        <select name="second_day">
+                        Day : <select name="second_day">
                             <option value="2023-06-03">Saturday</option>
                             <option value="2023-06-04">Sunday</option>
                         </select>
                     </div>
 
-                    <div class="weekend">
+                    <div class="weekend" v-if="pass.id == 3">
                         <input type="hidden" name="first_day" value="2023-06-03">
                         <input type="hidden" name="second_day" value="2023-06-04">
                     </div>
 
-                    <div class="premium">
+                    <div class="premium" v-if="pass.id == 4">
                         <input type="hidden" name="first_day" value="2023-06-02">
                         <input type="hidden" name="second_day" value="2023-06-04">
-                    </div> --}}
+                    </div>
+
+                    <div>
+                        <span>Quantity : </span>
+                        <select class="quantity" name="quantity"></select>
+                    </div>
 
                     <input class="hidden_id" type="hidden" name="id">
-                    <h3 class="totalPrice">Price : $@{{ price }}</h3>
-                    <input class="submit" type="submit" value="Purchase">
+                    <h3 class="totalPrice">Total : $@{{ price }}</h3>
+                    <input class="submit" type="submit" value="PURCHASE">
                 </form>
             </div>
         </main>
