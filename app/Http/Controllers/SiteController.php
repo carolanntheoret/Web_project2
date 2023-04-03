@@ -49,6 +49,7 @@ class SiteController extends Controller
      */
     public function showPackage()
     {
+        if(!Auth::check()) return redirect('user-zone');
         return view('packages', [
             'title' => 'HIFF | Packages',
             'actif' => 'packages',

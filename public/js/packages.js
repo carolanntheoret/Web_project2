@@ -12,7 +12,6 @@ function displayPurchase(data)
     if(Number.isInteger(data))
     {
         fetch(`get-pass/${data}`).then(reply => reply.json()).then(result => {
-            console.log(result)
             pass.value = result
             setTimeout(createForm(pass.value.price, pass.value.name, 0), 100);
         })
@@ -22,7 +21,6 @@ function displayPurchase(data)
         if(data["quantity"] >= 5) lessThanFive.value = false
         else
         {
-            console.log(data)
             pass.value = data
             createForm(data["price"], data["name"], parseInt(data["quantity"]))
         }

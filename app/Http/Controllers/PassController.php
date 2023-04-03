@@ -17,6 +17,6 @@ class PassController extends Controller
     public function getPass(Request $request)
     {
         if(!Auth::check()) return back('/');
-        echo json_encode(Pass::select('id', 'name', 'price')->where('id', '=', $request->id)->first());
+        echo json_encode(Pass::select('id AS pass_id', 'name', 'price')->where('id', '=', $request->id)->first());
     }
 }
