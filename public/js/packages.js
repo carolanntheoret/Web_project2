@@ -32,7 +32,7 @@ function createForm(html_price, pass_name, qtt)
     lessThanFive.value = true
 
     if(qtt == 0) price.value = (html_price).toFixed(2)
-    else price.value = (html_price * qtt).toFixed(2)
+    else price.value = (html_price).toFixed(2)
     name.value = pass_name
 
     const id = document.querySelector('.hidden_id')
