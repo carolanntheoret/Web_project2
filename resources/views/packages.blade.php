@@ -66,7 +66,7 @@
                     <p class="close" @@click="close()">X</p>
                     <h2>BUY @{{ pass.name }}</h2>
 
-                    <div class="oneDay" v-if="pass.id == 1">
+                    <div class="oneDay" v-if="pass.pass_id == 1">
                         Day : <select name="first_day">
                             <option value="2023-06-02">Friday</option>
                             <option value="2023-06-03">Saturday</option>
@@ -75,7 +75,7 @@
                         <input type="hidden" name="second_day" value="1970-01-01">
                     </div>
 
-                    <div class="twoDays" v-if="pass.id == 2">
+                    <div class="twoDays" v-if="pass.pass_id == 2">
                         <input type="hidden" name="first_day" value="2023-06-02">
                         Day : <select name="second_day">
                             <option value="2023-06-03">Saturday</option>
@@ -83,12 +83,12 @@
                         </select>
                     </div>
 
-                    <div class="weekend" v-if="pass.id == 3">
+                    <div class="weekend" v-if="pass.pass_id == 3">
                         <input type="hidden" name="first_day" value="2023-06-03">
                         <input type="hidden" name="second_day" value="2023-06-04">
                     </div>
 
-                    <div class="premium" v-if="pass.id == 4">
+                    <div class="premium" v-if="pass.pass_id == 4">
                         <input type="hidden" name="first_day" value="2023-06-02">
                         <input type="hidden" name="second_day" value="2023-06-04">
                     </div>
