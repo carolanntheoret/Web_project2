@@ -3,7 +3,6 @@ body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fbf7ea;
   background-color: #222222;
-  padding-top: 6rem;
 }
 body .mainBlock {
   border: 1px solid #fefed5;
@@ -366,12 +365,106 @@ h2 {
 .tickets::after {
   content: "";
   position: absolute;
-  /* to position the pseudo-element relative to the .tickets div */
   border: 7px solid #fbf7ea;
   top: 71px;
   right: -73px;
   bottom: -63px;
   left: 118px;
   z-index: -1;
-  /* to make sure the border is behind the .tickets div */
+}
+
+@media (min-width: 1024px) and (max-width: 1668px) {
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .contenu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  .schedule {
+    width: 30%;
+    margin-right: 2%;
+  }
+  .small-item,
+  .image {
+    width: 45%;
+    margin-left: 2%;
+  }
+  .img1 {
+    height: 450px;
+    width: 100%;
+  }
+  .small-img,
+  .med-img {
+    height: 250px;
+    width: 100%;
+  }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .contenu {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 100px;
+  }
+  .schedule {
+    width: 40%;
+    margin-right: 2%;
+  }
+  .small-item,
+  .image {
+    width: 55%;
+    margin-left: 2%;
+  }
+  .img1 {
+    height: 350px;
+    width: 100%;
+  }
+  .small-img,
+  .med-img {
+    height: 200px;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .contenu {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    margin-top: 100px;
+    flex-direction: column;
+  }
+  .schedule,
+  .small-item,
+  .image {
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+  .img1 {
+    height: 250px;
+    width: 100%;
+  }
+  .small-img,
+  .med-img {
+    height: 150px;
+    width: 100%;
+  }
 }/*# sourceMappingURL=schedule.css.map */
