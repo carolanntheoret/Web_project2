@@ -110,7 +110,6 @@
   display: inline-block;
   padding: 10px 20px;
   margin-left: auto;
-  /* show the dropdown*/
 }
 @media screen and (max-width: 835px) {
   .navigation #headBlock .headContent .headLinks .headList {
@@ -140,22 +139,36 @@
   color: #fbf7ea;
   font-size: 1.5rem;
 }
-.navigation #headBlock .headContent .headLinks .headList .dropdown {
+.navigation #headBlock .headContent .headLinks .headList .dropdown-festival {
   position: relative;
   display: inline-block;
   width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
-.navigation #headBlock .headContent .headLinks .headList .dropdown-content {
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
+.navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival {
   display: none;
   position: absolute;
   z-index: 10;
   padding: 5px 0;
+  right: 0;
+  top: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  min-width: 50px;
 }
-.navigation #headBlock .headContent .headLinks .headList .dropdown-content a {
+.navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival.show {
+  display: flex;
+  top: 4vh;
+  left: -4vw;
+}
+@media screen and (max-width: 835px) {
+  .navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival.show {
+    display: contents;
+  }
+}
+.navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival a {
   display: block;
   width: -webkit-fit-content;
   width: -moz-fit-content;
@@ -167,16 +180,8 @@
   border-top: #fbf7ea;
   padding: 3%;
 }
-.navigation #headBlock .headContent .headLinks .headList .dropdown-content a:hover {
+.navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival a:hover {
   text-decoration: underline;
-}
-.navigation #headBlock .headContent .headLinks .headList .dropdown:hover .dropdown-content {
-  display: block;
-}
-@media screen and (max-width: 835px) {
-  .navigation #headBlock .headContent .headLinks .headList .dropdown:hover .dropdown-content {
-    display: contents;
-  }
 }
 .navigation #headBlock .headContent .headLinks .mainBtn {
   background: linear-gradient(to right, #f54674, #f348a4);

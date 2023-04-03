@@ -15,9 +15,9 @@
             <ul class="headLinks fw-semibold">
               <li class="headList"><a @if(isset($actif) && $actif=='homepage') class="actif" @endif href="/">Home</a></li>
               <li class="headList">
-                <div class="dropdown">
+                <div class="dropdown-festival">
                   <a @if(isset($actif) && $actif=='packages' || isset($actif) && $actif=='schedule') class="actif" @endif>Festival</a>
-                  <div class="dropdown-content">
+                  <div class="dropdown-content-festival">
                     <a href="/packages">Packages</a>
                     <a href="/schedule">Schedule</a>
                   </div>

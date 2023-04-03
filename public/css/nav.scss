@@ -131,7 +131,6 @@ $almost-black: #222222;
                     background-color: $deep-blue;
 
                         &.active {
-                            // show the menu on active state
                             display: block;
                         }
                     }
@@ -169,27 +168,34 @@ $almost-black: #222222;
                         font-size: 1.5rem;
                     }
 
-                    .dropdown {
+                    .dropdown-festival {
                         position: relative;
                         display: inline-block;
                         width: min-content;
                     }
 
-                    .dropdown-content {
-                        // display: none;
-                        // padding: 10px 5px;
-                        // text-decoration: none;
-                        // z-index: 10;
-                         transform: translateX(100%);
-                         transition: transform 0.3s ease-in-out;
+                    .dropdown-content-festival {
                         display: none;
                         position: absolute;
                         z-index: 10;
                         padding: 5px 0;
+                        right: 0;
+                        top: 0;
+                        width: fit-content;
+                        min-width: 50px;
 
+                    &.show{
+                        display: flex;
+                        top: 4vh;
+                        left: -4vw;
+
+                        @media screen and (max-width: 835px) {
+                             display: contents;
+                              }
+                      }
                     }
 
-                    .dropdown-content a {
+                    .dropdown-content-festival a {
                         display: block;
                         width: fit-content;
                         border-radius: 100%;
@@ -201,17 +207,8 @@ $almost-black: #222222;
                     }
 
 
-                    .dropdown-content a:hover {
+                    .dropdown-content-festival a:hover {
                         text-decoration: underline;
-                    }
-
-                    /* show the dropdown*/
-                    .dropdown:hover .dropdown-content {
-                        display: block;
-
-                        @media screen and (max-width: 835px) {
-                        display: contents;
-                          }
                     }
                 }
 
@@ -288,7 +285,6 @@ $almost-black: #222222;
                         max-width: 40px;
                     }
               }
-
             }
 
             .dropdown-content1 {
@@ -305,7 +301,6 @@ $almost-black: #222222;
                 display: flex;
                 top: 7vh;
               }
-
             }
 
             .dropdown-content1 a {
@@ -326,7 +321,6 @@ $almost-black: #222222;
             }
           }
     }
-
 
     .footerBlock {
         display: flex;
@@ -423,132 +417,3 @@ $almost-black: #222222;
         padding: 0vh 2vw 0vh 10vw;
     }
 }
-
-// .headIcon {
-//     align-items: center;
-//     display: flex;
-//     margin-left: auto;
-//     visibility: visible;
-
-
-//     .dropdown {
-//       position: relative;
-//       display: flex;
-//       padding: 10px 20px;
-
-//       @media screen and (max-width: 390px) {
-//         padding: 10px 10px;
-//     }
-
-//       #userId {
-//         color: #222222;
-//         position: absolute;
-//         font-size: 28px;
-//         font-weight: bold;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, -50%);
-//       }
-
-//       #userImg,
-//       #userNone {
-//         width: 50px;
-//             @media screen and (max-width: 390px) {
-//                 width: 40px;
-//             }
-//       }
-//     }
-
-//     .dropdown-content {
-//       display: none;
-//       position: absolute;
-//       z-index: 10;
-//       border-radius: 20%;
-//       background-color: $deep-blue;
-//     }
-
-//     .dropdown-content a {
-//       color: $almost-white;
-//       font-size:medium;
-//       padding: 5px 5px;
-//       text-decoration: none;
-//       display: block;
-//       border-radius: 100%;
-//       min-width: 8vw;
-//       width: fit-content;
-//       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-//       text-align: center;
-//     }
-
-//     .dropdown-content a:hover {
-//       background-color: $almost-white;
-//       color: $deep-blue;
-//     }
-
-//     /* Ajout des styles pour le hover */
-//     .dropdown:hover .dropdown-content {
-//       display: block;
-//     }
-//     .dropdown:hover #userImg {
-//       background-color: $deep-blue;
-//     }
-//     .dropdown:hover #userId {
-//       background-color: $deep-blue;
-
-//     }
-//     .dropdown:hover .headIcon {
-//         display: none;
-//       }
-//   }
-
-
-                // .headBtn button{
-                //     background: linear-gradient(to right, $reddish-pink, $pink);
-                //     padding: 1.1vh 2vw 1.3vh;
-                //     font-size: 1.5rem;
-                //     text-align: center;
-                //     text-decoration: none;
-                //     border-radius: 24px;
-                //     //margin: auto;
-                //     cursor: pointer;
-                //     color: $almost-white;
-                //     border: none;
-                //     flex-wrap: nowrap;
-                //     margin-left: auto;
-                //     transition: background 0.3s ease-in-out;
-                //     position: relative;
-                //     overflow: hidden;
-                //     z-index: 10001;
-                //   }
-                // .headBtn button:hover {
-                //     background: linear-gradient(to left, $reddish-pink, $pink);
-                //   }
-
-                //   .headBtn button a {
-                //     color: $almost-white;
-                //     text-decoration: none;
-                //     z-index: 10002;
-                //    }
-
-                //   .headBtn button::after {
-                //     content: "";
-                //     position: absolute;
-                //     top: 50%;
-                //     left: 50%;
-                //     width: 0;
-                //     height: 0;
-                //     background: radial-gradient(circle at center, #de3f69,#de4396,);
-                //     border-radius: 50%;
-                //     opacity: 0;
-                //     transform: translate(-50%, -50%);
-                //     transition: all 0.5s cubic-bezier(0.5, 0, 0.5, 1);
-                //     z-index: -9999;
-                // }
-
-                // .headBtn:hover::after {
-                //     width: 300px;
-                //      height: 300px;
-                //      opacity: 1;
-                // }
-
-
