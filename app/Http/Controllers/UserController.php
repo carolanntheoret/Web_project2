@@ -26,8 +26,8 @@ class UserController extends Controller
         ]);
 
         if(!Auth::attempt($request->only('email', 'password'))) return back()->with('error', "incorrect informations");
-        if(auth()->user()->admin == 1) return redirect('/admin')->with('You are logged in');
-        return redirect('/my-tickets')->with('You are logged in');
+        if(auth()->user()->admin == 1) return redirect('/admin')->with('success', 'You are logged in');
+        return redirect('/my-tickets')->with('success', 'You are logged in');
     }
 
     /**
