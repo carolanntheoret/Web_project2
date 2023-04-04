@@ -391,7 +391,7 @@ h2 {
     margin-right: 2%;
   }
   .small-item,
-  .image {
+.image {
     width: 45%;
     margin-left: 2%;
   }
@@ -400,7 +400,7 @@ h2 {
     width: 100%;
   }
   .small-img,
-  .med-img {
+.med-img {
     height: 250px;
     width: 100%;
   }
@@ -423,7 +423,7 @@ h2 {
     margin-right: 2%;
   }
   .small-item,
-  .image {
+.image {
     width: 55%;
     margin-left: 2%;
   }
@@ -432,7 +432,7 @@ h2 {
     width: 100%;
   }
   .small-img,
-  .med-img {
+.med-img {
     height: 200px;
     width: 100%;
   }
@@ -452,8 +452,8 @@ h2 {
     flex-direction: column;
   }
   .schedule,
-  .small-item,
-  .image {
+.small-item,
+.image {
     width: 90%;
     margin-left: 5%;
     margin-right: 5%;
@@ -463,7 +463,7 @@ h2 {
     width: 100%;
   }
   .small-img,
-  .med-img {
+.med-img {
     height: 150px;
     width: 100%;
   }

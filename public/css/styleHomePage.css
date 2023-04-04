@@ -72,7 +72,7 @@ body .aboutSection .aboutInfo {
   width: 35%;
   float: left;
 }
-body .aboutSection .aboutInfo h1 {
+body .aboutSection .aboutInfo h2 {
   font-size: 70px;
   max-width: 25%;
 }
@@ -127,7 +127,7 @@ body .latestNews .titleLast span {
   font-size: 70px;
   margin-top: -10px;
 }
-body .latestNews .titleLast h1 {
+body .latestNews .titleLast h2 {
   font-size: 4rem;
 }
 body .latestNews .news {

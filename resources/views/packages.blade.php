@@ -4,7 +4,7 @@
             <h1>Passes & Packages</h1>
 
             <section class="package sectionOneThree">
-                <div class="img" style="background-image: url('<?= $packages[0]->image ?>')"></div>
+                <div class="img" style="background-image: url('<?= $packages[0]->image ?>')" role="img" aria-label="HIFF - One day pass image" alt="HIFF - One day pass image"></div>
                 <div class="infos">
                     <h3 class="fw-semibold">{{ $packages[0]->name }}</h3>
                     <p>{{ $packages[0]->description }}</p>
@@ -16,7 +16,7 @@
             </section>
 
             <section class="package sectionTwo">
-                <div class="img" style="background-image: url('<?= $packages[1]->image ?>')"></div>
+                <div class="img" style="background-image: url('<?= $packages[1]->image ?>')" role="img" aria-label="HIFF - Two days pass image" alt="HIFF - All the fun for: Two days pass image" ></div>
                 <div class="infos">
                     <h3 class="fw-semibold">{{ $packages[1]->name }}</h3>
                     <p>{{ $packages[1]->description }}</p>
@@ -28,7 +28,7 @@
             </section>
 
             <section class="package sectionOneThree">
-                <div class="img" style="background-image: url('<?= $packages[2]->image ?>')"></div>
+                <div class="img" style="background-image: url('<?= $packages[2]->image ?>')" role="img" aria-label="HIFF - Weekend pass image" alt="HIFF - Fun fot the: Weekend pass image"></div>
                 <div class="infos">
                     <h3 class="fw-semibold">{{ $packages[2]->name }}</h3>
                     <p>{{ $packages[2]->description }}</p>
@@ -40,7 +40,7 @@
             </section>
 
             <section class="package sectionFour">
-                <div class="img" style="background-image: url('<?= $packages[3]->image ?>')"></div>
+                <div class="img" style="background-image: url('<?= $packages[3]->image ?>')" role="img" aria-label="HIFF - Premium pass image" alt="HIFF -  Got it all: Premium pass image"></div>
                 <div class="infos">
                     <h3 class="fw-semibold">{{ $packages[3]->name }}</h3>
                     <p>{{ $packages[3]->description }}</p>
@@ -54,7 +54,7 @@
             <div class="mask">
 
                 <div class="buy" v-show="!lessThanFive">
-                    <img src="<?= asset('/images/Mascotte_logo.svg') ?>" alt="">
+                    <img src="<?= asset('/images/Mascotte_logo.svg') ?>" role="img" alt="Horizon Independent Film Festival image of the Mascot">
                     <p class="close" @@click="close()">X</p>
                     <p class="max">You have reached the maximum quantity for this package</p>
                     <a class="submit" href="/my-tickets">My Tickets</a>
@@ -62,7 +62,7 @@
 
                 <form class="buy" action="/reservation" method="post" v-show="lessThanFive">
                     @csrf
-                    <img src="<?= asset('/images/Mascotte_logo.svg') ?>" alt="">
+                    <img src="<?= asset('/images/Mascotte_logo.svg') ?>" role="img" alt="Horizon Independent Film Festival image of the Mascot">
                     <p class="close" @@click="close()">X</p>
                     <h2>BUY @{{ pass.name }}</h2>
 

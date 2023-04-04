@@ -13,7 +13,7 @@
                     <iframe
                         src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11183.131077394353!2d-73.5414854!3d45.5144514!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4cc91b03473b92c9%3A0x46e7ac7562cb8303!2sParc%20Jean-Drapeau!5e0!3m2!1sfr!2sca!4v1679504932932!5m2!1sfr!2sca"
                         width="822" height="685" style="border:0;" allowfullscreen="" loading="lazy"
-                        referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        referrerpolicy="no-referrer-when-downgrade" alt="show a google map of the Horizon Independent film festival location"></iframe>
                 </div>
             </div>
         </div>
