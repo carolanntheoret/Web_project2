@@ -35,7 +35,7 @@ class ActivityController extends Controller
         $activity->description = $request->description;
         $activity->image = $request->image;
 
-        if(!$activity->save()) return back()->with('create_activity_failed', 'Activity creation failed');
+        if(!$activity->save()) return back()->with('error', 'Activity creation failed');
 
         $hours = [$request->hour1, $request->hour2, $request->hour3];
         foreach($hours as $hour)
@@ -43,10 +43,10 @@ class ActivityController extends Controller
             $activity_hour = new ActivityHour();
             $activity_hour->activity_id = $activity->id;
             $activity_hour->begin_time = strtotime($request->day . ' ' . $hour);
-            if(!$activity_hour->save()) return back()->with('create_activity_failed', 'Activity creation failed');
+            if(!$activity_hour->save()) return back()->with('error', 'Activity creation failed');
         }
 
-        return back()->with('create_activity_successful', 'Activity created successfully');
+        return back()->with('success', 'Activity created successfully');
     }
 
     /**
@@ -80,7 +80,7 @@ class ActivityController extends Controller
             'image' => $request->image,
         ]);
 
-        if(!$success) return back()->with('modify_error', 'An error occurred while updating the activity');
+        if(!$success) return back()->with('error', 'An error occurred while updating the activity');
 
         $hours = [
             ['time' => $request->hour1, 'id' => $request->hour_id1],
@@ -94,10 +94,10 @@ class ActivityController extends Controller
                 'begin_time' => strtotime($request->day . ' ' . $hour["time"]),
             ]);
 
-            if(!$success) return back()->with('modify_error', 'An error occurred while updating the activity');
+            if(!$success) return back()->with('error', 'An error occurred while updating the activity');
         }
 
-        return back()->with('modify_success', 'Modification successful');
+        return back()->with('success', 'Modification successful');
     }
 
     /**
@@ -112,7 +112,7 @@ class ActivityController extends Controller
         if(!auth()->user()->admin) return back();
 
         $request->validate(['id' => 'required']);
-        if(Activity::where('id', $request->id)->delete()) return back()->with(['delete_successful', 'The activity has been deleted sucessfully']);
-        return back()->withInput(['delete_fail', 'An error occurred while deleting the activity']);
+        if(Activity::where('id', $request->id)->delete()) return back()->with(['success', 'The activity has been deleted sucessfully']);
+        return back()->withInput(['error', 'An error occurred while deleting the activity']);
     }
 }

@@ -25,9 +25,9 @@ class UserController extends Controller
             'password' => "required|max:255",
         ]);
 
-        if(!Auth::attempt($request->only('email', 'password'))) return back()->with('wrong_login', "incorrect informations");
+        if(!Auth::attempt($request->only('email', 'password'))) return back()->with('error', "incorrect informations");
         if(auth()->user()->admin == 1) return redirect('/admin');
-        return redirect('/user-zone');
+        return redirect('/my-tickets')->with('You are logged in');
     }
 
     /**
@@ -38,7 +38,7 @@ class UserController extends Controller
     public function disconnect()
     {
         auth()->logout(auth()->user());
-        return back()->with('logout_successful', 'Log out successfully');
+        return redirect('/user-zone')->with('success', 'Log out successfully');
     }
 
     /**
@@ -68,7 +68,7 @@ class UserController extends Controller
 
         $user->save();
 
-        if(Auth::check() && auth()->user()->admin == 1) return redirect('/admin')->with('creation_successful','Account created with success');
+        if(Auth::check() && auth()->user()->admin == 1) return redirect('/admin')->with('success','Account created with success');
 
         auth()->login($user);
         return redirect('my-tickets');
@@ -100,8 +100,8 @@ class UserController extends Controller
             'password' => $request->password == null ? DB::table('users')->select('password')->where('id', '=', $request->id)->first()->password : Hash::make($request->password)
         ]);
 
-        if(!$success) return back()->with('modify_error', 'An error occurred while updating the user');
-        return back()->with('modify_success', 'Modification successful');
+        if(!$success) return back()->with('error', 'An error occurred while updating the user');
+        return back()->with('success', 'Modification successful');
     }
 
     /**
@@ -113,8 +113,8 @@ class UserController extends Controller
     public function delete(Request $request)
     {
         if(!auth()->user()->admin) return back();
-        if(!User::find($request->id)) return back()->with('user_missing', "User not found");
-        if(User::where('id', $request->id)->delete()) return back()->with(['delete_successful', 'The account has been deleted sucessfully']);
-        return back()->withInput(['delete_fail', 'An error occurred while deleting the account']);
+        if(!User::find($request->id)) return back()->with('error', "User not found");
+        if(User::where('id', $request->id)->delete()) return back()->with(['success', 'The account has been deleted sucessfully']);
+        return back()->withInput(['error', 'An error occurred while deleting the account']);
     }
 }

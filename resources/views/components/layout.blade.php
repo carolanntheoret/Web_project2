@@ -16,6 +16,9 @@
 <body class="body">
 
     <x-header :actif="$actif"></x-header>
+    @php
+        $message->display();
+    @endphp
     {{ $slot }}
     <x-footer></x-footer>
 

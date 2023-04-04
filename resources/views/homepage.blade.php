@@ -1,4 +1,4 @@
-<x-layout :title="$title" :actif="$actif">
+<x-layout :title="$title" :actif="$actif" :message="$message">
     <link rel="stylesheet" href="<?= asset('css/styleHomePage.css') ?>">
     <main class="content">
 

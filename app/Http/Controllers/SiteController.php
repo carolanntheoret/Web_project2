@@ -25,6 +25,7 @@ class SiteController extends Controller
             'title' => 'HIFF | Home',
             'actif' => 'homepage',
             'news' =>  News::orderBy('created_at', 'desc')->limit(3)->get(),
+            'message' => new Message(),
         ]);
 
     }
@@ -39,6 +40,7 @@ class SiteController extends Controller
         return view('news', [
             'title' => 'HIFF |  News',
             'actif' => 'news',
+            'message' => new Message(),
         ]);
     }
 
@@ -58,6 +60,7 @@ class SiteController extends Controller
             'reservation2' => Reservation::select('pass_id', 'quantity', 'user_id', 'price', 'name')->join('passes', 'passes.id', '=', 'reservations.pass_id')->where('user_id', '=', auth()->user()->id)->where('pass_id', '=', 2)->first(),
             'reservation3' => Reservation::select('pass_id', 'quantity', 'user_id', 'price', 'name')->join('passes', 'passes.id', '=', 'reservations.pass_id')->where('user_id', '=', auth()->user()->id)->where('pass_id', '=', 3)->first(),
             'reservation4' => Reservation::select('pass_id', 'quantity', 'user_id', 'price', 'name')->join('passes', 'passes.id', '=', 'reservations.pass_id')->where('user_id', '=', auth()->user()->id)->where('pass_id', '=', 4)->first(),
+            'message' => new Message(),
         ]);
     }
 
@@ -68,7 +71,11 @@ class SiteController extends Controller
      */
     public function showContact()
     {
-        return view('contact', ['title' => 'HIFF | Contact Us', 'actif' => 'contact']);
+        return view('contact', [
+            'title' => 'HIFF | Contact Us',
+            'actif' => 'contact',
+            'message' => new Message(),
+        ]);
     }
 
     /**
@@ -91,6 +98,7 @@ class SiteController extends Controller
             "reservations" => DB::table('reservations')->join('passes', 'pass_id', '=', 'passes.id')->get(),
             'user' => auth()->user(),
             'actif' => 'spaceAdmin',
+            'message' => new Message(),
         ]);
     }
 
@@ -106,7 +114,8 @@ class SiteController extends Controller
         return view('spaceUser', [
             'title' => 'HIFF | Login',
             'user' => null,
-            'actif' => 'spaceUser'
+            'actif' => 'spaceUser',
+            'message' => new Message(),
         ]);
     }
 
@@ -122,6 +131,7 @@ class SiteController extends Controller
             'title' => 'HIFF | My Tickets',
             'actif' => 'myTickets',
             'passes' => DB::table('passes')->select(['passes.id', 'name', 'resume', 'image'])->join('reservations', 'passes.id', '=', 'pass_id')->where('user_id', '=', Auth::user()->id)->get(),
+            'message' => new Message(),
         ]);
     }
 
@@ -136,6 +146,7 @@ class SiteController extends Controller
             'title' => 'HIFF | Schedule 2023',
             'actif' => 'schedule',
             'activities' => (new Activity)->getHours(),
+            'message' => new Message(),
         ]);
     }
 }

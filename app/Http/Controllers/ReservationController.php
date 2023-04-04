@@ -37,9 +37,9 @@ class ReservationController extends Controller
 
         if($reservation != NULL)
         {
-            if($reservation->quantity >= 5) return back()->with('max_quantity', 'You already have the maximum number of reservations authorized for this pass');
-            if(Reservation::where('id', '=', $reservation->id)->increment('quantity', $request->quantity)) return redirect('/my-tickets')->with('reservation_successful', 'Your reservation has been recorded sucessfully');
-            return back()->with('reservation_fail', 'Something went wrong when recording your reservation');
+            if($reservation->quantity >= 5) return back()->with('error', 'You already have the maximum number of reservations authorized for this pass');
+            if(Reservation::where('id', '=', $reservation->id)->increment('quantity', $request->quantity)) return redirect('/my-tickets')->with('success', 'Your reservation has been recorded sucessfully');
+            return back()->with('error', 'Something went wrong when recording your reservation');
         }
 
         $pass = new Reservation();
@@ -52,8 +52,8 @@ class ReservationController extends Controller
         $pass->created_at = date('Y-m-d H:i:s');
         $pass->updated_at = date('Y-m-d H:i:s');
 
-        if($pass->save()) return redirect('/my-tickets')->with('reservation_successful', 'Your reservation has been recorded sucessfully');
-        return back()->with('reservation_fail', 'Something went wrong when recording your reservation');
+        if($pass->save()) return redirect('/my-tickets')->with('success', 'Your reservation has been recorded sucessfully');
+        return back()->with('error', 'Something went wrong when recording your reservation');
     }
 
     /**
@@ -70,7 +70,7 @@ class ReservationController extends Controller
             'quantity' => 'required',
         ]);
 
-        if(!Reservation::find($request->reservation_id)) return back()->with('reservation_missing', "Reservation cannot be find");
+        if(!Reservation::find($request->reservation_id)) return back()->with('error', "Reservation cannot be find");
 
         $reservation = Reservation::where('id', '=', $request->reservation_id)->first();
 
@@ -80,8 +80,8 @@ class ReservationController extends Controller
         if($reservation->quantity <= $request->quantity) $success = Reservation::where('id', '=', $request->reservation_id)->delete();
         if($reservation->quantity > $request->quantity) $success = DB::table('reservations')->where('id', '=', $request->reservation_id)->decrement('quantity', $request->quantity);
 
-        if($success) return back()->with('cancel_success', 'Reservation has been canceled');
-        return back()->with('cancel_fail', 'An error occurred while cancelling the reservation');
+        if($success) return back()->with('success', 'Reservation has been canceled');
+        return back()->with('error', 'An error occurred while cancelling the reservation');
     }
 
     /**
@@ -102,8 +102,8 @@ class ReservationController extends Controller
             'closed_day' => $request->scond_day,
         ]);
 
-        if(!$success) return back()->with('reservation_modification_error', 'An error occurred while modifying the reservation');
-        return back()->with('reservation_modification_success', 'The modification ont he reservation is successful');
+        if(!$success) return back()->with('error', 'An error occurred while modifying the reservation');
+        return back()->with('success', 'The modification ont he reservation is successful');
     }
 
     /**

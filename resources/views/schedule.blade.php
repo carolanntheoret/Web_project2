@@ -1,4 +1,4 @@
-<x-layout :title="$title" :actif="$actif">
+<x-layout :title="$title" :actif="$actif" :message="$message">
     <link rel="stylesheet" href="{{ asset('css/schedule.css') }}">
     <main class="content w-80 m-auto">
         <div class="contenu">
