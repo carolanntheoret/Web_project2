@@ -1,4 +1,4 @@
-<x-layout :title="$title" :actif="$actif" :message="$message">
+<x-layout :title="$title" :actif="$actif">
     <link rel="stylesheet" href="{{ asset('css/news.css') }}">
 
     <main class="w-80 m-auto">

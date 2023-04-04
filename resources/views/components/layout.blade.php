@@ -16,9 +16,14 @@
 <body class="body">
 
     <x-header :actif="$actif"></x-header>
-    @php
-        $message->display();
-    @endphp
+
+    @if (session('success'))
+        <div class="message success">{{ session('success') }}</div>
+    @endif
+    @if (session('error'))
+        <div class="message error">{{ session('error') }}</div>
+    @endif
+
     {{ $slot }}
     <x-footer></x-footer>
 
