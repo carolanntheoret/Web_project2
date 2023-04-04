@@ -16,8 +16,8 @@ class ActivityController extends Controller
      */
     public function create(Request $request)
     {
-        if(!auth()->check()) return redirect('/user-zone');
-        if(!auth()->user()->admin) return back();
+        if(!auth()->check()) return redirect('/user-zone')->with('error', "You're not logged in");
+        if(!auth()->user()->admin) return back()->with("error", "Access denied");
 
         $request->validate([
             'title' => 'required|max:255',
@@ -57,8 +57,8 @@ class ActivityController extends Controller
      */
     public function modify(Request $request)
     {
-        if(!auth()->check()) return redirect('/user-zone');
-        if(!auth()->user()->admin) return back();
+        if(!auth()->check()) return redirect('/user-zone')->with('error', "You're not logged in");
+        if(!auth()->user()->admin) return back()->with("error", "Access denied");
 
         $request->validate([
             'id' => 'required',
@@ -108,8 +108,8 @@ class ActivityController extends Controller
      */
     public function delete(Request $request)
     {
-        if(!auth()->check()) return redirect('/user-zone');
-        if(!auth()->user()->admin) return back();
+        if(!auth()->check()) return redirect('/user-zone')->with('error', "You're not logged in");
+        if(!auth()->user()->admin) return back()->with("error", "Access denied");
 
         $request->validate(['id' => 'required']);
         if(Activity::where('id', $request->id)->delete()) return back()->with(['success', 'The activity has been deleted sucessfully']);

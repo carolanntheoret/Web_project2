@@ -17,7 +17,7 @@ class ReservationController extends Controller
      */
     public function reserve(Request $request)
     {
-        if(!auth()->check()) return redirect('/');
+        if(!auth()->check()) return redirect('/')->with('error', "You're not logged in");
 
         $request->validate([
             'id' => 'required',
@@ -64,7 +64,7 @@ class ReservationController extends Controller
      */
     public function cancel(Request $request)
     {
-        if(!Auth::check()) return back();
+        if(!Auth::check()) return back()->with('error', "You're not logged in");
         $request->validate([
             'reservation_id' => 'required',
             'quantity' => 'required',
@@ -74,7 +74,7 @@ class ReservationController extends Controller
 
         $reservation = Reservation::where('id', '=', $request->reservation_id)->first();
 
-        if(auth()->user()->id != $reservation->user_id && auth()->user()->admin != 1) return back();
+        if(auth()->user()->id != $reservation->user_id && auth()->user()->admin != 1) return back()->with('error', "You're not allowed to cancel that reservation");
 
         $success = false;
         if($reservation->quantity <= $request->quantity) $success = Reservation::where('id', '=', $request->reservation_id)->delete();
@@ -114,7 +114,7 @@ class ReservationController extends Controller
      */
     public function getReservations(Request $request)
     {
-        if(!Auth::check() || Auth::user()->admin == 0) return redirect('/');
+        if(!Auth::check() || Auth::user()->admin == 0) return redirect('/')->with('error', "You're not logged in or you are not allowed to get these informations");
         echo json_encode(DB::table('reservations')->select(['reservations.id as reservation_id', 'user_id', 'pass_id', 'open_day', 'closed_day', 'quantity', 'name'])
                             ->join('passes', 'pass_id', '=', 'passes.id')
                             ->where('user_id', '=', $request->user_id)
@@ -129,7 +129,7 @@ class ReservationController extends Controller
      */
     public function getReservation(Request $request)
     {
-        if(!Auth::check()) return redirect('/');
+        if(!Auth::check()) return redirect('/')->with('error', "You're not logged in");
         echo json_encode(Reservation::join('passes', 'pass_id', '=', 'passes.id')
                                 ->select('reservations.id AS reservation_id', 'user_id', 'pass_id', 'open_day', 'closed_day', 'quantity', 'name', 'price', 'resume', 'description', 'image')
                                 ->where('pass_id', '=', $request->pass_id)

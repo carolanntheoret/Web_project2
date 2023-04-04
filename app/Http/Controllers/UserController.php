@@ -18,7 +18,7 @@ class UserController extends Controller
      */
     public function connect(Request $request)
     {
-        if(auth()->check()) return back();
+        if(auth()->check()) return back()->with('error', "You're already logged in");
 
         $request->validate([
             'email' => "required|max:255",
@@ -26,7 +26,7 @@ class UserController extends Controller
         ]);
 
         if(!Auth::attempt($request->only('email', 'password'))) return back()->with('error', "incorrect informations");
-        if(auth()->user()->admin == 1) return redirect('/admin');
+        if(auth()->user()->admin == 1) return redirect('/admin')->with('You are logged in');
         return redirect('/my-tickets')->with('You are logged in');
     }
 
@@ -49,7 +49,7 @@ class UserController extends Controller
      */
     public function create(Request $request)
     {
-        if(auth()->check() && auth()->user()->admin == 0) return back();
+        if(auth()->check() && auth()->user()->admin == 0) return back()->with('error', "You're not logged in or you are not allowed to get these informations");
 
         $request->validate([
             'first_name' => 'required|max:255',
@@ -71,7 +71,7 @@ class UserController extends Controller
         if(Auth::check() && auth()->user()->admin == 1) return redirect('/admin')->with('success','Account created with success');
 
         auth()->login($user);
-        return redirect('my-tickets');
+        return redirect('my-tickets')->with('success', 'Account created with success');
     }
 
     /**
@@ -82,8 +82,8 @@ class UserController extends Controller
      */
     public function modify(Request $request)
     {
-        if(!auth()->check()) return redirect('/user-zone');
-        if(!auth()->user()->admin) return back();
+        if(!auth()->check()) return redirect('/user-zone')->with('error', "You're not logged in");
+        if(!auth()->user()->admin) return back()->with("error", "Access denied");
 
         $request->validate([
             'first_name' => 'required|max:255',
@@ -112,7 +112,7 @@ class UserController extends Controller
      */
     public function delete(Request $request)
     {
-        if(!auth()->user()->admin) return back();
+        if(!auth()->user()->admin) return back()->with("error", "Access denied");
         if(!User::find($request->id)) return back()->with('error', "User not found");
         if(User::where('id', $request->id)->delete()) return back()->with(['success', 'The account has been deleted sucessfully']);
         return back()->withInput(['error', 'An error occurred while deleting the account']);

@@ -3,14 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Activity;
+use App\Models\Message;
 use App\Models\News;
 use App\Models\Pass;
 use App\Models\Reservation;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Session;
-
-use function Ramsey\Uuid\v1;
 
 class SiteController extends Controller
 {
