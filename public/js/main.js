@@ -52,7 +52,7 @@ const members = document.querySelectorAll('.member')
                     form += `<option value="${i}">${i}</option>`
                 }
                 form += `</select><input name="reservation_id" type="hidden" value="${reservation.reservation_id}"><span class="loginInput"><input type="submit" value="🚫" style:"outline: none;"></span></form>`
-                div.innerHTML = `<span><h1><strong>${reservation.name}</strong></h1></span><span><p>${reservation.open_day}-${reservation.closed_day}</p><p>Quantité: ${reservation.quantity}</p></span>Supprimer: ${form}`;
+                div.innerHTML = `<span><h1><strong>${reservation.name}</strong></h1></span><span><p>${reservation.open_day}-${reservation.closed_day}</p><p>Quantité: ${reservation.quantity}</p></span><span class="suppress">Supprimer: ${form}</span>`;
                 document.querySelector(".sectionReservation .listReservations").appendChild(div);
                 }
             })

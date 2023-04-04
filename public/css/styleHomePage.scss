@@ -1,15 +1,18 @@
 $reddish-pink: #f54674;
 $pink: #f348a4;
+$deep-blue: #1f2833;
+$almost-white: #fbf7ea;
+
 body {
     margin: 0;
 
     .firstSection {
-        margin-top: -59px;
         width: 100%;
-        height: 100vh;
+        height: 90vh;
+
         .festivalImage {
             width: 100%;
-            height: 100vh;
+            height: 90vh;
             background-size: cover;
             background-repeat: no-repeat;
             background-position: center;
@@ -36,6 +39,7 @@ body {
             border: 1px solid black;
         }
     }
+
     .downRow {
         display: flex;
         flex-direction: row;
@@ -50,79 +54,109 @@ body {
             border: 1px solid black;
         }
     }
+
     .aboutSection {
         display: flex;
         flex-direction: row;
         width: 100%;
         height: 100vh;
         align-items: center;
-        justify-content: center;
-        gap: 12%;
+        justify-content: space-between;
+        background-color: $deep-blue;
+        position: relative;
+        z-index: 2;
+
 
         .imageBack {
             position: relative;
+            left: 80px;
+            top: 96px;
 
             img {
-                margin: 125px 0px 0px 50px;
+
                 width: 850px;
                 height: 750px;
             }
         }
+
         .aboutInfo {
             display: flex;
             flex-direction: column;
             position: absolute;
             gap: 30px;
             left: 180px;
+
             width: 35%;
+            float: left;
 
             h1 {
-                font-size: 50px;
+                font-size: 70px;
                 max-width: 25%;
             }
         }
 
-        .borderBack {
+        .imageContainer {
+            width: 447px;
+            height: 560px;
             position: relative;
-            left: 0px;
-            top: 60px;
-            width: 450px;
-            height: 550px;
-            border: 5px solid whitesmoke;
+            float: right;
+            margin-right: 8%;
         }
-        .aboutImage img {
-            display: flex;
+
+        .imageBorder {
             position: absolute;
-            left: 1080px;
-            top: 1025px;
-            width: 400px;
-            height: 550px;
+            top: 60px;
+            right: -70px;
+            bottom: -70px;
+            left: 60px;
+            border: 7px solid #fbf7ea;
+            z-index: -1;
+        }
+
+        .aboutImage {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        .aboutImage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
         }
     }
+
     .latestNews {
         display: flex;
         flex-direction: column;
         width: 100%;
-        padding: 2.5% 0 4% 0;
+        padding: 4.5% 0 6% 0;
         background-color: #dff0f0;
         color: black;
         align-items: center;
 
         p {
-            max-width: 450px;
+            max-width: 445px;
         }
 
         .titleLast {
             display: flex;
             flex-direction: row;
             gap: 60px;
+            align-items: center;
+            margin-bottom: 45px;
 
             span {
                 transform: rotate(90deg);
-                font-size: 50px;
+                font-size: 70px;
                 margin-top: -10px;
             }
+
+            h1 {
+                font-size: 4rem;
+            }
         }
+
         .news {
             display: flex;
             flex-direction: row;
@@ -131,6 +165,7 @@ body {
             justify-content: center;
             margin-top: 25px;
             gap: 20%;
+
             .newsPicture {
                 display: flex;
                 align-self: auto;
@@ -140,12 +175,11 @@ body {
                 background-position: center;
                 position: relative;
             }
+
             .banner {
                 position: absolute;
                 top: 13px;
                 font-size: 25px;
-                font-family: "Trebuchet MS", "Lucida Sans Unicode",
-                    "Lucida Grande", "Lucida Sans", Arial, sans-serif;
                 font-weight: 600;
                 color: white;
                 align-items: center;
@@ -154,22 +188,32 @@ body {
                 height: 66px;
                 padding: 15px 55px 15px 35px;
                 background-color: #35d0ba;
+                text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
             }
         }
+
         .mainNews {
             margin-top: 0;
             max-width: 600px;
+
             .newsPicture {
                 width: 825px;
                 height: 450px;
             }
+
+            .title-main {
+                max-width: 800px !important;
+                width: 800px;
+                margin-top: 15px;
+            }
+
             .more {
                 background: linear-gradient(to right, $reddish-pink, $pink);
-                font-size: 16px;
+                font-size: 1.5rem;
                 font-weight: bold;
                 text-align: center;
                 color: white;
-                padding: 2.5px 16px 5px 15px;
+                padding: 7.5px 41px 9px 36px;
                 text-decoration: none;
                 border-radius: 25px;
                 margin: auto;
@@ -178,11 +222,24 @@ body {
 
                 &:hover {
                     background: linear-gradient(to left, $reddish-pink, $pink);
-                    border: 2px solid black;
                 }
             }
         }
+
+        .secondary {
+            max-width: 440px;
+
+            a {
+                color: #1f2833;
+                text-decoration: none;
+            }
+
+            .title-sec {
+                margin-top: 5px;
+            }
+        }
     }
+
     .showEvents {
         display: grid;
         grid-column: 4;
@@ -192,6 +249,7 @@ body {
         padding: 150px 75px 150px 75px;
         align-items: center;
         background-color: #2D2D2D;
+
         .eventTop {
             display: flex;
             flex-direction: row;
@@ -203,37 +261,52 @@ body {
             flex-direction: row;
             gap: 0;
         }
+
         .event {
             width: 25%;
-            height: 42.5vh;
-            padding-left: 55px;
-            padding-top: 100px;
+            height: 55vh;
+            padding: 0 30px;
             color: black;
             background-color: #FBF7EA;
+            position: relative;
+
+            .book-ticket {
+                position: absolute;;
+                font-size: x-large;
+               bottom: 60px;
+               p {
+                color: #A8A394;
+               }
+            }
         }
 
         p {
             margin-top: 25px;
+            font-size: large;
+            color: #A8A394;
         }
 
         a {
-            color: rgb(1, 206, 221);
+            color: $reddish-pink;
             text-decoration: none;
+            font-size: xx-large;
+
         }
 
         .book {
             margin: 0 0 2.5px 25px;
-            width: 25px;
-            height: 20px;
+            width: 57px;
+            height: 38px;
         }
 
         .image {
             width: 25%;
-            height: 42.5vh;
+            height: 55vh;
             background-color: rgb(190, 190, 190);
             background-size: cover;
             background-position: center;
         }
+
         span {
             width: 150px;
             height: 200px;

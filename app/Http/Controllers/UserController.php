@@ -105,7 +105,7 @@ class UserController extends Controller
     }
 
     /**
-     * Delete a user !
+     * Delete a user
      *
      * @param Request $request
      * @return object
@@ -115,6 +115,6 @@ class UserController extends Controller
         if(!auth()->user()->admin) return back();
         if(!User::find($request->id)) return back()->with('user_missing', "User not found");
         if(User::where('id', $request->id)->delete()) return back()->with(['delete_successful', 'The account has been deleted sucessfully']);
-        return back()->withInput(['delete_fail', 'AN error occurred while deleting the account']);
+        return back()->withInput(['delete_fail', 'An error occurred while deleting the account']);
     }
 }
