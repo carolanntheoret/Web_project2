@@ -110,6 +110,7 @@
   display: inline-block;
   padding: 10px 20px;
   margin-left: auto;
+  cursor: pointer;
 }
 @media screen and (max-width: 835px) {
   .navigation #headBlock .headContent .headLinks .headList {
@@ -142,7 +143,6 @@
 .navigation #headBlock .headContent .headLinks .headList .dropdown-festival {
   position: relative;
   display: inline-block;
-  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
@@ -153,7 +153,6 @@
   padding: 5px 0;
   right: 0;
   top: 0;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   min-width: 50px;
@@ -161,16 +160,19 @@
 .navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival.show {
   display: flex;
   top: 4vh;
-  left: -4vw;
+  left: -43px;
 }
 @media screen and (max-width: 835px) {
   .navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival.show {
     display: contents;
   }
 }
+.navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival.show a:hover {
+  color: #35d0ba;
+  text-decoration: none;
+}
 .navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival a {
   display: block;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 100%;
@@ -204,6 +206,7 @@
   align-items: center;
   display: flex;
   visibility: visible;
+  transition: transform 0.5s ease-in-out;
 }
 .navigation #headBlock .headIcon .dropdown {
   position: relative;
@@ -232,6 +235,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 @media screen and (max-width: 500px) {
   .navigation #headBlock .headIcon .dropdown #userId {
@@ -249,7 +253,7 @@
 }
 @media screen and (max-width: 414px) {
   .navigation #headBlock .headIcon .dropdown #userImg,
-.navigation #headBlock .headIcon .dropdown #userNone {
+  .navigation #headBlock .headIcon .dropdown #userNone {
     max-width: 40px;
   }
 }
@@ -260,14 +264,14 @@
   border-radius: 20%;
   right: 0;
   top: 0;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   min-width: 50px;
 }
 .navigation #headBlock .headIcon .dropdown-content1.show {
   display: flex;
-  top: 7vh;
+  top: 6vh;
+  left: -70px;
 }
 .navigation #headBlock .headIcon .dropdown-content1 a {
   color: #fbf7ea;
@@ -283,6 +287,9 @@
 }
 .navigation #headBlock .headIcon .dropdown-content1 a:hover {
   color: #35d0ba;
+}
+.navigation #headBlock .headIcon:hover {
+  transform: scale(1.1);
 }
 .navigation .footerBlock {
   display: flex;
@@ -313,12 +320,19 @@
   display: flex;
   flex-direction: column;
   padding-left: 2vw;
+  margin-left: 50px;
 }
 .navigation .footerBlock #footerSection #footerText {
   display: flex;
   flex-direction: column;
   color: #222222;
   max-width: 70%;
+  text-align: justify;
+}
+@media screen and (min-width: 200px) and (max-width: 835px) {
+  .navigation .footerBlock #footerSection #footerText h2 {
+    text-align: center;
+  }
 }
 .navigation .footerBlock #footerSection #footerText #HIFF {
   overflow: hidden;
@@ -328,34 +342,58 @@
     display: none;
   }
 }
-.navigation .footerBlock #footerSection .socialIcons {
-  width: 50%;
-}
 .navigation .footerBlock #footerSection .socialIcons ul {
-  display: flex;
-  list-style-type: none;
+  list-style: none;
+  margin-top: 25px;
   padding: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 38%;
+}
+@media screen and (min-width: 500px) and (max-width: 835px) {
+  .navigation .footerBlock #footerSection .socialIcons ul {
+    margin-top: 36vh;
+    margin-left: -4vw;
+  }
 }
 @media screen and (min-width: 200px) and (max-width: 500px) {
   .navigation .footerBlock #footerSection .socialIcons ul {
     position: absolute;
-    margin-top: 37vh;
-    margin-left: 7vw;
+    margin-top: 41vh;
+    margin-left: -2vw;
     z-index: 10;
   }
 }
+.navigation .footerBlock #footerSection .socialIcons .icons {
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  transition: all 0.3s ease-in-out;
+}
+.navigation .footerBlock #footerSection .socialIcons .icons:hover {
+  transform: scale(1.2);
+}
+.navigation .footerBlock #footerSection .socialIcons img {
+  width: 100%;
+  height: 100%;
+}
 .navigation .footerBlock .footerLinks {
-  margin: auto;
+  margin: 50px 0;
   flex-direction: column;
   margin-bottom: 1.5em;
   -webkit-margin-start: auto;
           margin-inline-start: auto;
   text-align: end;
 }
+@media screen and (min-width: 200px) and (max-width: 835px) {
+  .navigation .footerBlock .footerLinks {
+    margin-bottom: 75px;
+  }
+}
 .navigation .footerBlock .footerLinks .footerList {
   display: block;
   padding-bottom: 2.5vh;
-  width: 150px;
+  width: 166px;
 }
 .navigation .footerBlock .footerLinks .footerList a {
   text-decoration: none;

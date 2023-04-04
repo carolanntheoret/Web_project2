@@ -43,20 +43,23 @@ body .downRow span {
   height: 100%;
   border: 1px solid black;
 }
+body .about {
+  position: relative;
+}
 body .aboutSection {
   display: flex;
   flex-direction: row;
   width: 100%;
   height: 100vh;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around;
   background-color: #1f2833;
   position: relative;
   z-index: 2;
 }
 body .aboutSection .imageBack {
   position: relative;
-  left: 80px;
+  left: -30px;
   top: 96px;
 }
 body .aboutSection .imageBack img {
@@ -68,13 +71,19 @@ body .aboutSection .aboutInfo {
   flex-direction: column;
   position: absolute;
   gap: 30px;
-  left: 180px;
-  width: 35%;
+  left: 60px;
+  top: 110px;
+  width: 652px;
   float: left;
+  max-width: 652px;
+  overflow: hidden;
 }
 body .aboutSection .aboutInfo h1 {
   font-size: 70px;
   max-width: 25%;
+}
+body .aboutSection .aboutInfo p {
+  text-align: justify;
 }
 body .aboutSection .imageContainer {
   width: 447px;
@@ -174,6 +183,17 @@ body .latestNews .mainNews .title-main {
   max-width: 800px !important;
   width: 800px;
   margin-top: 15px;
+  color: #222222;
+}
+body .latestNews .mainNews .title-main:hover {
+  color: #646363;
+  cursor: pointer;
+}
+body .latestNews .mainNews .subtitle-main {
+  max-width: 800px !important;
+  width: 800px;
+  margin-top: 15px;
+  color: #222222;
 }
 body .latestNews .mainNews .more {
   background: linear-gradient(to right, #f54674, #f348a4);
@@ -200,6 +220,10 @@ body .latestNews .secondary a {
 }
 body .latestNews .secondary .title-sec {
   margin-top: 5px;
+}
+body .latestNews .secondary .title-sec a:hover {
+  color: #646363;
+  cursor: pointer;
 }
 body .showEvents {
   display: grid;
@@ -236,6 +260,12 @@ body .showEvents .event .book-ticket {
 }
 body .showEvents .event .book-ticket p {
   color: #A8A394;
+}
+body .showEvents .event .book-ticket a img {
+  transition: transform 0.2s ease-in-out;
+}
+body .showEvents .event .book-ticket a img:hover {
+  transform: translateX(5px);
 }
 body .showEvents p {
   margin-top: 25px;

@@ -9,17 +9,19 @@
         </section>
 
         <section class="aboutSection" id="aboutSection">
-            <div class="imageBack"><img src="{{ asset('images/Path 2.png') }}" alt=""></div>
-            <div class="aboutInfo">
-                <h1 class="fw-semibold">ABOUT HIFF.</h1>
-                <p>Horizon Independent Film Festival (HIFF) is a celebration of the art and craft of independent cinema
-                    from around the world. Our mission is to showcase the most innovative and inspiring films, support
-                    emerging filmmakers, and foster a vibrant community of film lovers and industry professionals.</p>
-                <p>Each year, we curate a diverse and innovative program of films that represent the best in
-                    contemporary independent cinema. From narrative features and documentaries to short films and
-                    experimental works, our lineup is designed to challenge, entertain, and engage our audience.Join us
-                    for a week of unforgettable screenings, discussions, and events that explore the power of the
-                    cinematic medium to entertain, enlighten, and inspire. </p>
+            <div class="about">
+                <div class="imageBack"><img src="{{ asset('images/Path 2.png') }}" alt=""></div>
+                <div class="aboutInfo">
+                    <h1 class="fw-semibold">ABOUT HIFF.</h1>
+                    <p>Horizon Independent Film Festival (HIFF) is a celebration of the art and craft of independent cinema
+                        from around the world. Our mission is to showcase the most innovative and inspiring films, support
+                        emerging filmmakers, and foster a vibrant community of film lovers and industry professionals.</p>
+                    <p>Each year, we curate a diverse and innovative program of films that represent the best in
+                        contemporary independent cinema. From narrative features and documentaries to short films and
+                        experimental works, our lineup is designed to challenge, entertain, and engage our audience.Join us
+                        for a week of unforgettable screenings, discussions, and events that explore the power of the
+                        cinematic medium to entertain, enlighten, and inspire. </p>
+                </div>
             </div>
             <div class="imageContainer">
                 <div class="imageBorder"></div>
@@ -41,7 +43,7 @@
                         <div class="banner">UPCOMING</div>
                     </div>
                     <p class="fw-semibold fs-2 title-main">{{ $news[0]->title }}</p>
-                    <p class="title-main mb-5 fs-4">{{ $news[0]->subtitle }}</p>
+                    <p class="subtitle-main mb-5 fs-4">{{ $news[0]->subtitle }}</p>
                     <a href="/news/{{ $news[0]->id }}" class="more">MORE</a>
                 </div>
                 <div class="secondary">

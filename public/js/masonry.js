@@ -41,6 +41,6 @@ const bouton = document.querySelector(".button");
 bouton.addEventListener("click", () => {
     quantite += 10;
     display();
-    msnry.reloadItems();
     msnry.layout();
+    msnry.reloadItems();
 });

@@ -5,7 +5,7 @@
             </div>
             <div id="footerSection">
                 <div id="footerText">
-                    <h2>HIFF 2023</h2>
+                    <h2 class="fw-semibold">HIFF 2023</h2>
                     <p id="HIFF">
                         Horizon Independent Film Festival (HIFF) is a celebration of the art and craft of independent cinema from around the world. Our mission is to showcase the most innovative and inspiring films, support emerging filmmakers, and foster a vibrant community of film lovers and industry professionals. Join us for a week of unforgettable screenings, discussions, workshops, and events that explore the power of the cinematic medium to entertain, enlighten, and inspire.
                     </p>
@@ -28,10 +28,10 @@
 
             <ul class="footerLinks fw-semibold">
                 <li class="footerList"><a href="#aboutSection">About</a></li>
-                <li class="footerList"><a href="contact">Contact Us</a></li>
                 <li class="footerList"><a href="news">News</a></li>
+                <li class="footerList"><a href="contact">Contact</a></li>
                 <li class="footerList"><a href="packages">Packages </a></li>
-                <li class="footerList"><a href="schedule">2023 Schedule</a></li>
+                <li class="footerList"><a href="schedule">Schedule 2023</a></li>
             </ul>
         </div>
         <div>

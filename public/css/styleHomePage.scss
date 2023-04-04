@@ -2,6 +2,7 @@ $reddish-pink: #f54674;
 $pink: #f348a4;
 $deep-blue: #1f2833;
 $almost-white: #fbf7ea;
+$almost-black: #222222;
 
 body {
     margin: 0;
@@ -55,13 +56,17 @@ body {
         }
     }
 
+    .about {
+        position: relative;
+    }
+
     .aboutSection {
         display: flex;
         flex-direction: row;
         width: 100%;
         height: 100vh;
         align-items: center;
-        justify-content: space-between;
+        justify-content: space-around;
         background-color: $deep-blue;
         position: relative;
         z-index: 2;
@@ -69,7 +74,7 @@ body {
 
         .imageBack {
             position: relative;
-            left: 80px;
+            left: -30px;
             top: 96px;
 
             img {
@@ -84,14 +89,19 @@ body {
             flex-direction: column;
             position: absolute;
             gap: 30px;
-            left: 180px;
-
-            width: 35%;
+            left: 60px;
+            top: 110px;
+            width: 652px;
             float: left;
+            max-width: 652px;
+            overflow: hidden;
 
             h1 {
                 font-size: 70px;
                 max-width: 25%;
+            }
+            p{
+                text-align: justify;
             }
         }
 
@@ -205,6 +215,19 @@ body {
                 max-width: 800px !important;
                 width: 800px;
                 margin-top: 15px;
+                color: $almost-black;
+            }
+
+            .title-main:hover {
+                color: #646363;
+                cursor: pointer;
+            }
+
+            .subtitle-main {
+                max-width: 800px !important;
+                width: 800px;
+                margin-top: 15px;
+                color: $almost-black;
             }
 
             .more {
@@ -236,6 +259,10 @@ body {
 
             .title-sec {
                 margin-top: 5px;
+            }
+            .title-sec a:hover {
+                color: #646363;
+                cursor: pointer;
             }
         }
     }
@@ -276,6 +303,12 @@ body {
                bottom: 60px;
                p {
                 color: #A8A394;
+               }
+               a img{
+                transition: transform 0.2s ease-in-out;
+               }
+               a img:hover {
+                transform: translateX(5px);
                }
             }
         }
