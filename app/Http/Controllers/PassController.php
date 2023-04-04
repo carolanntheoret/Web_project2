@@ -17,6 +17,7 @@ class PassController extends Controller
     public function getPass(Request $request)
     {
         if(!Auth::check()) return back('/');
+        // AS pass_id is needed to avoid a conflict in packages page.
         echo json_encode(Pass::select('id AS pass_id', 'name', 'price')->where('id', '=', $request->id)->first());
     }
 }
