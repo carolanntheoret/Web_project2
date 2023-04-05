@@ -61,6 +61,7 @@
 }
 .navigation #headBlock .headContent .headLinks.is-open {
   display: block;
+  padding-bottom: 25px;
 }
 @media screen and (max-width: 1193px) {
   .navigation #headBlock .headContent .headLinks {
@@ -146,6 +147,17 @@
   width: -moz-min-content;
   width: min-content;
 }
+.navigation #headBlock .headContent .headLinks .headList .dropdown-festival a {
+  display: flex;
+  align-items: center;
+}
+.navigation #headBlock .headContent .headLinks .headList .dropdown-festival a .dropdown-arrow {
+  margin-left: 10px;
+  transition: transform 0.3s ease-in-out;
+}
+.navigation #headBlock .headContent .headLinks .headList .dropdown-festival a .dropdown-arrow.open {
+  transform: rotate(-180deg);
+}
 .navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival {
   display: none;
   position: absolute;
@@ -198,9 +210,27 @@
   border: none;
   flex-wrap: nowrap;
   margin-left: auto;
+  position: relative;
+  z-index: 1;
+}
+.navigation #headBlock .headContent .headLinks .mainBtn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: radial-gradient(circle at center, #de3f69, #de4396);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 20px;
+  z-index: -1;
+}
+.navigation #headBlock .headContent .headLinks .mainBtn:hover::before {
+  opacity: 1;
 }
 .navigation #headBlock .headContent .headLinks .mainBtn:hover {
-  background: linear-gradient(to left, #f54674, #f348a4);
+  text-decoration: none !important;
 }
 .navigation #headBlock .headIcon {
   align-items: center;
@@ -360,7 +390,7 @@
   .navigation .footerBlock #footerSection .socialIcons ul {
     position: absolute;
     margin-top: 41vh;
-    margin-left: -2vw;
+    margin-left: -6vw;
     z-index: 10;
   }
 }
@@ -404,6 +434,10 @@
 .navigation .footerBlock .footerLinks .footerList a:hover {
   color: #35d0ba;
 }
-.navigation #copyright-text {
-  padding: 0vh 2vw 0vh 10vw;
+.navigation .copyright {
+  background-color: #222222;
+  padding-bottom: 2px;
+}
+.navigation .copyright #copyright-text {
+  padding: 1vh 2vw 0vh 10vw;
 }/*# sourceMappingURL=nav.css.map */

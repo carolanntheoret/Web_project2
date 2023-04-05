@@ -293,4 +293,16 @@ body .showEvents span {
   width: 150px;
   height: 200px;
   background-color: black;
+}
+
+@media (min-width: 1193px) and (max-width: 1440px) {
+  .firstSection {
+    height: 82vh !important;
+  }
+  .firstSection .festivalImage {
+    background-size: contain !important;
+  }
+  .showEvents .event .book-ticket a {
+    font-size: x-large;
+  }
 }/*# sourceMappingURL=styleHomePage.css.map */

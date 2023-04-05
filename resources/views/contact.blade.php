@@ -1,6 +1,6 @@
 <x-layout :title="$title" :actif="$actif">
     <link rel="stylesheet" href="{{ asset('css/contact.css') }}">
-    <main class="w-80 m-auto mt-5">
+    <main class="w-80 m-auto mt-4">
         <div>
             <div class="contenu justify-content-around d-flex z-1">
                 <div class="contact-info">

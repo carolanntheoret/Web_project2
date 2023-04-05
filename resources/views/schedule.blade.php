@@ -9,7 +9,7 @@
                     <img src="{{ asset('images/line_header.png') }}" alt="Line Header" class="line-title">
                     <div class="mt-5">
                         <p>The Screening Room</p>
-                        <h3>{{ $activities[0]->title }}</h3>
+                        <h3 class="mb-3">{{ $activities[0]->title }}</h3>
                         <div class="d-flex justify-content-between hours">
                             <h4>{{ date('g:i A', $activities[0]->first_time) }}</h4>
                             <h4>{{ date('g:i A', $activities[0]->second_time) }}</h4>
@@ -18,7 +18,7 @@
                     </div>
                     <div class="mt-5">
                         <p>The Cinema Lounge</p>
-                        <h3>{{ $activities[1]->title }}</h3>
+                        <h3 class="mb-3">{{ $activities[1]->title }}</h3>
                         <div class="d-flex justify-content-between hours">
                             <h4>{{ date('g:i A', $activities[1]->first_time) }}</h4>
                             <h4>{{ date('g:i A', $activities[1]->second_time) }}</h4>
@@ -27,7 +27,7 @@
                     </div>
                     <div class="mt-5">
                         <p>The Grand Theater</p>
-                        <h3>{{ $activities[2]->title }}</h3>
+                        <h3 class="mb-3">{{ $activities[2]->title }}</h3>
                         <div class="d-flex justify-content-between hours">
                             <h4>{{ date('g:i A', $activities[2]->first_time) }}</h4>
                             <h4>{{ date('g:i A', $activities[2]->second_time) }}</h4>
@@ -40,7 +40,7 @@
                     <img src="{{ asset('images/line_header.png') }}" alt="Line Header" class="line-title">
                     <div class="mt-5">
                         <p>The Grand Theater</p>
-                        <h3>{{ $activities[3]->title }}</h3>
+                        <h3 class="mb-3">{{ $activities[3]->title }}</h3>
                         <div class="d-flex justify-content-between hours">
                             <h4>{{ date('g:i A', $activities[3]->first_time) }}</h4>
                             <h4>{{ date('g:i A', $activities[3]->second_time) }}</h4>
@@ -49,7 +49,7 @@
                     </div>
                     <div class="mt-5">
                         <p>The Screening Room</p>
-                        <h3>{{ $activities[4]->title }}</h3>
+                        <h3 class="mb-3">{{ $activities[4]->title }}</h3>
                         <div class="d-flex justify-content-between hours">
                             <h4>{{ date('g:i A', $activities[4]->first_time) }}</h4>
                             <h4>{{ date('g:i A', $activities[4]->second_time) }}</h4>
@@ -58,7 +58,7 @@
                     </div>
                     <div class="mt-5">
                         <p>The Cinema Lounge</p>
-                        <h3>{{ $activities[5]->title }}</h3>
+                        <h3 class="mb-3">{{ $activities[5]->title }}</h3>
                         <div class="d-flex justify-content-between hours">
                             <h4>{{ date('g:i A', $activities[5]->first_time) }}</h4>
                             <h4>{{ date('g:i A', $activities[5]->second_time) }}</h4>
@@ -67,7 +67,7 @@
                     </div>
                     <div class="mt-5">
                         <p>The Silver Screen</p>
-                        <h3>{{ $activities[6]->title }}</h3>
+                        <h3 class="mb-3">{{ $activities[6]->title }}</h3>
                         <div class="d-flex justify-content-between hours">
                             <h4>{{ date('g:i A', $activities[6]->first_time) }}</h4>
                             <h4>{{ date('g:i A', $activities[6]->second_time) }}</h4>
@@ -80,7 +80,7 @@
                     <img src="{{ asset('images/line_header.png') }}" alt="Line Header" class="line-title">
                     <div class="mt-5">
                         <p>The Cinema Lounge</p>
-                        <h3>{{ $activities[7]->title }}</h3>
+                        <h3 class="mb-3">{{ $activities[7]->title }}</h3>
                         <div class="d-flex justify-content-between hours">
                             <h4>{{ date('g:i A', $activities[7]->first_time) }}</h4>
                             <h4>{{ date('g:i A', $activities[7]->second_time) }}</h4>
@@ -89,7 +89,7 @@
                     </div>
                     <div class="mt-5">
                         <p>The Grand Theater</p>
-                        <h3>{{ $activities[8]->title }}</h3>
+                        <h3 class="mb-3">{{ $activities[8]->title }}</h3>
                         <div class="d-flex justify-content-between hours">
                             <h4>{{ date('g:i A', $activities[8]->first_time) }}</h4>
                             <h4>{{ date('g:i A', $activities[8]->second_time) }}</h4>
@@ -98,7 +98,7 @@
                     </div>
                     <div class="mt-5">
                         <p>The Screening Room</p>
-                        <h3>{{ $activities[9]->title }}</h3>
+                        <h3 class="mb-3">{{ $activities[9]->title }}</h3>
                         <div class="d-flex justify-content-between hours">
                             <h4>{{ date('g:i A', $activities[9]->first_time) }}</h4>
                             <h4>{{ date('g:i A', $activities[9]->second_time) }}</h4>
@@ -193,7 +193,7 @@
             </div>
         </div>
         <div class="line"></div>
-        <div class="contenu">
+        <div class="contenu-bottom">
             <div class="image-bottom">
                 <div class="title-cat">
                     <h3 class="fw-semibold">PANEL DISCUSSIONS AND Q&A SESSIONS</h3>

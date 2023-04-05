@@ -19,6 +19,7 @@ for (const pass of passes) {
 
             const name = document.createElement('h4')
             name.innerHTML = pass.name
+            name.setAttribute('class', 'fw-semibold')
             infos.appendChild(name)
 
             const price = document.createElement('h4')

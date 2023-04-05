@@ -88,7 +88,6 @@ main .contenu {
   margin: 0 7.3vw;
 }
 main .contenu .contact-info {
-  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   position: relative;
@@ -114,4 +113,31 @@ main .contenu .contact-info p {
 main .contenu .map {
   border: 5px solid #f348a4;
   background-color: #f348a4;
+}
+
+@media (min-width: 1193px) and (max-width: 1668px) {
+  main {
+    padding: 95px 0;
+  }
+  main .contenu .contact-info {
+    left: 90px;
+  }
+  main .contenu .contact-info .blob {
+    position: absolute;
+    height: 740px;
+    width: 900px;
+    background-size: contain;
+    top: -160px;
+    left: -255px;
+  }
+  main .contenu .contact-info h1 {
+    font-size: 5rem;
+  }
+  main .contenu .contact-info p {
+    font-size: 1.5rem;
+  }
+  main .contenu .map iframe {
+    width: 722px;
+    height: 585px;
+  }
 }/*# sourceMappingURL=contact.css.map */

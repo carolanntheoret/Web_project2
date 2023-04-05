@@ -7,7 +7,6 @@ body {
 main {
     padding: 150px 0px;
 
-
     .contenu {
         margin: 0 7.3vw;
 
@@ -42,6 +41,43 @@ main {
             background-color: #f348a4;
         }
     }
+}
 
+@media (min-width: 1193px) and (max-width: 1668px) {
+    main {
+        padding: 95px 0;
 
+        .contenu {
+            .contact-info {
+                left: 90px;
+
+                .blob {
+                    position: absolute;
+                    height: 740px;
+                    width: 900px;
+                    background-size: contain;
+                    top: -160px;
+                    left: -255px;
+                }
+
+                h1 {
+                    font-size: 5rem;
+                }
+
+                p {
+                    font-size: 1.5rem;
+                }
+            }
+
+            .map {
+                iframe {
+
+                    width: 722px;
+                    height: 585px;
+                }
+
+            }
+        }
+
+    }
 }

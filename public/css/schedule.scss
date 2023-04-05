@@ -16,12 +16,24 @@
     display: flex;
     width: 1640px;
     justify-content: space-between;
-    margin-top: 100px;
+    margin-top: 10%!important;
+}
+.contenu-bottom {
+    display: flex;
+    width: 1640px;
+    justify-content: space-between;
+    margin-top: 2%;
 }
 
 .schedule {
     width: 430px;
     margin-right: 2%;
+
+    .schedule-item {
+        p {
+            color:$logo-turquoise;
+        }
+    }
 }
 
 h1 {
@@ -106,7 +118,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 5%;
+    margin-top: 7%;
 }
 
 .small-item {
@@ -255,7 +267,7 @@ h2 {
 .tickets-content button {
     background: linear-gradient(to right, $reddish-pink, $pink);
     border: none;
-    padding: 20px 35px;
+    padding: 14px 35px;
     font-size: 25px;
     font-weight: 600;
     text-align: center;
@@ -269,11 +281,6 @@ h2 {
     overflow: hidden;
     z-index: 1;
   }
-
-//   .tickets-content button:hover {
-//     background: linear-gradient(to left, $reddish-pink, $pink);
-
-//   }
 
   .tickets-content button a {
     color: $almost-white;
@@ -314,101 +321,6 @@ h2 {
     z-index: -1;
 }
 
-@media (min-width: 1024px) and (max-width: 1668px) {
-    .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .contenu {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      margin-top: 100px;
-    }
-    .schedule {
-      width: 30%;
-      margin-right: 2%;
-    }
-    .small-item,
-    .image {
-      width: 45%;
-      margin-left: 2%;
-    }
-    .img1 {
-      height: 450px;
-      width: 100%;
-    }
-    .small-img,
-    .med-img {
-      height: 250px;
-      width: 100%;
-    }
-  }
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .contenu {
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      margin-top: 100px;
-    }
-    .schedule {
-      width: 40%;
-      margin-right: 2%;
-    }
-    .small-item,
-    .image {
-      width: 55%;
-      margin-left: 2%;
-    }
-    .img1 {
-      height: 350px;
-      width: 100%;
-    }
-    .small-img,
-    .med-img {
-      height: 200px;
-      width: 100%;
-    }
-  }
 
-  @media (max-width: 767px) {
-    .content {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-    .contenu {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      margin-top: 100px;
-      flex-direction: column;
-    }
-    .schedule,
-    .small-item,
-    .image {
-      width: 90%;
-      margin-left: 5%;
-      margin-right: 5%;
-    }
-    .img1 {
-      height: 250px;
-      width: 100%;
-    }
-    .small-img,
-    .med-img {
-      height: 150px;
-      width: 100%;
-    }
-  }
-
+// 1700px 1660px  -   1500px laptop

@@ -27,16 +27,14 @@
             </div>
 
             <ul class="footerLinks fw-semibold">
-                <li class="footerList"><a href="#aboutSection">About</a></li>
+                <li class="footerList"><a href="/#aboutSection">About</a></li>
                 <li class="footerList"><a href="news">News</a></li>
                 <li class="footerList"><a href="contact">Contact</a></li>
                 <li class="footerList"><a href="packages">Packages </a></li>
                 <li class="footerList"><a href="schedule">Schedule 2023</a></li>
             </ul>
         </div>
-        <div>
+        <div class="copyright">
             <p id="copyright-text">&copy; 2023 All Rights Reserved</p>
         </div>
-
-
 </footer>

@@ -9,9 +9,11 @@ burgerMenu.addEventListener('click', function() {
 // Used for the festival menu in the navigation
 const festivalDropdown = document.querySelector(".dropdown-festival");
 const festivalDropdownContent = document.querySelector(".dropdown-content-festival");
+const festivalDropdownArrow = document.querySelector(".dropdown-arrow");
 
 festivalDropdown.addEventListener('click', function() {
     festivalDropdownContent.classList.toggle('show');
+    festivalDropdownArrow.classList.toggle('open');
 });
 
 // Used for the Icon user in the navigation

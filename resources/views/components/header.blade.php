@@ -19,7 +19,9 @@
                 </li>
                 <li class="headList">
                     <div class="dropdown-festival">
-                        <a @if ((isset($actif) && $actif == 'packages') || (isset($actif) && $actif == 'schedule')) class="actif" @endif>Festival</a>
+                        <a @if ((isset($actif) && $actif == 'packages') || (isset($actif) && $actif == 'schedule')) class="actif" @endif>Festival
+                            <img src="{{asset('images/downarrow.png')}}" alt="Dropdown arrow" class="dropdown-arrow">
+                        </a>
                         <div class="dropdown-content-festival">
                             <a href="/packages">Packages</a>
                             <a href="/schedule">Schedule</a>
@@ -30,7 +32,7 @@
                 </li>
                 <li class="headList"><a @if (isset($actif) && $actif == 'contact') class="actif" @endif
                         href="/contact">Contact</a></li>
-                <li class="headList">
+                <li class="headList button-head">
                     <a class=" mainBtn fw-semibold" href="/user-zone">My Tickets</a>
                 </li>
             </ul>

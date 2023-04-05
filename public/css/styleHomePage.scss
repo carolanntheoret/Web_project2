@@ -100,7 +100,8 @@ body {
                 font-size: 70px;
                 max-width: 25%;
             }
-            p{
+
+            p {
                 text-align: justify;
             }
         }
@@ -260,6 +261,7 @@ body {
             .title-sec {
                 margin-top: 5px;
             }
+
             .title-sec a:hover {
                 color: #646363;
                 cursor: pointer;
@@ -298,18 +300,21 @@ body {
             position: relative;
 
             .book-ticket {
-                position: absolute;;
+                position: absolute;
                 font-size: x-large;
-               bottom: 60px;
-               p {
-                color: #A8A394;
-               }
-               a img{
-                transition: transform 0.2s ease-in-out;
-               }
-               a img:hover {
-                transform: translateX(5px);
-               }
+                bottom: 60px;
+
+                p {
+                    color: #A8A394;
+                }
+
+                a img {
+                    transition: transform 0.2s ease-in-out;
+                }
+
+                a img:hover {
+                    transform: translateX(5px);
+                }
             }
         }
 
@@ -344,6 +349,27 @@ body {
             width: 150px;
             height: 200px;
             background-color: black;
+        }
+    }
+}
+
+@media (min-width: 1193px) and (max-width: 1440px) {
+
+    .firstSection {
+        height: 82vh !important;
+
+        .festivalImage {
+            background-size: contain !important;
+        }
+    }
+
+    .showEvents {
+        .event {
+            .book-ticket {
+                a {
+                    font-size: x-large;
+                }
+            }
         }
     }
 }

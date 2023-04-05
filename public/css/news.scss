@@ -2,6 +2,7 @@
 
 body {
     main {
+        margin-top: 4%;
         a {
             display: block;
             color: #fbf7ea;
@@ -184,7 +185,7 @@ body {
                 left: 50%;
                 transform: translate(-50%, -50%);
                 text-align: center;
-                width: 100%;
+                width: 95%;
                 z-index: 5;
 
                 h1 {
@@ -193,6 +194,7 @@ body {
                     font-weight: bold;
 
                 }
+
                 h4 {
                     margin: 0 50px;
                 }
@@ -210,7 +212,7 @@ body {
             border: 2px solid #ccc;
             border-radius: 10px;
             padding: 40px;
-            margin: 5% 15%;
+            margin: 10% 15%;
             color: $almost-white;
         }
 
@@ -247,5 +249,102 @@ body {
         }
 
 
+    }
+}
+
+@media (min-width: 1100px) and (max-width: 1440px) {
+
+    main {
+        .highlighted-news {
+
+            h1 {
+                left: 35%!important;
+            }
+
+            .content {
+                width: 80%!important;
+                top: 60%!important;
+            }
+        }
+    }
+}
+
+// Media Queries
+
+@media (min-width: 800px) and (max-width: 1099px) {
+    main {
+        .highlighted-news {
+
+            h1 {
+                left: 32%!important;
+            }
+
+            .content {
+                width: 80%!important;
+                top: 60%!important;
+            }
+        }
+    }
+}
+
+@media (min-width: 501px) and (max-width: 799px) {
+    main {
+        .highlighted-news {
+
+            h1 {
+                left: 32%!important;
+                font-size: 47px!important;
+            }
+
+            .content {
+                width: 80%!important;
+                top: 60%!important;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 500px) {
+    main {
+        .highlighted-news {
+
+            h1 {
+                left: 27%!important;
+                font-size: 40px!important;
+            }
+
+            .content {
+                width: 80%!important;
+                top: 60%!important;
+                left: 0%!important;
+            }
+        }
+    }
+}
+
+
+@media (min-width: 700px) and (max-width: 1000px) {
+    main {
+        margin-top: 13%;
+    }
+}
+
+@media screen and (min-width: 200px) and (max-width: 500px) {
+    main {
+        .article-head {
+
+            .title {
+                h1 {
+                    font-size: 25px!important;
+                }
+            }
+        }
+
+        .article-header {
+            display: inline!important;
+            p {
+                margin: 0!important;
+            }
+        }
     }
 }

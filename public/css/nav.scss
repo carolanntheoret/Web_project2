@@ -88,6 +88,7 @@ $almost-black: #222222;
 
                 &.is-open {
                     display: block;
+                    padding-bottom: 25px;
                 }
 
                 @media screen and (max-width: 1193px) {
@@ -176,6 +177,19 @@ $almost-black: #222222;
                         position: relative;
                         display: inline-block;
                         width: min-content;
+
+                        a {
+                            display: flex;
+                            align-items: center;
+
+                            .dropdown-arrow {
+                                margin-left: 10px;
+                                transition: transform 0.3s ease-in-out;
+                            }
+                            .dropdown-arrow.open {
+                                transform: rotate(-180deg);
+                            }
+                        }
                     }
 
                     .dropdown-content-festival {
@@ -234,12 +248,32 @@ $almost-black: #222222;
                     border: none;
                     flex-wrap: nowrap;
                     margin-left: auto;
+                    position: relative;
+                    z-index: 1;
+                }
+
+                .mainBtn::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    right: 0;
+                    bottom: 0;
+                    background: radial-gradient(circle at center, #de3f69, #de4396);
+                    opacity: 0;
+                    transition: opacity 0.3s ease-in-out;
+                    border-radius: 20px;
+                    z-index: -1;
+
+                }
+
+                .mainBtn:hover::before {
+                    opacity: 1;
                 }
 
                 .mainBtn:hover {
-                    background: linear-gradient(to left, $reddish-pink, $pink);
+                    text-decoration: none !important;
                 }
-
             }
         }
 
@@ -334,9 +368,10 @@ $almost-black: #222222;
                 color: $logo-turquoise;
             }
         }
+
         .headIcon:hover {
             transform: scale(1.1);
-          }
+        }
     }
 
     .footerBlock {
@@ -395,45 +430,47 @@ $almost-black: #222222;
                     }
                 }
             }
+
             .socialIcons {
                 ul {
-                  list-style: none;
-                  margin-top: 25px;
-                  padding: 0;
-                  display: flex;
-                  justify-content: space-between;
-                  width: 38%;
+                    list-style: none;
+                    margin-top: 25px;
+                    padding: 0;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 38%;
 
-                  @media screen and (min-width: 500px) and (max-width: 835px) {
+                    @media screen and (min-width: 500px) and (max-width: 835px) {
 
-                      margin-top: 36vh;
-                      margin-left: -4vw;
+                        margin-top: 36vh;
+                        margin-left: -4vw;
 
-                  }
-                  @media screen and (min-width: 200px) and (max-width: 500px) {
-                      position: absolute;
-                      margin-top: 41vh;
-                      margin-left: -2vw;
-                      z-index: 10;
-                  }
+                    }
+
+                    @media screen and (min-width: 200px) and (max-width: 500px) {
+                        position: absolute;
+                        margin-top: 41vh;
+                        margin-left: -6vw;
+                        z-index: 10;
+                    }
                 }
 
                 .icons {
-                  display: inline-block;
-                  width: 60px;
-                  height: 60px;
-                  transition: all 0.3s ease-in-out;
+                    display: inline-block;
+                    width: 60px;
+                    height: 60px;
+                    transition: all 0.3s ease-in-out;
                 }
 
                 .icons:hover {
-                  transform: scale(1.2);
+                    transform: scale(1.2);
                 }
 
                 img {
-                  width: 100%;
-                  height: 100%;
+                    width: 100%;
+                    height: 100%;
                 }
-              }
+            }
         }
 
         .footerLinks {
@@ -466,7 +503,12 @@ $almost-black: #222222;
         }
     }
 
-    #copyright-text {
-        padding: 0vh 2vw 0vh 10vw;
+    .copyright {
+        background-color: $almost-black;
+        padding-bottom: 2px;
+
+        #copyright-text {
+            padding: 1vh 2vw 0vh 10vw;
+        }
     }
 }
