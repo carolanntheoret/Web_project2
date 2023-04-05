@@ -13,13 +13,14 @@ class CreateNewsTable extends Migration
      */
     public function up()
     {
-        Schema::create('news', function (Blueprint $table) {
+        Schema::create('news', function (Blueprint $table)
+        {
             $table->id();
-            $table->text('author', 255);
-            $table->text('title', 255);
-            $table->text('subtitle')->nullable();
+            $table->tinyText('author');
+            $table->tinyText('title');
+            $table->tinyText('subtitle')->nullable();
             $table->text('text');
-            $table->text('image', 255);
+            $table->tinyText('image');
             $table->timestamps();
         });
     }

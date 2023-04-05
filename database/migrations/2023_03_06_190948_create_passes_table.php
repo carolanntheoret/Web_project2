@@ -13,13 +13,14 @@ class CreatePassesTable extends Migration
      */
     public function up()
     {
-        Schema::create('passes', function (Blueprint $table) {
+        Schema::create('passes', function (Blueprint $table)
+        {
             $table->id();
-            $table->text('name', 255);
+            $table->tinyText('name');
             $table->float('price');
-            $table->text('resume', 127);
+            $table->string('resume', 127);
             $table->text('description');
-            $table->text('image', 63);
+            $table->string('image', 63);
             $table->timestamps();
         });
     }
