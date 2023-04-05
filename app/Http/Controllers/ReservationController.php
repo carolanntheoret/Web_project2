@@ -26,14 +26,14 @@ class ReservationController extends Controller
             'second_day' => 'required',
         ]);
 
-        // verify is a reservation already exist for the same pass (and same date for first and second passes)
-        $reservation = Reservation::where('pass_id', '=', $request->id)->first();
+        // verify is a reservation already exist for that user, for the same pass and same date for first and second passes
+        $reservation = Reservation::where('user_id', '=', auth()->user()->id)->where('pass_id', '=', $request->id)->first();
         if($request->id == 1)
         {
             $request->second_day = NULL; // useless because closed_day is the same as begin_day for this pass
-            $reservation = Reservation::where('pass_id', '=', $request->id)->where('open_day', '=', $request->first_day)->first();
+            $reservation = Reservation::where('user_id', '=', auth()->user()->id)->where('pass_id', '=', $request->id)->where('open_day', '=', $request->first_day)->first();
         }
-        if($request->id == 2) $reservation = Reservation::where('pass_id', '=', $request->id)->where('closed_day', '=', $request->second_day)->first();
+        if($request->id == 2) $reservation = Reservation::where('user_id', '=', auth()->user()->id)->where('pass_id', '=', $request->id)->where('closed_day', '=', $request->second_day)->first();
 
         if($reservation != NULL)
         {
