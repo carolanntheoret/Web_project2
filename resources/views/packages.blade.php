@@ -62,7 +62,7 @@
 
                 <form class="buy" action="/reservation" method="post" v-show="lessThanFive">
                     @csrf
-                    <img src="<?= asset('/images/Mascotte_logo.svg') ?>" role="img" alt="Horizon Independent Film Festival image of the Mascot">
+                    <img src="<?= asset('/images/mascotte_logo.svg') ?>" role="img" alt="Horizon Independent Film Festival image of the Mascot">
                     <p class="close" @@click="close()">X</p>
                     <h2>BUY @{{ pass.name }}</h2>
 

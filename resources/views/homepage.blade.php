@@ -59,7 +59,7 @@
 
         <section class="showEvents">
             <div class="eventTop">
-                <div class="image" role="img" alt="HIFF - Event in our festival" style="background-image: url('images/tim-cooper-1R7iHPt63Lc-unsplash.jpg')"
+                <div class="image" role="img" alt="HIFF - Feast and Film event in our festival" style="background-image: url('images/tim-cooper-1R7iHPt63Lc-unsplash.jpg')"
 
                 ></div>
                 <div class="event">
@@ -70,7 +70,7 @@
                         <a href="/packages" class="fw-semibold">Book ticket <img src="{{ asset('images/arrow.png') }}" alt="Hiff- arrow to book a ticket" class="book"></a>
                     </div>
                 </div>
-                <div class="image" role="img" alt="HIFF - Event in our festival"  style="background-image: url('images/samuel-ramos-YfsyWcoI9Ko-unsplash.jpg')"></div>
+                <div class="image" role="img" alt="HIFF - Award event in our festival"  style="background-image: url('images/samuel-ramos-YfsyWcoI9Ko-unsplash.jpg')"></div>
                 <div class="event">
                     <p class="fw-semibold" style="margin-top: 18%;">June 4, 2023</p>
                     <h3 class="fw-semibold">HIFF 2023 Closing Night: Awards Ceremony and Screening of "Beyond the
@@ -90,7 +90,7 @@
                         <a href="/schedule" class="fw-semibold">Schedule 2023 <img src="{{ asset('images/arrow.png') }}" alt="Hiff- arrow to book a ticket" class="book"></a>
                     </div>
                 </div>
-                <div class="image" role="img" alt="HIFF - Event in our festival" style="background-image: url('images/stephen-mcfadden-1JOsn6qk8w4-unsplash.jpg')">
+                <div class="image" role="img" alt="HIFF - Outdoor screening event in our festival" style="background-image: url('images/stephen-mcfadden-1JOsn6qk8w4-unsplash.jpg')">
                 </div>
                 <div class="event">
                     <p class="fw-semibold" style="margin-top: 18%;">June 2, 2023</p>
@@ -100,7 +100,7 @@
                         <a href="/packages" class="fw-semibold">Book ticket <img src="{{ asset('images/arrow.png') }}" alt="Hiff- arrow to book a ticket" class="book"></a>
                     </div>
                 </div>
-                <div class="image" role="img" alt="HIFF - Event in our festival" style="background-image: url('images/miguel-henriques-RfiBK6Y_upQ-unsplash.jpg')">
+                <div class="image" role="img" alt="HIFF - Masterclass event in our festival " style="background-image: url('images/miguel-henriques-RfiBK6Y_upQ-unsplash.jpg')">
                 </div>
         </section>
     </main>

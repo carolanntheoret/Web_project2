@@ -4,7 +4,7 @@
     <main class="w-80 m-auto">
         @forelse ($news as $key => $article)
             @if ($key === 0)
-                <div class="highlighted-news" style="background-image: url('{{ $article->image }}');" role="img" aria-label="{{ $article->image }}" alt="HIFF - Head Image of the news" >
+                <div class="highlighted-news" style="background-image: url('{{ $article->image }}');" role="img" alt="HIFF - Head Image of the news" >
                     <div class="overlay z-1"></div>
                     <h1 class="z-3">HIFF NEWS</h1>
                     <div class="content z-3 ms-5">
@@ -29,7 +29,7 @@
                     @if ($key !== 0)
                         <a href="{{ url('/news/' . $article->id) }}">
                             <div class="news-article grid-item">
-                                <img src="{{ $article->image }}" alt="Hiff - {{ $article->title }}">
+                                <img src="{{ $article->image }}" alt="Hiff - <?= $article->title ?>" aria-label="<?= $article->title ?>">
                                 <p class="mt-3 author">{{ $article->author }}</p>
                                 <p class="date">{{ date('F d Y', strtotime($article->created_at)) }}</p>
                                 <h4>

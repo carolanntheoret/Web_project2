@@ -12,7 +12,7 @@
         <h1>MY TICKETS</h1>
         <div class="passes">
             @forelse ($passes as $pass)
-                <div class="pass" style="background-image: url('<?= $pass->image ?>');">
+                <div class="pass" role="img"  alt="HIFF- Pass for <?=$pass->name?>" style="background-image: url('<?= $pass->image ?>');">
                     <div class="overlay"></div>
                     <h6>MY TICKETS</h6>
                     <h3>{{ $pass->name }}</h3>

@@ -108,7 +108,7 @@
                 </div>
             </div>
             <div class="image">
-                <div class="position-relative img1"
+                <div class="position-relative img1" role="img" alt="Picture of <?=$activities[1]->title?> film"
                     style="background-image: url({{ asset('images/activities/1.jpg') }})">
                     <div class="text-film z-2">
                         <p class="fw-semibold">SPECIAL PRESENTATION</p>
@@ -118,7 +118,7 @@
                     <div class="overlay z-0"></div>
                 </div>
                 <div class="small">
-                    <div class="small-item" style="background-image: url({{ asset('images/activities/2.jpg') }})">
+                    <div class="small-item"  role="img" alt="Picture of <?=$activities[2]->title?> film" style="background-image: url({{ asset('images/activities/2.jpg') }})">
                         <div class="text-film-med z-2">
                             <p class="fw-semibold fs-4">OPENS FRIDAY</p>
                             <h4 class="fw-semibold">{{ $activities[1]->title }}</h4>
@@ -126,7 +126,7 @@
                         </div>
                         <div class="overlay"></div>
                     </div>
-                    <div class="small-item" style="background-image: url({{ asset('images/activities/16.jpg') }})">
+                    <div class="small-item"  role="img" alt="Picture of <?=$activities[16]->title?> film"  style="background-image: url({{ asset('images/activities/16.jpg') }})">
                         <div class="text-film-med z-2">
                             <p class="fw-semibold fs-4">CLOSES SUNDAY</p>
                             <h4 class="fw-semibold">{{ $activities[15]->title }}</h4>
@@ -141,15 +141,15 @@
                 </div>
                 <div class="small-cat">
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/3.jpg') }})"></div>
+                        <div class="small-img"  role="img" alt="Picture of <?=$activities[2]->title?> film" style="background-image: url({{ asset('images/activities/3.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[2]->title }}</p>
                     </div>
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/4.jpg') }})"></div>
+                        <div class="small-img"  role="img" alt="Picture of <?=$activities[3]->title?> film" style="background-image: url({{ asset('images/activities/4.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[3]->title }}</p>
                     </div>
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/5.jpg') }})"></div>
+                        <div class="small-img"  role="img" alt="Picture of <?=$activities[4]->title?> film" style="background-image: url({{ asset('images/activities/5.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[4]->title }}</p>
                     </div>
                 </div>
@@ -160,15 +160,15 @@
                 </div>
                 <div class="small-cat">
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/6.jpg') }})"></div>
+                        <div class="small-img" role="img" alt="Picture of <?=$activities[5]->title?> film" style="background-image: url({{ asset('images/activities/6.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[5]->title }}</p>
                     </div>
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/7.jpg') }})"></div>
+                        <div class="small-img" role="img" alt="Picture of <?=$activities[6]->title?> film" style="background-image: url({{ asset('images/activities/7.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[6]->title }}</p>
                     </div>
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/25.jpg') }})"></div>
+                        <div class="small-img" role="img" alt="Picture of <?=$activities[24]->title?> film" style="background-image: url({{ asset('images/activities/25.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[24]->title }}</p>
                     </div>
                 </div>
@@ -178,15 +178,15 @@
                 </div>
                 <div class="small-cat">
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/9.jpg') }})"></div>
+                        <div class="small-img" role="img" alt="Picture of <?=$activities[8]->title?> film" style="background-image: url({{ asset('images/activities/9.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[8]->title }}</p>
                     </div>
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/10.jpg') }})"></div>
+                        <div class="small-img" role="img" alt="Picture of <?=$activities[9]->title?> film" style="background-image: url({{ asset('images/activities/10.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[9]->title }}</p>
                     </div>
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/11.jpg') }})"></div>
+                        <div class="small-img" role="img" alt="Picture of <?=$activities[10]->title?> film"style="background-image: url({{ asset('images/activities/11.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[10]->title }}</p>
                     </div>
                 </div>
@@ -201,24 +201,24 @@
                 </div>
                 <div class="small-cat">
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/12.jpg') }})"></div>
+                        <div class="small-img" role="img" alt="Picture of <?=$activities[11]->title?> film" style="background-image: url({{ asset('images/activities/12.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[11]->title }}</p>
                     </div>
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/13.jpg') }})"></div>
+                        <div class="small-img" role="img" alt="Picture of <?=$activities[12]->title?> film" style="background-image: url({{ asset('images/activities/13.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[12]->title }}</p>
                     </div>
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/14.jpg') }})"></div>
+                        <div class="small-img" role="img" alt="Picture of <?=$activities[13]->title?>film "style="background-image: url({{ asset('images/activities/14.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[13]->title }}</p>
                     </div>
                     <div class="small-cat-content">
-                        <div class="small-img" style="background-image: url({{ asset('images/activities/15.jpg') }})"></div>
+                        <div class="small-img" role="img" alt="Picture of <?=$activities[14]->title?> film" style="background-image: url({{ asset('images/activities/15.jpg') }})"></div>
                         <p class="fw-semibold">{{ $activities[14]->title }}</p>
                     </div>
                 </div>
                 <div class="small">
-                    <div class="grd-img" style="background-image: url({{ asset('images/activities/17.jpg');}})">
+                    <div class="grd-img" role="img" alt="Picture of <?=$activities[16]->title?> activity"style="background-image: url({{ asset('images/activities/17.jpg');}})">
                         <div class="text-film-grd z-2">
                             <p class="fw-semibold fs-4">OUTDOOR SCREENINGS</p>
                             <h4 class="fw-semibold">{{ $activities[16]->title }}</h4>
@@ -226,7 +226,7 @@
                         </div>
                         <div class="overlay"></div>
                     </div>
-                    <div class="grd-img" style="background-image: url({{ asset('images/activities/18.jpg') }}); background-position: initial;">
+                    <div class="grd-img" role="img" alt="Picture of <?=$activities[17]->title?> activity"style="background-image: url({{ asset('images/activities/18.jpg') }}); background-position: initial;">
                         <div class="text-film-grd z-2">
                             <p class="fw-semibold fs-4">OUTDOOR SCREENINGS</p>
                             <h4 class="fw-semibold">{{ $activities[17]->title }}</h4>
@@ -242,15 +242,15 @@
                 </div>
                 <div class="small-cat">
                     <div class="small-cat-content">
-                        <div class="med-img" style="background-image: url({{ asset('images/activities/19.jpg') }})"></div>
+                        <div class="med-img" role="img" alt="Picture of <?=$activities[18]->title?> activity"style="background-image: url({{ asset('images/activities/19.jpg') }})"></div>
                         <p class="fw-semibold fs-5">{{ $activities[18]->title }}</p>
                     </div>
                     <div class="small-cat-content">
-                        <div class="med-img" style="background-image: url({{ asset('images/activities/20.jpg') }})"></div>
+                        <div class="med-img" srole="img" alt="Picture of <?=$activities[19]->title?> activity"tyle="background-image: url({{ asset('images/activities/20.jpg') }})"></div>
                         <p class="fw-semibold fs-5">{{ $activities[19]->title }}</p>
                     </div>
                     <div class="small-cat-content">
-                        <div class="med-img" style="background-image: url({{ asset('images/activities/21.jpg') }})"></div>
+                        <div class="med-img" role="img" alt="Picture of <?=$activities[20]->title?> activity" style="background-image: url({{ asset('images/activities/21.jpg') }})"></div>
                         <p class="fw-semibold fs-5">{{ $activities[20]->title }}</p>
                     </div>
                 </div>
