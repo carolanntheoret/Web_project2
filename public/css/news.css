@@ -76,6 +76,52 @@ body .mainBlock .container .mainBtn .secBtn .secBtn:hover,
 body .mainBlock .container .secBtn .secBtn .secBtn:hover {
   background: linear-gradient(to left, #65efce, #35d0ba);
 }
+body .message {
+  background-color: #fbf7ea;
+  height: 50px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999999999999;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  -webkit-animation: fadeOut 2000ms linear 1000ms forwards;
+          animation: fadeOut 2000ms linear 1000ms forwards;
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body .error {
+  color: #f54674;
+  border: 1px #f54674 solid;
+}
+body .success {
+  color: #35d0ba;
+  border: 1px #35d0ba solid;
+}
 
 body main a {
   display: block;
@@ -99,6 +145,7 @@ body main .highlighted-news h1 {
   left: 39%;
   font-size: 75px;
   font-weight: bold;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -106,6 +153,7 @@ body main .highlighted-news .content {
   position: relative;
   top: 65%;
   left: 5%;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -120,6 +168,7 @@ body main .highlighted-news .content .festi-line p {
   margin: 0;
 }
 body main .highlighted-news .content .festi-line img {
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }
@@ -129,6 +178,7 @@ body main .highlighted-news .content .festi-line .date {
 body main .highlighted-news .content .button-header {
   border: 3px solid #fbf7ea;
   padding: 15px 35px;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   font-weight: bold;
@@ -257,6 +307,7 @@ body main .article-header p {
   margin: 0;
 }
 body main .article-header img {
+  height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
 }

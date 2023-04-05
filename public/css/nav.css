@@ -142,6 +142,7 @@
 .navigation #headBlock .headContent .headLinks .headList .dropdown-festival {
   position: relative;
   display: inline-block;
+  width: -webkit-min-content;
   width: -moz-min-content;
   width: min-content;
 }
@@ -152,6 +153,7 @@
   padding: 5px 0;
   right: 0;
   top: 0;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   min-width: 50px;
@@ -168,6 +170,7 @@
 }
 .navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival a {
   display: block;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   border-radius: 100%;
@@ -246,7 +249,7 @@
 }
 @media screen and (max-width: 414px) {
   .navigation #headBlock .headIcon .dropdown #userImg,
-  .navigation #headBlock .headIcon .dropdown #userNone {
+.navigation #headBlock .headIcon .dropdown #userNone {
     max-width: 40px;
   }
 }
@@ -257,6 +260,7 @@
   border-radius: 20%;
   right: 0;
   top: 0;
+  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   min-width: 50px;
