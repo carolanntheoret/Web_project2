@@ -39,7 +39,7 @@
                 <div class="infos">
                 </div>
                 <div class="loginInput">
-                    <input class="submit" type="submit" value="REMOVE">
+                    <input class="submit fw-semibold" type="submit" value="REMOVE">
                     <img src="{{ asset('images/wastebasket.png') }}">
                 </div>
             </form>

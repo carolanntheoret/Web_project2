@@ -14,8 +14,25 @@
 </head>
 
 <body class="body">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q6KL6ZE9FN"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-Q6KL6ZE9FN');
+</script>
 
     <x-header :actif="$actif"></x-header>
+
+    @if (session('success'))
+        <div class="message success">{{ session('success') }}</div>
+    @endif
+    @if (session('error'))
+        <div class="message error">{{ session('error') }}</div>
+    @endif
+
     {{ $slot }}
     <x-footer></x-footer>
 

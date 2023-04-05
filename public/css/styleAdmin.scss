@@ -2,7 +2,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    margin-top: 50px;
+    margin: 10% 0 6% 0;
     width: 100%;
 
     .sectionName {
@@ -177,6 +177,12 @@
                         border: 1px solid #8d8d8d;
                         background-color: #35d0b921;
                     }
+
+                    .createAccountInput {
+                        input {
+                            margin-left: 45px;
+                        }
+                    }
                 }
             }
             ul {
@@ -207,9 +213,9 @@
                 }
                 a {
                     font-size: 25px;
-                    position: absolute;
-                    top: 7px;
-                    right: 215px;
+                    position: relative;
+                    top: -1px;
+                    right: 144px;
                     text-decoration: none;
                 }
             }
@@ -221,6 +227,14 @@
         border: 6px solid #707070;
         width: 1240px;
         height: 85vh;
+
+        .sectionName {
+            h3 {
+                img {
+                    margin-left: 15px;
+                }
+            }
+        }
 
         .usersSection {
             display: flex;
@@ -288,9 +302,9 @@
                 }
                 a {
                     font-size: 25px;
-                    position: absolute;
-                    top: 7px;
-                    right: 215px;
+                    position: relative;
+                    top: -1px;
+                    right: 144px;
                     text-decoration: none;
                 }
             }

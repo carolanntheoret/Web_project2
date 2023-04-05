@@ -76,6 +76,7 @@ h1
 .pass
 {
     width: 17.5vw;
+    height: 400px;
     background-size: cover;
     background-position: center;
     border-radius: 25px;
@@ -90,12 +91,17 @@ h1
         position: relative;
     }
 
+    p
+    {
+        height: 120px;
+        overflow-y: auto;
+    }
+
     h3
     {
         width: 150px;
         margin: 20px 0
     }
-
 }
 
 .overlay
@@ -114,6 +120,7 @@ h1
     width: 100%;
     position: absolute;
     left: 0;
+    bottom: 50px;
     height: 41px;
     background: rgba(101, 239, 206, 0.60);
     color: lighten(#65efce, 25%);
@@ -171,11 +178,14 @@ h1
         {
             background-color: transparent;
             margin: 0;
-            width: auto;
+            width: 100%;
+            display: flex;
             font-weight: 500;
             padding: 15px 0 15px 30px;
             border: 0px;
             color: $almost-white;
+            z-index: 1;
+            text-align: left;
         }
     }
 
