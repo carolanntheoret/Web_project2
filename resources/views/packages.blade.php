@@ -67,29 +67,38 @@
                     <h2>BUY @{{ pass.name }}</h2>
 
                     <div class="oneDay" v-if="pass.pass_id == 1">
-                        <p>Include only one day of your choice !</p>
-                        Day : <select name="first_day">
-                            <option value="2023-06-02">Friday</option>
-                            <option value="2023-06-03">Saturday</option>
-                            <option value="2023-06-04">Sunday</option>
-                        </select>
+                        <p>Include only one day of your choice (June 2nd, 3rd or 4th)</p>
+                        <div>
+                            <span>Day : </span>
+                            <select name="first_day">
+                                <option value="2023-06-02">Friday</option>
+                                <option value="2023-06-03">Saturday</option>
+                                <option value="2023-06-04">Sunday</option>
+                            </select>
+                        </div>
                         <input type="hidden" name="second_day" value="1970-01-01">
                     </div>
 
                     <div class="twoDays" v-if="pass.pass_id == 2">
+                        <p>Include Friday, June 2nd, with only one weekend day of your choice (June 3rd or 4th)</p>
                         <input type="hidden" name="first_day" value="2023-06-02">
-                        Day : <select name="second_day">
-                            <option value="2023-06-03">Saturday</option>
-                            <option value="2023-06-04">Sunday</option>
-                        </select>
+                        <div>
+                            <span>Day : </span>
+                            <select name="second_day">
+                                <option value="2023-06-03">Saturday</option>
+                                <option value="2023-06-04">Sunday</option>
+                            </select>
+                        </div>
                     </div>
 
                     <div class="weekend" v-if="pass.pass_id == 3">
+                        <p>Include Saturday and Sunday (June 3rd and 4th)</p>
                         <input type="hidden" name="first_day" value="2023-06-03">
                         <input type="hidden" name="second_day" value="2023-06-04">
                     </div>
 
                     <div class="premium" v-if="pass.pass_id == 4">
+                        <p>Include all day of the event. Friday June 2nd, Saturday 3rd and Sunday 4th</p>
                         <input type="hidden" name="first_day" value="2023-06-02">
                         <input type="hidden" name="second_day" value="2023-06-04">
                     </div>
