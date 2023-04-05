@@ -271,11 +271,13 @@ h1 {
 .removeItem .loginInput .submit {
   background-color: transparent;
   margin: 0;
-  width: auto;
+  width: 100%;
+  display: flex;
   font-weight: 500;
   padding: 15px 0 15px 30px;
   border: 0px;
   color: #fbf7ea;
+  z-index: 1;
 }
 .removeItem .loginInput:hover {
   background: linear-gradient(to left, #f54674, #f348a4);
