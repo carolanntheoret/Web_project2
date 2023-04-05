@@ -25,8 +25,8 @@ class PassSeeder extends Seeder
         DB::table('passes')->insert([
             'name' => 'TWO DAYS PASS',
             'price' => 99.99,
-            'resume' => "The Two Days Pass, gives you access to all the festival offerings for two consecutive days.",
-            'description' => "With the Two Days Pass, you'll have access to all the festival offerings for two consecutive days. This pass is perfect for those who want to explore a wider range of films, attend multiple events, or simply take their time and immerse themselves in the festival experience.",
+            'resume' => "The Two Days Pass, gives you access to all the festival offerings for two days.",
+            'description' => "With the Two Days Pass, you'll have access to all the festival offerings for two days. This pass is perfect for those who want to explore a wider range of films, attend multiple events, or simply take their time and immerse themselves in the festival experience.",
             'image' => '/images/two_days_pass.webp',
         ]);
 

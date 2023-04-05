@@ -67,6 +67,7 @@
                     <h2>BUY @{{ pass.name }}</h2>
 
                     <div class="oneDay" v-if="pass.pass_id == 1">
+                        <p>Include only one day of your choice !</p>
                         Day : <select name="first_day">
                             <option value="2023-06-02">Friday</option>
                             <option value="2023-06-03">Saturday</option>
