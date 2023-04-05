@@ -76,6 +76,7 @@ h1
 .pass
 {
     width: 17.5vw;
+    height: 400px;
     background-size: cover;
     background-position: center;
     border-radius: 25px;
@@ -88,6 +89,12 @@ h1
     p
     {
         position: relative;
+    }
+
+    p
+    {
+        height: 120px;
+        overflow-y: auto;
     }
 
     h3
@@ -114,6 +121,7 @@ h1
     width: 100%;
     position: absolute;
     left: 0;
+    bottom: 50px;
     height: 41px;
     background: rgba(101, 239, 206, 0.60);
     color: lighten(#65efce, 25%);
