@@ -76,6 +76,52 @@ body .mainBlock .container .mainBtn .secBtn .secBtn:hover,
 body .mainBlock .container .secBtn .secBtn .secBtn:hover {
   background: linear-gradient(to left, #65efce, #35d0ba);
 }
+body .message {
+  background-color: #fbf7ea;
+  height: 50px;
+  position: absolute;
+  top: 200px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 9999999999999;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 13px;
+  -webkit-animation: fadeOut 2000ms linear 1000ms forwards;
+          animation: fadeOut 2000ms linear 1000ms forwards;
+}
+@-webkit-keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+body .error {
+  color: #f54674;
+  border: 1px #f54674 solid;
+}
+body .success {
+  color: #35d0ba;
+  border: 1px #35d0ba solid;
+}
 
 body {
   background-color: #1f2833;
@@ -139,6 +185,7 @@ h1 {
 
 .pass {
   width: 17.5vw;
+  height: 400px;
   background-size: cover;
   background-position: center;
   border-radius: 25px;
@@ -150,6 +197,10 @@ h1 {
 .pass h3,
 .pass p {
   position: relative;
+}
+.pass p {
+  height: 120px;
+  overflow-y: auto;
 }
 .pass h3 {
   width: 150px;
@@ -170,6 +221,7 @@ h1 {
   width: 100%;
   position: absolute;
   left: 0;
+  bottom: 50px;
   height: 41px;
   background: rgba(101, 239, 206, 0.6);
   color: #d9fbf3;
@@ -219,11 +271,13 @@ h1 {
 .removeItem .loginInput .submit {
   background-color: transparent;
   margin: 0;
-  width: auto;
+  width: 100%;
+  display: flex;
   font-weight: 500;
   padding: 15px 0 15px 30px;
   border: 0px;
   color: #fbf7ea;
+  z-index: 1;
 }
 .removeItem .loginInput:hover {
   background: linear-gradient(to left, #f54674, #f348a4);

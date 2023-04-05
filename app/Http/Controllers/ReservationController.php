@@ -17,7 +17,7 @@ class ReservationController extends Controller
      */
     public function reserve(Request $request)
     {
-        if(!auth()->check()) return redirect('/user-zone');
+        if(!auth()->check()) return redirect('/')->with('error', "You're not logged in");
 
         $request->validate([
             'id' => 'required',
@@ -26,22 +26,20 @@ class ReservationController extends Controller
             'second_day' => 'required',
         ]);
 
-        $reservation = Reservation::where('pass_id', '=', $request->id)->first();
+        // verify is a reservation already exist for that user, for the same pass and same date for first and second passes
+        $reservation = Reservation::where('user_id', '=', auth()->user()->id)->where('pass_id', '=', $request->id)->first();
         if($request->id == 1)
         {
-            $request->second_day = $request->first_day;
-            $reservation = Reservation::where('pass_id', '=', $request->id)->where('open_day', '=', $request->first_day)->first();
+            $request->second_day = NULL; // useless because closed_day is the same as begin_day for this pass
+            $reservation = Reservation::where('user_id', '=', auth()->user()->id)->where('pass_id', '=', $request->id)->where('open_day', '=', $request->first_day)->first();
         }
-        if($request->id == 2)
-        {
-            $reservation = Reservation::where('pass_id', '=', $request->id)->where('closed_day', '=', $request->second_day)->first();
-        }
+        if($request->id == 2) $reservation = Reservation::where('user_id', '=', auth()->user()->id)->where('pass_id', '=', $request->id)->where('closed_day', '=', $request->second_day)->first();
 
         if($reservation != NULL)
         {
-            if($reservation->quantity >= 5) return back()->with('max_quantity', 'You already have the maximum number of reservation authorized for this pass');
-            if(Reservation::where('id', '=', $reservation->id)->increment('quantity', $request->quantity)) return redirect('/my-tickets')->with('reservation_successful', 'Your reservation has been recorded sucessfully');
-            return back()->with('reservation_fail', 'Something went wrong when recording your reservation');
+            if($reservation->quantity >= 5) return back()->with('error', 'You already have the maximum number of reservations authorized for this pass');
+            if(Reservation::where('id', '=', $reservation->id)->increment('quantity', $request->quantity)) return redirect('/my-tickets')->with('success', 'Your reservation has been recorded sucessfully');
+            return back()->with('error', 'Something went wrong when recording your reservation');
         }
 
         $pass = new Reservation();
@@ -54,8 +52,8 @@ class ReservationController extends Controller
         $pass->created_at = date('Y-m-d H:i:s');
         $pass->updated_at = date('Y-m-d H:i:s');
 
-        if($pass->save()) return redirect('/my-tickets')->with('reservation_successful', 'Your reservation has been recorded sucessfully');
-        return back()->with('reservation_fail', 'Something went wrong when recording your reservation');
+        if($pass->save()) return redirect('/my-tickets')->with('success', 'Your reservation has been recorded sucessfully');
+        return back()->with('error', 'Something went wrong when recording your reservation');
     }
 
     /**
@@ -66,26 +64,32 @@ class ReservationController extends Controller
      */
     public function cancel(Request $request)
     {
-        if(!Auth::check()) return back();
+        if(!Auth::check()) return back()->with('error', "You're not logged in");
         $request->validate([
             'reservation_id' => 'required',
             'quantity' => 'required',
         ]);
 
-        if(!Reservation::find($request->reservation_id)) return back()->with('reservation_missing', "Reservation cannot be find");
+        if(!Reservation::find($request->reservation_id)) return back()->with('error', "Reservation cannot be find");
 
         $reservation = Reservation::where('id', '=', $request->reservation_id)->first();
 
-        if(auth()->user()->id != $reservation->user_id && auth()->user()->admin != 1) return back();
+        if(auth()->user()->id != $reservation->user_id && auth()->user()->admin != 1) return back()->with('error', "You're not allowed to cancel that reservation");
 
         $success = false;
-        if($reservation->quantity == $request->quantity) $success = Reservation::where('id', '=', $request->reservation_id)->delete();
+        if($reservation->quantity <= $request->quantity) $success = Reservation::where('id', '=', $request->reservation_id)->delete();
         if($reservation->quantity > $request->quantity) $success = DB::table('reservations')->where('id', '=', $request->reservation_id)->decrement('quantity', $request->quantity);
 
-        if($success) return back()->with('cancel_success', 'Reservation has been canceled');
-        return back()->with('cancel_fail', 'An error occurred while cancelling the reservation');
+        if($success) return back()->with('success', 'Reservation has been canceled');
+        return back()->with('error', 'An error occurred while cancelling the reservation');
     }
 
+    /**
+     * Modify a reservation
+     *
+     * @param Request $request
+     * @return void
+     */
     public function modify(Request $request)
     {
         $request->validate([
@@ -97,24 +101,35 @@ class ReservationController extends Controller
             'open_day' => $request->first_day,
             'closed_day' => $request->scond_day,
         ]);
-        var_dump($success); exit();
 
-        if(!$success) return back()->with('reservation_modification_error', 'An error occurred while modifying the reservation');
-        return back()->with('reservation_modification_success', 'The modification ont he reservation is successful');
+        if(!$success) return back()->with('error', 'An error occurred while modifying the reservation');
+        return back()->with('success', 'The modification ont he reservation is successful');
     }
 
+    /**
+     * Return a json containing all reservations of a user
+     *
+     * @param Request $request
+     * @return json
+     */
     public function getReservations(Request $request)
     {
-        if(!Auth::check() || Auth::user()->admin == 0) return redirect('/');
+        if(!Auth::check() || Auth::user()->admin == 0) return redirect('/')->with('error', "You're not logged in or you are not allowed to get these informations");
         echo json_encode(DB::table('reservations')->select(['reservations.id as reservation_id', 'user_id', 'pass_id', 'open_day', 'closed_day', 'quantity', 'name'])
                             ->join('passes', 'pass_id', '=', 'passes.id')
                             ->where('user_id', '=', $request->user_id)
                             ->get());
     }
 
+    /**
+     * Return a json containing a specific reservation of a user
+     *
+     * @param Request $request
+     * @return json
+     */
     public function getReservation(Request $request)
     {
-        if(!Auth::check()) return back('/');
+        if(!Auth::check()) return redirect('/')->with('error', "You're not logged in");
         echo json_encode(Reservation::join('passes', 'pass_id', '=', 'passes.id')
                                 ->select('reservations.id AS reservation_id', 'user_id', 'pass_id', 'open_day', 'closed_day', 'quantity', 'name', 'price', 'resume', 'description', 'image')
                                 ->where('pass_id', '=', $request->pass_id)

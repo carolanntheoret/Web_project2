@@ -1,7 +1,7 @@
 <footer class="navigation">
         <div class="footerBlock">
             <div class="footerLogo">
-                <img class="dudeLogo img-fluid" src="<?= asset('images/Mascot_festival.svg') ?>" alt="HIFF Mascot" >
+                <img class="dudeLogo img-fluid" src="<?= asset('images/mascot_festival.svg') ?>" alt="HIFF Mascot" >
             </div>
             <div id="footerSection">
                 <div id="footerText">

@@ -26,7 +26,8 @@ class NewsController extends Controller
      * @param object
      * @return object
      */
-    public function show(News $article){
+    public function show(News $article)
+    {
         return view('article', [
             "article" => $article,
             'title' => 'HIFF | ' . $article->title,
