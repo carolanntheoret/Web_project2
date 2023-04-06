@@ -5,7 +5,7 @@
         <input type="password" name="password" placeholder="Password">
         <div class="loginInput">
             <input class="submit fw-semibold" id="submit" type="submit" value="LOGIN">
-            <img src="{{ asset('arrow.png') }}">
+            <img src="{{ asset('images/loginarrow.png') }}">
         </div>
     </form>
 </div>
