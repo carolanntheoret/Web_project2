@@ -321,6 +321,75 @@ h2 {
     z-index: -1;
 }
 
+@media (min-width: 1193px) and (max-width: 1700px) {
 
+    .contenu {
+        width: 90%;
+
+        .image {
+            .img1 {
+                width: 59vw;
+            }
+
+            .small {
+                .small-item {
+                    width: 400px;
+
+                    .text-film-med {
+                        left: 26px;
+                    }
+                }
+            }
+            .small-cat {
+                .small-cat-content {
+                    .small-img {
+                        width: 260px;
+                    }
+                }
+            }
+        }
+    }
+
+    .line {
+        width: 1300px;
+    }
+
+    .contenu-bottom {
+        width: 1300px;
+        .image-bottom {
+            .small-cat {
+                .small-cat-content {
+                    .small-img {
+                        width: 260px;
+                    }
+
+                    .med-img {
+                        width: 400px;
+                    }
+                }
+            }
+
+            .small {
+                .grd-img {
+                    width: 610px;
+
+                    .text-film-grd {
+                        left: 35px;
+                    }
+                }
+            }
+        }
+    }
+
+    .tickets {
+        width: 1205px;
+        .tickets-image {
+            img {
+                max-width: none;
+                max-height: none;
+            }
+        }
+    }
+}
 
 // 1700px 1660px  -   1500px laptop

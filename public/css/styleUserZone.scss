@@ -113,8 +113,9 @@ h2
 .loginInput:hover,
 .createAccountInput:hover
 {
-    background: linear-gradient(to left, $reddish-pink, $pink);
-}
+
+        background: radial-gradient(circle at center, #de3f69, #de4396);
+    }
 
 .createAccountName
 {

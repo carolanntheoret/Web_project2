@@ -89,7 +89,7 @@ body .message {
   align-items: center;
   justify-content: center;
   border-radius: 13px;
-  animation: fadeOut 2000ms linear 1000ms forwards;
+  animation: fadeOut 5000ms linear 3000ms forwards;
 }
 @keyframes fadeOut {
   0% {
@@ -227,7 +227,7 @@ body main .container .grid .grid-item:hover img {
 }
 body main .container .button {
   background: linear-gradient(to right, #f54674, #f348a4);
-  padding: 2.3vh 2vw 2.3vh;
+  padding: 1.3vh 0vw 1.3vh;
   font-size: 25px;
   font-weight: 600;
   text-align: center;
@@ -238,10 +238,10 @@ body main .container .button {
   color: #fbf7ea;
   transition: all 0.3s ease-in-out;
   border: none;
-  width: 218px;
+  width: 185px;
 }
 body main .container .button:hover {
-  background: linear-gradient(to left, #f54674, #f348a4);
+  background: radial-gradient(circle at center, #de3f69, #de4396);
 }
 body main .article-head {
   background-size: cover;

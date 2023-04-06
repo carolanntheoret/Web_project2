@@ -237,17 +237,18 @@ body {
                 font-weight: bold;
                 text-align: center;
                 color: white;
-                padding: 7.5px 41px 9px 36px;
+                padding: 10.5px 41px 11px 36px;
                 text-decoration: none;
-                border-radius: 25px;
+                border-radius: 20px;
                 margin: auto;
                 cursor: pointer;
-                transition: all 0.2s ease-in-out;
+                transition: background-color 0.5s ease-in-out;
 
                 &:hover {
-                    background: linear-gradient(to left, $reddish-pink, $pink);
+                    background: radial-gradient(circle at center, #de3f69, #de4396);
                 }
             }
+
         }
 
         .secondary {
@@ -353,7 +354,7 @@ body {
     }
 }
 
-@media (min-width: 1193px) and (max-width: 1440px) {
+@media (min-width: 1193px) and (max-width: 1500px) {
 
     .firstSection {
         height: 82vh !important;
@@ -365,6 +366,10 @@ body {
 
     .showEvents {
         .event {
+            h3 {
+                font-size: x-large !important;
+            }
+
             .book-ticket {
                 a {
                     font-size: x-large;

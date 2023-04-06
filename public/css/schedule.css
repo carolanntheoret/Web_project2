@@ -89,7 +89,7 @@ body .message {
   align-items: center;
   justify-content: center;
   border-radius: 13px;
-  animation: fadeOut 2000ms linear 1000ms forwards;
+  animation: fadeOut 5000ms linear 3000ms forwards;
 }
 @keyframes fadeOut {
   0% {
@@ -415,4 +415,47 @@ h2 {
   bottom: -63px;
   left: 118px;
   z-index: -1;
+}
+
+@media (min-width: 1193px) and (max-width: 1700px) {
+  .contenu {
+    width: 90%;
+  }
+  .contenu .image .img1 {
+    width: 59vw;
+  }
+  .contenu .image .small .small-item {
+    width: 400px;
+  }
+  .contenu .image .small .small-item .text-film-med {
+    left: 26px;
+  }
+  .contenu .image .small-cat .small-cat-content .small-img {
+    width: 260px;
+  }
+  .line {
+    width: 1300px;
+  }
+  .contenu-bottom {
+    width: 1300px;
+  }
+  .contenu-bottom .image-bottom .small-cat .small-cat-content .small-img {
+    width: 260px;
+  }
+  .contenu-bottom .image-bottom .small-cat .small-cat-content .med-img {
+    width: 400px;
+  }
+  .contenu-bottom .image-bottom .small .grd-img {
+    width: 610px;
+  }
+  .contenu-bottom .image-bottom .small .grd-img .text-film-grd {
+    left: 35px;
+  }
+  .tickets {
+    width: 1205px;
+  }
+  .tickets .tickets-image img {
+    max-width: none;
+    max-height: none;
+  }
 }/*# sourceMappingURL=schedule.css.map */

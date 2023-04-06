@@ -110,7 +110,7 @@
 
                     <input class="hidden_id" type="hidden" name="id">
                     <h3 class="totalPrice">Total : $@{{ price }}</h3>
-                    <input class="submit" type="submit" value="PURCHASE">
+                    <input class="submit fw-semibold" type="submit" value="PURCHASE">
                 </form>
             </div>
         </main>

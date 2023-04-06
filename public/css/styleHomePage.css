@@ -201,15 +201,15 @@ body .latestNews .mainNews .more {
   font-weight: bold;
   text-align: center;
   color: white;
-  padding: 7.5px 41px 9px 36px;
+  padding: 10.5px 41px 11px 36px;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 20px;
   margin: auto;
   cursor: pointer;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
 }
 body .latestNews .mainNews .more:hover {
-  background: linear-gradient(to left, #f54674, #f348a4);
+  background: radial-gradient(circle at center, #de3f69, #de4396);
 }
 body .latestNews .secondary {
   max-width: 440px;
@@ -295,12 +295,15 @@ body .showEvents span {
   background-color: black;
 }
 
-@media (min-width: 1193px) and (max-width: 1440px) {
+@media (min-width: 1193px) and (max-width: 1500px) {
   .firstSection {
     height: 82vh !important;
   }
   .firstSection .festivalImage {
     background-size: contain !important;
+  }
+  .showEvents .event h3 {
+    font-size: x-large !important;
   }
   .showEvents .event .book-ticket a {
     font-size: x-large;

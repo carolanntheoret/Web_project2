@@ -7,17 +7,17 @@
             <h3>Admin</h3></div>
             <div class="menu">
                 <button class="employes"><h2>Staff</h2></button>
-                <button class="users"><h2>Users</h2></button>
+                <button class="users"><h2>Members</h2></button>
                 <button class="activities"><h2>Activities</h2></button>
                 <button class="reservations"><h2>Reservation</h2></div>
             </div>
             </section>
                 <section class="listEmployes">
-                    <div class="sectionName"><h3>Admin</h3><img src="{{ asset('images/add.png') }}" alt="" class="addAdmin"></div>
+                    <div class="sectionName"><h3>Admins</h3><img src="{{ asset('images/add.png') }}" alt="" class="addAdmin"></div>
                     <div class="employeSection"><x-liste-admins :users="$users" :user="$user"/></div>
                 </section>
                 <section class="listUsers">
-                    <div class="sectionName"><h3>Employees<img src="{{ asset('images/add.png') }}" alt="" class="addUser"></h3></div>
+                    <div class="sectionName"><h3>Members<img src="{{ asset('images/add.png') }}" alt="" class="addUser"></h3></div>
                     <div class="usersSection"><x-liste-users :members="$members"/></div>
                 </section>
                 <section class="listActivities">
@@ -28,7 +28,7 @@
 
                 <div class="reservationSection">
                     <div class="sectionMember">
-                        <div class="titleMember"><h3>Membres</h3></div>
+                        <div class="titleMember"><h3>Members</h3></div>
                         <div class="listMembers" ><x-liste-members :members="$members"/></div>
                     </div>
                     <div class="sectionReservation">

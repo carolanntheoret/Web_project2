@@ -86,7 +86,7 @@
             <div class="eventDown">
                 <div class="event">
                     <p class="fw-semibold" style="margin-top: 18%;">June 2 and 3, 2023</p>
-                    <h2 class="fw-semibold">Under the Stars: Exclusive outdoor screenings exclusivity</h2>
+                    <h3 class="fw-semibold">Under the Stars: Exclusive outdoor screenings exclusivity</h3>
                     <div class="book-ticket">
                         <p>View Schedule</p>
                         <a href="/schedule" class="fw-semibold">Schedule 2023 <img src="{{ asset('images/arrow.png') }}" alt="Hiff- arrow to book a ticket" class="book"></a>
@@ -96,7 +96,7 @@
                 </div>
                 <div class="event">
                     <p class="fw-semibold" style="margin-top: 18%;">June 2, 2023</p>
-                    <h2 class="fw-semibold">Workshops and Masterclasses: "Directing 101: From Script to Screen"</h2>
+                    <h3 class="fw-semibold">Workshops and Masterclasses: "Directing 101: From Script to Screen"</h3>
                     <div class="book-ticket">
                         <p>From $54.99</p>
                         <a href="/packages" class="fw-semibold">Book ticket <img src="{{ asset('images/arrow.png') }}" alt="Hiff- arrow to book a ticket" class="book"></a>
