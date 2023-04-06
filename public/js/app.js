@@ -2,8 +2,8 @@
 const burgerMenu = document.querySelector(".burgerMenu");
 const dropdownMenu = document.querySelector(".headLinks");
 
-burgerMenu.addEventListener('click', function() {
-  dropdownMenu.classList.toggle('is-open');
+burgerMenu.addEventListener('click', function () {
+    dropdownMenu.classList.toggle('is-open');
 });
 
 // Used for the festival menu in the navigation
@@ -11,7 +11,7 @@ const festivalDropdown = document.querySelector(".dropdown-festival");
 const festivalDropdownContent = document.querySelector(".dropdown-content-festival");
 const festivalDropdownArrow = document.querySelector(".dropdown-arrow");
 
-festivalDropdown.addEventListener('click', function() {
+festivalDropdown.addEventListener('click', function () {
     festivalDropdownContent.classList.toggle('show');
     festivalDropdownArrow.classList.toggle('open');
 });
@@ -20,7 +20,7 @@ festivalDropdown.addEventListener('click', function() {
 const headIcon = document.querySelector("#userId");
 const dropdownContent = document.querySelector(".dropdown-content1");
 
-headIcon.addEventListener('click', function() {
+headIcon.addEventListener('click', function () {
     dropdownContent.classList.toggle('show');
 });
 //end Navigation

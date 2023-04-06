@@ -1,40 +1,40 @@
 @import url(nav.css);
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fbf7ea;
   background-color: #222222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body .mainBlock {
   border: 1px solid #fefed5;
   border-radius: 4px;
-  padding: 20px;
   margin: 20px;
+  padding: 20px;
 }
 body .mainBlock .container {
-  max-width: 95vw;
   margin: 0 auto;
+  max-width: 95vw;
 }
 body .mainBlock .container h1 {
   font-size: 90px;
   font-weight: bold;
-  margin-top: 0;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 body .mainBlock .container h2 {
   font-size: 50px;
   font-weight: bold;
-  margin-top: 0;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 body .mainBlock .container h3 {
   font-size: 40px;
-  margin-top: 0;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 body .mainBlock .container h4 {
   font-size: 25px;
-  margin-top: 0;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 body .mainBlock .container .mainText {
   font-size: 25px;
@@ -54,14 +54,14 @@ body .mainBlock .container .secBtn {
 body .mainBlock .container .mainBtn .mainBtn,
 body .mainBlock .container .secBtn .mainBtn {
   background: linear-gradient(to right, #f54674, #f348a4);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
   font-size: 16px;
   font-weight: bold;
+  margin: auto;
   text-align: center;
   text-decoration: none;
-  border-radius: 8px;
-  margin: auto;
-  cursor: pointer;
-  border: none;
 }
 body .mainBlock .container .mainBtn .mainBtn .mainBtn:hover,
 body .mainBlock .container .secBtn .mainBtn .mainBtn:hover {
@@ -77,19 +77,19 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
   background: linear-gradient(to left, #65efce, #35d0ba);
 }
 body .message {
+  align-items: center;
+  animation: fadeOut 5000ms linear 3000ms forwards;
   background-color: #fbf7ea;
+  border-radius: 13px;
+  display: flex;
   height: 50px;
+  justify-content: center;
+  left: 50%;
+  padding: 5px 10px;
   position: absolute;
   top: 200px;
-  left: 50%;
   transform: translateX(-50%);
   z-index: 9999999999999;
-  padding: 5px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 13px;
-  animation: fadeOut 2000ms linear 1000ms forwards;
 }
 @keyframes fadeOut {
   0% {
@@ -103,12 +103,12 @@ body .message {
   }
 }
 body .error {
-  color: #f54674;
   border: 1px #f54674 solid;
+  color: #f54674;
 }
 body .success {
-  color: #35d0ba;
   border: 1px #35d0ba solid;
+  color: #35d0ba;
 }
 
 body {
@@ -124,19 +124,19 @@ main .contenu {
 main .contenu .contact-info {
   height: -moz-fit-content;
   height: fit-content;
+  left: 100px;
+  margin-right: 215px;
   position: relative;
   top: 60px;
-  left: 100px;
   width: 400px;
-  margin-right: 215px;
 }
 main .contenu .contact-info .blob {
-  position: absolute;
-  height: 900px;
-  width: 900px;
   background-size: contain;
-  top: -185px;
+  height: 900px;
   left: -300px;
+  position: absolute;
+  top: -185px;
+  width: 900px;
 }
 main .contenu .contact-info h1 {
   font-size: 7rem;
@@ -145,8 +145,8 @@ main .contenu .contact-info p {
   font-size: 2rem;
 }
 main .contenu .map {
-  border: 5px solid #f348a4;
   background-color: #f348a4;
+  border: 5px solid #f348a4;
 }
 
 @media (min-width: 1193px) and (max-width: 1668px) {
@@ -157,12 +157,12 @@ main .contenu .map {
     left: 90px;
   }
   main .contenu .contact-info .blob {
-    position: absolute;
-    height: 740px;
-    width: 900px;
     background-size: contain;
-    top: -160px;
+    height: 740px;
     left: -255px;
+    position: absolute;
+    top: -160px;
+    width: 900px;
   }
   main .contenu .contact-info h1 {
     font-size: 5rem;
@@ -171,7 +171,7 @@ main .contenu .map {
     font-size: 1.5rem;
   }
   main .contenu .map iframe {
-    width: 722px;
     height: 585px;
+    width: 722px;
   }
 }/*# sourceMappingURL=contact.css.map */

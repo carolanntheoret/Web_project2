@@ -1,40 +1,40 @@
 @import url(nav.css);
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fbf7ea;
   background-color: #222222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body .mainBlock {
   border: 1px solid #fefed5;
   border-radius: 4px;
-  padding: 20px;
   margin: 20px;
+  padding: 20px;
 }
 body .mainBlock .container {
-  max-width: 95vw;
   margin: 0 auto;
+  max-width: 95vw;
 }
 body .mainBlock .container h1 {
   font-size: 90px;
   font-weight: bold;
-  margin-top: 0;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 body .mainBlock .container h2 {
   font-size: 50px;
   font-weight: bold;
-  margin-top: 0;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 body .mainBlock .container h3 {
   font-size: 40px;
-  margin-top: 0;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 body .mainBlock .container h4 {
   font-size: 25px;
-  margin-top: 0;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 body .mainBlock .container .mainText {
   font-size: 25px;
@@ -54,14 +54,14 @@ body .mainBlock .container .secBtn {
 body .mainBlock .container .mainBtn .mainBtn,
 body .mainBlock .container .secBtn .mainBtn {
   background: linear-gradient(to right, #f54674, #f348a4);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
   font-size: 16px;
   font-weight: bold;
+  margin: auto;
   text-align: center;
   text-decoration: none;
-  border-radius: 8px;
-  margin: auto;
-  cursor: pointer;
-  border: none;
 }
 body .mainBlock .container .mainBtn .mainBtn .mainBtn:hover,
 body .mainBlock .container .secBtn .mainBtn .mainBtn:hover {
@@ -77,19 +77,19 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
   background: linear-gradient(to left, #65efce, #35d0ba);
 }
 body .message {
+  align-items: center;
+  animation: fadeOut 5000ms linear 3000ms forwards;
   background-color: #fbf7ea;
+  border-radius: 13px;
+  display: flex;
   height: 50px;
+  justify-content: center;
+  left: 50%;
+  padding: 5px 10px;
   position: absolute;
   top: 200px;
-  left: 50%;
   transform: translateX(-50%);
   z-index: 9999999999999;
-  padding: 5px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 13px;
-  animation: fadeOut 5000ms linear 3000ms forwards;
 }
 @keyframes fadeOut {
   0% {
@@ -103,46 +103,46 @@ body .message {
   }
 }
 body .error {
-  color: #f54674;
   border: 1px #f54674 solid;
+  color: #f54674;
 }
 body .success {
-  color: #35d0ba;
   border: 1px #35d0ba solid;
+  color: #35d0ba;
 }
 
 body main {
   margin-top: 4%;
 }
 body main a {
-  display: block;
   color: #fbf7ea;
+  display: block;
 }
 body main .highlighted-news {
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   height: 850px;
   margin-bottom: 50px;
 }
 body main .highlighted-news .overlay {
-  width: 100%;
+  background-color: rgba(34, 34, 34, 0.4156862745);
   height: 850px;
   position: absolute;
-  background-color: rgba(34, 34, 34, 0.4156862745);
+  width: 100%;
 }
 body main .highlighted-news h1 {
-  position: relative;
-  top: 35%;
-  left: 39%;
   font-size: 75px;
   font-weight: bold;
+  left: 39%;
+  position: relative;
+  top: 35%;
   width: -moz-fit-content;
   width: fit-content;
 }
 body main .highlighted-news .content {
+  left: 5%;
   position: relative;
   top: 65%;
-  left: 5%;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -150,8 +150,8 @@ body main .highlighted-news .content h2 {
   font-weight: bold;
 }
 body main .highlighted-news .content .festi-line {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 body main .highlighted-news .content .festi-line p {
   margin: 0;
@@ -165,11 +165,11 @@ body main .highlighted-news .content .festi-line .date {
 }
 body main .highlighted-news .content .button-header {
   border: 3px solid #fbf7ea;
+  font-weight: bold;
+  margin-top: 10px;
   padding: 15px 35px;
   width: -moz-fit-content;
   width: fit-content;
-  font-weight: bold;
-  margin-top: 10px;
 }
 body main .highlighted-news .content .button-header a {
   text-decoration: none;
@@ -183,23 +183,23 @@ body main .highlighted-news .content .button-header:hover a {
   color: #222222;
 }
 body main .container {
-  max-width: 2000px;
   display: grid;
   justify-content: center;
   margin: 0;
+  max-width: 2000px;
 }
 body main .container .grid {
-  width: 100%;
-  visibility: hidden;
   margin: 0 auto;
+  visibility: hidden;
+  width: 100%;
 }
 body main .container .grid .grid-item {
-  width: 375px;
-  margin-bottom: 50px;
   border: 3px solid #222;
-  padding: 0px 0px 10px 0px;
+  margin-bottom: 50px;
   overflow: hidden;
+  padding: 0px 0px 10px 0px;
   transition: all 1s ease-in-out;
+  width: 375px;
 }
 body main .container .grid .grid-item img {
   max-width: 100%;
@@ -221,47 +221,46 @@ body main .container .grid .grid-item--width2 img {
   max-width: 100%;
 }
 body main .container .grid .grid-item:hover img {
-  transform: scale(1.02);
   filter: contrast(75%);
+  transform: scale(1.02);
   transition: all 0.3s ease-in-out;
 }
 body main .container .button {
   background: linear-gradient(to right, #f54674, #f348a4);
-  padding: 1.3vh 0vw 1.3vh;
+  border: none;
+  border-radius: 22px;
+  color: #fbf7ea;
+  cursor: pointer;
   font-size: 25px;
   font-weight: 600;
+  margin: auto;
+  padding: 1.3vh 0vw 1.3vh;
   text-align: center;
   text-decoration: none;
-  border-radius: 22px;
-  margin: auto;
-  cursor: pointer;
-  color: #fbf7ea;
   transition: all 0.3s ease-in-out;
-  border: none;
   width: 185px;
 }
 body main .container .button:hover {
   background: radial-gradient(circle at center, #de3f69, #de4396);
 }
 body main .article-head {
+  background-position: center center;
   background-size: cover;
   height: 425px;
   position: relative;
-  background-size: cover;
-  background-position: center center;
 }
 body main .article-head .overlay {
-  width: 100%;
+  background-color: rgba(34, 34, 34, 0.4156862745);
   height: 425px;
   position: absolute;
-  background-color: rgba(34, 34, 34, 0.4156862745);
+  width: 100%;
 }
 body main .article-head .title {
-  position: absolute;
-  top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute;
   text-align: center;
+  top: 50%;
+  transform: translate(-50%, -50%);
   width: 95%;
   z-index: 5;
 }
@@ -274,20 +273,20 @@ body main .article-head .title h4 {
   margin: 0 50px;
 }
 body main .band {
-  width: 100%;
-  height: 50px;
   background-color: rgba(53, 208, 185, 0.7176470588);
+  height: 50px;
+  width: 100%;
 }
 body main .article {
   border: 2px solid #ccc;
   border-radius: 10px;
-  padding: 40px;
-  margin: 10% 15%;
   color: #fbf7ea;
+  margin: 10% 15%;
+  padding: 40px;
 }
 body main .article-header {
-  display: flex;
   align-items: center;
+  display: flex;
   margin-bottom: 10px;
 }
 body main .article-header p {
@@ -303,13 +302,13 @@ body main .article-author {
   margin-left: 10px;
 }
 body main .article-date {
-  font-size: 20px;
   color: #a8a8a8;
+  font-size: 20px;
 }
 body main .article-content {
-  margin-top: 45px;
   font-size: 22px;
   line-height: 1.5;
+  margin-top: 45px;
 }
 
 @media (min-width: 1100px) and (max-width: 1440px) {
@@ -317,8 +316,8 @@ body main .article-content {
     left: 35% !important;
   }
   main .highlighted-news .content {
-    width: 80% !important;
     top: 60% !important;
+    width: 80% !important;
   }
 }
 @media (min-width: 800px) and (max-width: 1099px) {
@@ -326,29 +325,29 @@ body main .article-content {
     left: 32% !important;
   }
   main .highlighted-news .content {
-    width: 80% !important;
     top: 60% !important;
+    width: 80% !important;
   }
 }
 @media (min-width: 501px) and (max-width: 799px) {
   main .highlighted-news h1 {
-    left: 32% !important;
     font-size: 47px !important;
+    left: 32% !important;
   }
   main .highlighted-news .content {
-    width: 80% !important;
     top: 60% !important;
+    width: 80% !important;
   }
 }
 @media screen and (min-width: 200px) and (max-width: 500px) {
   main .highlighted-news h1 {
-    left: 27% !important;
     font-size: 40px !important;
+    left: 27% !important;
   }
   main .highlighted-news .content {
-    width: 80% !important;
-    top: 60% !important;
     left: 0% !important;
+    top: 60% !important;
+    width: 80% !important;
   }
 }
 @media (min-width: 700px) and (max-width: 1000px) {

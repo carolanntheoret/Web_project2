@@ -89,7 +89,7 @@ body .message {
   align-items: center;
   justify-content: center;
   border-radius: 13px;
-  animation: fadeOut 2000ms linear 1000ms forwards;
+  animation: fadeOut 5000ms linear 3000ms forwards;
 }
 @keyframes fadeOut {
   0% {
@@ -116,70 +116,70 @@ body {
 }
 
 .headerImage {
-  position: relative;
-  width: 100%;
-  height: 37vh;
   background-image: url("../images/header_image_mytickets.webp");
   background-position: center;
   background-size: cover;
+  height: 37vh;
   padding: 0 7.3vw;
+  position: relative;
+  width: 100%;
 }
 .headerImage h2,
 .headerImage h3 {
   position: absolute;
 }
 .headerImage h2 {
-  width: 303px;
   bottom: 37px;
   font-size: 44px;
+  width: 303px;
 }
 .headerImage h3 {
-  width: 36vw;
-  right: 7.3vw;
   bottom: 40px;
+  right: 7.3vw;
+  width: 36vw;
 }
 .headerImage .line {
+  background-color: white;
+  bottom: 37px;
+  height: 3px;
   position: absolute;
   right: 7.3vw;
-  bottom: 37px;
-  background-color: white;
   width: 36vw;
-  height: 3px;
 }
 
 .band {
-  width: 100%;
-  height: 50px;
   background-color: rgba(53, 208, 185, 0.7176470588);
+  height: 50px;
+  width: 100%;
 }
 
 .passes {
   display: flex;
-  margin: 0 7.3vw;
   justify-content: space-evenly;
+  margin: 0 7.3vw;
   margin-bottom: 150px;
 }
 
 h1 {
-  margin: 60px auto;
-  text-align: center;
-  padding-bottom: 7px;
-  display: inline-block;
   border-bottom: 3px solid #fbf7ea;
-  position: relative;
+  display: inline-block;
   left: 50%;
+  margin: 60px auto;
+  padding-bottom: 7px;
+  position: relative;
+  text-align: center;
   transform: translateX(-50%);
 }
 
 .pass {
-  width: 17.5vw;
   height: 400px;
-  background-size: cover;
   background-position: center;
+  background-size: cover;
   border-radius: 25px;
+  overflow: hidden;
   padding: 43px 27px 86px 27px;
   position: relative;
-  overflow: hidden;
+  width: 17.5vw;
 }
 .pass h6,
 .pass h3,
@@ -191,38 +191,38 @@ h1 {
   overflow-y: auto;
 }
 .pass h3 {
-  width: 150px;
   margin: 20px 0;
+  width: 150px;
 }
 
 .overlay {
-  width: calc(100% + 150px);
-  height: calc(100% + 150px);
   background: linear-gradient(315deg, rgba(245, 70, 116, 0), rgb(245, 70, 116));
   border-radius: 25px;
+  height: calc(100% + 150px);
+  left: -150px;
   position: absolute;
   top: -150px;
-  left: -150px;
+  width: calc(100% + 150px);
 }
 
 .remove {
-  width: 100%;
-  position: absolute;
-  left: 0;
-  bottom: 50px;
-  height: 41px;
   background: rgba(101, 239, 206, 0.6);
+  bottom: 50px;
   color: #d9fbf3;
   font-size: 25px;
+  height: 41px;
+  left: 0;
+  position: absolute;
   text-align: center;
+  width: 100%;
 }
 
 .remove:hover {
-  transition: background 0.2s ease-in-out;
   background: rgba(184, 248, 233, 0.8823529412);
   color: rgba(53, 208, 185, 0.7176470588);
-  text-decoration: underline;
   cursor: pointer;
+  text-decoration: underline;
+  transition: background 0.2s ease-in-out;
 }
 
 .removeItem {
@@ -230,43 +230,43 @@ h1 {
 }
 .removeItem .line {
   background-color: white;
-  width: 65%;
   height: 3px;
   margin: 0 17.5%;
+  width: 65%;
 }
 .removeItem .loginInput {
+  align-items: center;
+  background: linear-gradient(to right, #f54674, #f348a4);
+  border: none;
+  border-radius: 24px;
+  color: #fbf7ea;
+  cursor: pointer;
+  display: flex;
+  font-size: 21px;
+  left: 50%;
   margin-top: 100px;
   margin-bottom: 150px;
-  background: linear-gradient(to right, #f54674, #f348a4);
-  font-size: 21px;
-  border-radius: 24px;
-  cursor: pointer;
-  color: #fbf7ea;
-  border: none;
-  display: flex;
-  align-items: center;
   position: relative;
-  width: 185px;
-  left: 50%;
   transform: translateX(-50%);
+  width: 185px;
 }
 .removeItem .loginInput img {
+  margin-bottom: 5px;
   position: absolute;
   right: 30px;
   width: 30px;
-  margin-bottom: 5px;
 }
 .removeItem .loginInput .submit {
   background-color: transparent;
-  margin: 0;
-  width: 100%;
-  display: flex;
-  font-weight: 500;
-  padding: 15px 0 15px 30px;
   border: 0px;
   color: #fbf7ea;
-  z-index: 1;
+  display: flex;
+  font-weight: 500;
+  margin: 0;
+  padding: 15px 0 15px 30px;
   text-align: left;
+  width: 100%;
+  z-index: 1;
 }
 .removeItem .loginInput:hover {
   background: linear-gradient(to left, #f54674, #f348a4);
@@ -293,18 +293,18 @@ h1 {
 }
 
 .noReservation {
-  font-size: 25px;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  font-size: 25px;
 }
 .noReservation p {
   margin: 0;
 }
 
 .getTicket {
-  margin-top: 60px;
   color: #f348a4;
+  margin-top: 60px;
 }
 
 .getTicket:hover {

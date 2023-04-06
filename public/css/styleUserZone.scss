@@ -1,124 +1,108 @@
 @import 'style.scss';
 
-body
-{
+body {
     background-color: #1f2833;
 }
 
-main
-{
-    display: flex;
-    justify-content: space-evenly;
+main {
     align-items: center;
-    margin-top: 6vh;
+    display: flex;
     height: 89vh;
+    justify-content: space-evenly;
+    margin-top: 6vh;
 }
 
-.connectForm
-{
-    border-radius: 20px;
-    border: 7px $almost-white solid;
-    width: 40%;
-    height: 648px;
+.connectForm {
     background-color: lighten($deep-blue, $amount: 3);
+    border: 7px $almost-white solid;
+    border-radius: 20px;
+    height: 648px;
+    width: 40%;
 }
 
 .login,
-.createAccount
-{
-    width: 65%;
+.createAccount {
     margin: 12.25% auto;
+    width: 65%;
 }
 
-input
-{
+input {
+    background-color: #404851;
+    border: 0px;
+    color: $almost-white;
     font-size: 20px;
-    width: 100%;
     height: 60px;
     margin-bottom: 20px;
-    border: 0px;
-    background-color: #404851;
     padding: 16px 0 16px 40px;
+    width: 100%;
+}
+
+input::placeholder {
     color: $almost-white;
 }
 
-input::placeholder
-{
-    color: $almost-white;
-}
-
-h2
-{
+h2 {
     margin-bottom: 22px;
 }
 
 .loginInput,
-.createAccountInput
-{
-    margin-top: 9px;
-    background: linear-gradient(to right, $reddish-pink, $pink);
-    font-size: 21px;
-    border-radius: 24px;
-    cursor: pointer;
-    color: $almost-white;
-    border: none;
-    display: flex;
+.createAccountInput {
     align-items: center;
+    background: linear-gradient(to right, $reddish-pink, $pink);
+    border: none;
+    border-radius: 24px;
+    color: $almost-white;
+    cursor: pointer;
+    display: flex;
+    font-size: 21px;
+    margin-top: 9px;
     position: relative;
 
-    img
-    {
+    img {
         position: absolute;
         right: 30px;
         width: 30px;
     }
 }
 
-.loginInput
-{
+.loginInput {
     width: 160px;
 }
 
-.createAccountInput
-{
+.createAccountInput {
     width: 263px;
 }
 
-.submit
-{
+.submit {
     background-color: transparent;
-    margin: 0;
-    width: auto;
     font-weight: 500;
+    margin: 0;
     padding: 15px 0 15px 30px;
+    width: auto;
 }
 
-#submit
-{
+#submit {
     display: flex;
     margin: 0;
+    text-align: left;
     width: 100%;
     z-index: 1;
-    text-align: left;
 }
 
-.plus
-{
-    position: absolute;
-    right: 30px;
+.plus {
     font-size: 40px;
     margin: -10px 0 0 12px;
+    position: absolute;
+    right: 30px;
 }
 
 .loginInput:hover,
-.createAccountInput:hover
-{
+.createAccountInput:hover {
 
-        background: radial-gradient(circle at center, #de3f69, #de4396);
-    }
+    background: radial-gradient(circle at center, #de3f69, #de4396);
+}
 
-.createAccountName
-{
+.createAccountName {
     display: flex;
     gap: 25px;
 }

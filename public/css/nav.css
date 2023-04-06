@@ -5,12 +5,12 @@
 }
 .navigation #headBlock {
   align-items: center;
-  display: flex;
   background-color: #1f2833;
+  display: flex;
+  padding: 2.5vh 7.3vw 2.5vh 7.3vw;
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 2.5vh 7.3vw 2.5vh 7.3vw;
   z-index: 10000;
 }
 .navigation #headBlock .headLogo #logo {
@@ -26,10 +26,10 @@
   }
 }
 .navigation #headBlock .headContent .burgerMenu {
-  display: block;
   background-color: transparent;
   border: none;
   cursor: pointer;
+  display: block;
 }
 @media screen and (min-width: 1193px) {
   .navigation #headBlock .headContent .burgerMenu {
@@ -65,13 +65,13 @@
 }
 @media screen and (max-width: 1193px) {
   .navigation #headBlock .headContent .headLinks {
-    display: none;
-    position: absolute;
-    left: 0;
     background-color: #1f2833;
+    display: none;
+    left: 0;
+    padding: 0.5%;
+    position: absolute;
     top: 90%;
     width: 100%;
-    padding: 0.5%;
   }
   .navigation #headBlock .headContent .headLinks.active {
     display: flex;
@@ -79,14 +79,14 @@
 }
 @media screen and (max-width: 835px) {
   .navigation #headBlock .headContent .headLinks {
-    display: none;
-    position: absolute;
-    left: 0;
     background-color: #1f2833;
+    display: none;
+    left: 0;
+    padding: 0.5%;
+    position: absolute;
     text-align: center;
     top: 90%;
     width: 100%;
-    padding: 0.5%;
   }
   .navigation #headBlock .headContent .headLinks.active {
     display: flex;
@@ -97,33 +97,33 @@
 }
 @media screen and (max-width: 414px) {
   .navigation #headBlock .headContent .headLinks {
+    background-color: #1f2833;
     display: none;
     position: absolute;
     top: 100%;
     width: 100%;
-    background-color: #1f2833;
   }
   .navigation #headBlock .headContent .headLinks.active {
     display: block;
   }
 }
 .navigation #headBlock .headContent .headLinks .headList {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-left: auto;
   cursor: pointer;
+  display: inline-block;
+  margin-left: auto;
+  padding: 10px 20px;
 }
 @media screen and (max-width: 835px) {
   .navigation #headBlock .headContent .headLinks .headList {
+    background-color: #1f2833;
     display: block;
     width: 100%;
-    background-color: #1f2833;
   }
 }
 @media screen and (max-width: 414px) {
   .navigation #headBlock .headContent .headLinks .headList {
-    display: block;
     background-color: #1f2833;
+    display: block;
   }
   .navigation #headBlock .headContent .headLinks .headList a {
     font-size: 1rem;
@@ -136,20 +136,20 @@
   text-decoration: underline;
 }
 .navigation #headBlock .headContent .headLinks .headList a {
-  text-decoration: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fbf7ea;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1.5rem;
+  text-decoration: none;
 }
 .navigation #headBlock .headContent .headLinks .headList .dropdown-festival {
-  position: relative;
   display: inline-block;
+  position: relative;
   width: -moz-min-content;
   width: min-content;
 }
 .navigation #headBlock .headContent .headLinks .headList .dropdown-festival a {
-  display: flex;
   align-items: center;
+  display: flex;
 }
 .navigation #headBlock .headContent .headLinks .headList .dropdown-festival a .dropdown-arrow {
   margin-left: 10px;
@@ -160,19 +160,19 @@
 }
 .navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival {
   display: none;
-  position: absolute;
-  z-index: 10;
+  min-width: 50px;
   padding: 5px 0;
+  position: absolute;
   right: 0;
   top: 0;
   width: -moz-fit-content;
   width: fit-content;
-  min-width: 50px;
+  z-index: 10;
 }
 .navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival.show {
   display: flex;
-  top: 4vh;
   left: -43px;
+  top: 4vh;
 }
 @media screen and (max-width: 835px) {
   .navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival.show {
@@ -184,46 +184,46 @@
   text-decoration: none;
 }
 .navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival a {
+  border-radius: 100%;
+  border-top: #fbf7ea;
   display: block;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1.2rem;
+  padding: 3%;
+  text-align: center;
   width: -moz-fit-content;
   width: fit-content;
-  border-radius: 100%;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
-  font-size: 1.2rem;
-  border-top: #fbf7ea;
-  padding: 3%;
 }
 .navigation #headBlock .headContent .headLinks .headList .dropdown-content-festival a:hover {
   text-decoration: underline;
 }
 .navigation #headBlock .headContent .headLinks .mainBtn {
   background: linear-gradient(to right, #f54674, #f348a4);
-  padding: 1.1vh 2vw 1.3vh;
+  border: none;
+  border-radius: 20px;
+  color: #fbf7ea;
+  cursor: pointer;
+  flex-wrap: nowrap;
   font-size: 1.5rem;
+  margin: auto;
+  margin-left: auto;
+  padding: 1.1vh 2vw 1.3vh;
+  position: relative;
   text-align: center;
   text-decoration: none;
-  border-radius: 20px;
-  margin: auto;
-  cursor: pointer;
-  color: #fbf7ea;
-  border: none;
-  flex-wrap: nowrap;
-  margin-left: auto;
-  position: relative;
   z-index: 1;
 }
 .navigation #headBlock .headContent .headLinks .mainBtn::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   background: radial-gradient(circle at center, #de3f69, #de4396);
-  opacity: 0;
-  transition: opacity 0.3s ease-in-out;
   border-radius: 20px;
+  bottom: 0;
+  content: "";
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: opacity 0.3s ease-in-out;
   z-index: -1;
 }
 .navigation #headBlock .headContent .headLinks .mainBtn:hover::before {
@@ -235,13 +235,13 @@
 .navigation #headBlock .headIcon {
   align-items: center;
   display: flex;
-  visibility: visible;
   transition: transform 0.5s ease-in-out;
+  visibility: visible;
 }
 .navigation #headBlock .headIcon .dropdown {
-  position: relative;
   display: flex;
   padding: 1vw 2vh;
+  position: relative;
 }
 @media screen and (max-width: 414px) {
   .navigation #headBlock .headIcon .dropdown {
@@ -249,23 +249,23 @@
   }
 }
 .navigation #headBlock .headIcon .dropdown #userId {
+  align-items: center;
+  background-color: #fbf7ea;
+  border-radius: 50%;
   color: #222222;
-  position: absolute;
+  cursor: pointer;
+  display: flex;
   font-size: 1.4rem;
-  text-transform: uppercase;
   font-weight: bold;
-  top: 50%;
+  justify-content: center;
   left: 50%;
   min-height: 40px;
   min-width: 40px;
+  position: absolute;
+  text-transform: uppercase;
+  top: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.5s ease-in-out;
-  background-color: #fbf7ea;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
 }
 @media screen and (max-width: 500px) {
   .navigation #headBlock .headIcon .dropdown #userId {
@@ -274,12 +274,12 @@
 }
 .navigation #headBlock .headIcon .dropdown #userImg,
 .navigation #headBlock .headIcon .dropdown #userNone {
-  max-width: 50px;
-  transition: all 0.5s ease-in-out;
+  align-items: center;
   border-radius: 50%;
   display: flex;
   justify-content: center;
-  align-items: center;
+  max-width: 50px;
+  transition: all 0.5s ease-in-out;
 }
 @media screen and (max-width: 414px) {
   .navigation #headBlock .headIcon .dropdown #userImg,
@@ -288,32 +288,32 @@
   }
 }
 .navigation #headBlock .headIcon .dropdown-content1 {
-  display: none;
-  position: absolute;
-  z-index: 10;
   border-radius: 20%;
+  display: none;
+  min-width: 50px;
+  position: absolute;
   right: 0;
   top: 0;
   width: -moz-fit-content;
   width: fit-content;
-  min-width: 50px;
+  z-index: 10;
 }
 .navigation #headBlock .headIcon .dropdown-content1.show {
   display: flex;
-  top: 6vh;
   left: -70px;
+  top: 6vh;
 }
 .navigation #headBlock .headIcon .dropdown-content1 a {
+  align-items: center;
   color: #fbf7ea;
+  flex: none;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 1rem;
   font-weight: bold;
-  text-decoration: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  text-align: center;
   justify-content: center;
-  align-items: center;
   padding: 1em;
-  flex: none;
+  text-align: center;
+  text-decoration: none;
 }
 .navigation #headBlock .headIcon .dropdown-content1 a:hover {
   color: #35d0ba;
@@ -322,10 +322,10 @@
   transform: scale(1.1);
 }
 .navigation .footerBlock {
-  display: flex;
   background-color: #65efce;
-  padding: 3.5vh 7.3vw 3.5vh 7.3vw;
+  display: flex;
   margin-bottom: 0;
+  padding: 3.5vh 7.3vw 3.5vh 7.3vw;
 }
 @media screen and (min-width: 200px) and (max-width: 500px) {
   .navigation .footerBlock {
@@ -333,8 +333,8 @@
   }
 }
 .navigation .footerBlock .footerLogo {
-  display: flex;
   color: #222222;
+  display: flex;
   min-width: 20%;
 }
 .navigation .footerBlock .footerLogo .dudeLogo {
@@ -349,13 +349,13 @@
 .navigation .footerBlock #footerSection {
   display: flex;
   flex-direction: column;
-  padding-left: 2vw;
   margin-left: 50px;
+  padding-left: 2vw;
 }
 .navigation .footerBlock #footerSection #footerText {
+  color: #222222;
   display: flex;
   flex-direction: column;
-  color: #222222;
   max-width: 70%;
   text-align: justify;
 }
@@ -373,11 +373,11 @@
   }
 }
 .navigation .footerBlock #footerSection .socialIcons ul {
+  display: flex;
+  justify-content: space-between;
   list-style: none;
   margin-top: 25px;
   padding: 0;
-  display: flex;
-  justify-content: space-between;
   width: 38%;
 }
 @media screen and (min-width: 500px) and (max-width: 835px) {
@@ -388,17 +388,17 @@
 }
 @media screen and (min-width: 200px) and (max-width: 500px) {
   .navigation .footerBlock #footerSection .socialIcons ul {
-    position: absolute;
-    margin-top: 41vh;
     margin-left: -6vw;
+    margin-top: 41vh;
+    position: absolute;
     z-index: 10;
   }
 }
 .navigation .footerBlock #footerSection .socialIcons .icons {
   display: inline-block;
-  width: 60px;
   height: 60px;
   transition: all 0.3s ease-in-out;
+  width: 60px;
 }
 .navigation .footerBlock #footerSection .socialIcons .icons:hover {
   transform: scale(1.2);
@@ -408,8 +408,8 @@
   height: 100%;
 }
 .navigation .footerBlock .footerLinks {
-  margin: 50px 0;
   flex-direction: column;
+  margin: 50px 0;
   margin-bottom: 1.5em;
   -webkit-margin-start: auto;
           margin-inline-start: auto;
@@ -426,10 +426,10 @@
   width: 166px;
 }
 .navigation .footerBlock .footerLinks .footerList a {
-  text-decoration: none;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #222222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   font-size: 25px;
+  text-decoration: none;
 }
 .navigation .footerBlock .footerLinks .footerList a:hover {
   color: #35d0ba;

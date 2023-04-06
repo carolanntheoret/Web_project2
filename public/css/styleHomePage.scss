@@ -1,3 +1,5 @@
+// Variable style.css
+
 $reddish-pink: #f54674;
 $pink: #f348a4;
 $deep-blue: #1f2833;
@@ -8,15 +10,15 @@ body {
     margin: 0;
 
     .firstSection {
-        width: 100%;
         height: 90vh;
+        width: 100%;
 
         .festivalImage {
-            width: 100%;
-            height: 90vh;
-            background-size: cover;
-            background-repeat: no-repeat;
             background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 90vh;
+            width: 100%;
         }
     }
 
@@ -27,32 +29,32 @@ body {
     }
 
     .topRow {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 50%;
         background-color: rgb(197, 197, 197);
         border: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        height: 50%;
+        width: 100%;
 
         span {
-            width: 33.333333%;
-            height: 100%;
             border: 1px solid black;
+            height: 100%;
+            width: 33.333333%;
         }
     }
 
     .downRow {
-        display: flex;
-        flex-direction: row;
-        width: 100%;
-        height: 50%;
         background-color: rgb(197, 197, 197);
         border: 1px solid black;
+        display: flex;
+        flex-direction: row;
+        height: 50%;
+        width: 100%;
 
         span {
-            width: 33.333333%;
-            height: 100%;
             border: 1px solid black;
+            height: 100%;
+            width: 33.333333%;
         }
     }
 
@@ -61,40 +63,39 @@ body {
     }
 
     .aboutSection {
+        align-items: center;
+        background-color: $deep-blue;
         display: flex;
         flex-direction: row;
-        width: 100%;
         height: 100vh;
-        align-items: center;
         justify-content: space-around;
-        background-color: $deep-blue;
         position: relative;
+        width: 100%;
         z-index: 2;
 
 
         .imageBack {
-            position: relative;
             left: -30px;
+            position: relative;
             top: 96px;
 
             img {
-
-                width: 850px;
                 height: 750px;
+                width: 850px;
             }
         }
 
         .aboutInfo {
             display: flex;
             flex-direction: column;
-            position: absolute;
+            float: left;
             gap: 30px;
             left: 60px;
-            top: 110px;
-            width: 652px;
-            float: left;
             max-width: 652px;
             overflow: hidden;
+            position: absolute;
+            top: 110px;
+            width: 652px;
 
             h2 {
                 font-size: 70px;
@@ -107,60 +108,60 @@ body {
         }
 
         .imageContainer {
-            width: 447px;
-            height: 560px;
-            position: relative;
             float: right;
+            height: 560px;
             margin-right: 8%;
+            position: relative;
+            width: 447px;
         }
 
         .imageBorder {
-            position: absolute;
-            top: 60px;
-            right: -70px;
+            border: 7px solid #fbf7ea;
             bottom: -70px;
             left: 60px;
-            border: 7px solid #fbf7ea;
+            position: absolute;
+            right: -70px;
+            top: 60px;
             z-index: -1;
         }
 
         .aboutImage {
-            width: 100%;
             height: 100%;
             position: relative;
+            width: 100%;
         }
 
         .aboutImage img {
-            width: 100%;
             height: 100%;
             object-fit: cover;
+            width: 100%;
         }
     }
 
     .latestNews {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        padding: 4.5% 0 6% 0;
+        align-items: center;
         background-color: #dff0f0;
         color: black;
-        align-items: center;
+        display: flex;
+        flex-direction: column;
+        padding: 4.5% 0 6% 0;
+        width: 100%;
 
         p {
             max-width: 445px;
         }
 
         .titleLast {
+            align-items: center;
             display: flex;
             flex-direction: row;
             gap: 60px;
-            align-items: center;
             margin-bottom: 45px;
 
             span {
-                transform: rotate(90deg);
                 font-size: 70px;
                 margin-top: -10px;
+                transform: rotate(90deg);
             }
 
             h2 {
@@ -171,35 +172,35 @@ body {
         .news {
             display: flex;
             flex-direction: row;
-            width: 100%;
             height: 75%;
+            gap: 20%;
             justify-content: center;
             margin-top: 25px;
-            gap: 20%;
+            width: 100%;
 
             .newsPicture {
-                display: flex;
                 align-self: auto;
-                width: 422px;
-                height: 264px;
                 background-size: cover;
                 background-position: center;
+                display: flex;
+                height: 264px;
                 position: relative;
+                width: 422px;
             }
 
             .banner {
-                position: absolute;
-                top: 13px;
+                align-items: center;
+                background-color: #35d0ba;
+                color: white;
                 font-size: 25px;
                 font-weight: 600;
-                color: white;
-                align-items: center;
-                left: -25px;
-                width: 365px;
                 height: 66px;
+                left: -25px;
                 padding: 15px 55px 15px 35px;
-                background-color: #35d0ba;
+                position: absolute;
                 text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+                top: 13px;
+                width: 365px;
             }
         }
 
@@ -208,15 +209,15 @@ body {
             max-width: 600px;
 
             .newsPicture {
-                width: 825px;
                 height: 450px;
+                width: 825px;
             }
 
             .title-main {
+                color: $almost-black;
+                margin-top: 15px;
                 max-width: 800px !important;
                 width: 800px;
-                margin-top: 15px;
-                color: $almost-black;
             }
 
             .title-main:hover {
@@ -225,23 +226,23 @@ body {
             }
 
             .subtitle-main {
+                color: $almost-black;
+                margin-top: 15px;
                 max-width: 800px !important;
                 width: 800px;
-                margin-top: 15px;
-                color: $almost-black;
             }
 
             .more {
                 background: linear-gradient(to right, $reddish-pink, $pink);
+                border-radius: 20px;
+                color: white;
+                cursor: pointer;
                 font-size: 1.5rem;
                 font-weight: bold;
-                text-align: center;
-                color: white;
-                padding: 10.5px 41px 11px 36px;
-                text-decoration: none;
-                border-radius: 20px;
                 margin: auto;
-                cursor: pointer;
+                padding: 10.5px 41px 11px 36px;
+                text-align: center;
+                text-decoration: none;
                 transition: background-color 0.5s ease-in-out;
 
                 &:hover {
@@ -271,14 +272,14 @@ body {
     }
 
     .showEvents {
+        align-items: center;
+        background-color: #2D2D2D;
         display: grid;
         grid-column: 4;
         grid-row: 2;
-        width: 100%;
         min-height: 100vh;
         padding: 150px 75px 150px 75px;
-        align-items: center;
-        background-color: #2D2D2D;
+        width: 100%;
 
         .eventTop {
             display: flex;
@@ -293,17 +294,17 @@ body {
         }
 
         .event {
-            width: 25%;
+            background-color: #FBF7EA;
+            color: black;
             height: 55vh;
             padding: 0 30px;
-            color: black;
-            background-color: #FBF7EA;
             position: relative;
+            width: 25%;
 
             .book-ticket {
-                position: absolute;
-                font-size: x-large;
                 bottom: 60px;
+                font-size: x-large;
+                position: absolute;
 
                 p {
                     color: #A8A394;
@@ -320,36 +321,35 @@ body {
         }
 
         p {
-            margin-top: 25px;
-            font-size: large;
             color: #A8A394;
+            font-size: large;
+            margin-top: 25px;
         }
 
         a {
             color: $reddish-pink;
-            text-decoration: none;
             font-size: xx-large;
-
+            text-decoration: none;
         }
 
         .book {
+            height: 38px;
             margin: 0 0 2.5px 25px;
             width: 57px;
-            height: 38px;
         }
 
         .image {
-            width: 25%;
-            height: 55vh;
             background-color: rgb(190, 190, 190);
-            background-size: cover;
             background-position: center;
+            background-size: cover;
+            height: 55vh;
+            width: 25%;
         }
 
         span {
-            width: 150px;
-            height: 200px;
             background-color: black;
+            height: 200px;
+            width: 150px;
         }
     }
 }

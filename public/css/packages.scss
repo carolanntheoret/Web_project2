@@ -12,16 +12,16 @@ body {
 }
 
 main {
-    margin: 15vh 7.3vw;
     color: $deep-blue;
+    margin: 15vh 7.3vw;
 }
 
 h1 {
-    margin: 60px auto 60px auto;
+    background: linear-gradient(to right, #ff6e97, #fe8c4d);
+    color: #ff6e97;
     font-family: FormulaCondensed;
     font-size: 5rem;
-    color: #ff6e97;
-    background: linear-gradient(to right, #ff6e97, #fe8c4d);
+    margin: 60px auto 60px auto;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -31,16 +31,16 @@ h1 {
 }
 
 .package {
-    width: 85.4vw;
-    height: 600px;
-    position: relative;
-    display: flex;
     align-items: center;
+    display: flex;
+    height: 600px;
     margin-bottom: 250px;
+    position: relative;
+    width: 85.4vw;
 
     * {
-        width: 56%;
         position: absolute;
+        width: 56%;
     }
 
     .infos {
@@ -49,9 +49,9 @@ h1 {
         padding: 70px 0;
 
         * {
-            width: 72%;
             margin: 0 auto;
             position: relative;
+            width: 72%;
         }
 
         h2 {
@@ -74,29 +74,29 @@ h1 {
         }
 
         div {
+            bottom: 70px;
             display: flex;
             position: absolute;
-            bottom: 70px;
 
             h2 {
                 font-size: 3rem;
             }
 
             a {
-                width: 30%;
+                align-items: center;
                 display: flex;
                 justify-content: center;
-                align-items: center;
+                width: 30%;
             }
         }
     }
 
     .img {
-        height: 600px;
         background-image: url('../images/youtube.icon.svg');
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+        height: 600px;
     }
 }
 
@@ -141,11 +141,11 @@ h1 {
     margin-bottom: 400px;
 
     .infos {
-        width: 60%;
-        top: 300px;
+        align-items: center;
         display: flex;
         flex-direction: column;
-        align-items: center;
+        top: 300px;
+        width: 60%;
 
         h3 {
             text-align: center;
@@ -173,17 +173,16 @@ h1 {
 .buyBTN,
 .purchase {
     background: linear-gradient(to right, #f54674, #f348a4);
-    padding: 0 2vw;
-    font-size: 2rem;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
+    border: none;
     border-radius: 24px;
-    margin: auto;
     cursor: pointer;
     color: #fbf7ea;
-    border: none;
-
+    font-size: 2rem;
+    font-weight: bold;
+    margin: auto;
+    padding: 0 2vw;
+    text-align: center;
+    text-decoration: none;
 }
 
 .buyBTN:hover {
@@ -200,35 +199,35 @@ h1 {
 }
 
 .mask {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 100001;
+    align-items: center;
     background-color: rgba(31, 40, 51, 0.8);
-    width: 100%;
+    display: none;
     height: 100vh;
     justify-content: center;
-    align-items: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100001;
 
     img {
-        max-width: 100px;
         max-height: 100px;
+        max-width: 100px;
     }
 }
 
 .buy {
-    position: relative;
-    width: 50%;
-    height: 55%;
+    align-items: center;
     background-color: rgba(206, 218, 218, 0.9);
-    border-radius: 20px;
     border: 7px solid rgba(31, 40, 51, 0.6);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: 55%;
     justify-content: space-around;
     padding: 20px;
+    position: relative;
+    width: 50%;
 }
 
 .buy .submit:hover {
@@ -240,25 +239,25 @@ h1 {
 }
 
 .close {
-    position: absolute;
-    top: 20px;
-    right: 25px;
-    font-weight: bold;
     font-size: 1.25rem;
+    font-weight: bold;
+    position: absolute;
+    right: 25px;
+    top: 20px;
 }
 
 .close:hover {
-    cursor: pointer;
     color: $reddish-pink;
+    cursor: pointer;
 }
 
 .submit {
     background: linear-gradient(to right, $reddish-pink, $pink);
-    font-size: 2rem;
-    border-radius: 24px;
-    cursor: pointer;
-    color: $almost-white;
     border: none;
+    border-radius: 24px;
+    color: $almost-white;
+    cursor: pointer;
+    font-size: 2rem;
     font-weight: 500;
     padding: 15px 30px;
 }
@@ -275,8 +274,8 @@ h1 {
 .twoDays,
 .weekend,
 .premium {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: space-evenly;
 }

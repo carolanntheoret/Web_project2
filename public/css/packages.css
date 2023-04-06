@@ -1,40 +1,40 @@
 @import url(nav.css);
 body {
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #fbf7ea;
   background-color: #222222;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 body .mainBlock {
   border: 1px solid #fefed5;
   border-radius: 4px;
-  padding: 20px;
   margin: 20px;
+  padding: 20px;
 }
 body .mainBlock .container {
-  max-width: 95vw;
   margin: 0 auto;
+  max-width: 95vw;
 }
 body .mainBlock .container h1 {
   font-size: 90px;
   font-weight: bold;
-  margin-top: 0;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 body .mainBlock .container h2 {
   font-size: 50px;
   font-weight: bold;
-  margin-top: 0;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 body .mainBlock .container h3 {
   font-size: 40px;
-  margin-top: 0;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 body .mainBlock .container h4 {
   font-size: 25px;
-  margin-top: 0;
   margin-bottom: 10px;
+  margin-top: 0;
 }
 body .mainBlock .container .mainText {
   font-size: 25px;
@@ -54,14 +54,14 @@ body .mainBlock .container .secBtn {
 body .mainBlock .container .mainBtn .mainBtn,
 body .mainBlock .container .secBtn .mainBtn {
   background: linear-gradient(to right, #f54674, #f348a4);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
   font-size: 16px;
   font-weight: bold;
+  margin: auto;
   text-align: center;
   text-decoration: none;
-  border-radius: 8px;
-  margin: auto;
-  cursor: pointer;
-  border: none;
 }
 body .mainBlock .container .mainBtn .mainBtn .mainBtn:hover,
 body .mainBlock .container .secBtn .mainBtn .mainBtn:hover {
@@ -77,19 +77,19 @@ body .mainBlock .container .secBtn .secBtn .secBtn:hover {
   background: linear-gradient(to left, #65efce, #35d0ba);
 }
 body .message {
+  align-items: center;
+  animation: fadeOut 5000ms linear 3000ms forwards;
   background-color: #fbf7ea;
+  border-radius: 13px;
+  display: flex;
   height: 50px;
+  justify-content: center;
+  left: 50%;
+  padding: 5px 10px;
   position: absolute;
   top: 200px;
-  left: 50%;
   transform: translateX(-50%);
   z-index: 9999999999999;
-  padding: 5px 10px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 13px;
-  animation: fadeOut 5000ms linear 3000ms forwards;
 }
 @keyframes fadeOut {
   0% {
@@ -103,12 +103,12 @@ body .message {
   }
 }
 body .error {
-  color: #f54674;
   border: 1px #f54674 solid;
+  color: #f54674;
 }
 body .success {
-  color: #35d0ba;
   border: 1px #35d0ba solid;
+  color: #35d0ba;
 }
 
 @font-face {
@@ -122,16 +122,16 @@ body {
 }
 
 main {
-  margin: 15vh 7.3vw;
   color: #1f2833;
+  margin: 15vh 7.3vw;
 }
 
 h1 {
-  margin: 60px auto 60px auto;
+  background: linear-gradient(to right, #ff6e97, #fe8c4d);
+  color: #ff6e97;
   font-family: FormulaCondensed;
   font-size: 5rem;
-  color: #ff6e97;
-  background: linear-gradient(to right, #ff6e97, #fe8c4d);
+  margin: 60px auto 60px auto;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -140,16 +140,16 @@ h1 .et {
 }
 
 .package {
-  width: 85.4vw;
-  height: 600px;
-  position: relative;
-  display: flex;
   align-items: center;
+  display: flex;
+  height: 600px;
   margin-bottom: 250px;
+  position: relative;
+  width: 85.4vw;
 }
 .package * {
-  width: 56%;
   position: absolute;
+  width: 56%;
 }
 .package .infos {
   background-color: rgba(206, 218, 218, 0.9);
@@ -157,9 +157,9 @@ h1 .et {
   padding: 70px 0;
 }
 .package .infos * {
-  width: 72%;
   margin: 0 auto;
   position: relative;
+  width: 72%;
 }
 .package .infos h2 {
   padding-bottom: 5px;
@@ -177,25 +177,25 @@ h1 .et {
   }
 }
 .package .infos div {
+  bottom: 70px;
   display: flex;
   position: absolute;
-  bottom: 70px;
 }
 .package .infos div h2 {
   font-size: 3rem;
 }
 .package .infos div a {
-  width: 30%;
+  align-items: center;
   display: flex;
   justify-content: center;
-  align-items: center;
+  width: 30%;
 }
 .package .img {
-  height: 600px;
   background-image: url("../images/youtube.icon.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 600px;
 }
 
 .sectionOneThree .infos div,
@@ -230,11 +230,11 @@ h1 .et {
   margin-bottom: 400px;
 }
 .sectionFour .infos {
-  width: 60%;
-  top: 300px;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  top: 300px;
+  width: 60%;
 }
 .sectionFour .infos h3 {
   text-align: center;
@@ -257,16 +257,16 @@ h1 .et {
 .buyBTN,
 .purchase {
   background: linear-gradient(to right, #f54674, #f348a4);
-  padding: 0 2vw;
-  font-size: 2rem;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
+  border: none;
   border-radius: 24px;
-  margin: auto;
   cursor: pointer;
   color: #fbf7ea;
-  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  margin: auto;
+  padding: 0 2vw;
+  text-align: center;
+  text-decoration: none;
 }
 
 .buyBTN:hover {
@@ -283,34 +283,34 @@ h1 .et {
 }
 
 .mask {
-  display: none;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 100001;
+  align-items: center;
   background-color: rgba(31, 40, 51, 0.8);
-  width: 100%;
+  display: none;
   height: 100vh;
   justify-content: center;
-  align-items: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 100001;
 }
 .mask img {
-  max-width: 100px;
   max-height: 100px;
+  max-width: 100px;
 }
 
 .buy {
-  position: relative;
-  width: 50%;
-  height: 55%;
+  align-items: center;
   background-color: rgba(206, 218, 218, 0.9);
-  border-radius: 20px;
   border: 7px solid rgba(31, 40, 51, 0.6);
+  border-radius: 20px;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 55%;
   justify-content: space-around;
   padding: 20px;
+  position: relative;
+  width: 50%;
 }
 
 .buy .submit:hover {
@@ -322,25 +322,25 @@ h1 .et {
 }
 
 .close {
-  position: absolute;
-  top: 20px;
-  right: 25px;
-  font-weight: bold;
   font-size: 1.25rem;
+  font-weight: bold;
+  position: absolute;
+  right: 25px;
+  top: 20px;
 }
 
 .close:hover {
-  cursor: pointer;
   color: #f54674;
+  cursor: pointer;
 }
 
 .submit {
   background: linear-gradient(to right, #f54674, #f348a4);
-  font-size: 2rem;
-  border-radius: 24px;
-  cursor: pointer;
-  color: #fbf7ea;
   border: none;
+  border-radius: 24px;
+  color: #fbf7ea;
+  cursor: pointer;
+  font-size: 2rem;
   font-weight: 500;
   padding: 15px 30px;
 }
@@ -357,8 +357,8 @@ h1 .et {
 .twoDays,
 .weekend,
 .premium {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-evenly;
 }/*# sourceMappingURL=packages.css.map */

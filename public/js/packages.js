@@ -5,33 +5,32 @@ const name = ref('')
 const price = ref('')
 const lessThanFive = ref(true)
 
-function displayPurchase(data)
-{
+// Displays the popup for the purchase
+
+function displayPurchase(data) {
     (document.querySelector('.mask')).style.display = 'flex'
 
-    if(Number.isInteger(data))
-    {
+    if (Number.isInteger(data)) {
         fetch(`get-pass/${data}`).then(reply => reply.json()).then(result => {
             pass.value = result
             setTimeout(createForm(pass.value.price, pass.value.name, 0), 100);
         })
     }
-    else
-    {
-        if(data["quantity"] >= 5) lessThanFive.value = false
-        else
-        {
+    else {
+        if (data["quantity"] >= 5) lessThanFive.value = false
+        else {
             pass.value = data
             createForm(data["price"], data["name"], parseInt(data["quantity"]))
         }
     }
 }
 
-function createForm(html_price, pass_name, qtt)
-{
+// Adds the "SELECT" option to the purchase popup
+
+function createForm(html_price, pass_name, qtt) {
     lessThanFive.value = true
 
-    if(qtt == 0) price.value = (html_price).toFixed(2)
+    if (qtt == 0) price.value = (html_price).toFixed(2)
     else price.value = (html_price).toFixed(2)
     name.value = pass_name
 
@@ -39,18 +38,16 @@ function createForm(html_price, pass_name, qtt)
     id.setAttribute('value', pass.value.pass_id)
 
     const elements = document.querySelectorAll('.quantity *')
-    for(let element of elements)
-    {
+    for (let element of elements) {
         element.remove()
     }
 
     const select = document.querySelector('.quantity')
-    for(let i = 5 - qtt; i > 0; i--)
-    {
+    for (let i = 5 - qtt; i > 0; i--) {
         const option = document.createElement('option')
         option.setAttribute('value', i)
-        if(i == 1) option.setAttribute('selected', 'true')
-    option.innerHTML = i
+        if (i == 1) option.setAttribute('selected', 'true')
+        option.innerHTML = i
         select.appendChild(option)
     }
 
@@ -60,8 +57,9 @@ function createForm(html_price, pass_name, qtt)
     })
 }
 
-function close()
-{
+// Closes the popup
+
+function close() {
     (document.querySelector('.mask')).style.display = 'none'
 }
 

@@ -1,244 +1,214 @@
 @import 'style.scss';
 
-body
-{
+body {
     background-color: $deep-blue;
 }
 
-.headerImage
-{
-    position: relative;
-    width: 100%;
-    height: 37vh;
+.headerImage {
     background-image: url('../images/header_image_mytickets.webp');
     background-position: center;
     background-size: cover;
+    height: 37vh;
     padding: 0 7.3vw;
+    position: relative;
+    width: 100%;
 
     h2,
-    h3
-    {
+    h3 {
         position: absolute;
     }
 
-    h2
-    {
-        width: 303px;
+    h2 {
         bottom: 37px;
         font-size: 44px;
+        width: 303px;
     }
 
-    h3
-    {
-        width: 36vw;
-        right: 7.3vw;
+    h3 {
         bottom: 40px;
+        right: 7.3vw;
+        width: 36vw;
     }
 
-    .line
-    {
+    .line {
+        background-color: white;
+        bottom: 37px;
+        height: 3px;
         position: absolute;
         right: 7.3vw;
-        bottom: 37px;
-        background-color: white;
         width: 36vw;
-        height: 3px;
     }
 }
 
-.band
-{
-    width: 100%;
-    height: 50px;
+.band {
     background-color: #35d0b9b7;
+    height: 50px;
+    width: 100%;
 }
 
-.passes
-{
+.passes {
     display: flex;
-    margin: 0 7.3vw;
     justify-content: space-evenly;
+    margin: 0 7.3vw;
     margin-bottom: 150px;
 }
 
-h1
-{
-    margin: 60px auto;
-    text-align: center;
-    padding-bottom: 7px;
-    display: inline-block;
+h1 {
     border-bottom: 3px solid $almost-white;
-    position: relative;
+    display: inline-block;
     left: 50%;
+    margin: 60px auto;
+    padding-bottom: 7px;
+    position: relative;
+    text-align: center;
     transform: translateX(-50%);
 }
 
-.pass
-{
-    width: 17.5vw;
+.pass {
     height: 400px;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
     border-radius: 25px;
+    overflow: hidden;
     padding: 43px 27px 86px 27px;
     position: relative;
-    overflow: hidden;
+    width: 17.5vw;
 
     h6,
     h3,
-    p
-    {
+    p {
         position: relative;
     }
 
-    p
-    {
+    p {
         height: 120px;
         overflow-y: auto;
     }
 
-    h3
-    {
+    h3 {
+        margin: 20px 0;
         width: 150px;
-        margin: 20px 0
     }
 }
 
-.overlay
-{
-    width: calc(100% + 150px);
-    height: calc(100% + 150px);
+.overlay {
     background: linear-gradient(315deg, rgba(245, 70, 116, 0), rgba(245, 70, 116, 1));
     border-radius: 25px;
+    height: calc(100% + 150px);
+    left: -150px;
     position: absolute;
     top: -150px;
-    left: -150px;
+    width: calc(100% + 150px);
 }
 
-.remove
-{
-    width: 100%;
-    position: absolute;
-    left: 0;
-    bottom: 50px;
-    height: 41px;
+.remove {
     background: rgba(101, 239, 206, 0.60);
+    bottom: 50px;
     color: lighten(#65efce, 25%);
     font-size: 25px;
+    height: 41px;
+    left: 0;
+    position: absolute;
     text-align: center;
+    width: 100%;
 }
 
-.remove:hover
-{
-    transition: background 0.2s ease-in-out;
+.remove:hover {
     background: lighten(#65efcfe1, 18%);
     color: rgba(53, 208, 185, 0.7176470588);
-    text-decoration: underline;
     cursor: pointer;
+    text-decoration: underline;
+    transition: background 0.2s ease-in-out;
 }
 
-.removeItem
-{
+.removeItem {
     display: none;
 
-    .line
-    {
+    .line {
         background-color: white;
-        width: 65%;
         height: 3px;
         margin: 0 17.5%;
+        width: 65%;
     }
 
-    .loginInput
-    {
+    .loginInput {
+        align-items: center;
+        background: linear-gradient(to right, $reddish-pink, $pink);
+        border: none;
+        border-radius: 24px;
+        color: $almost-white;
+        cursor: pointer;
+        display: flex;
+        font-size: 21px;
+        left: 50%;
         margin-top: 100px;
         margin-bottom: 150px;
-        background: linear-gradient(to right, $reddish-pink, $pink);
-        font-size: 21px;
-        border-radius: 24px;
-        cursor: pointer;
-        color: $almost-white;
-        border: none;
-        display: flex;
-        align-items: center;
         position: relative;
-        width: 185px;
-        left: 50%;
         transform: translateX(-50%);
+        width: 185px;
 
-        img
-        {
+        img {
+            margin-bottom: 5px;
             position: absolute;
             right: 30px;
             width: 30px;
-            margin-bottom: 5px;
         }
 
-        .submit
-        {
+        .submit {
             background-color: transparent;
-            margin: 0;
-            width: 100%;
-            display: flex;
-            font-weight: 500;
-            padding: 15px 0 15px 30px;
             border: 0px;
             color: $almost-white;
-            z-index: 1;
+            display: flex;
+            font-weight: 500;
+            margin: 0;
+            padding: 15px 0 15px 30px;
             text-align: left;
+            width: 100%;
+            z-index: 1;
         }
     }
 
-    .loginInput:hover
-    {
+    .loginInput:hover {
         background: linear-gradient(to left, $reddish-pink, $pink);
     }
 }
 
 .titles,
-.infos
-{
+.infos {
     display: flex;
     justify-content: space-between;
     margin: 0 17.5%;
     width: 65%;
 
-    *
-    {
+    * {
         width: 30%;
     }
 
-    .last
-    {
+    .last {
         width: 10%;
     }
 }
 
-.infos
-{
+.infos {
     margin-top: 100px;
 }
 
-.noReservation
-{
-    font-size: 25px;
+.noReservation {
+    align-items: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    font-size: 25px;
 
-    p
-    {
+    p {
         margin: 0;
     }
 }
 
-.getTicket
-{
-    margin-top: 60px;
+.getTicket {
     color: $pink;
+    margin-top: 60px;
 }
 
-.getTicket:hover
-{
+.getTicket:hover {
     color: $logo-turquoise;
 }

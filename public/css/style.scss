@@ -13,57 +13,55 @@
 // almost black #222222
 
 // Variables
-$reddish-pink: #f54674;
-$pink: #f348a4;
-$logo-turquoise: #35d0ba;
-$light-turquoise: #65efce;
+$almost-black: #222222;
 $almost-white: #fbf7ea;
 $deep-blue: #1f2833;
-$almost-black: #222222;
+$light-turquoise: #65efce;
+$logo-turquoise: #35d0ba;
+$pink: #f348a4;
+$reddish-pink: #f54674;
 
 
 // Styles
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: $almost-white;
     background-color: $almost-black;
-    // padding-top: 6rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
     .mainBlock {
         border: 1px solid #fefed5;
         border-radius: 4px;
-        padding: 20px;
         margin: 20px;
+        padding: 20px;
 
         .container {
-            max-width: 95vw;
             margin: 0 auto;
-
+            max-width: 95vw;
 
             h1 {
                 font-size: 90px;
                 font-weight: bold;
-                margin-top: 0;
                 margin-bottom: 10px;
+                margin-top: 0;
             }
 
             h2 {
                 font-size: 50px;
                 font-weight: bold;
-                margin-top: 0;
                 margin-bottom: 10px;
+                margin-top: 0;
             }
 
             h3 {
                 font-size: 40px;
-                margin-top: 0;
                 margin-bottom: 10px;
+                margin-top: 0;
             }
 
             h4 {
                 font-size: 25px;
-                margin-top: 0;
                 margin-bottom: 10px;
+                margin-top: 0;
             }
 
             .mainText {
@@ -80,28 +78,19 @@ body {
 
             .mainBtn,
             .secBtn {
-                // display: inline-block;
-                // padding: 10px 20px;
-                // font-size: 16px;
-                // font-weight: bold;
-                // text-align: center;
-                // text-decoration: none;
-                // border-radius: 4px;
                 color: $almost-white;
-                 cursor: pointer;
-                // transition: all 0.3s ease-in-out;
+                cursor: pointer;
 
                 .mainBtn {
                     background: linear-gradient(to right, $reddish-pink, $pink);
+                    border: none;
+                    border-radius: 8px;
+                    cursor: pointer;
                     font-size: 16px;
                     font-weight: bold;
+                    margin: auto;
                     text-align: center;
                     text-decoration: none;
-                    border-radius: 8px;
-                    margin: auto;
-                    cursor: pointer;
-                    //transition: all 0.3s ease-in-out;
-                    border: none;
 
                     .mainBtn:hover {
                         background: linear-gradient(to left, $reddish-pink, $pink);
@@ -110,7 +99,6 @@ body {
 
                 .secBtn {
                     background: linear-gradient(to left, $logo-turquoise, $light-turquoise);
-
                     border: 2px solid $reddish-pink;
 
                     .secBtn:hover {
@@ -121,51 +109,43 @@ body {
         }
     }
 
-    .message
-    {
+    .message {
+        align-items: center;
+        animation: fadeOut 5000ms linear 3000ms forwards;
         background-color: $almost-white;
+        border-radius: 13px;
+        display: flex;
         height: 50px;
+        justify-content: center;
+        left: 50%;
+        padding: 5px 10px;
         position: absolute;
         top: 200px;
-        left: 50%;
         transform: translateX(-50%);
         z-index: 9999999999999;
-        padding: 5px 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 13px;
-
-        animation: fadeOut 5000ms linear 3000ms forwards;
     }
 
-    @keyframes fadeOut
-    {
-        0%
-        {
+    @keyframes fadeOut {
+        0% {
             opacity: 1;
         }
 
-        50%
-        {
+        50% {
             opacity: 0.7;
         }
 
-        100%
-        {
+        100% {
             opacity: 0;
         }
     }
 
-    .error
-    {
-        color: $reddish-pink;
+    .error {
         border: 1px $reddish-pink solid;
+        color: $reddish-pink;
     }
 
-    .success
-    {
-        color: $logo-turquoise;
+    .success {
         border: 1px $logo-turquoise solid;
+        color: $logo-turquoise;
     }
 }

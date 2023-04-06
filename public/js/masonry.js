@@ -17,6 +17,8 @@ window.onload = () => {
     }, 500)
 }
 
+// Displays the button for more article
+
 function display() {
     const articles = document.querySelectorAll(".grid-item");
     let lastIndex = quantite - 1;

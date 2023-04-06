@@ -12,19 +12,19 @@ main {
 
         .contact-info {
             height: fit-content;
+            left: 100px;
+            margin-right: 215px;
             position: relative;
             top: 60px;
-            left: 100px;
             width: 400px;
-            margin-right: 215px;
 
             .blob {
-                position: absolute;
-                height: 900px;
-                width: 900px;
                 background-size: contain;
-                top: -185px;
+                height: 900px;
                 left: -300px;
+                position: absolute;
+                top: -185px;
+                width: 900px;
             }
 
             h1 {
@@ -37,8 +37,8 @@ main {
         }
 
         .map {
-            border: 5px solid #f348a4;
             background-color: #f348a4;
+            border: 5px solid #f348a4;
         }
     }
 }
@@ -52,12 +52,12 @@ main {
                 left: 90px;
 
                 .blob {
-                    position: absolute;
-                    height: 740px;
-                    width: 900px;
                     background-size: contain;
-                    top: -160px;
+                    height: 740px;
                     left: -255px;
+                    position: absolute;
+                    top: -160px;
+                    width: 900px;
                 }
 
                 h1 {
@@ -71,13 +71,11 @@ main {
 
             .map {
                 iframe {
-
-                    width: 722px;
                     height: 585px;
+                    width: 722px;
                 }
 
             }
         }
-
     }
 }

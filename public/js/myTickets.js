@@ -1,5 +1,7 @@
 const passes = document.querySelectorAll(".pass .remove")
 
+// Shows the tickets
+
 for (const pass of passes) {
     pass.addEventListener('click', (e) => {
         //display block
@@ -10,8 +12,7 @@ for (const pass of passes) {
             removeItem.style.display = 'block'
 
             let elements = document.querySelectorAll('.infos *')
-            for(let element of elements)
-            {
+            for (let element of elements) {
                 element.remove()
             }
 
@@ -40,8 +41,7 @@ for (const pass of passes) {
             select.setAttribute('name', 'quantity')
             div_select.appendChild(select)
 
-            for(let i = pass.quantity; i > 0; i--)
-            {
+            for (let i = pass.quantity; i > 0; i--) {
                 const option = document.createElement('option')
                 option.setAttribute('value', i)
                 option.innerHTML = i
